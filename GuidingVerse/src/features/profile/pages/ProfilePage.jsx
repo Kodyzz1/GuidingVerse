@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NotFoundPage() {
+function ProfilePage() {
   return (
     <div>
       <h1>Home Page</h1>
@@ -9,4 +9,4 @@ function NotFoundPage() {
   );
 }
 
-export default NotFoundPage;
+export default ProfilePage;
