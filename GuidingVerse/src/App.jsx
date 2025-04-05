@@ -1,15 +1,17 @@
+// src/App.jsx
+
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import AppRoutes from './routes'; // Import the routes definition
-import './styles/index.css'; // Or your main CSS entry point
+import AppRoutes from './routes';
+import { AuthProvider } from './contexts/AuthContext'; // Correct import?
+import './styles/index.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      {/* Potential Context Providers will wrap AppRoutes later */}
-      {/* e.g., <AuthProvider><SettingsProvider> */}
-      <AppRoutes />
-      {/* </SettingsProvider></AuthProvider> */}
+    <BrowserRouter> {/* BrowserRouter MUST be outermost */}
+      <AuthProvider> {/* AuthProvider MUST wrap AppRoutes */}
+        <AppRoutes /> {/* Your routes component */}
+      </AuthProvider>
     </BrowserRouter>
   );
 }
