@@ -1,0 +1,85 @@
+/* General Layout Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #eee;
+    border-bottom: 1px solid #ddd; /* Added a subtle border */
+  }
+  
+  .nav {
+    display: flex;
+    gap: 15px; /* Slightly increased gap */
+    align-items: center;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #0056b3; /* Example link color */
+    padding: 0.25rem 0;
+  }
+  .navLink:hover {
+    text-decoration: underline;
+  }
+  
+  /* Make the title link look less like a standard link */
+  .titleLink {
+     text-decoration: none;
+     color: inherit; /* Inherit color from parent */
+  }
+  .titleLink h1 {
+      margin: 0; /* Remove default h1 margin */
+      font-size: 1.5rem; /* Adjust size */
+  }
+  
+  
+  .userInfo {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .logoutButton {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #e0e0e0; /* Slightly different background */
+    color: #333;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  .logoutButton:hover {
+    background-color: #d0d0d0;
+  }
+  .logoutButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  
+  .main {
+    padding: 1rem;
+    min-height: calc(100vh - 150px); /* Example: Adjust based on header/footer height */
+  }
+  
+  .footer {
+    padding: 1rem;
+    background-color: #eee;
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+    text-align: center; /* Center footer content */
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .footerLink {
+    margin: 0 10px; /* Adjust margin */
+     color: #0056b3;
+     text-decoration: none;
+  }
+  .footerLink:hover {
+      text-decoration: underline;
+  }
+  
+  /* Add more specific styles or reuse classes as needed */
