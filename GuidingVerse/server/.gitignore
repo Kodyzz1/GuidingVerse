@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+*.env.*
+
+# Log files
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Add any other backend-specific files or directories to ignore
+# (e.g., build output if you use TypeScript and compile)
