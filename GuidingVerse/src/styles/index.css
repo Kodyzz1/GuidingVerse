@@ -1,68 +1,100 @@
+/* src/styles/index.css */
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+    /* Font Setup (keep as before) */
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+  
+    /* Color Variables - DARK MODE Defaults */
+    --text-color: rgba(255, 255, 255, 0.87);
+    --background-color: #242424;
+    --link-color: #646cff;
+    --link-hover-color: #535bf2;
+    --button-background: #1a1a1a;
+    --button-hover-border: #646cff;
+    /* Add NEW variables for components */
+    --surface-background: #333; /* Background for cards/containers */
+    --border-color: #555;       /* Border for containers/inputs */
+    --input-background: #444;   /* Background for inputs */
+    --input-text-color: var(--text-color);
+    --button-text-color: var(--text-color);
+    --primary-color: #646cff; /* Example primary color */
+  
+  
+    /* Rendering/Font Setup (keep as before) */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Light Mode Overrides */
+  @media (prefers-color-scheme: light) {
+    :root {
+      --text-color: #213547;
+      --background-color: #ffffff; /* Changed from #f8f9fa for more contrast maybe */
+      --link-color: #0056b3; /* Adjusted light mode link */
+      --link-hover-color: #003d80; /* Adjusted light mode link hover */
+      --button-background: #f9f9f9;
+      --button-hover-border: #747bff;
+      /* Override NEW variables for light mode */
+      --surface-background: #fff;
+      --border-color: #dee2e6; /* Light border */
+      --input-background: #fff;
+      --input-text-color: #495057;
+      --button-text-color: var(--text-color);
+       --primary-color: #007bff;
+    }
+    /* Keep other light mode specific overrides if needed */
+    a:hover { /* Example override specific to light mode */
+       color: var(--link-hover-color);
+     }
+     button:hover {
+       border-color: var(--button-hover-border);
+     }
+  }
+  
+  
+  /* --- Keep Resets and Base Styles --- */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    font-family: var(--font-family);
+    line-height: 1.5;
+    color: var(--text-color); /* Use variable */
+    background-color: var(--background-color); /* Use variable */
+    min-width: 320px;
+    min-height: 100vh;
+  }
+  
+  /* Update base link style */
+  a {
+    font-weight: 500;
+    color: var(--link-color);
+    text-decoration: inherit;
   }
   a:hover {
-    color: #747bff;
+    color: var(--link-hover-color);
   }
+  
+  /* Keep H1, Button base styles etc. */
+  h1 { font-size: 3.2em; line-height: 1.1; }
+  h2, h3, h4, h5, h6 { margin-bottom: 0.75rem; font-weight: 500; line-height: 1.2; }
+  ul, ol { list-style: none; }
+  
   button {
-    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: var(--button-background);
+    color: var(--button-text-color); /* Use variable */
+    cursor: pointer;
+    transition: border-color 0.25s;
   }
-}
+  /* Default button hover/focus can stay or use variables */
+  /* ... */
