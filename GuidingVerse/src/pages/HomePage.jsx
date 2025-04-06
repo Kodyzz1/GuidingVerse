@@ -1,12 +1,13 @@
-// src/pages/HomePage.jsx
-import React from 'react';
+// --- Imports ---
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import './HomePage.module.css';
 
+// --- Component Definition ---
 function HomePage() {
   const { isAuthenticated } = useAuth();
   
+  // --- JSX Structure ---
   return (
     <div className="home-container">
       {/* Hero Section */}
@@ -72,17 +73,17 @@ function HomePage() {
         
         <div className="testimonials-container">
           <div className="testimonial-card">
-            <p className="testimonial-text">"GuidingVerse has transformed my daily devotional time. The clean interface helps me focus on Scripture without distractions."</p>
+            <p className="testimonial-text">&quot;GuidingVerse has transformed my daily devotional time. The clean interface helps me focus on Scripture without distractions.&quot;</p>
             <p className="testimonial-author">— Sarah K.</p>
           </div>
           
           <div className="testimonial-card">
-            <p className="testimonial-text">"I appreciate how GuidingVerse respects different denominational traditions while keeping the focus on Scripture itself."</p>
+            <p className="testimonial-text">&quot;I appreciate how GuidingVerse respects different denominational traditions while keeping the focus on Scripture itself.&quot;</p>
             <p className="testimonial-author">— Michael T.</p>
           </div>
           
           <div className="testimonial-card">
-            <p className="testimonial-text">"The ability to access my Bible study notes across all my devices has been a game-changer for my small group leadership."</p>
+            <p className="testimonial-text">&quot;The ability to access my Bible study notes across all my devices has been a game-changer for my small group leadership.&quot;</p>
             <p className="testimonial-author">— Pastor James</p>
           </div>
         </div>
@@ -92,7 +93,7 @@ function HomePage() {
       <section className="scripture-section">
         <h2 className="section-title">Scripture of the Day</h2>
         <div className="scripture-card">
-          <p className="scripture-text">"Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths."</p>
+          <p className="scripture-text">&quot;Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.&quot;</p>
           <p className="scripture-reference">— Proverbs 3:5-6 (KJV)</p>
         </div>
       </section>

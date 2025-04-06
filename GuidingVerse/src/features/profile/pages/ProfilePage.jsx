@@ -1,24 +1,22 @@
-import React from 'react';
-import { useAuth } from '../../../contexts/AuthContext'; // Adjust path if needed
-// Optional: Import a CSS module for styling later
+// --- Imports ---
+import { useAuth } from '../../../contexts/AuthContext';
+// TODO: Create and import ProfilePage.module.css if needed
 // import styles from './ProfilePage.module.css';
 
+// --- Component Definition ---
 function ProfilePage() {
-  // Get the current user data from the AuthContext
+  // --- Auth Hook ---
   const { user } = useAuth();
 
-  // The ProtectedRoute should already prevent access if not authenticated,
-  // and handle the initial loading state. But as a safeguard,
-  // we can check if user data exists before trying to display it.
+  // --- Conditional Render (Loading/Not Logged In) ---
+  // Safeguard: ProtectedRoute should handle this, but check user exists.
   if (!user) {
-    // This case should theoretically not be reached if ProtectedRoute works correctly
-    // and AuthContext sets user upon authentication.
     return <div>Loading user data or not logged in...</div>;
   }
 
-  // If user data exists, display it
+  // --- JSX Structure ---
+  // Optional: Use styles.container if using CSS Modules
   return (
-    // Optional: Add a wrapper div with className={styles.container} if using CSS Modules
     <div>
       <h2>User Profile</h2>
       <div>
@@ -32,7 +30,7 @@ function ProfilePage() {
           <strong>Selected Denomination:</strong> {user.denomination || 'N/A'}
         </p>
       </div>
-      {/* Add more sections later, e.g., for changing password or denomination */}
+      {/* TODO: Add sections for editing profile, changing password, etc. */}
     </div>
   );
 }

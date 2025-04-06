@@ -1,27 +1,27 @@
-// src/layouts/MainLayout.jsx
-import React, { useState, useRef } from 'react';
+// --- Imports ---
+import { useState } from 'react';
 import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-// import SearchBar from '../features/search/components/SearchBar';
 import styles from './MainLayout.module.css';
 
+// --- Component Definition ---
 function MainLayout() {
+  // --- State ---
   const { isAuthenticated, user, logout, isLoading } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // --- Handlers & Helpers ---
   const handleLogout = async () => {
     try {
       await logout();
       navigate('/login');
-      console.log("Logout successful, navigated to login.");
     } catch (error) {
       console.error("Failed to logout:", error);
     }
   };
 
-  // Check if the current route is active
   const isActive = (path) => {
     if (path === '/') {
       return location.pathname === '/';
@@ -29,13 +29,14 @@ function MainLayout() {
     return location.pathname.startsWith(path);
   };
 
-  // Toggle mobile menu
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  // --- JSX Structure ---
   return (
     <div className={styles.layout}>
+      {/* --- Header --- */}
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <Link to="/" className={styles.logoContainer}>
@@ -44,8 +45,8 @@ function MainLayout() {
           </Link>
 
           {/* Mobile menu button */}
-          <button 
-            className={styles.mobileMenuButton} 
+          <button
+            className={styles.mobileMenuButton}
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
@@ -56,27 +57,27 @@ function MainLayout() {
 
           {/* Navigation links - desktop */}
           <nav className={styles.desktopNav}>
-            <Link 
-              to="/reader" 
+            <Link
+              to="/reader"
               className={`${styles.navLink} ${isActive('/reader') ? styles.activeLink : ''}`}
             >
               Reader
             </Link>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className={`${styles.navLink} ${isActive('/about') ? styles.activeLink : ''}`}
             >
               About
             </Link>
-            <Link 
-              to="/how-it-works" 
+            <Link
+              to="/how-it-works"
               className={`${styles.navLink} ${isActive('/how-it-works') ? styles.activeLink : ''}`}
             >
               How It Works
             </Link>
           </nav>
 
-          {/* Search Bar */}
+          {/* Search Bar (Commented Out) */}
           {/* <div className={styles.searchBarWrapper}>
             <SearchBar compact={true} />
           </div> */}
@@ -93,9 +94,9 @@ function MainLayout() {
                     <span className={styles.userName}>{user.name || user.email}</span>
                   </Link>
                 )}
-                <button 
-                  onClick={handleLogout} 
-                  disabled={isLoading} 
+                <button
+                  onClick={handleLogout}
+                  disabled={isLoading}
                   className={styles.logoutButton}
                 >
                   {isLoading ? 'Logging out...' : 'Logout'}
@@ -113,50 +114,51 @@ function MainLayout() {
         {/* Mobile navigation menu */}
         <div className={`${styles.mobileNav} ${mobileMenuOpen ? styles.mobileNavOpen : ''}`}>
           <nav className={styles.mobileNavLinks}>
-            <Link 
-              to="/reader" 
+            <Link
+              to="/reader"
               className={`${styles.mobileNavLink} ${isActive('/reader') ? styles.activeLink : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Reader
             </Link>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className={`${styles.mobileNavLink} ${isActive('/about') ? styles.activeLink : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </Link>
-            <Link 
-              to="/how-it-works" 
+            <Link
+              to="/how-it-works"
               className={`${styles.mobileNavLink} ${isActive('/how-it-works') ? styles.activeLink : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               How It Works
             </Link>
-            
-            {/* <Link 
-              to="/search" 
+
+            {/* Search Link (Commented Out) */}
+            {/* <Link
+              to="/search"
               className={`${styles.mobileNavLink} ${isActive('/search') ? styles.activeLink : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               Search
             </Link> */}
-            
+
             {isAuthenticated ? (
               <>
-                <Link 
-                  to="/profile" 
+                <Link
+                  to="/profile"
                   className={`${styles.mobileNavLink} ${isActive('/profile') ? styles.activeLink : ''}`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Profile
                 </Link>
-                <button 
+                <button
                   onClick={() => {
                     handleLogout();
                     setMobileMenuOpen(false);
-                  }} 
+                  }}
                   className={styles.mobileLogoutButton}
                 >
                   Logout
@@ -164,15 +166,15 @@ function MainLayout() {
               </>
             ) : (
               <>
-                <Link 
-                  to="/login" 
+                <Link
+                  to="/login"
                   className={styles.mobileNavLink}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Login
                 </Link>
-                <Link 
-                  to="/signup" 
+                <Link
+                  to="/signup"
                   className={`${styles.mobileNavLink} ${styles.mobileSignupLink}`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -184,10 +186,12 @@ function MainLayout() {
         </div>
       </header>
 
+      {/* --- Main Content --- */}
       <main className={styles.main}>
         <Outlet />
       </main>
 
+      {/* --- Footer --- */}
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.footerBrand}>
@@ -195,7 +199,7 @@ function MainLayout() {
             <h2 className={styles.footerTitle}>GuidingVerse</h2>
             <p className={styles.footerTagline}>Your companion for Scripture study</p>
           </div>
-          
+
           <div className={styles.footerLinks}>
             <div className={styles.footerLinkGroup}>
               <h3 className={styles.footerLinkTitle}>Navigation</h3>
@@ -206,7 +210,7 @@ function MainLayout() {
                 <li><Link to="/how-it-works" className={styles.footerLink}>How It Works</Link></li>
               </ul>
             </div>
-            
+
             <div className={styles.footerLinkGroup}>
               <h3 className={styles.footerLinkTitle}>Account</h3>
               <ul>
@@ -223,7 +227,7 @@ function MainLayout() {
                 )}
               </ul>
             </div>
-            
+
             <div className={styles.footerLinkGroup}>
               <h3 className={styles.footerLinkTitle}>Legal</h3>
               <ul>
@@ -233,7 +237,7 @@ function MainLayout() {
             </div>
           </div>
         </div>
-        
+
         <div className={styles.footerBottom}>
           <p className={styles.copyright}>&copy; {new Date().getFullYear()} GuidingVerse. All rights reserved.</p>
         </div>

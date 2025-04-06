@@ -1,5 +1,5 @@
 // src/components/Modal/Modal.jsx
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Modal.module.css';
 
@@ -24,9 +24,11 @@ function Modal({
   closeOnEsc = true,
   closeOnOverlayClick = true
 }) {
+  // --- Refs ---
   const modalRef = useRef(null);
 
-  // Close on Escape key
+  // --- Effects ---
+  // Effect to handle Escape key press and body scroll lock
   useEffect(() => {
     const handleEscKeyPress = (e) => {
       if (closeOnEsc && isOpen && e.key === 'Escape') {
@@ -36,47 +38,51 @@ function Modal({
 
     if (isOpen) {
       document.addEventListener('keydown', handleEscKeyPress);
-      // Prevent scrolling of the body when modal is open
+      // Prevent body scrolling
       document.body.style.overflow = 'hidden';
     }
 
     return () => {
       document.removeEventListener('keydown', handleEscKeyPress);
-      // Restore scrolling when modal is closed
+      // Restore body scrolling
       document.body.style.overflow = '';
     };
   }, [isOpen, onClose, closeOnEsc]);
 
-  // Focus trap inside modal
+  // Effect to trap focus within the modal when it opens
   useEffect(() => {
     if (isOpen && modalRef.current) {
-      modalRef.current.focus();
+      modalRef.current.focus(); // Focus the modal itself
+      // TODO: Implement full focus trap logic if needed
     }
   }, [isOpen]);
 
-  // Don't render anything if modal is not open
+  // --- Conditional Render ---
+  // Don't render if not open
   if (!isOpen) {
     return null;
   }
 
-  // Handle overlay click
+  // --- Handlers ---
   const handleOverlayClick = (e) => {
+    // Close only if the overlay itself (not content) is clicked
     if (closeOnOverlayClick && e.target === e.currentTarget) {
       onClose();
     }
   };
 
+  // --- JSX Structure ---
   return (
     <div className={styles.overlay} onClick={handleOverlayClick} role="dialog" aria-modal="true">
-      <div 
+      <div
         ref={modalRef}
         className={`${styles.modal} ${styles[size]}`}
-        tabIndex={-1}
+        tabIndex={-1} // Make modal focusable
       >
         <div className={styles.header}>
           {title && <h2 className={styles.title}>{title}</h2>}
-          <button 
-            className={styles.closeButton} 
+          <button
+            className={styles.closeButton}
             onClick={onClose}
             aria-label="Close"
           >

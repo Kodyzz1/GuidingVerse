@@ -1,3 +1,4 @@
+// --- Constants (Bible Books) ---
 export const BIBLE_BOOKS = [
     // Old Testament
     "Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth",
@@ -13,13 +14,14 @@ export const BIBLE_BOOKS = [
     "1 John", "2 John", "3 John", "Jude", "Revelation"
   ];
   
-  // Basic map for chapter counts (expand later or use a library/API)
-  // This is just a small sample for initial structure
+  // --- Constants (Bible Chapter Counts - Sample) ---
+  // NOTE: This is an incomplete list. A full list or dynamic fetching is recommended.
   export const BIBLE_CHAPTER_COUNTS = {
     "Genesis": 50,
     "Exodus": 40,
     "Psalms": 150,
     "John": 21,
     "Romans": 16,
-    // Add many more...
+    "Revelation": 22
+    // ... many more books needed
   };

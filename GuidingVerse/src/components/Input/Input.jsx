@@ -1,5 +1,5 @@
-// src/components/Input/Input.jsx
-import React, { forwardRef } from 'react';
+// --- Imports ---
+import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Input.module.css';
 
@@ -33,8 +33,8 @@ const Input = forwardRef(({
   className = '',
   ...rest
 }, ref) => {
+  // --- Style Logic ---
   const hasError = !!error;
-  
   const inputClasses = [
     styles.input,
     hasError ? styles.error : '',
@@ -42,6 +42,7 @@ const Input = forwardRef(({
     className
   ].filter(Boolean).join(' ');
 
+  // --- JSX Structure ---
   return (
     <div className={styles.formGroup}>
       {label && (
@@ -81,8 +82,10 @@ const Input = forwardRef(({
   );
 });
 
+// --- Display Name ---
 Input.displayName = 'Input';
 
+// --- Prop Types ---
 Input.propTypes = {
   id: PropTypes.string.isRequired,
   type: PropTypes.string,

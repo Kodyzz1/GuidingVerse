@@ -1,4 +1,4 @@
-import React from 'react';
+// --- Imports ---
 import PropTypes from 'prop-types';
 import styles from './LoadingSpinner.module.css';
 
@@ -13,15 +13,12 @@ import styles from './LoadingSpinner.module.css';
  * @param {boolean} [props.fullPage=false] - Whether the spinner should take the full page
  */
 function LoadingSpinner({ size = 'medium', color = 'primary', message, fullPage = false }) {
-  // Determine size class
+  // --- Style Logic ---
   const sizeClass = styles[size] || styles.medium;
-  
-  // Determine color class
   const colorClass = styles[color] || styles.primary;
-  
-  // Determine container class
   const containerClass = fullPage ? styles.fullPage : styles.container;
 
+  // --- JSX Structure ---
   return (
     <div className={containerClass}>
       <div className={`${styles.spinner} ${sizeClass} ${colorClass}`}>
@@ -35,6 +32,7 @@ function LoadingSpinner({ size = 'medium', color = 'primary', message, fullPage 
   );
 }
 
+// --- Prop Types ---
 LoadingSpinner.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   color: PropTypes.oneOf(['primary', 'secondary', 'light']),

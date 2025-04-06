@@ -1,14 +1,15 @@
 // src/pages/AboutPage.jsx
-import React from 'react';
 
+// --- Component Definition ---
 function AboutPage() {
+  // --- JSX Structure ---
   return (
     <div className="about-container">
       <h1>About GuidingVerse</h1>
       
       <section className="mission-section">
         <h2>Our Mission</h2>
-        <p>GuidingVerse was created with a simple mission: to make Bible study more accessible, engaging, and meaningful for everyone. We believe that Scripture is a guiding light for life's journey, and our aim is to provide tools that help you connect with its wisdom in today's digital world.</p>
+        <p>GuidingVerse was created with a simple mission: to make Bible study more accessible, engaging, and meaningful for everyone. We believe that Scripture is a guiding light for life&apos;s journey, and our aim is to provide tools that help you connect with its wisdom in today&apos;s digital world.</p>
       </section>
       
       <section className="story-section">
@@ -37,7 +38,7 @@ function AboutPage() {
           
           <div className="value-card">
             <h3>Privacy</h3>
-            <p>Your spiritual journey is personal. We respect your privacy and limit data collection to only what's necessary to provide and improve our service.</p>
+            <p>Your spiritual journey is personal. We respect your privacy and limit data collection to only what&apos;s necessary to provide and improve our service.</p>
           </div>
         </div>
       </section>
@@ -45,13 +46,13 @@ function AboutPage() {
       <section className="tech-section">
         <h2>Our Technology</h2>
         <p>GuidingVerse is built using modern web technologies that ensure a fast, reliable experience across devices. We use React for our frontend interface and Node.js for our backend services.</p>
-        <p>Our Scripture database utilizes public domain texts and is constantly being improved for accuracy and readability. We're committed to maintaining the integrity of the biblical text while making it accessible in digital form.</p>
+        <p>Our Scripture database utilizes public domain texts and is constantly being improved for accuracy and readability. We&apos;re committed to maintaining the integrity of the biblical text while making it accessible in digital form.</p>
       </section>
       
       <section className="team-section">
         <h2>Our Team</h2>
         <p>GuidingVerse is developed and maintained by a small team of passionate individuals with backgrounds in software development, theology, and user experience design.</p>
-        <p>We're always looking to grow our community and welcome contributions from those who share our vision.</p>
+        <p>We&apos;re always looking to grow our community and welcome contributions from those who share our vision.</p>
       </section>
       
       <section className="contact-section">

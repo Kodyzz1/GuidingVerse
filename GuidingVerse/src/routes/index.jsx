@@ -1,10 +1,10 @@
-import React from 'react';
+// --- Imports (Core & Router) ---
 import { Routes, Route } from 'react-router-dom';
 
-// Import Layouts
+// --- Imports (Layouts) ---
 import MainLayout from '../layouts/MainLayout';
 
-// Import Pages
+// --- Imports (General Pages) ---
 import HomePage from '../pages/HomePage';
 import AboutPage from '../pages/AboutPage';
 import HowItWorksPage from '../pages/HowItWorksPage';
@@ -12,15 +12,16 @@ import PrivacyPolicyPage from '../pages/PrivacyPolicyPage';
 import TermsOfServicePage from '../pages/TermsOfServicePage';
 import NotFoundPage from '../pages/NotFoundPage';
 
-// Import Feature Pages
+// --- Imports (Feature Pages) ---
 import LoginPage from '../features/auth/pages/LoginPage';
 import SignupPage from '../features/auth/pages/SignupPage';
 import BibleReaderPage from '../features/bibleReader/pages/BibleReaderPage';
 import ProfilePage from '../features/profile/pages/ProfilePage';
 
-// Import ProtectedRoute
+// --- Imports (Routing Helpers) ---
 import ProtectedRoute from './ProtectedRoute';
 
+// --- Component Definition (AppRoutes) ---
 function AppRoutes() {
   return (
     <Routes>

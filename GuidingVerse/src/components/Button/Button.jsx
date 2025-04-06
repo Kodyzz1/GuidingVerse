@@ -1,4 +1,4 @@
-import React from 'react';
+// --- Imports ---
 import PropTypes from 'prop-types';
 import styles from './Button.module.css';
 
@@ -26,6 +26,8 @@ function Button({
   className = '',
   ...rest
 }) {
+  // --- Style Logic ---
+  // Combine base style with variant, size, and other conditional classes
   const buttonClasses = [
     styles.button,
     styles[variant],
@@ -34,6 +36,7 @@ function Button({
     className
   ].filter(Boolean).join(' ');
 
+  // --- JSX Structure ---
   return (
     <button
       type={type}
@@ -47,6 +50,7 @@ function Button({
   );
 }
 
+// --- Prop Types ---
 Button.propTypes = {
   variant: PropTypes.oneOf(['primary', 'secondary', 'outline', 'text']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
