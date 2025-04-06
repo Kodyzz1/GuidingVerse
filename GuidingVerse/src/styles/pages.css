@@ -1,0 +1,224 @@
+/* 
+ * src/styles/pages.css 
+ * Styles for static content pages (About, Terms, Privacy, How It Works, 404)
+ */
+
+/* ===================
+   BASE CONTAINERS
+   =================== */
+   .about-container,
+   .terms-container,
+   .privacy-container,
+   .how-it-works-container,
+   .not-found-container {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 2rem 1rem;
+     line-height: 1.6;
+   }
+   
+   .about-container {
+     max-width: 900px;
+   }
+   
+   /* ===================
+      TYPOGRAPHY
+      =================== */
+   .about-container h1,
+   .terms-container h1,
+   .privacy-container h1,
+   .how-it-works-container h1,
+   .not-found-container h1 {
+     font-size: 2.5rem;
+     margin-bottom: 2rem;
+     color: var(--text-color);
+     border-bottom: 1px solid var(--border-color);
+     padding-bottom: 0.5rem;
+   }
+   
+   h2 {
+     font-size: 1.8rem;
+     margin: 1.5rem 0 1rem;
+     color: var(--text-color);
+   }
+   
+   /* ===================
+      SECTION LAYOUTS
+      =================== */
+   section {
+     margin-bottom: 2rem;
+   }
+   
+   /* List styles */
+   ul, ol {
+     padding-left: 2rem;
+     margin: 1rem 0;
+   }
+   
+   li {
+     margin-bottom: 0.5rem;
+   }
+   
+   /* Footer notes */
+   .terms-footer,
+   .privacy-footer {
+     margin-top: 3rem;
+     font-style: italic;
+     color: var(--text-color);
+     opacity: 0.7;
+   }
+   
+   /* ===================
+      BUTTONS
+      =================== */
+   .primary-button {
+     display: inline-block;
+     background-color: var(--primary-color);
+     color: white;
+     padding: 0.75rem 1.5rem;
+     border-radius: 4px;
+     text-decoration: none;
+     font-weight: bold;
+     border: none;
+     transition: background-color 0.3s;
+   }
+   
+   .primary-button:hover {
+     background-color: var(--link-hover-color);
+     text-decoration: none;
+   }
+   
+   .secondary-button {
+     display: inline-block;
+     background-color: transparent;
+     color: var(--text-color);
+     padding: 0.75rem 1.5rem;
+     border-radius: 4px;
+     text-decoration: none;
+     font-weight: bold;
+     border: 1px solid var(--border-color);
+     transition: all 0.3s;
+   }
+   
+   .secondary-button:hover {
+     background-color: var(--surface-background);
+     border-color: var(--primary-color);
+     text-decoration: none;
+   }
+   
+   /* ===================
+      ABOUT PAGE
+      =================== */
+   .values-grid {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 1.5rem;
+     margin-top: 1.5rem;
+   }
+   
+   .value-card {
+     background-color: var(--surface-background);
+     padding: 1.5rem;
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+   }
+   
+   .value-card h3 {
+     margin-top: 0;
+     margin-bottom: 0.75rem;
+     color: var(--primary-color);
+   }
+   
+   .contact-email {
+     font-weight: bold;
+     font-size: 1.1rem;
+     margin-top: 0.5rem;
+   }
+   
+   .mission-section p {
+     font-size: 1.1rem;
+     line-height: 1.7;
+   }
+   
+   .team-section {
+     margin-bottom: 3rem;
+   }
+   
+   /* ===================
+      HOW IT WORKS PAGE
+      =================== */
+   .feature-section {
+     margin-bottom: 3rem;
+   }
+   
+   .feature-content {
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem;
+   }
+   
+   .image-placeholder {
+     background-color: var(--border-color);
+     color: var(--text-color);
+     padding: 2rem;
+     text-align: center;
+     border-radius: 8px;
+   }
+   
+   .cta-section {
+     background-color: var(--surface-background);
+     padding: 2rem;
+     margin-top: 3rem;
+     border-radius: 8px;
+     text-align: center;
+   }
+   
+   .cta-buttons {
+     display: flex;
+     justify-content: center;
+     gap: 1rem;
+     margin-top: 1.5rem;
+   }
+   
+   /* ===================
+      404 NOT FOUND PAGE
+      =================== */
+   .not-found-message {
+     font-size: 1.2rem;
+     font-style: italic;
+     margin: 2rem 0;
+     text-align: center;
+   }
+   
+   .not-found-navigation {
+     margin-top: 3rem;
+     text-align: center;
+   }
+   
+   .nav-buttons {
+     display: flex;
+     justify-content: center;
+     gap: 1rem;
+     margin-top: 1rem;
+   }
+   
+   /* ===================
+      RESPONSIVE STYLES
+      =================== */
+   @media (min-width: 768px) {
+     .feature-content {
+       flex-direction: row;
+     }
+     
+     .feature-text {
+       flex: 3;
+     }
+     
+     .feature-image {
+       flex: 2;
+     }
+     
+     .values-grid {
+       grid-template-columns: repeat(2, 1fr);
+     }
+   }

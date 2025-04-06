@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 // Import Layouts
 import MainLayout from '../layouts/MainLayout';
+
 // Import Pages
 import HomePage from '../pages/HomePage';
 import AboutPage from '../pages/AboutPage';
@@ -17,19 +18,17 @@ import SignupPage from '../features/auth/pages/SignupPage';
 import BibleReaderPage from '../features/bibleReader/pages/BibleReaderPage';
 import ProfilePage from '../features/profile/pages/ProfilePage';
 
-// --- 1. Import ProtectedRoute ---
-import ProtectedRoute from './ProtectedRoute'; // Adjust path if necessary
+// Import ProtectedRoute
+import ProtectedRoute from './ProtectedRoute';
 
 function AppRoutes() {
   return (
     <Routes>
       {/* Routes using MainLayout */}
-      {/* Wrap the parent Route's element OR wrap individual Route elements */}
-      {/* Here we wrap individual Route elements */}
       <Route element={<MainLayout />}>
         <Route path="/" element={<HomePage />} />
 
-        {/* --- 2. Apply ProtectedRoute --- */}
+        {/* Protected routes */}
         <Route
           path="/reader"
           element={
@@ -46,16 +45,16 @@ function AppRoutes() {
             </ProtectedRoute>
           }
         />
-        {/* --- End Protected Routes --- */}
-
+        
+        {/* Public routes */}
         <Route path="/about" element={<AboutPage />} />
         <Route path="/how-it-works" element={<HowItWorksPage />} />
         <Route path="/privacy" element={<PrivacyPolicyPage />} />
         <Route path="/terms" element={<TermsOfServicePage />} />
-        {/* Add other public routes that use MainLayout here */}
+        {/* <Route path="/search" element={<SearchResultsPage />} /> */}
       </Route>
 
-      {/* Routes without MainLayout (Auth pages) */}
+      {/* Auth routes without MainLayout */}
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
 

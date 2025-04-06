@@ -1,85 +1,441 @@
-/* General Layout Styles */
-.header {
+/* 
+ * src/layouts/MainLayout.module.css 
+ * Styles for the main application layout (header, footer, navigation)
+ */
+
+/* ===================
+   GENERAL LAYOUT
+   =================== */
+   .layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 0;
+    width: 100%;
+  }
+  
+  /* ===================
+     HEADER STYLES
+     =================== */
+  .header {
+    background-color: var(--surface-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.75rem 0;
+  }
+  
+  .headerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: #eee;
-    border-bottom: 1px solid #ddd; /* Added a subtle border */
+    gap: 1rem;
   }
   
-  .nav {
+  /* Search bar wrapper */
+  .searchBarWrapper {
+    display: none;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+  
+  /* Logo styling */
+  .logoContainer {
     display: flex;
-    gap: 15px; /* Slightly increased gap */
     align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  .logo {
+    background-color: var(--primary-color);
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 0.75rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    display: none;
+  }
+  
+  /* Desktop navigation */
+  .desktopNav {
+    display: none;
   }
   
   .navLink {
+    color: var(--text-color);
     text-decoration: none;
-    color: #0056b3; /* Example link color */
-    padding: 0.25rem 0;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
   }
+  
   .navLink:hover {
-    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0.05);
   }
   
-  /* Make the title link look less like a standard link */
-  .titleLink {
-     text-decoration: none;
-     color: inherit; /* Inherit color from parent */
-  }
-  .titleLink h1 {
-      margin: 0; /* Remove default h1 margin */
-      font-size: 1.5rem; /* Adjust size */
-  }
-  
-  
-  .userInfo {
-    margin-right: 10px;
+  .activeLink {
     font-weight: bold;
-    color: #333;
+    color: var(--primary-color);
+  }
+  
+  /* Auth section */
+  .authSection {
+    display: none;
+  }
+  
+  .authButtons {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .loginButton {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .loginButton:hover {
+    color: var(--primary-color);
+  }
+  
+  .signupButton {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .signupButton:hover {
+    background-color: var(--link-hover-color);
+  }
+  
+  .userSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .profileLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .profileLink:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .userAvatar {
+    background-color: var(--primary-color);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .userName {
+    font-weight: 500;
+    display: none;
   }
   
   .logoutButton {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
     padding: 0.5rem 1rem;
-    cursor: pointer;
-    border: none;
-    background-color: #e0e0e0; /* Slightly different background */
-    color: #333;
     border-radius: 4px;
-    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
   }
+  
   .logoutButton:hover {
-    background-color: #d0d0d0;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: var(--primary-color);
   }
+  
   .logoutButton:disabled {
-    cursor: not-allowed;
     opacity: 0.6;
+    cursor: not-allowed;
   }
   
+  /* Mobile menu button */
+  .mobileMenuButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
   
-  .main {
+  .hamburgerLine {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease;
+  }
+  
+  /* Mobile navigation */
+  .mobileNav {
+    display: none;
+    background-color: var(--surface-background);
     padding: 1rem;
-    min-height: calc(100vh - 150px); /* Example: Adjust based on header/footer height */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
+  .mobileNavOpen {
+    display: block;
+  }
+  
+  .mobileNavLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .mobileNavLink {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .mobileNavLink:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .mobileLogoutButton {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .mobileSignupLink {
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 0.5rem;
+  }
+  
+  .mobileSignupLink:hover {
+    background-color: var(--link-hover-color);
+  }
+  
+  /* ===================
+     FOOTER STYLES
+     =================== */
   .footer {
-    padding: 1rem;
-    background-color: #eee;
-    margin-top: 2rem;
-    border-top: 1px solid #ddd;
-    text-align: center; /* Center footer content */
-    font-size: 0.9rem;
-    color: #555;
+    background-color: var(--surface-background);
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+    padding: 3rem 0 0;
+  }
+  
+  .footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footerBrand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footerLogo {
+    background-color: var(--primary-color);
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footerTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem;
+    color: var(--text-color);
+  }
+  
+  .footerTagline {
+    color: var(--text-color);
+    opacity: 0.7;
+    text-align: center;
+  }
+  
+  .footerLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footerLinkGroup {
+    flex: 1;
+  }
+  
+  .footerLinkTitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+  
+  .footerLinkGroup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footerLinkGroup li {
+    margin-bottom: 0.75rem;
   }
   
   .footerLink {
-    margin: 0 10px; /* Adjust margin */
-     color: #0056b3;
-     text-decoration: none;
-  }
-  .footerLink:hover {
-      text-decoration: underline;
+    color: var(--text-color);
+    opacity: 0.8;
+    text-decoration: none;
+    transition: all 0.2s ease;
   }
   
-  /* Add more specific styles or reuse classes as needed */
+  .footerLink:hover {
+    color: var(--primary-color);
+    opacity: 1;
+  }
+  
+  .footerLinkButton {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: var(--text-color);
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+  }
+  
+  .footerLinkButton:hover {
+    color: var(--primary-color);
+    opacity: 1;
+  }
+  
+  .footerBottom {
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+  }
+  
+  .copyright {
+    color: var(--text-color);
+    opacity: 0.7;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  /* ===================
+     RESPONSIVE STYLES
+     =================== */
+  @media (min-width: 768px) {
+    .title {
+      display: block;
+    }
+    
+    .desktopNav {
+      display: flex;
+    }
+    
+    .authSection {
+      display: block;
+    }
+    
+    .mobileMenuButton {
+      display: none;
+    }
+    
+    .userName {
+      display: block;
+    }
+    
+    .footerContent {
+      flex-direction: row;
+    }
+    
+    .footerBrand {
+      flex: 1;
+      align-items: flex-start;
+    }
+    
+    .footerTagline {
+      text-align: left;
+    }
+    
+    .footerLinks {
+      flex: 2;
+      flex-direction: row;
+    }
+    
+    .searchBarWrapper {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .navLink {
+      margin: 0 0.5rem;
+    }
+  }

@@ -1,7 +1,7 @@
 /* src/styles/index.css */
 
 :root {
-    /* Font Setup (keep as before) */
+    /* Font Setup */
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
@@ -14,16 +14,17 @@
     --link-hover-color: #535bf2;
     --button-background: #1a1a1a;
     --button-hover-border: #646cff;
-    /* Add NEW variables for components */
-    --surface-background: #333; /* Background for cards/containers */
-    --border-color: #555;       /* Border for containers/inputs */
-    --input-background: #444;   /* Background for inputs */
+    /* Component variables */
+    --surface-background: #333;
+    --border-color: #555;
+    --input-background: #444;
     --input-text-color: var(--text-color);
     --button-text-color: var(--text-color);
-    --primary-color: #646cff; /* Example primary color */
+    --primary-color: #646cff;
+    /* RGB values for transparency effects */
+    --primary-color-rgb: 100, 108, 255; /* RGB value for #646cff */
   
-  
-    /* Rendering/Font Setup (keep as before) */
+    /* Rendering/Font Setup */
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -34,56 +35,75 @@
   @media (prefers-color-scheme: light) {
     :root {
       --text-color: #213547;
-      --background-color: #ffffff; /* Changed from #f8f9fa for more contrast maybe */
-      --link-color: #0056b3; /* Adjusted light mode link */
-      --link-hover-color: #003d80; /* Adjusted light mode link hover */
+      --background-color: #ffffff;
+      --link-color: #0056b3;
+      --link-hover-color: #003d80;
       --button-background: #f9f9f9;
       --button-hover-border: #747bff;
-      /* Override NEW variables for light mode */
+      /* Override component variables for light mode */
       --surface-background: #fff;
-      --border-color: #dee2e6; /* Light border */
+      --border-color: #dee2e6;
       --input-background: #fff;
       --input-text-color: #495057;
       --button-text-color: var(--text-color);
-       --primary-color: #007bff;
+      --primary-color: #007bff;
+      /* RGB value for light mode primary color */
+      --primary-color-rgb: 0, 123, 255; /* RGB value for #007bff */
     }
-    /* Keep other light mode specific overrides if needed */
-    a:hover { /* Example override specific to light mode */
-       color: var(--link-hover-color);
-     }
-     button:hover {
-       border-color: var(--button-hover-border);
-     }
+    
+    a:hover {
+      color: var(--link-hover-color);
+    }
+    
+    button:hover {
+      border-color: var(--button-hover-border);
+    }
   }
   
-  
-  /* --- Keep Resets and Base Styles --- */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  /* --- Base Styles & Resets --- */
+  *, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+  }
   
   body {
     font-family: var(--font-family);
     line-height: 1.5;
-    color: var(--text-color); /* Use variable */
-    background-color: var(--background-color); /* Use variable */
+    color: var(--text-color);
+    background-color: var(--background-color);
     min-width: 320px;
     min-height: 100vh;
   }
   
-  /* Update base link style */
+  /* Base link style */
   a {
     font-weight: 500;
     color: var(--link-color);
     text-decoration: inherit;
   }
+  
   a:hover {
     color: var(--link-hover-color);
   }
   
-  /* Keep H1, Button base styles etc. */
-  h1 { font-size: 3.2em; line-height: 1.1; }
-  h2, h3, h4, h5, h6 { margin-bottom: 0.75rem; font-weight: 500; line-height: 1.2; }
-  ul, ol { list-style: none; }
+  /* Typography */
+  h1 { 
+    font-size: 3.2em; 
+    line-height: 1.1; 
+  }
   
+  h2, h3, h4, h5, h6 { 
+    margin-bottom: 0.75rem; 
+    font-weight: 500; 
+    line-height: 1.2; 
+  }
+  
+  ul, ol { 
+    list-style: none; 
+  }
+  
+  /* Base button style */
   button {
     border-radius: 8px;
     border: 1px solid transparent;
@@ -92,9 +112,37 @@
     font-weight: 500;
     font-family: inherit;
     background-color: var(--button-background);
-    color: var(--button-text-color); /* Use variable */
+    color: var(--button-text-color);
     cursor: pointer;
     transition: border-color 0.25s;
   }
-  /* Default button hover/focus can stay or use variables */
-  /* ... */
+  
+  button:hover {
+    border-color: var(--primary-color);
+  }
+  
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+  /* Form elements */
+  input, 
+  select, 
+  textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--input-text-color);
+    background-color: var(--input-background);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.5rem;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.25);
+  }

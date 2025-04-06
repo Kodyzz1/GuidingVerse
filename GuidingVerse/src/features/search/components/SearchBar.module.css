@@ -1,0 +1,107 @@
+/* 
+ * src/features/search/components/SearchBar.module.css
+ * Styles for the search bar component
+ */
+
+ .searchContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchForm {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .searchInput {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px 0 0 4px;
+    font-size: 0.9rem;
+  }
+  
+  .searchButton {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .searchButton:hover {
+    background-color: var(--link-hover-color);
+  }
+  
+  .searchButton:disabled {
+    background-color: var(--border-color);
+    cursor: not-allowed;
+  }
+  
+  /* Compact version for navbar */
+  .compact {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: width 0.3s ease;
+  }
+  
+  .compact.expanded {
+    width: 15rem;
+  }
+  
+  .searchIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .compact .searchForm {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2.5rem;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+  
+  .compact.expanded .searchForm {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .compact .searchIcon {
+    position: absolute;
+    right: 0;
+    z-index: 5;
+  }
+  
+  .compact.expanded .searchIcon {
+    display: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .searchInput {
+      font-size: 1rem; /* Slightly larger on mobile for better touch targets */
+    }
+    
+    .compact.expanded {
+      width: 100%; /* Full width on mobile */
+      max-width: 15rem;
+    }
+  }

@@ -3,8 +3,11 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './routes';
-import { AuthProvider } from './contexts/AuthContext'; // Correct import?
-import './styles/index.css';
+import { AuthProvider } from './contexts/AuthContext';
+
+// Import styles
+import './styles/index.css';  // Base styles
+import './styles/pages.css';  // Static pages styles
 
 function App() {
   return (
