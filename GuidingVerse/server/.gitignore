@@ -5,6 +5,10 @@ node_modules/
 .env
 *.env.*
 
+# Service Account Credentials (KEEP PRIVATE!)
+*.json # Generally ignore JSON keys
+gen-lang-client-0463343543-8debce331adb.json # Specifically ignore this one
+
 # Log files
 *.log
 logs/

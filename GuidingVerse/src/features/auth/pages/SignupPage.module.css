@@ -1,0 +1,91 @@
+.container {
+    max-width: 400px;
+    margin: 3rem auto;
+    padding: 2rem;
+    /* Use variables */
+    background-color: var(--surface-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow might need adjustment for dark mode too */
+  }
+  
+  .title {
+     text-align: center;
+     margin-bottom: 1.5rem;
+     color: var(--text-color); /* Use variable */
+  }
+  
+  .formGroup {
+    margin-bottom: 1rem;
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color); /* Use variable */
+  }
+  
+  .input,
+  .select /* Add select */ {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    /* Use variables */
+    color: var(--input-text-color);
+    background-color: var(--input-background);
+    background-clip: padding-box;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  /* Focus styles might need variable colors too */
+  .input:focus,
+  .select:focus /* Add select */ {
+     border-color: var(--primary-color); /* Use primary color variable */
+     outline: 0;
+     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* This color might need a variable */
+  }
+  
+  
+  .button {
+    /* Inherit base button styles from index.css */
+    /* Override specific things if needed */
+    display: inline-block; /* Keep overrides */
+    width: 100%;
+    margin-top: 0.5rem;
+    /* Use primary color variable for background/border */
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff; /* Explicit white text often best for primary buttons */
+  }
+  .button:hover {
+    /* Define specific hover using variables or slightly darker shade */
+    /* Example: filter: brightness(90%); */
+    /* Or define --primary-hover-color variable */
+     background-color: var(--link-hover-color); /* Example reuse */
+     border-color: var(--link-hover-color);
+  }
+  .button:disabled {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+  
+  .error {
+    color: #dc3545; /* Keep specific error color or make it a variable */
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .switchLink {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  /* Link color should inherit from global 'a' style now */
+  /* .switchLink a { ... } */ 

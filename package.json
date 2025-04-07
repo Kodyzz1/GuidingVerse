@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@google-cloud/aiplatform": "^4.1.0",
+    "@google/generative-ai": "^0.24.0",
+    "dotenv": "^16.4.7"
+  }
+}

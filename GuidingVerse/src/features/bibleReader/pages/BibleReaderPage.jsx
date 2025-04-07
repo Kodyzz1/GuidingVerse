@@ -264,8 +264,7 @@ function BibleReaderPage() {
       {/* --- Bible Text Display Area --- */}
       <div className={styles.textDisplayArea}>
         <BibleTextDisplay
-          book={selectedPassage.book}
-          chapter={selectedPassage.chapter}
+          passage={selectedPassage}
           fontSize={settings.fontSize}
           lineSpacing={settings.lineSpacing}
           showVerseNumbers={settings.showVerseNumbers}

@@ -53,7 +53,7 @@
     color: var(--muted-foreground);
   }
 
-  /* Verses Container and Buttons */
+  /* Verses Container and Individual Verses */
 .versesContainer {
     display: flex;
     flex-direction: column;
@@ -61,11 +61,11 @@
     margin: 1rem 0;
   }
   
-  .verseButton {
-    display: flex;
+  .verse {
+    display: inline;
     align-items: flex-start;
-    gap: 1rem;
-    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem;
     background: none;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -73,33 +73,36 @@
     cursor: pointer;
     transition: all 0.2s ease;
     color: var(--foreground);
+    margin-right: 0.25em;
   }
   
-  .verseButton:hover {
+  .verse:hover,
+  .verse:focus {
     background-color: var(--accent);
+    outline: none;
   }
   
-  .verseButton.highlighted {
+  .verse.highlighted {
     background-color: #4a90e2;
     border-color: #357abd;
     color: white;
+    border-radius: 4px;
   }
   
-  .verseButton.highlighted .verseNumber {
+  .verse.highlighted .verseNumber {
     color: white;
   }
   
-  .verseButton.selectionStart {
-    background-color: #357abd;
-    border-color: #2b639a;
-    color: white;
+  .verse.selectionStart {
+    box-shadow: inset 0 -2px 0 #4a90e2;
   }
   
-  .verseButton.selectionStart .verseNumber {
-    color: white;
+  .verse.selectionStart .verseNumber {
   }
   
   .verseNumber {
+    display: inline-block;
+    margin-right: 0.2em;
     flex-shrink: 0;
     color: var(--muted-foreground);
     font-weight: 600;
@@ -107,60 +110,64 @@
   }
   
   .verseText {
-    flex-grow: 1;
     line-height: 1.6;
   }
   
   /* Interpretation Panel */
   .interpretationPanel {
     position: fixed;
-    right: 2rem;
-    top: 2rem;
-    width: 400px;
-    background: #1c1c1c;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    max-height: calc(100vh - 4rem);
-    overflow-y: auto;
-    z-index: 50;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 50vh;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    border-radius: 8px 8px 0 0;
+    transform: translateY(100%);
+    visibility: hidden;
+    transition: transform 0.4s ease-in-out, visibility 0s linear 0.4s;
   }
   
-  .interpretationHeader {
+  .interpretationPanel.panelVisible {
+    transform: translateY(0%);
+    visibility: visible;
+    transition-delay: 0s;
+    overflow-y: auto;
+  }
+  
+  .panelHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    border-bottom: 1px solid #333;
-    background: #1c1c1c;
-    border-radius: 8px 8px 0 0;
+    padding: 8px 15px;
     position: sticky;
     top: 0;
-    z-index: 51;
+    z-index: 101;
   }
   
-  .interpretationHeader h3 {
+  .panelHeader h3 {
     margin: 0;
-    font-size: 1.25rem;
-    color: #ffffff;
+    font-size: 1.1em;
   }
   
   .closeButton {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.8em;
+    line-height: 1;
     cursor: pointer;
-    padding: 0.25rem 0.5rem;
-    color: #999;
+    padding: 0 5px;
   }
   
   .closeButton:hover {
-    color: #ffffff;
+    color: #000;
   }
   
-  .interpretationContent {
-    padding: 1rem;
-    background: #1c1c1c;
-    color: #ffffff;
+  .panelContent {
+    padding: 15px;
+    color: inherit;
   }
   
   .interpretationLoading {
@@ -201,7 +208,6 @@
   }
   
   .interpretationError {
-    color: #ff4444;
     padding: 1rem;
     text-align: center;
   }
@@ -241,75 +247,155 @@
     border-color: #357abd;
   }
   
+  /* Style for the Save button */
+  .saveButton {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color, #4a90e2);
+    border-radius: 4px;
+    background-color: var(--primary-color, #4a90e2);
+    color: var(--primary-foreground, #ffffff);
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .saveButton:hover {
+    background-color: var(--primary-hover-color, #357abd);
+    border-color: var(--primary-hover-color, #357abd);
+  }
+  
+  .saveButton:focus {
+     outline: 2px solid var(--primary-focus-ring, #4a90e2);
+     outline-offset: 2px;
+  }
+  
   /* Accessibility and Focus States */
-  .verseButton:focus,
+  .verse:focus,
   .actionButton:focus,
   .closeButton:focus {
     outline: 2px solid #4a90e2;
     outline-offset: 2px;
   }
   
-  /* Media Queries */
+  /* Media Queries - Re-enabled but base styles now handle positioning */
+
   @media (max-width: 768px) {
-    .bibleTextContainer {
-      padding: 1rem;
+    .interpretationPanel.panelVisible {
+      max-height: 60vh; 
     }
-  
-    .interpretationPanel {
-      position: fixed;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      top: auto;
-      width: 100%;
-      max-height: 70vh;
-      border-radius: 8px 8px 0 0;
-    }
+    /* Keep other styles if relevant, but position/width are handled by base rule now */
+    /* .bibleTextContainer { padding: 1rem; } */
   }
   
+  /* Dark mode styles */
+  @media (prefers-color-scheme: dark) {
+    .interpretationPanel {
+      background-color: #2d2d2d;
+      color: #e0e0e0;
+      border-top-color: #444;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    }
+    .panelHeader {
+      background-color: #3a3a3a;
+      border-bottom-color: #444;
+    }
+    .panelHeader h3 {
+      color: #f5f5f5;
+    }
+    .closeButton {
+      color: #aaa;
+    }
+    .closeButton:hover {
+      color: #fff;
+    }
+    .interpretationError {
+      color: #ff8a8a;
+    }
+    .entrySeparator {
+      border-top: 1px dashed #555;
+    }
+  }
+
   /* Light mode styles */
   @media (prefers-color-scheme: light) {
-    .interpretationPanel,
-    .interpretationHeader,
-    .interpretationContent,
-    .selectedVerses,
-    .selectedVerses blockquote {
-      background: #ffffff;
+    .interpretationPanel {
+      background-color: #ffffff;
+      color: #000000;
+      border-top-color: #ddd; 
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.07);
+    }
+    .panelHeader {
+      background-color: #f5f5f5;
+      border-bottom-color: #ddd;
+    }
+    .panelHeader h3 {
       color: #000000;
     }
-  
-    .interpretationHeader {
-      border-bottom: 1px solid #e0e0e0;
-    }
-  
-    .interpretationHeader h3 {
-      color: #000000;
-    }
-  
     .closeButton {
-      color: #666666;
+      color: #555;
     }
-  
     .closeButton:hover {
       color: #000000;
     }
-  
-    .selectedVerses h5,
-    .denominationInterpretation h5 {
-      color: #000000;
+    .interpretationError {
+      color: #d00; 
     }
-  
-    .actionButton {
-      background: #ffffff;
-      color: #000000;
-      border-color: #e0e0e0;
+    .entrySeparator {
+      border-top-color: #ddd;
     }
-  
-    .actionButton:hover {
-      background-color: #f5f5f5;
-    }
-  
-    .interpretationActions {
-      border-top: 1px solid #e0e0e0;
-    }
+  }
+
+  /* Styling for the new passage header */
+  .passageHeader {
+    padding: 10px 15px;
+    font-size: 1.4em;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .bookTitle,
+  .chapterNumber {
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    margin: 0 5px;
+    display: inline-block;
+  }
+
+  .bookTitle:hover,
+  .chapterNumber:hover,
+  .bookTitle:focus,
+  .chapterNumber:focus {
+    background-color: #e9e9e9;
+    outline: none;
+  }
+
+  .bookTitle {
+    /* color: #333; */
+  }
+
+  .chapterNumber {
+    /* color: #555; */
+  }
+
+  /* Separator for interpretation entries */
+  .entrySeparator {
+    border: none;
+    margin: 15px 0;
+  }
+
+  /* Existing style for highlighted verse (ensure it doesn't conflict) */
+  .highlighted {
+    background-color: #f0e68c;
+    /* Ensure padding/margin doesn't break flow */
+  }
+
+  /* Existing style for selection start (ensure it doesn't conflict) */
+  .selectionStart {
+    /* Example: Add a slightly different background or border */
+    /* background-color: #e0d67c; */ 
   }

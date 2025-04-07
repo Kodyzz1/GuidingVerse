@@ -81,11 +81,20 @@ function BibleTextDisplay({ passage }) {
   }, [passage.book, passage.chapter]);
 
   const handleVerseClick = (verseNum) => {
+    console.log(`--- handleVerseClick: Clicked verse ${verseNum} ---`);
+    console.log('Before Click Logic:', { isSelecting, selectionStartVerse, highlightedVerses: [...highlightedVerses] });
+
     if (!isSelecting) {
+      console.log('First click logic executing...');
+      // Start selection
       setIsSelecting(true);
       setSelectionStartVerse(verseNum);
       setHighlightedVerses([verseNum]);
+      // Log state *after* setting (note: state updates might not reflect immediately in console)
+      console.log('After First Click Setters:', { isSelecting: true, selectionStartVerse: verseNum, highlightedVerses: [verseNum] });
     } else {
+      console.log('Second click logic executing...');
+      // Complete selection
       setIsSelecting(false);
       const start = Math.min(selectionStartVerse, verseNum);
       const end = Math.max(selectionStartVerse, verseNum);
@@ -94,7 +103,11 @@ function BibleTextDisplay({ passage }) {
         selectedVerses.push(i);
       }
       setHighlightedVerses(selectedVerses);
-      getAIInterpretation(selectedVerses);
+      console.log('Calculated Range:', { start, end, selectedVerses: [...selectedVerses] });
+      console.log('After Second Click Setters:', { isSelecting: false, highlightedVerses: [...selectedVerses] });
+
+      getVerseInterpretations(selectedVerses); // Trigger interpretation
+      console.log('getVerseInterpretations triggered with:', selectedVerses);
     }
   };
 
@@ -138,55 +151,163 @@ function BibleTextDisplay({ passage }) {
     }
   };
 
-  const getAIInterpretation = async (verses) => {
+  const getVerseInterpretations = async (verses) => {
     if (!verses || verses.length === 0) return;
+    
+    setIsInterpretationLoading(true);
+    setShowInterpretation(true);
+    setInterpretation(null); // Reset state
+
+    const denomination = user?.denomination;
+    let denominationQuery = '';
+    if (denomination && denomination !== 'Prefer not to say') {
+      denominationQuery = `?denomination=${encodeURIComponent(denomination)}`;
+    }
+
+    // --- Create fetch promises for each verse --- //
+    const fetchPromises = verses.map(verseNum => {
+      const reference = `${passage.book} ${passage.chapter}:${verseNum}`;
+      const encodedReference = encodeURIComponent(reference);
+      const apiUrl = `/api/interpret/${encodedReference}${denominationQuery}`;
+      
+      return fetch(apiUrl, { method: 'GET' })
+        .then(async response => {
+          if (!response.ok) {
+            const errorData = await response.json().catch(() => ({}));
+            const message = response.status === 404 
+              ? (errorData.message || 'No interpretation found') 
+              : (errorData.message || `API Error: ${response.status}`);
+            throw { reference: reference, status: response.status, message: message, type: 'verse' }; 
+          }
+          return response.json(); 
+        })
+        .then(data => {
+            // Add the original reference back for fulfilled promises
+            return { ...data, reference: reference }; // Backend should provide type: 'verse'
+        })
+        .catch(error => {
+            if (!error.reference) {
+                error.reference = reference;
+            }
+            if (!error.type) { // Ensure type is set for errors
+                error.type = 'verse';
+            }
+            throw error; 
+        });
+    });
+
+    console.log(`Fetching verse interpretations for ${fetchPromises.length} verses...`);
+
+    const results = await Promise.allSettled(fetchPromises);
+    
+    const interpretationResults = results.map(result => {
+      if (result.status === 'fulfilled') {
+        return {
+          type: result.value.type || 'verse', // Use type from response
+          reference: result.value.reference, 
+          interpretation: result.value.interpretation, 
+          sourceDenomination: result.value.sourceDenomination,
+          timestamp: new Date().toISOString()
+        };
+      } else {
+        console.error('Error fetching verse interpretation:', result.reason?.reference, result.reason);
+        return {
+          type: result.reason?.type || 'verse',
+          reference: result.reason?.reference || 'Unknown Verse Reference', 
+          error: result.reason?.message || 'Failed to load interpretation.'
+        };
+      }
+    });
+
+    setInterpretation(interpretationResults); 
+    setIsInterpretationLoading(false);
+  };
+
+  const getChapterSummary = async () => {
     setIsInterpretationLoading(true);
     setShowInterpretation(true);
     setInterpretation(null);
 
+    const encodedBook = encodeURIComponent(passage.book);
+    const encodedChapter = encodeURIComponent(passage.chapter);
+    const denomination = user?.denomination;
+    let denominationQuery = '';
+    if (denomination && denomination !== 'Prefer not to say') {
+      denominationQuery = `?denomination=${encodeURIComponent(denomination)}`;
+    }
+
+    const apiUrl = `/api/interpret/chapter/${encodedBook}/${encodedChapter}${denominationQuery}`;
+    console.log('Fetching chapter summary from URL:', apiUrl);
+
     try {
-      const selectedText = verses
-        .map(verseNum => {
-          const verse = versesData.find(v => v.verse === verseNum);
-          return verse ? `${verseNum}. ${verse.text}` : '';
-        })
-        .filter(Boolean)
-        .join(' ');
-
-      const reference = `${passage.book} ${passage.chapter}:${verses[0]}${verses.length > 1 ? `-${verses[verses.length - 1]}` : ''}`;
-
-      setTimeout(() => {
-        const userDenomination = user?.denomination || 'Non-denominational';
-        setInterpretation({
-          text: selectedText,
-          reference,
-          interpretation: getMockInterpretation(reference, userDenomination),
-          timestamp: new Date().toISOString()
-        });
-        setIsInterpretationLoading(false);
-      }, 1500);
+      const response = await fetch(apiUrl, { method: 'GET' });
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || `API Error ${response.status}`);
+      }
+      const data = await response.json();
+      setInterpretation(data); // Set state with the single summary object
     } catch (error) {
-      setInterpretation({
-        error: 'Failed to get interpretation. Please try again.'
-      });
+       console.error('Error fetching chapter summary:', error);
+       setInterpretation({ 
+         reference: `${passage.book} ${passage.chapter} (Chapter Summary)`, 
+         type: 'chapter',
+         error: error.message || 'Failed to load chapter summary.' 
+       });
+    } finally {
       setIsInterpretationLoading(false);
     }
   };
 
-  const getMockInterpretation = (reference, denomination) => {
-    const interpretations = {
-      'Baptist': `From a Baptist perspective, <i>${reference}</i> emphasizes the personal relationship with Christ and the importance of faith alone for salvation. This passage calls believers to personal accountability in their walk with God.`,
-      'Catholic': `In Catholic tradition, <i>${reference}</i> connects to the Church&apos;s teaching on grace and works. The Catechism relates this passage to our participation in God&apos;s divine plan through both faith and obedient action.`,
-      'Methodist': `Methodist theology sees <i>${reference}</i> as highlighting God&apos;s prevenient grace that draws us toward salvation. This reflects Wesley&apos;s emphasis on personal holiness and social responsibility as responses to God&apos;s grace.`,
-      'Non-denominational': `This passage in <i>${reference}</i> emphasizes core Christian principles about God&apos;s love and our response as believers. It reminds us of the universal call to follow Christ&apos;s teachings in our daily lives.`,
-      'Presbyterian': `From a Reformed/Presbyterian perspective, <i>${reference}</i> reflects God&apos;s sovereignty and the covenant relationship He establishes with believers. This reinforces the doctrines of grace that emphasize God&apos;s initiative in salvation.`,
-      'default': `<i>${reference}</i> contains timeless wisdom that speaks to believers across Christian traditions. Its message resonates with fundamental truths about God&apos;s character and His relationship with humanity.`
-    };
-    return interpretations[denomination] || interpretations.default;
+  const getBookSummary = async () => {
+    setIsInterpretationLoading(true);
+    setShowInterpretation(true);
+    setInterpretation(null);
+
+    const encodedBook = encodeURIComponent(passage.book);
+    const denomination = user?.denomination;
+    let denominationQuery = '';
+    if (denomination && denomination !== 'Prefer not to say') {
+      denominationQuery = `?denomination=${encodeURIComponent(denomination)}`;
+    }
+
+    const apiUrl = `/api/interpret/book/${encodedBook}${denominationQuery}`;
+    console.log('Fetching book summary from URL:', apiUrl);
+
+    try {
+      const response = await fetch(apiUrl, { method: 'GET' });
+       if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || `API Error ${response.status}`);
+      }
+      const data = await response.json();
+      setInterpretation(data); // Set state with the single summary object
+    } catch (error) {
+       console.error('Error fetching book summary:', error);
+       setInterpretation({ 
+         reference: `${passage.book} (Book Summary)`, 
+         type: 'book',
+         error: error.message || 'Failed to load book summary.' 
+       });
+    } finally {
+      setIsInterpretationLoading(false);
+    }
   };
 
+  const handleChapterClick = () => {
+    console.log(`Chapter ${passage.chapter} clicked - fetching summary...`);
+    getChapterSummary(); // Call the new function
+  };
+
+  const handleBookClick = () => {
+    console.log(`Book ${passage.book} clicked - fetching summary...`);
+    getBookSummary(); // Call the new function
+  };
+
+  // --- Conditional Rendering ---
   if (!passage.book || !passage.chapter) {
-    return <div className={styles.placeholder}>Please select a book and chapter above.</div>;
+    // Handle cases where passage prop might be incomplete initially
+    return <div className={styles.placeholder}>Please select a book and chapter.</div>;
   }
 
   if (isLoading) {
@@ -201,74 +322,138 @@ function BibleTextDisplay({ passage }) {
     return <div className={styles.error}>{error}</div>;
   }
 
+  // --- JSX Structure ---
   let interpretationContent;
   if (isInterpretationLoading) {
     interpretationContent = <LoadingSpinner size="small" message="Getting interpretation..." />;
-  } else if (interpretation?.error) {
-    interpretationContent = <p className={styles.interpretationError}>{interpretation.error}</p>;
-  } else if (interpretation) {
+  } 
+  // Handle Array (Multiple Verses)
+  else if (Array.isArray(interpretation)) {
+    interpretationContent = interpretation.map((item, index) => (
+      <div key={item.reference || index} className={styles.interpretationEntry}>
+        <p><strong>Reference:</strong> {item.reference}</p>
+        {item.error ? (
+          <p className={styles.interpretationError}>{item.error}</p>
+        ) : (
+          <>
+            {/* Display based on type - might be redundant if only verse errors exist here */}
+            <p><strong>Interpretation ({item.sourceDenomination || 'Unknown'}):</strong></p>
+            <div
+              className={styles.interpretationText}
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(item.interpretation || '', sanitizeConfig)
+              }}
+            />
+          </>
+        )}
+        {index < interpretation.length - 1 && <hr className={styles.entrySeparator} />}
+      </div>
+    ));
+  } 
+  // Handle Single Object (Book/Chapter Summary or Error)
+  else if (interpretation && typeof interpretation === 'object' && !Array.isArray(interpretation)) {
     interpretationContent = (
-      <>
+      <div className={styles.interpretationEntry}> {/* Use same class for consistency? */}
         <p><strong>Reference:</strong> {interpretation.reference}</p>
-        <p><strong>Text:</strong> {interpretation.text}</p>
-        <p><strong>Interpretation:</strong></p>
-        <div
-          className={styles.interpretationText}
-          dangerouslySetInnerHTML={{
-            __html: DOMPurify.sanitize(interpretation.interpretation, sanitizeConfig)
-          }}
-        />
-        <button onClick={handleSaveInterpretation} className={styles.saveButton}>
-          Save Interpretation
-        </button>
-      </>
+        {interpretation.error ? (
+           <p className={styles.interpretationError}>{interpretation.error}</p>
+        ) : (
+          <>
+            <p><strong>{interpretation.type === 'book' ? 'Book' : 'Chapter'} Summary ({interpretation.sourceDenomination || 'Unknown'}):</strong></p>
+            <div
+              className={styles.interpretationText}
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(interpretation.interpretation || '', sanitizeConfig)
+              }}
+            />
+          </>
+        )}
+      </div>
     );
   }
+  // Handle case where loading finished but interpretation is null/empty
+  else if (!isInterpretationLoading && !interpretation) {
+     interpretationContent = <p>No interpretation loaded.</p>; 
+  }
 
+  // --- Interpretation Panel Structure ---
+  const interpretationPanel = (
+    <div className={`${styles.interpretationPanel} ${showInterpretation ? styles.panelVisible : ''}`}>
+      <div className={styles.panelHeader}>
+        <h3>Interpretation</h3>
+        <button onClick={handleCloseInterpretation} className={styles.closeButton} aria-label="Close interpretation panel">
+          &times;
+        </button>
+      </div>
+      <div className={styles.panelContent}>
+          {interpretationContent}
+      </div>
+    </div>
+  );
+
+  // --- Final Return ---
   return (
     <div className={styles.container} onKeyDown={handleKeyDown} tabIndex={-1}>
+      {/* --- New Header Section --- */}
+      <div className={styles.passageHeader}>
+        <span 
+          className={styles.bookTitle}
+          onClick={handleBookClick}
+          role="button"
+          tabIndex={0}
+          aria-label={`Interpret book ${passage.book}`}
+          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleBookClick(); }}
+        >
+          {passage.book}
+        </span>
+        <span 
+          className={styles.chapterNumber}
+          onClick={handleChapterClick}
+          role="button"
+          tabIndex={0}
+          aria-label={`Interpret chapter ${passage.chapter}`}
+          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleChapterClick(); }}
+        >
+          {passage.chapter}
+        </span>
+      </div>
+
       <div className={styles.versesContainer} ref={versesContainerRef}>
         {versesData.map((verse) => {
           const isHighlighted = highlightedVerses.includes(verse.verse);
           const isSelectionStart = verse.verse === selectionStartVerse;
           return (
+            // Use span for inline flow, but make it behave like a button
             <span
               key={verse.verse}
               className={`${styles.verse} ${isHighlighted ? styles.highlighted : ''} ${isSelectionStart ? styles.selectionStart : ''}`}
               onClick={() => handleVerseClick(verse.verse)}
               onKeyDown={(e) => handleVerseKeyDown(e, verse.verse)}
               role="button"
-              tabIndex={0}
+              tabIndex={0} // Make it focusable
               aria-pressed={isHighlighted}
               aria-label={`Verse ${verse.verse}`}
             >
               <sup className={styles.verseNumber}>{verse.verse}</sup>
+              {/* Sanitize verse text allowing basic formatting */}
               <span dangerouslySetInnerHTML={{
                  __html: DOMPurify.sanitize(verse.text, sanitizeConfig)
               }} />
-              {' '}
+              {' '}{/* Add space between verses */}
             </span>
           );
         })}
+        {versesData.length === 0 && !isLoading && (
+            <div className={styles.noContent}>No text available for this chapter.</div>
+        )}
       </div>
 
-      {showInterpretation && (
-        <div className={styles.interpretationPanel}>
-          <div className={styles.interpretationHeader}>
-            <h3>AI Interpretation</h3>
-            <button onClick={handleCloseInterpretation} className={styles.closeButton} aria-label="Close Interpretation">
-              &times;
-            </button>
-          </div>
-          <div className={styles.interpretationBody}>
-            {interpretationContent}
-          </div>
-        </div>
-      )}
+      {interpretationPanel}
     </div>
   );
 }
 
+// --- Prop Types ---
 BibleTextDisplay.propTypes = {
   passage: PropTypes.shape({
     book: PropTypes.string.isRequired,
