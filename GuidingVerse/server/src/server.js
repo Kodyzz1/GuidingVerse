@@ -5,6 +5,7 @@ import bibleRoutes from './routes/bibleRoutes.js';
 import searchRoutes from './routes/searchRoutes.js';
 // Use standard static import for the router
 import interpretationRoutes from './routes/interpretationRoutes.js';
+import authRoutes from './routes/authRoutes.js'; // Import auth routes
 import connectDB from './config/db.js'; // Import the DB connection function
 import 'dotenv/config'; // Ensure .env is loaded early (if not already by db.js)
 
@@ -23,6 +24,7 @@ app.use(express.json());
 
 // --- API Routes ---
 // Mount routes synchronously
+app.use('/api/auth', authRoutes); // Mount auth routes
 app.use('/api/bible', bibleRoutes);
 app.use('/api/search', searchRoutes);
 app.use('/api/interpret', interpretationRoutes); // Use the imported router directly
