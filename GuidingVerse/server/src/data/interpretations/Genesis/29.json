@@ -3,7 +3,7 @@
   "book": "Genesis",
   "chapter": "29",
   "verses": {
-    "1": {
+  "1": {
       "General": "Then Jacob continued on his journey and came to the land of the eastern peoples.",
       "Non-Denominational": "Then Jacob continued on his journey and came to the land of the eastern peoples.",
       "Baptist": "Jacob resumes his journey eastward, eventually arriving in the region inhabited by his relatives (the 'eastern peoples').",
@@ -16,8 +16,8 @@
       "Orthodox": "Jacob resumes his travels and reaches the territory of the eastern peoples (Mesopotamia).",
       "Other": "Then Jacob continued on his journey and came to the land of the eastern peoples.",
       "Prefer not to say": "Then Jacob continued on his journey and came to the land of the eastern peoples."
-    },
-    "2": {
+  },
+  "2": {
       "General": "There he saw a well in the open country, with three flocks of sheep lying near it because the flocks were watered from that well. The stone over the mouth of the well was large.",
       "Non-Denominational": "There he saw a well in the open country, with three flocks of sheep lying near it because the flocks were watered from that well. The stone over the mouth of the well was large.",
       "Baptist": "He comes upon a well in a field with three flocks waiting nearby. The well is covered by a large stone, indicating a communal and perhaps regulated water source.",
@@ -30,8 +30,8 @@
       "Orthodox": "He encounters a well in the open country, secured by a large stone, with three flocks resting nearby awaiting water.",
       "Other": "There he saw a well in the open country, with three flocks of sheep lying near it because the flocks were watered from that well. The stone over the mouth of the well was large.",
       "Prefer not to say": "There he saw a well in the open country, with three flocks of sheep lying near it because the flocks were watered from that well. The stone over the mouth of the well was large."
-    },
-    "3": {
+  },
+  "3": {
       "General": "When all the flocks were gathered there, the shepherds would roll the stone away from the well's mouth and water the sheep. Then they would return the stone to its place over the mouth of the well.",
       "Non-Denominational": "When all the flocks were gathered there, the shepherds would roll the stone away from the well's mouth and water the sheep. Then they would return the stone to its place over the mouth of the well.",
       "Baptist": "Describes the custom: only when all shepherds and flocks assigned to that well arrived would they cooperate to roll away the heavy stone, water their sheep, and then replace the stone.",
@@ -44,8 +44,8 @@
       "Orthodox": "Details the local practice: the heavy stone was removed only when all designated flocks were present, after which the sheep were watered, and the stone promptly replaced.",
       "Other": "When all the flocks were gathered there, the shepherds would roll the stone away from the well's mouth and water the sheep. Then they would return the stone to its place over the mouth of the well.",
       "Prefer not to say": "When all the flocks were gathered there, the shepherds would roll the stone away from the well's mouth and water the sheep. Then they would return the stone to its place over the mouth of the well."
-    },
-    "4": {
+  },
+  "4": {
       "General": "Jacob asked the shepherds, \"My brothers, where are you from?\" \"We're from Harran,\" they replied.",
       "Non-Denominational": "Jacob asked the shepherds, \"My brothers, where are you from?\" \"We're from Harran,\" they replied.",
       "Baptist": "Jacob initiates conversation, addressing them courteously ('My brothers'). He learns they are from Harran, his intended destination.",
@@ -58,8 +58,8 @@
       "Orthodox": "Jacob inquires of the shepherds' place of origin, and they confirm they hail from Harran.",
       "Other": "Jacob asked the shepherds, \"My brothers, where are you from?\" \"We're from Harran,\" they replied.",
       "Prefer not to say": "Jacob asked the shepherds, \"My brothers, where are you from?\" \"We're from Harran,\" they replied."
-    },
-    "5": {
+  },
+  "5": {
       "General": "He said to them, \"Do you know Laban, Nahor's grandson?\" \"Yes, we know him,\" they answered.",
       "Non-Denominational": "He said to them, \"Do you know Laban, Nahor's grandson?\" \"Yes, we know him,\" they answered.",
       "Baptist": "Jacob specifically asks if they know Laban, identifying him via his grandfather Nahor (Abraham's brother). They confirm they know him.",
@@ -72,8 +72,8 @@
       "Orthodox": "Jacob specifically asks about Laban, identifying him through his grandfather Nahor. The shepherds affirm their acquaintance with Laban.",
       "Other": "He said to them, \"Do you know Laban, Nahor's grandson?\" \"Yes, we know him,\" they answered.",
       "Prefer not to say": "He said to them, \"Do you know Laban, Nahor's grandson?\" \"Yes, we know him,\" they answered."
-    },
-    "6": {
+  },
+  "6": {
       "General": "Then Jacob asked them, \"Is he well?\" \"Yes, he is,\" they said, \"and here comes his daughter Rachel with the sheep.\"",
       "Non-Denominational": "Then Jacob asked them, \"Is he well?\" \"Yes, he is,\" they said, \"and here comes his daughter Rachel with the sheep.\"",
       "Baptist": "Jacob inquires about Laban's well-being. The shepherds confirm Laban is well and, significantly, point out Laban's daughter Rachel approaching with her father's sheep.",
@@ -86,8 +86,8 @@
       "Orthodox": "Jacob inquires about Laban's health. The shepherds affirm his well-being and simultaneously announce the arrival of his daughter Rachel with the flock.",
       "Other": "Then Jacob asked them, \"Is he well?\" \"Yes, he is,\" they said, \"and here comes his daughter Rachel with the sheep.\"",
       "Prefer not to say": "Then Jacob asked them, \"Is he well?\" \"Yes, he is,\" they said, \"and here comes his daughter Rachel with the sheep.\""
-    },
-    "7": {
+  },
+  "7": {
       "General": "\"Look,\" he said, \"the sun is still high; it's not time for the flocks to be gathered. Water the sheep and take them back to pasture.\"",
       "Non-Denominational": "\"Look,\" he said, \"the sun is still high; it's not time for the flocks to be gathered. Water the sheep and take them back to pasture.\"",
       "Baptist": "Jacob, perhaps trying to facilitate meeting Rachel or simply noting inefficiency, points out it's still daytime and suggests they water the sheep now and let them continue grazing rather than waiting.",
@@ -100,8 +100,8 @@
       "Orthodox": "Jacob observes that it is still early in the day and suggests the shepherds water their flocks immediately rather than adhering to the custom of waiting for all to gather.",
       "Other": "\"Look,\" he said, \"the sun is still high; it's not time for the flocks to be gathered. Water the sheep and take them back to pasture.\"",
       "Prefer not to say": "\"Look,\" he said, \"the sun is still high; it's not time for the flocks to be gathered. Water the sheep and take them back to pasture.\""
-    },
-    "8": {
+  },
+  "8": {
       "General": "\"We can't,\" they replied, \"until all the flocks are gathered and the stone has been rolled away from the mouth of the well. Then we will water the sheep.\"",
       "Non-Denominational": "\"We can't,\" they replied, \"until all the flocks are gathered and the stone has been rolled away from the mouth of the well. Then we will water the sheep.\"",
       "Baptist": "The shepherds reiterate the established custom: they cannot water individually but must wait for all flocks and collective effort to move the stone.",
@@ -114,8 +114,8 @@
       "Orthodox": "The shepherds reiterate their obligation to follow the established procedure, requiring the presence of all flocks before moving the stone.",
       "Other": "\"We can't,\" they replied, \"until all the flocks are gathered and the stone has been rolled away from the mouth of the well. Then we will water the sheep.\"",
       "Prefer not to say": "\"We can't,\" they replied, \"until all the flocks are gathered and the stone has been rolled away from the mouth of the well. Then we will water the sheep.\""
-    },
-    "9": {
+  },
+  "9": {
       "General": "While he was still speaking with them, Rachel came with her father's sheep, for she was a shepherd.",
       "Non-Denominational": "While he was still speaking with them, Rachel came with her father's sheep, for she was a shepherd.",
       "Baptist": "As Jacob is talking with the shepherds, Rachel arrives with Laban's flock. The text notes she herself worked as a shepherd.",
@@ -128,8 +128,8 @@
       "Orthodox": "During Jacob's conversation, Rachel arrives tending her father's flock, explicitly identified as a shepherdess.",
       "Other": "While he was still speaking with them, Rachel came with her father's sheep, for she was a shepherd.",
       "Prefer not to say": "While he was still speaking with them, Rachel came with her father's sheep, for she was a shepherd."
-    },
-    "10": {
+  },
+  "10": {
       "General": "When Jacob saw Rachel daughter of his uncle Laban, and Laban's sheep, he went over and rolled the stone away from the mouth of the well and watered his uncle's sheep.",
       "Non-Denominational": "When Jacob saw Rachel daughter of his uncle Laban, and Laban's sheep, he went over and rolled the stone away from the mouth of the well and watered his uncle's sheep.",
       "Baptist": "Upon seeing his cousin Rachel and his uncle Laban's sheep, Jacob, perhaps motivated by attraction, helpfulness, or a show of strength, single-handedly rolls away the large stone (contrary to custom) and waters Laban's flock.",
@@ -142,8 +142,8 @@
       "Orthodox": "Upon recognizing Rachel and his uncle's flock, Jacob unilaterally removes the large stone from the well (demonstrating strength and disregarding custom) and waters Laban's sheep.",
       "Other": "When Jacob saw Rachel daughter of his uncle Laban, and Laban's sheep, he went over and rolled the stone away from the mouth of the well and watered his uncle's sheep.",
       "Prefer not to say": "When Jacob saw Rachel daughter of his uncle Laban, and Laban's sheep, he went over and rolled the stone away from the mouth of the well and watered his uncle's sheep."
-    },
-    "11": {
+  },
+  "11": {
       "General": "Then Jacob kissed Rachel and began to weep aloud.",
       "Non-Denominational": "Then Jacob kissed Rachel and began to weep aloud.",
       "Baptist": "Overcome with emotion (relief at finding kin, perhaps joy, gratitude to God), Jacob kisses his cousin Rachel and weeps loudly.",
@@ -156,8 +156,8 @@
       "Orthodox": "Jacob kisses Rachel (a familial greeting) and begins to weep loudly, overcome by the emotions of arriving and meeting kin.",
       "Other": "Then Jacob kissed Rachel and began to weep aloud.",
       "Prefer not to say": "Then Jacob kissed Rachel and began to weep aloud."
-    },
-    "12": {
+  },
+  "12": {
       "General": "He had told Rachel that he was a relative of her father and a son of Rebekah. So she ran and told her father.",
       "Non-Denominational": "He had told Rachel that he was a relative of her father and a son of Rebekah. So she ran and told her father.",
       "Baptist": "Jacob identifies himself to Rachel as her father's relative and Rebekah's son. Rachel runs to inform her father Laban of Jacob's arrival.",
@@ -170,8 +170,8 @@
       "Orthodox": "Jacob reveals his identity to Rachel as a kinsman of her father and the son of Rebekah. Rachel promptly runs to inform Laban.",
       "Other": "He had told Rachel that he was a relative of her father and a son of Rebekah. So she ran and told her father.",
       "Prefer not to say": "He had told Rachel that he was a relative of her father and a son of Rebekah. So she ran and told her father."
-    },
-    "13": {
+  },
+  "13": {
       "General": "As soon as Laban heard the news about Jacob, his sister's son, he hurried to meet him. He embraced him and kissed him and brought him to his home. Then Jacob told Laban all that had happened to him.",
       "Non-Denominational": "As soon as Laban heard the news about Jacob, his sister's son, he hurried to meet him. He embraced him and kissed him and brought him to his home. Then Jacob told Laban all that had happened to him.",
       "Baptist": "Laban, upon hearing the news of his nephew Jacob's arrival, hurries to meet him, embraces and kisses him in welcome, and brings him into his home. Jacob then recounts his story ('all that had happened') to Laban.",
@@ -184,8 +184,8 @@
       "Orthodox": "Upon receiving the news of his nephew Jacob, Laban hastily goes to meet him, greets him affectionately with an embrace and kiss, and welcomes him into his home, whereupon Jacob relates his recent experiences.",
       "Other": "As soon as Laban heard the news about Jacob, his sister's son, he hurried to meet him. He embraced him and kissed him and brought him to his home. Then Jacob told Laban all that had happened to him.",
       "Prefer not to say": "As soon as Laban heard the news about Jacob, his sister's son, he hurried to meet him. He embraced him and kissed him and brought him to his home. Then Jacob told Laban all that had happened to him."
-    },
-    "14": {
+  },
+  "14": {
       "General": "Then Laban said to him, \"You are my own flesh and blood.\" After Jacob had stayed with him for a whole month,",
       "Non-Denominational": "Then Laban said to him, \"You are my own flesh and blood.\" After Jacob had stayed with him for a whole month,",
       "Baptist": "Laban acknowledges their close kinship ('my own flesh and blood' or 'my bone and my flesh'). Jacob stays with Laban for a month.",
@@ -198,8 +198,8 @@
       "Orthodox": "Laban affirms their close consanguinity ('my bone and my flesh'). Jacob resides with Laban for a period of one month.",
       "Other": "Then Laban said to him, \"You are my own flesh and blood.\" After Jacob had stayed with him for a whole month,",
       "Prefer not to say": "Then Laban said to him, \"You are my own flesh and blood.\" After Jacob had stayed with him for a whole month,"
-    },
-    "15": {
+  },
+  "15": {
       "General": "Laban said to him, \"Just because you are a relative of mine, should you work for me for nothing? Tell me what your wages should be.\"",
       "Non-Denominational": "Laban said to him, \"Just because you are a relative of mine, should you work for me for nothing? Tell me what your wages should be.\"",
       "Baptist": "After a month, Laban initiates a discussion about wages, acknowledging Jacob shouldn't work for free just because he's family and asking Jacob to name his price.",
@@ -212,8 +212,8 @@
       "Orthodox": "Laban broaches the subject of compensation, asserting that kinship should not preclude wages, and invites Jacob to state his desired remuneration.",
       "Other": "Laban said to him, \"Just because you are a relative of mine, should you work for me for nothing? Tell me what your wages should be.\"",
       "Prefer not to say": "Laban said to him, \"Just because you are a relative of mine, should you work for me for nothing? Tell me what your wages should be.\""
-    },
-    "16": {
+  },
+  "16": {
       "General": "Now Laban had two daughters; the name of the older was Leah, and the name of the younger was Rachel.",
       "Non-Denominational": "Now Laban had two daughters; the name of the older was Leah, and the name of the younger was Rachel.",
       "Baptist": "Introduces Laban's two daughters: Leah (older) and Rachel (younger).",
@@ -226,8 +226,8 @@
       "Orthodox": "Introduces Laban's two daughters: the elder, Leah, and the younger, Rachel.",
       "Other": "Now Laban had two daughters; the name of the older was Leah, and the name of the younger was Rachel.",
       "Prefer not to say": "Now Laban had two daughters; the name of the older was Leah, and the name of the younger was Rachel."
-    },
-    "17": {
+  },
+  "17": {
       "General": "Leah had weak eyes, but Rachel had a lovely figure and was beautiful.",
       "Non-Denominational": "Leah had weak eyes, but Rachel had a lovely figure and was beautiful.",
       "Baptist": "Contrasts the sisters' appearance: Leah had 'weak' or 'tender' eyes (perhaps lacking sparkle, or simply less attractive), while Rachel was physically beautiful in form and appearance.",
@@ -240,8 +240,8 @@
       "Orthodox": "Contrasts the physical attributes of the sisters: Leah possessed 'weak' or 'tender' eyes, whereas Rachel was exceptionally beautiful in both figure and countenance.",
       "Other": "Leah had weak eyes, but Rachel had a lovely figure and was beautiful.",
       "Prefer not to say": "Leah had weak eyes, but Rachel had a lovely figure and was beautiful."
-    },
-    "18": {
+  },
+  "18": {
       "General": "Jacob was in love with Rachel and said, \"I'll work for you seven years in return for your younger daughter Rachel.\"",
       "Non-Denominational": "Jacob was in love with Rachel and said, \"I'll work for you seven years in return for your younger daughter Rachel.\"",
       "Baptist": "Jacob, smitten with the beautiful Rachel, proposes his wages: seven years of labor in exchange for marrying Rachel.",
@@ -254,8 +254,8 @@
       "Orthodox": "Jacob, having fallen in love with Rachel, proposes to serve Laban for seven years as the bride price for Rachel.",
       "Other": "Jacob was in love with Rachel and said, \"I'll work for you seven years in return for your younger daughter Rachel.\"",
       "Prefer not to say": "Jacob was in love with Rachel and said, \"I'll work for you seven years in return for your younger daughter Rachel.\""
-    },
-    "19": {
+  },
+  "19": {
       "General": "Laban answered, \"It's better that I give her to you than to some other man. Stay here with me.\"",
       "Non-Denominational": "Laban answered, \"It's better that I give her to you than to some other man. Stay here with me.\"",
       "Baptist": "Laban agrees readily, stating it's better to give Rachel to a relative (Jacob) than an outsider, and invites Jacob to stay and fulfill the agreement.",
@@ -268,8 +268,8 @@
       "Orthodox": "Laban consents to the proposal, deeming it preferable to give Rachel to a kinsman rather than an outsider, and bids Jacob remain with him.",
       "Other": "Laban answered, \"It's better that I give her to you than to some other man. Stay here with me.\"",
       "Prefer not to say": "Laban answered, \"It's better that I give her to you than to some other man. Stay here with me.\""
-    },
-    "20": {
+  },
+  "20": {
       "General": "So Jacob served seven years to get Rachel, but they seemed like only a few days to him because of his love for her.",
       "Non-Denominational": "So Jacob served seven years to get Rachel, but they seemed like only a few days to him because of his love for her.",
       "Baptist": "Jacob fulfills the seven years of labor. The time passes quickly for him due to the depth of his love for Rachel.",
@@ -282,8 +282,8 @@
       "Orthodox": "Jacob completes the agreed-upon seven years of service, a period that felt brief to him due to the intensity of his love for Rachel.",
       "Other": "So Jacob served seven years to get Rachel, but they seemed like only a few days to him because of his love for her.",
       "Prefer not to say": "So Jacob served seven years to get Rachel, but they seemed like only a few days to him because of his love for her."
-    },
-    "21": {
+  },
+  "21": {
       "General": "Then Jacob said to Laban, \"Give me my wife. My time is completed, and I want to make love to her.\"",
       "Non-Denominational": "Then Jacob said to Laban, \"Give me my wife. My time is completed, and I want to make love to her.\"",
       "Baptist": "After completing the seven years, Jacob formally requests Laban to give him Rachel as his wife so he can consummate the marriage.",
@@ -296,8 +296,8 @@
       "Orthodox": "Upon completing the service period, Jacob requests Laban deliver his wife, Rachel, so that the marriage can be consummated.",
       "Other": "Then Jacob said to Laban, \"Give me my wife. My time is completed, and I want to make love to her.\"",
       "Prefer not to say": "Then Jacob said to Laban, \"Give me my wife. My time is completed, and I want to make love to her.\""
-    },
-    "22": {
+  },
+  "22": {
       "General": "So Laban brought together all the people of the place and gave a feast.",
       "Non-Denominational": "So Laban brought together all the people of the place and gave a feast.",
       "Baptist": "Laban prepares a wedding feast, inviting the local community.",
@@ -310,8 +310,8 @@
       "Orthodox": "Laban organizes a wedding feast, inviting the local inhabitants.",
       "Other": "So Laban brought together all the people of the place and gave a feast.",
       "Prefer not to say": "So Laban brought together all the people of the place and gave a feast."
-    },
-    "23": {
+  },
+  "23": {
       "General": "But when evening came, he took his daughter Leah and brought her to Jacob, and Jacob made love to her.",
       "Non-Denominational": "But when evening came, he took his daughter Leah and brought her to Jacob, and Jacob made love to her.",
       "Baptist": "Under the cover of darkness (and likely custom involving veiling the bride), Laban deceptively substitutes Leah for Rachel. Jacob, unaware, consummates the marriage with Leah.",
@@ -324,8 +324,8 @@
       "Orthodox": "Under the concealment of night, Laban practices deceit by presenting Leah to Jacob instead of Rachel. Jacob, unaware of the substitution, consummates the marriage with Leah.",
       "Other": "But when evening came, he took his daughter Leah and brought her to Jacob, and Jacob made love to her.",
       "Prefer not to say": "But when evening came, he took his daughter Leah and brought her to Jacob, and Jacob made love to her."
-    },
-    "24": {
+  },
+  "24": {
       "General": "And Laban gave his servant Zilpah to his daughter Leah as her attendant.",
       "Non-Denominational": "And Laban gave his servant Zilpah to his daughter Leah as her attendant.",
       "Baptist": "Laban provides his servant Zilpah as a handmaid to Leah, part of the marriage arrangement.",
@@ -338,8 +338,8 @@
       "Orthodox": "Laban assigns his maidservant Zilpah to his daughter Leah.",
       "Other": "And Laban gave his servant Zilpah to his daughter Leah as her attendant.",
       "Prefer not to say": "And Laban gave his servant Zilpah to his daughter Leah as her attendant."
-    },
-    "25": {
+  },
+  "25": {
       "General": "When morning came, there was Leah! So Jacob said to Laban, \"What is this you have done to me? I served you for Rachel, didn't I? Why have you deceived me?\"",
       "Non-Denominational": "When morning came, there was Leah! So Jacob said to Laban, \"What is this you have done to me? I served you for Rachel, didn't I? Why have you deceived me?\"",
       "Baptist": "In the morning light, Jacob discovers the deception. He confronts Laban angrily, reminding him the agreement was for Rachel and accusing Laban of deceit.",
@@ -352,8 +352,8 @@
       "Orthodox": "With the morning light, Jacob discovers the substitution and confronts Laban, questioning the deceit given that his service was explicitly for Rachel.",
       "Other": "When morning came, there was Leah! So Jacob said to Laban, \"What is this you have done to me? I served you for Rachel, didn't I? Why have you deceived me?\"",
       "Prefer not to say": "When morning came, there was Leah! So Jacob said to Laban, \"What is this you have done to me? I served you for Rachel, didn't I? Why have you deceived me?\""
-    },
-    "26": {
+  },
+  "26": {
       "General": "Laban replied, \"It is not our custom here to give the younger daughter in marriage before the older one.",
       "Non-Denominational": "Laban replied, \"It is not our custom here to give the younger daughter in marriage before the older one.",
       "Baptist": "Laban offers a justification based on local custom: the older daughter must marry before the younger. (He conveniently failed to mention this earlier.)",
@@ -366,8 +366,8 @@
       "Orthodox": "Laban justifies his deceit by invoking local custom, stating it is not permissible to give the younger daughter in marriage before the elder.",
       "Other": "Laban replied, \"It is not our custom here to give the younger daughter in marriage before the older one.",
       "Prefer not to say": "Laban replied, \"It is not our custom here to give the younger daughter in marriage before the older one."
-    },
-    "27": {
+  },
+  "27": {
       "General": "Finish this daughter's bridal week; then we will give you the younger one also, in return for another seven years of work.\"",
       "Non-Denominational": "Finish this daughter's bridal week; then we will give you the younger one also, in return for another seven years of work.\"",
       "Baptist": "Laban proposes a solution: complete the traditional seven-day wedding celebration for Leah, after which Laban will give Rachel to Jacob as well, but only in exchange for another seven years of labor.",
@@ -380,8 +380,8 @@
       "Orthodox": "Laban proposes that Jacob fulfill the week-long bridal festivities for Leah, after which Rachel will also be given to him, conditional upon Jacob committing to another seven years of service.",
       "Other": "Finish this daughter's bridal week; then we will give you the younger one also, in return for another seven years of work.\"",
       "Prefer not to say": "Finish this daughter's bridal week; then we will give you the younger one also, in return for another seven years of work.\""
-    },
-    "28": {
+  },
+  "28": {
       "General": "And Jacob did so. He finished the week with Leah, and then Laban gave him his daughter Rachel to be his wife.",
       "Non-Denominational": "And Jacob did so. He finished the week with Leah, and then Laban gave him his daughter Rachel to be his wife.",
       "Baptist": "Jacob agrees to Laban's terms, finishes Leah's bridal week, and then marries Rachel.",
@@ -394,8 +394,8 @@
       "Orthodox": "Jacob accepts the arrangement, completes Leah's bridal week, and subsequently Laban gives him Rachel in marriage.",
       "Other": "And Jacob did so. He finished the week with Leah, and then Laban gave him his daughter Rachel to be his wife.",
       "Prefer not to say": "And Jacob did so. He finished the week with Leah, and then Laban gave him his daughter Rachel to be his wife."
-    },
-    "29": {
+  },
+  "29": {
       "General": "Laban gave his servant Bilhah to his daughter Rachel as her attendant.",
       "Non-Denominational": "Laban gave his servant Bilhah to his daughter Rachel as her attendant.",
       "Baptist": "Laban provides his servant Bilhah as a handmaid to Rachel.",
@@ -408,8 +408,8 @@
       "Orthodox": "Laban assigns his maidservant Bilhah to his daughter Rachel.",
       "Other": "Laban gave his servant Bilhah to his daughter Rachel as her attendant.",
       "Prefer not to say": "Laban gave his servant Bilhah to his daughter Rachel as her attendant."
-    },
-    "30": {
+  },
+  "30": {
       "General": "Jacob made love to Rachel also, and his love for Rachel was greater than his love for Leah. And he worked for Laban another seven years.",
       "Non-Denominational": "Jacob made love to Rachel also, and his love for Rachel was greater than his love for Leah. And he worked for Laban another seven years.",
       "Baptist": "Jacob consummates his marriage with Rachel. The text explicitly states his greater love for Rachel compared to Leah. He then begins working the additional seven years for Laban.",
@@ -422,8 +422,8 @@
       "Orthodox": "Jacob consummates the marriage with Rachel, his affection for her explicitly noted as greater than for Leah. He commences the second seven-year period of service to Laban.",
       "Other": "Jacob made love to Rachel also, and his love for Rachel was greater than his love for Leah. And he worked for Laban another seven years.",
       "Prefer not to say": "Jacob made love to Rachel also, and his love for Rachel was greater than his love for Leah. And he worked for Laban another seven years."
-    },
-    "31": {
+  },
+  "31": {
       "General": "When the Lord saw that Leah was not loved, he enabled her to conceive, but Rachel remained childless.",
       "Non-Denominational": "When the Lord saw that Leah was not loved, he enabled her to conceive, but Rachel remained childless.",
       "Baptist": "God observes Leah's situation (being unloved or less loved) and intervenes providentially by opening her womb (allowing her to conceive), while Rachel, the beloved wife, remains barren.",
@@ -436,8 +436,8 @@
       "Orthodox": "Observing that Leah was unloved, the Lord enabled her to conceive, whereas Rachel, despite being favored, remained childless.",
       "Other": "When the Lord saw that Leah was not loved, he enabled her to conceive, but Rachel remained childless.",
       "Prefer not to say": "When the Lord saw that Leah was not loved, he enabled her to conceive, but Rachel remained childless."
-    },
-    "32": {
+  },
+  "32": {
       "General": "Leah became pregnant and gave birth to a son. She named him Reuben, for she said, \"It is because the Lord has seen my misery. Surely my husband will love me now.\"",
       "Non-Denominational": "Leah became pregnant and gave birth to a son. She named him Reuben, for she said, \"It is because the Lord has seen my misery. Surely my husband will love me now.\"",
       "Baptist": "Leah conceives and bears Jacob's first son. She names him Reuben (meaning related to 'see' or 'behold a son'), expressing hope that God has seen her affliction and that this son will cause Jacob to love her.",
@@ -450,8 +450,8 @@
       "Orthodox": "Leah conceives and bears a son, whom she names Reuben (punning on 'see' and 'son'), articulating that God observed her distress and expressing hope that the birth will garner Jacob's affection.",
       "Other": "Leah became pregnant and gave birth to a son. She named him Reuben, for she said, \"It is because the Lord has seen my misery. Surely my husband will love me now.\"",
       "Prefer not to say": "Leah became pregnant and gave birth to a son. She named him Reuben, for she said, \"It is because the Lord has seen my misery. Surely my husband will love me now.\""
-    },
-    "33": {
+  },
+  "33": {
       "General": "She conceived again, and when she gave birth to a son she said, \"Because the Lord heard that I am not loved, he gave me this one too.\" So she named him Simeon.",
       "Non-Denominational": "She conceived again, and when she gave birth to a son she said, \"Because the Lord heard that I am not loved, he gave me this one too.\" So she named him Simeon.",
       "Baptist": "Leah bears a second son. She names him Simeon (related to the Hebrew word 'to hear'), acknowledging God heard she was unloved and gave her another son.",
@@ -464,8 +464,8 @@
       "Orthodox": "Leah bears a second son, naming him Simeon (related to 'hearing'), acknowledging that God heard of her unloved status.",
       "Other": "She conceived again, and when she gave birth to a son she said, \"Because the Lord heard that I am not loved, he gave me this one too.\" So she named him Simeon.",
       "Prefer not to say": "She conceived again, and when she gave birth to a son she said, \"Because the Lord heard that I am not loved, he gave me this one too.\" So she named him Simeon."
-    },
-    "34": {
+  },
+  "34": {
       "General": "Again she conceived, and when she gave birth to a son she said, \"Now at last my husband will become attached to me, because I have borne him three sons.\" So he was named Levi.",
       "Non-Denominational": "Again she conceived, and when she gave birth to a son she said, \"Now at last my husband will become attached to me, because I have borne him three sons.\" So he was named Levi.",
       "Baptist": "Leah bears a third son. She names him Levi (related to Hebrew 'attach' or 'join'), expressing renewed hope that having three sons will finally cause Jacob to become attached to her.",
@@ -478,8 +478,8 @@
       "Orthodox": "Upon bearing a third son, Leah names him Levi (related to 'attach'), expressing the hope that this will finally cause Jacob to become attached to her.",
       "Other": "Again she conceived, and when she gave birth to a son she said, \"Now at last my husband will become attached to me, because I have borne him three sons.\" So he was named Levi.",
       "Prefer not to say": "Again she conceived, and when she gave birth to a son she said, \"Now at last my husband will become attached to me, because I have borne him three sons.\" So he was named Levi."
-    },
-    "35": {
+  },
+  "35": {
       "General": "She conceived again, and when she gave birth to a son she said, \"This time I will praise the Lord.\" So she named him Judah. Then she stopped having children.",
       "Non-Denominational": "She conceived again, and when she gave birth to a son she said, \"This time I will praise the Lord.\" So she named him Judah. Then she stopped having children.",
       "Baptist": "Leah bears a fourth son. This time, her focus shifts from her desire for Jacob's love to praising God. She names him Judah (related to Hebrew 'praise') and then temporarily stops conceiving.",

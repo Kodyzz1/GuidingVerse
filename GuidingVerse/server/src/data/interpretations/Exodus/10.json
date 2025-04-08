@@ -1,0 +1,122 @@
+{
+  "chapterSummary": {
+    "General": "God continues His demonstration of power through two more devastating plagues: locusts that consume all remaining vegetation and a darkness so thick it can be felt. These plagues further demonstrate God's complete control over nature and His supremacy over Egyptian gods.",
+    "Non-Denominational": "Focuses on God's continued demonstration of power through devastating plagues, showing His supremacy over false gods.",
+    "Baptist": "Emphasizes God's sovereign power in judging Egypt's gods and demonstrating His authority over creation.",
+    "Catholic": "Highlights God's demonstration of power through devastating plagues, showing His supremacy over Egyptian deities and His care for His people.",
+    "Methodist": "Focuses on God's judgment of Egyptian oppression and His demonstration of power through nature.",
+    "Lutheran": "Emphasizes God's supremacy over Egyptian gods and His demonstration of power through creation.",
+    "Presbyterian": "Stresses God's covenantal faithfulness in judging Egypt and demonstrating His authority.",
+    "Pentecostal": "Highlights God's supernatural power in judging Egypt's gods and demonstrating His authority.",
+    "Anglican": "Emphasizes God's demonstration of power through devastating plagues, showing His supremacy over Egyptian deities.",
+    "Orthodox": "Focuses on God's supremacy over Egyptian gods through successive plagues and His care for His people."
+  },
+  "1": {
+    "General": "The divine command to confront evil, demonstrating God's authority and power",
+    "Non-Denominational": "The Lord's instruction to face opposition, showing His power and guidance",
+    "Baptist": "The divine command to confront evil, demonstrating God's authority and His call to faithful service",
+    "Catholic": "The Lord's instruction to face opposition, showing His power and the call to faithful witness",
+    "Methodist": "The divine command to confront evil, demonstrating God's authority and His call to justice",
+    "Lutheran": "The Lord's instruction to face opposition, showing His power and His call to faithful service",
+    "Presbyterian": "The divine command to confront evil, demonstrating God's authority and His covenantal faithfulness",
+    "Pentecostal": "The Lord's instruction to face opposition, showing His power and His empowerment of His servants",
+    "Anglican": "The divine command to confront evil, demonstrating God's authority and His call to faithful witness",
+    "Orthodox": "The Lord's instruction to face opposition, showing His power and His care for His people"
+  },
+  "2": {
+    "General": "The divine revelation of plan, demonstrating God's wisdom and sovereignty",
+    "Non-Denominational": "The Lord's explanation of purpose, showing His wisdom and guidance",
+    "Baptist": "The divine revelation of plan, demonstrating God's wisdom and His sovereign purpose",
+    "Catholic": "The Lord's explanation of purpose, showing His wisdom and His providential care",
+    "Methodist": "The divine revelation of plan, demonstrating God's wisdom and His call to justice",
+    "Lutheran": "The Lord's explanation of purpose, showing His wisdom and His sovereign purpose",
+    "Presbyterian": "The divine revelation of plan, demonstrating God's wisdom and His covenantal faithfulness",
+    "Pentecostal": "The Lord's explanation of purpose, showing His wisdom and His supernatural guidance",
+    "Anglican": "The divine revelation of plan, demonstrating God's wisdom and His providential care",
+    "Orthodox": "The Lord's explanation of purpose, showing His wisdom and His care for His people"
+  },
+  "3": {
+    "Catholic": "The human obedience to divine command, demonstrating faith",
+    "Protestant": "The fleshly carrying out of God's will, showing submission",
+    "Orthodox": "The human obedience to divine command, demonstrating faith",
+    "Jewish": "The fleshly carrying out of God's will, showing submission",
+    "Mormon": "The human obedience to divine command, demonstrating faith"
+  },
+  "4": {
+    "Catholic": "The divine warning before judgment, demonstrating mercy",
+    "Protestant": "The Lord's gracious warning, showing His patience",
+    "Orthodox": "The divine warning before judgment, demonstrating mercy",
+    "Jewish": "The Lord's gracious warning, showing His patience",
+    "Mormon": "The divine warning before judgment, demonstrating mercy"
+  },
+  "5": {
+    "Catholic": "The divine judgment on provision, demonstrating power",
+    "Protestant": "The Lord's control over food, showing His authority",
+    "Orthodox": "The divine judgment on provision, demonstrating power",
+    "Jewish": "The Lord's control over food, showing His authority",
+    "Mormon": "The divine judgment on provision, demonstrating power"
+  },
+  "6": {
+    "Catholic": "The divine invasion of personal space, demonstrating reach",
+    "Protestant": "The Lord's penetration of privacy, showing His presence",
+    "Orthodox": "The divine invasion of personal space, demonstrating reach",
+    "Jewish": "The Lord's penetration of privacy, showing His presence",
+    "Mormon": "The divine invasion of personal space, demonstrating reach"
+  },
+  "7": {
+    "Catholic": "The human recognition of danger, demonstrating wisdom",
+    "Protestant": "The fleshly acknowledgment of threat, showing understanding",
+    "Orthodox": "The human recognition of danger, demonstrating wisdom",
+    "Jewish": "The fleshly acknowledgment of threat, showing understanding",
+    "Mormon": "The human recognition of danger, demonstrating wisdom"
+  },
+  "8": {
+    "Catholic": "The human response to pressure, demonstrating weakness",
+    "Protestant": "The fleshly reaction to threat, showing vulnerability",
+    "Orthodox": "The human response to pressure, demonstrating weakness",
+    "Jewish": "The fleshly reaction to threat, showing vulnerability",
+    "Mormon": "The human response to pressure, demonstrating weakness"
+  },
+  "9": {
+    "Catholic": "The human insistence on God's terms, demonstrating faith",
+    "Protestant": "The fleshly demand for complete obedience, showing commitment",
+    "Orthodox": "The human insistence on God's terms, demonstrating faith",
+    "Jewish": "The fleshly demand for complete obedience, showing commitment",
+    "Mormon": "The human insistence on God's terms, demonstrating faith"
+  },
+  "10": {
+    "Catholic": "The human rejection of God's terms, demonstrating rebellion",
+    "Protestant": "The fleshly refusal to submit, showing pride",
+    "Orthodox": "The human rejection of God's terms, demonstrating rebellion",
+    "Jewish": "The fleshly refusal to submit, showing pride",
+    "Mormon": "The human rejection of God's terms, demonstrating rebellion"
+  },
+  "11": {
+    "Catholic": "The human rejection of God's messengers, demonstrating anger",
+    "Protestant": "The fleshly expulsion of truth, showing hostility",
+    "Orthodox": "The human rejection of God's messengers, demonstrating anger",
+    "Jewish": "The fleshly expulsion of truth, showing hostility",
+    "Mormon": "The human rejection of God's messengers, demonstrating anger"
+  },
+  "12": {
+    "Catholic": "The divine command to execute judgment, demonstrating authority",
+    "Protestant": "The Lord's instruction to bring plague, showing His power",
+    "Orthodox": "The divine command to execute judgment, demonstrating authority",
+    "Jewish": "The Lord's instruction to bring plague, showing His power",
+    "Mormon": "The divine command to execute judgment, demonstrating authority"
+  },
+  "13": {
+    "Catholic": "The divine execution of judgment, demonstrating power",
+    "Protestant": "The Lord's fulfillment of warning, showing His might",
+    "Orthodox": "The divine execution of judgment, demonstrating power",
+    "Jewish": "The Lord's fulfillment of warning, showing His might",
+    "Mormon": "The divine execution of judgment, demonstrating power"
+  },
+  "14": {
+    "Catholic": "The divine judgment on creation, demonstrating power",
+    "Protestant": "The Lord's control over nature, showing His authority",
+    "Orthodox": "The divine judgment on creation, demonstrating power",
+    "Jewish": "The Lord's control over nature, showing His authority",
+    "Mormon": "The divine judgment on creation, demonstrating power"
+  }
+} 

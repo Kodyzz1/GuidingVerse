@@ -3,7 +3,7 @@
   "book": "Genesis",
   "chapter": "36",
   "verses": {
-    "1": {
+  "1": {
       "General": "This is the account of the family line of Esau (that is, Edom).",
       "Non-Denominational": "This is the account of the family line of Esau (that is, Edom).",
       "Baptist": "This verse introduces the genealogy ('toledot') of Esau, explicitly identifying him with Edom, the nation that descended from him.",
@@ -16,8 +16,8 @@
       "Orthodox": "This verse introduces the genealogical record ('toledot') of Esau, explicitly equating him with Edom.",
       "Other": "This is the account of the family line of Esau (that is, Edom).",
       "Prefer not to say": "This is the account of the family line of Esau (that is, Edom)."
-    },
-    "2": {
+  },
+  "2": {
       "General": "Esau took his wives from the women of Canaan: Adah daughter of Elon the Hittite, and Oholibamah daughter of Anah and granddaughter of Zibeon the Hivite—",
       "Non-Denominational": "Esau took his wives from the women of Canaan: Adah daughter of Elon the Hittite, and Oholibamah daughter of Anah and granddaughter of Zibeon the Hivite—",
       "Baptist": "Lists Esau's Canaanite wives: Adah (daughter of Elon the Hittite) and Oholibamah (daughter of Anah, son of Zibeon the Hivite). Note: These names differ somewhat from the list in Genesis 26:34 & 28:9, possibly due to alternative names or textual variations.",
@@ -30,8 +30,8 @@
       "Orthodox": "Enumerates Esau's wives from among the Canaanite women: Adah, daughter of Elon the Hittite, and Oholibamah, daughter of Anah, descendant of Zibeon the Hivite (noting potential discrepancies with Gen 26:34, 28:9).",
       "Other": "Esau took his wives from the women of Canaan: Adah daughter of Elon the Hittite, and Oholibamah daughter of Anah and granddaughter of Zibeon the Hivite—",
       "Prefer not to say": "Esau took his wives from the women of Canaan: Adah daughter of Elon the Hittite, and Oholibamah daughter of Anah and granddaughter of Zibeon the Hivite—"
-    },
-    "3": {
+  },
+  "3": {
       "General": "also Basemath daughter of Ishmael and sister of Nebaioth.",
       "Non-Denominational": "also Basemath daughter of Ishmael and sister of Nebaioth.",
       "Baptist": "Adds Basemath, daughter of Ishmael and sister of Nebaioth, to the list of wives. This aligns with Genesis 28:9 where Esau married Mahalath (likely another name for Basemath), Ishmael's daughter.",
@@ -44,8 +44,8 @@
       "Orthodox": "Includes Basemath, daughter of Ishmael and sister of Nebaioth (likely the same individual referred to as Mahalath in Gen 28:9).",
       "Other": "also Basemath daughter of Ishmael and sister of Nebaioth.",
       "Prefer not to say": "also Basemath daughter of Ishmael and sister of Nebaioth."
-    },
-    "4": {
+  },
+  "4": {
       "General": "Adah bore Eliphaz to Esau, Basemath bore Reuel,",
       "Non-Denominational": "Adah bore Eliphaz to Esau, Basemath bore Reuel,",
       "Baptist": "Lists the sons born to these wives: Eliphaz born to Adah, and Reuel born to Basemath.",
@@ -58,8 +58,8 @@
       "Orthodox": "Enumerates the sons: Eliphaz born to Adah, and Reuel born to Basemath.",
       "Other": "Adah bore Eliphaz to Esau, Basemath bore Reuel,",
       "Prefer not to say": "Adah bore Eliphaz to Esau, Basemath bore Reuel,"
-    },
-    "5": {
+  },
+  "5": {
       "General": "and Oholibamah bore Jeush, Jalam and Korah. These were the sons of Esau, who were born to him in Canaan.",
       "Non-Denominational": "and Oholibamah bore Jeush, Jalam and Korah. These were the sons of Esau, who were born to him in Canaan.",
       "Baptist": "Lists the sons born to Oholibamah: Jeush, Jalam, and Korah. It concludes this section by stating these sons were born to Esau while he was still living in the land of Canaan.",
@@ -72,8 +72,8 @@
       "Orthodox": "Lists the sons born to Oholibamah: Jeush, Jalam, and Korah. Concludes that these sons were born to Esau during his time in Canaan.",
       "Other": "and Oholibamah bore Jeush, Jalam and Korah. These were the sons of Esau, who were born to him in Canaan.",
       "Prefer not to say": "and Oholibamah bore Jeush, Jalam and Korah. These were the sons of Esau, who were born to him in Canaan."
-    },
-    "6": {
+  },
+  "6": {
       "General": "Esau took his wives and sons and daughters and all the members of his household, as well as his livestock and all his other animals and all the property he had acquired in Canaan, and moved to a land some distance from his brother Jacob.",
       "Non-Denominational": "Esau took his wives and sons and daughters and all the members of his household, as well as his livestock and all his other animals and all the property he had acquired in Canaan, and moved to a land some distance from his brother Jacob.",
       "Baptist": "Describes Esau's departure from Canaan. He takes his entire household (wives, sons, daughters, dependents), all his livestock, animals, and acquired property, and moves away from Canaan to a separate land, distancing himself from his brother Jacob.",
@@ -86,8 +86,8 @@
       "Orthodox": "Esau gathers his wives, children, household members, livestock, animals, and all possessions acquired in Canaan, and relocates to a region geographically separate from his brother Jacob.",
       "Other": "Esau took his wives and sons and daughters and all the members of his household, as well as his livestock and all his other animals and all the property he had acquired in Canaan, and moved to a land some distance from his brother Jacob.",
       "Prefer not to say": "Esau took his wives and sons and daughters and all the members of his household, as well as his livestock and all his other animals and all the property he had acquired in Canaan, and moved to a land some distance from his brother Jacob."
-    },
-    "7": {
+  },
+  "7": {
       "General": "Their possessions were too great for them to remain together; the land where they were staying could not support them both because of their livestock.",
       "Non-Denominational": "Their possessions were too great for them to remain together; the land where they were staying could not support them both because of their livestock.",
       "Baptist": "Explains the reason for the separation: both Esau and Jacob had become too wealthy, particularly in livestock, for the land they were sharing (in Canaan) to sustain them both. Their prosperity necessitated separate territories.",
@@ -100,8 +100,8 @@
       "Orthodox": "The rationale for their separation is given: their combined wealth, particularly in livestock, exceeded the carrying capacity of the land they inhabited, necessitating Esau's relocation.",
       "Other": "Their possessions were too great for them to remain together; the land where they were staying could not support them both because of their livestock.",
       "Prefer not to say": "Their possessions were too great for them to remain together; the land where they were staying could not support them both because of their livestock."
-    },
-    "8": {
+  },
+  "8": {
       "General": "So Esau (that is, Edom) settled in the hill country of Seir.",
       "Non-Denominational": "So Esau (that is, Edom) settled in the hill country of Seir.",
       "Baptist": "Identifies Esau's new place of settlement: the hill country of Seir. The text again equates Esau with Edom.",
@@ -114,8 +114,8 @@
       "Orthodox": "Thus, Esau (equated with Edom) established his dwelling in the mountainous region of Seir.",
       "Other": "So Esau (that is, Edom) settled in the hill country of Seir.",
       "Prefer not to say": "So Esau (that is, Edom) settled in the hill country of Seir."
-    },
-    "9": {
+  },
+  "9": {
       "General": "This is the account of the family line of Esau the father of the Edomites in the hill country of Seir.",
       "Non-Denominational": "This is the account of the family line of Esau the father of the Edomites in the hill country of Seir.",
       "Baptist": "This serves as a second heading, reiterating that the following is the genealogy ('toledot') of Esau, specifically identifying him as the progenitor of the Edomites who inhabit the hill country of Seir.",
@@ -128,8 +128,8 @@
       "Orthodox": "This serves as a subtitle, specifying the subsequent list as the genealogy of Esau, the patriarch of the Edomites dwelling in the hill country of Seir.",
       "Other": "This is the account of the family line of Esau the father of the Edomites in the hill country of Seir.",
       "Prefer not to say": "This is the account of the family line of Esau the father of the Edomites in the hill country of Seir."
-    },
-    "10": {
+  },
+  "10": {
       "General": "These are the names of Esau's sons: Eliphaz son of Esau's wife Adah, and Reuel son of Esau's wife Basemath.",
       "Non-Denominational": "These are the names of Esau's sons: Eliphaz son of Esau's wife Adah, and Reuel son of Esau's wife Basemath.",
       "Baptist": "Repeats the names of Esau's first two sons mentioned (Eliphaz and Reuel) along with their mothers (Adah and Basemath respectively).",
@@ -142,8 +142,8 @@
       "Orthodox": "Initiates the detailed list with Esau's sons: Eliphaz, born to Adah, and Reuel, born to Basemath.",
       "Other": "These are the names of Esau's sons: Eliphaz son of Esau's wife Adah, and Reuel son of Esau's wife Basemath.",
       "Prefer not to say": "These are the names of Esau's sons: Eliphaz son of Esau's wife Adah, and Reuel son of Esau's wife Basemath."
-    },
-    "11": {
+  },
+  "11": {
       "General": "The sons of Eliphaz: Teman, Omar, Zepho, Gatam and Kenaz.",
       "Non-Denominational": "The sons of Eliphaz: Teman, Omar, Zepho, Gatam and Kenaz.",
       "Baptist": "Lists the sons of Eliphaz: Teman (a name associated with a prominent Edomite region/clan), Omar, Zepho, Gatam, and Kenaz.",
@@ -156,8 +156,8 @@
       "Orthodox": "Enumerates the sons of Eliphaz: Teman, Omar, Zepho, Gatam, and Kenaz.",
       "Other": "The sons of Eliphaz: Teman, Omar, Zepho, Gatam and Kenaz.",
       "Prefer not to say": "The sons of Eliphaz: Teman, Omar, Zepho, Gatam and Kenaz."
-    },
-    "12": {
+  },
+  "12": {
       "General": "Esau's son Eliphaz also had a concubine named Timna, who bore him Amalek. These were grandsons of Esau's wife Adah.",
       "Non-Denominational": "Esau's son Eliphaz also had a concubine named Timna, who bore him Amalek. These were grandsons of Esau's wife Adah.",
       "Baptist": "Adds that Eliphaz had a son named Amalek through his concubine Timna. Amalek becomes the ancestor of the Amalekites, perennial enemies of Israel. These (Teman, Omar, etc., and Amalek) are identified as grandsons of Adah through Eliphaz.",
@@ -170,8 +170,8 @@
       "Orthodox": "Additionally lists Amalek, born to Eliphaz through his concubine Timna (progenitor of the Amalekites). These individuals are identified as grandsons of Adah.",
       "Other": "Esau's son Eliphaz also had a concubine named Timna, who bore him Amalek. These were grandsons of Esau's wife Adah.",
       "Prefer not to say": "Esau's son Eliphaz also had a concubine named Timna, who bore him Amalek. These were grandsons of Esau's wife Adah."
-    },
-    "13": {
+  },
+  "13": {
       "General": "The sons of Reuel: Nahath, Zerah, Shammah and Mizzah. These were grandsons of Esau's wife Basemath.",
       "Non-Denominational": "The sons of Reuel: Nahath, Zerah, Shammah and Mizzah. These were grandsons of Esau's wife Basemath.",
       "Baptist": "Lists the sons of Reuel (Esau's son by Basemath): Nahath, Zerah, Shammah, and Mizzah. Identifies them as grandsons of Basemath.",
@@ -184,8 +184,8 @@
       "Orthodox": "Enumerates the sons of Reuel: Nahath, Zerah, Shammah, and Mizzah, identifying them as grandsons of Basemath.",
       "Other": "The sons of Reuel: Nahath, Zerah, Shammah and Mizzah. These were grandsons of Esau's wife Basemath.",
       "Prefer not to say": "The sons of Reuel: Nahath, Zerah, Shammah and Mizzah. These were grandsons of Esau's wife Basemath."
-    },
-    "14": {
+  },
+  "14": {
       "General": "The sons of Esau's wife Oholibamah daughter of Anah and granddaughter of Zibeon, whom she bore to Esau: Jeush, Jalam and Korah.",
       "Non-Denominational": "The sons of Esau's wife Oholibamah daughter of Anah and granddaughter of Zibeon, whom she bore to Esau: Jeush, Jalam and Korah.",
       "Baptist": "Repeats the names of the sons born to Esau's wife Oholibamah (daughter of Anah, granddaughter of Zibeon): Jeush, Jalam, and Korah.",
@@ -198,8 +198,8 @@
       "Orthodox": "Reiterates the sons born to Oholibamah, daughter of Anah: Jeush, Jalam, and Korah.",
       "Other": "The sons of Esau's wife Oholibamah daughter of Anah and granddaughter of Zibeon, whom she bore to Esau: Jeush, Jalam and Korah.",
       "Prefer not to say": "The sons of Esau's wife Oholibamah daughter of Anah and granddaughter of Zibeon, whom she bore to Esau: Jeush, Jalam and Korah."
-    },
-    "15": {
+  },
+  "15": {
       "General": "These were the chiefs among Esau's descendants: The sons of Eliphaz the firstborn son of Esau: Chiefs Teman, Omar, Zepho, Kenaz,",
       "Non-Denominational": "These were the chiefs among Esau's descendants: The sons of Eliphaz the firstborn son of Esau: Chiefs Teman, Omar, Zepho, Kenaz,",
       "Baptist": "Begins a list of the 'chiefs' ('alluph' - clan leaders or tribal heads) descended from Esau. Starts with the chiefs descended from Eliphaz (Esau's firstborn): Teman, Omar, Zepho, Kenaz.",
@@ -212,8 +212,8 @@
       "Orthodox": "Initiates a listing of the chiefs ('alluphim', clan leaders) among Esau's descendants, beginning with those derived from Eliphaz: Chief Teman, Chief Omar, Chief Zepho, Chief Kenaz.",
       "Other": "These were the chiefs among Esau's descendants: The sons of Eliphaz the firstborn son of Esau: Chiefs Teman, Omar, Zepho, Kenaz,",
       "Prefer not to say": "These were the chiefs among Esau's descendants: The sons of Eliphaz the firstborn son of Esau: Chiefs Teman, Omar, Zepho, Kenaz,"
-    },
-    "16": {
+  },
+  "16": {
       "General": "Korah, Gatam and Amalek. These were the chiefs descended from Eliphaz in Edom; they were grandsons of Adah.",
       "Non-Denominational": "Korah, Gatam and Amalek. These were the chiefs descended from Eliphaz in Edom; they were grandsons of Adah.",
       "Baptist": "Continues the list of chiefs from Eliphaz: Korah (note: also listed as son of Oholibamah in v. 5 & 14, suggesting textual complexity or different individuals), Gatam, and Amalek. These are identified as the chiefs descended from Eliphaz in the land of Edom, and grandsons of Adah.",
@@ -226,8 +226,8 @@
       "Orthodox": "Continues the list of chiefs descended from Eliphaz: Chief Korah (potentially distinct from Oholibamah's son), Chief Gatam, Chief Amalek. These are specified as the chiefs from Eliphaz in Edom, grandsons of Adah.",
       "Other": "Korah, Gatam and Amalek. These were the chiefs descended from Eliphaz in Edom; they were grandsons of Adah.",
       "Prefer not to say": "Korah, Gatam and Amalek. These were the chiefs descended from Eliphaz in Edom; they were grandsons of Adah."
-    },
-    "17": {
+  },
+  "17": {
       "General": "The sons of Esau's son Reuel: Chiefs Nahath, Zerah, Shammah and Mizzah. These were the chiefs descended from Reuel in Edom; they were grandsons of Esau's wife Basemath.",
       "Non-Denominational": "The sons of Esau's son Reuel: Chiefs Nahath, Zerah, Shammah and Mizzah. These were the chiefs descended from Reuel in Edom; they were grandsons of Esau's wife Basemath.",
       "Baptist": "Lists the chiefs descended from Reuel (Esau's son): Nahath, Zerah, Shammah, and Mizzah. These are identified as chiefs in Edom descended from Reuel, and grandsons of Basemath.",
@@ -240,8 +240,8 @@
       "Orthodox": "Lists the chiefs descended from Reuel: Chief Nahath, Chief Zerah, Chief Shammah, Chief Mizzah. These are identified as the chiefs from Reuel in Edom, grandsons of Basemath.",
       "Other": "The sons of Esau's son Reuel: Chiefs Nahath, Zerah, Shammah and Mizzah. These were the chiefs descended from Reuel in Edom; they were grandsons of Esau's wife Basemath.",
       "Prefer not to say": "The sons of Esau's son Reuel: Chiefs Nahath, Zerah, Shammah and Mizzah. These were the chiefs descended from Reuel in Edom; they were grandsons of Esau's wife Basemath."
-    },
-    "18": {
+  },
+  "18": {
       "General": "The sons of Esau's wife Oholibamah: Chiefs Jeush, Jalam and Korah. These were the chiefs descended from Esau's wife Oholibamah daughter of Anah.",
       "Non-Denominational": "The sons of Esau's wife Oholibamah: Chiefs Jeush, Jalam and Korah. These were the chiefs descended from Esau's wife Oholibamah daughter of Anah.",
       "Baptist": "Lists the chiefs descended from Oholibamah (Esau's wife): Jeush, Jalam, and Korah. Identifies them as chiefs descended from Oholibamah.",
@@ -254,8 +254,8 @@
       "Orthodox": "Lists the chiefs descended from Oholibamah: Chief Jeush, Chief Jalam, Chief Korah, identifying them as descendants of Oholibamah, daughter of Anah.",
       "Other": "The sons of Esau's wife Oholibamah: Chiefs Jeush, Jalam and Korah. These were the chiefs descended from Esau's wife Oholibamah daughter of Anah.",
       "Prefer not to say": "The sons of Esau's wife Oholibamah: Chiefs Jeush, Jalam and Korah. These were the chiefs descended from Esau's wife Oholibamah daughter of Anah."
-    },
-    "19": {
+  },
+  "19": {
       "General": "These were the sons of Esau (that is, Edom), and these were their chiefs.",
       "Non-Denominational": "These were the sons of Esau (that is, Edom), and these were their chiefs.",
       "Baptist": "Summarizes the preceding lists: these individuals were the sons (descendants) of Esau (Edom), and the names listed were their respective chiefs or clan leaders.",
@@ -268,8 +268,8 @@
       "Orthodox": "Concludes the section on the chiefs directly descended from Esau (Edom).",
       "Other": "These were the sons of Esau (that is, Edom), and these were their chiefs.",
       "Prefer not to say": "These were the sons of Esau (that is, Edom), and these were their chiefs."
-    },
-    "20": {
+  },
+  "20": {
       "General": "These were the sons of Seir the Horite, who were living in the land: Lotan, Shobal, Zibeon, Anah,",
       "Non-Denominational": "These were the sons of Seir the Horite, who were living in the land: Lotan, Shobal, Zibeon, Anah,",
       "Baptist": "Shifts focus to the original inhabitants of the land of Seir before the Edomites: the Horites. Lists the sons of Seir the Horite: Lotan, Shobal, Zibeon, Anah.",
@@ -282,8 +282,8 @@
       "Orthodox": "Introduces the lineage of Seir the Horite, the pre-Edomite inhabitants of the region, listing his sons: Lotan, Shobal, Zibeon, Anah.",
       "Other": "These were the sons of Seir the Horite, who were living in the land: Lotan, Shobal, Zibeon, Anah,",
       "Prefer not to say": "These were the sons of Seir the Horite, who were living in the land: Lotan, Shobal, Zibeon, Anah,"
-    },
-    "21": {
+  },
+  "21": {
       "General": "Dishon, Ezer and Dishan. These sons of Seir in Edom were Horite chiefs.",
       "Non-Denominational": "Dishon, Ezer and Dishan. These sons of Seir in Edom were Horite chiefs.",
       "Baptist": "Continues the list of Seir's sons: Dishon, Ezer, and Dishan. Identifies these seven sons as the Horite chiefs in the land of Edom (Seir).",
@@ -296,8 +296,8 @@
       "Orthodox": "Completes the list of Seir's sons: Dishon, Ezer, and Dishan, identifying them as the chiefs of the Horites in the land of Edom.",
       "Other": "Dishon, Ezer and Dishan. These sons of Seir in Edom were Horite chiefs.",
       "Prefer not to say": "Dishon, Ezer and Dishan. These sons of Seir in Edom were Horite chiefs."
-    },
-    "22": {
+  },
+  "22": {
       "General": "The sons of Lotan: Hori and Homam. Timna was Lotan's sister.",
       "Non-Denominational": "The sons of Lotan: Hori and Homam. Timna was Lotan's sister.",
       "Baptist": "Lists the descendants of Seir's son Lotan: his sons Hori and Homam (elsewhere Hemam), and notes that Timna (mentioned earlier as Eliphaz's concubine) was Lotan's sister.",
@@ -310,8 +310,8 @@
       "Orthodox": "Lists the sons of Lotan: Hori and Homam. Also mentions Timna as Lotan's sister.",
       "Other": "The sons of Lotan: Hori and Homam. Timna was Lotan's sister.",
       "Prefer not to say": "The sons of Lotan: Hori and Homam. Timna was Lotan's sister."
-    },
-    "23": {
+  },
+  "23": {
       "General": "The sons of Shobal: Alvan, Manahath, Ebal, Shepho and Onam.",
       "Non-Denominational": "The sons of Shobal: Alvan, Manahath, Ebal, Shepho and Onam.",
       "Baptist": "Lists the sons of Seir's son Shobal: Alvan, Manahath, Ebal, Shepho, and Onam.",
@@ -324,8 +324,8 @@
       "Orthodox": "Enumerates the sons of Shobal: Alvan, Manahath, Ebal, Shepho, and Onam.",
       "Other": "The sons of Shobal: Alvan, Manahath, Ebal, Shepho and Onam.",
       "Prefer not to say": "The sons of Shobal: Alvan, Manahath, Ebal, Shepho and Onam."
-    },
-    "24": {
+  },
+  "24": {
       "General": "The sons of Zibeon: Aiah and Anah. This is the Anah who discovered the hot springs in the desert while he was grazing the donkeys of his father Zibeon.",
       "Non-Denominational": "The sons of Zibeon: Aiah and Anah. This is the Anah who discovered the hot springs in the desert while he was grazing the donkeys of his father Zibeon.",
       "Baptist": "Lists the sons of Seir's son Zibeon: Aiah and Anah. Adds an identifying note about this Anah: he is the one credited with finding 'hot springs' ('yemim' - meaning uncertain, possibly mules or giants) in the wilderness while tending his father's donkeys.",
@@ -338,8 +338,8 @@
       "Orthodox": "Lists the sons of Zibeon: Aiah and Anah. Includes an anecdote identifying this Anah as the discoverer of 'hot springs' (Hebrew 'yemim' - precise meaning debated) in the desert.",
       "Other": "The sons of Zibeon: Aiah and Anah. This is the Anah who discovered the hot springs in the desert while he was grazing the donkeys of his father Zibeon.",
       "Prefer not to say": "The sons of Zibeon: Aiah and Anah. This is the Anah who discovered the hot springs in the desert while he was grazing the donkeys of his father Zibeon."
-    },
-    "25": {
+  },
+  "25": {
       "General": "The children of Anah: Dishon and Oholibamah daughter of Anah.",
       "Non-Denominational": "The children of Anah: Dishon and Oholibamah daughter of Anah.",
       "Baptist": "Lists the children of Anah (Zibeon's son): a son named Dishon and a daughter named Oholibamah (previously mentioned as Esau's wife).",
@@ -352,8 +352,8 @@
       "Orthodox": "Lists the children of Anah: Dishon and Oholibamah (Esau's wife).",
       "Other": "The children of Anah: Dishon and Oholibamah daughter of Anah.",
       "Prefer not to say": "The children of Anah: Dishon and Oholibamah daughter of Anah."
-    },
-    "26": {
+  },
+  "26": {
       "General": "The sons of Dishon: Hemdan, Eshban, Ithran and Keran.",
       "Non-Denominational": "The sons of Dishon: Hemdan, Eshban, Ithran and Keran.",
       "Baptist": "Lists the sons of Dishon (Anah's son): Hemdan, Eshban, Ithran, and Keran.",
@@ -366,8 +366,8 @@
       "Orthodox": "Enumerates the sons of Dishon: Hemdan, Eshban, Ithran, and Keran.",
       "Other": "The sons of Dishon: Hemdan, Eshban, Ithran and Keran.",
       "Prefer not to say": "The sons of Dishon: Hemdan, Eshban, Ithran and Keran."
-    },
-    "27": {
+  },
+  "27": {
       "General": "The sons of Ezer: Bilhan, Zaavan and Akan.",
       "Non-Denominational": "The sons of Ezer: Bilhan, Zaavan and Akan.",
       "Baptist": "Lists the sons of Seir's son Ezer: Bilhan, Zaavan, and Akan.",
@@ -380,8 +380,8 @@
       "Orthodox": "Lists the sons of Ezer: Bilhan, Zaavan, and Akan.",
       "Other": "The sons of Ezer: Bilhan, Zaavan and Akan.",
       "Prefer not to say": "The sons of Ezer: Bilhan, Zaavan and Akan."
-    },
-    "28": {
+  },
+  "28": {
       "General": "The sons of Dishan: Uz and Aran.",
       "Non-Denominational": "The sons of Dishan: Uz and Aran.",
       "Baptist": "Lists the sons of Seir's son Dishan: Uz and Aran.",
@@ -394,8 +394,8 @@
       "Orthodox": "Lists the sons of Dishan: Uz and Aran.",
       "Other": "The sons of Dishan: Uz and Aran.",
       "Prefer not to say": "The sons of Dishan: Uz and Aran."
-    },
-    "29": {
+  },
+  "29": {
       "General": "These were the Horite chiefs: Lotan, Shobal, Zibeon, Anah,",
       "Non-Denominational": "These were the Horite chiefs: Lotan, Shobal, Zibeon, Anah,",
       "Baptist": "Begins a summary list of the Horite chiefs, repeating the names of the sons of Seir: Lotan, Shobal, Zibeon, Anah.",
@@ -408,8 +408,8 @@
       "Orthodox": "Initiates a summary list of the Horite chiefs: Chief Lotan, Chief Shobal, Chief Zibeon, Chief Anah.",
       "Other": "These were the Horite chiefs: Lotan, Shobal, Zibeon, Anah,",
       "Prefer not to say": "These were the Horite chiefs: Lotan, Shobal, Zibeon, Anah,"
-    },
-    "30": {
+  },
+  "30": {
       "General": "Dishon, Ezer and Dishan. These were the Horite chiefs, according to their divisions, in the land of Seir.",
       "Non-Denominational": "Dishon, Ezer and Dishan. These were the Horite chiefs, according to their divisions, in the land of Seir.",
       "Baptist": "Completes the summary list of Horite chiefs: Dishon, Ezer, and Dishan. States these were the chiefs according to their respective clans or territories within the land of Seir.",
@@ -422,8 +422,8 @@
       "Orthodox": "Completes the summary of Horite chiefs: Chief Dishon, Chief Ezer, Chief Dishan, organizing them according to their respective clans within the land of Seir.",
       "Other": "Dishon, Ezer and Dishan. These were the Horite chiefs, according to their divisions, in the land of Seir.",
       "Prefer not to say": "Dishon, Ezer and Dishan. These were the Horite chiefs, according to their divisions, in the land of Seir."
-    },
-    "31": {
+  },
+  "31": {
       "General": "These were the kings who reigned in Edom before any Israelite king reigned:",
       "Non-Denominational": "These were the kings who reigned in Edom before any Israelite king reigned:",
       "Baptist": "Introduces a list of kings who ruled in the land of Edom. Significantly, it notes these kings reigned *before* any king ruled over the Israelites, highlighting the earlier establishment of kingship in Edom compared to Israel.",
@@ -436,8 +436,8 @@
       "Orthodox": "Introduces a list of monarchs who ruled in Edom, emphasizing that their reigns preceded the establishment of kingship in Israel.",
       "Other": "These were the kings who reigned in Edom before any Israelite king reigned:",
       "Prefer not to say": "These were the kings who reigned in Edom before any Israelite king reigned:"
-    },
-    "32": {
+  },
+  "32": {
       "General": "Bela son of Beor became king of Edom. His city was named Dinhabah.",
       "Non-Denominational": "Bela son of Beor became king of Edom. His city was named Dinhabah.",
       "Baptist": "Lists the first king of Edom: Bela son of Beor. His capital city was Dinhabah.",
@@ -450,10 +450,10 @@
       "Orthodox": "The first king mentioned is Bela son of Beor, whose royal city was Dinhabah.",
       "Other": "Bela son of Beor became king of Edom. His city was named Dinhabah.",
       "Prefer not to say": "Bela son of Beor became king of Edom. His city was named Dinhabah."
-    },
-    "33": {
+  },
+  "33": {
       "General": "When Bela died, Jobab son of Zerah from Bozrah succeeded him as king.",
-      "Non-Denominational": "When Bela died, Jobab son of Zerah from Bozrah succeeded him as king.",
+    "Non-Denominational": "When Bela died, Jobab son of Zerah from Bozrah succeeded him as king.",
       "Baptist": "Upon Bela's death, Jobab son of Zerah, originating from Bozrah (a major Edomite city), became the next king.",
       "Catholic": "After Bela's death, Jobab son of Zerah from Bozrah succeeded him as king.",
       "Methodist": "Next king: Jobab son of Zerah from Bozrah.",
@@ -464,10 +464,10 @@
       "Orthodox": "Upon Bela's demise, Jobab son of Zerah from Bozrah assumed the kingship.",
       "Other": "When Bela died, Jobab son of Zerah from Bozrah succeeded him as king.",
       "Prefer not to say": "When Bela died, Jobab son of Zerah from Bozrah succeeded him as king."
-    },
-    "34": {
+  },
+  "34": {
       "General": "When Jobab died, Husham from the land of the Temanites succeeded him as king.",
-      "Non-Denominational": "When Jobab died, Husham from the land of the Temanites succeeded him as king.",
+    "Non-Denominational": "When Jobab died, Husham from the land of the Temanites succeeded him as king.",
       "Baptist": "Upon Jobab's death, Husham, from the land of the Temanites (descendants of Teman, Eliphaz's son), became king.",
       "Catholic": "After Jobab's death, Husham from the land of the Temanites succeeded him as king.",
       "Methodist": "Next king: Husham from the land of the Temanites.",
@@ -478,8 +478,8 @@
       "Orthodox": "Following Jobab's death, Husham from the territory of the Temanites became king.",
       "Other": "When Jobab died, Husham from the land of the Temanites succeeded him as king.",
       "Prefer not to say": "When Jobab died, Husham from the land of the Temanites succeeded him as king."
-    },
-    "35": {
+  },
+  "35": {
       "General": "When Husham died, Hadad son of Bedad, who defeated Midian in the country of Moab, succeeded him as king. His city was named Avith.",
       "Non-Denominational": "When Husham died, Hadad son of Bedad, who defeated Midian in the country of Moab, succeeded him as king. His city was named Avith.",
       "Baptist": "Upon Husham's death, Hadad son of Bedad became king. He is noted for defeating the Midianites in the territory of Moab. His capital city was Avith.",
@@ -492,10 +492,10 @@
       "Orthodox": "After Husham, Hadad son of Bedad ascended the throne; he is noted for defeating the Midianites in Moabite territory. His royal city was Avith.",
       "Other": "When Husham died, Hadad son of Bedad, who defeated Midian in the country of Moab, succeeded him as king. His city was named Avith.",
       "Prefer not to say": "When Husham died, Hadad son of Bedad, who defeated Midian in the country of Moab, succeeded him as king. His city was named Avith."
-    },
-    "36": {
+  },
+  "36": {
       "General": "When Hadad died, Samlah from Masrekah succeeded him as king.",
-      "Non-Denominational": "When Hadad died, Samlah from Masrekah succeeded him as king.",
+    "Non-Denominational": "When Hadad died, Samlah from Masrekah succeeded him as king.",
       "Baptist": "Upon Hadad's death, Samlah from Masrekah became king.",
       "Catholic": "After Hadad's death, Samlah of Masrekah succeeded him as king.",
       "Methodist": "Next king: Samlah from Masrekah.",
@@ -506,10 +506,10 @@
       "Orthodox": "Following Hadad's death, Samlah from Masrekah became king.",
       "Other": "When Hadad died, Samlah from Masrekah succeeded him as king.",
       "Prefer not to say": "When Hadad died, Samlah from Masrekah succeeded him as king."
-    },
-    "37": {
+  },
+  "37": {
       "General": "When Samlah died, Shaul from Rehoboth on the river succeeded him as king.",
-      "Non-Denominational": "When Samlah died, Shaul from Rehoboth on the river succeeded him as king.",
+    "Non-Denominational": "When Samlah died, Shaul from Rehoboth on the river succeeded him as king.",
       "Baptist": "Upon Samlah's death, Shaul from Rehoboth-on-the-River (possibly the Euphrates, or another river) became king.",
       "Catholic": "After Samlah's death, Shaul of Rehoboth-on-the-River succeeded him as king. (The identity of 'the River' is debated, possibly the Euphrates or a river closer to Edom).",
       "Methodist": "Next king: Shaul from Rehoboth on the river.",
@@ -520,10 +520,10 @@
       "Orthodox": "After Samlah, Shaul from Rehoboth-on-the-River assumed the kingship.",
       "Other": "When Samlah died, Shaul from Rehoboth on the river succeeded him as king.",
       "Prefer not to say": "When Samlah died, Shaul from Rehoboth on the river succeeded him as king."
-    },
-    "38": {
+  },
+  "38": {
       "General": "When Shaul died, Baal-Hanan son of Akbor succeeded him as king.",
-      "Non-Denominational": "When Shaul died, Baal-Hanan son of Akbor succeeded him as king.",
+    "Non-Denominational": "When Shaul died, Baal-Hanan son of Akbor succeeded him as king.",
       "Baptist": "Upon Shaul's death, Baal-hanan son of Achbor became king.",
       "Catholic": "After Shaul's death, Baal-hanan son of Achbor succeeded him as king.",
       "Methodist": "Next king: Baal-Hanan son of Akbor.",
@@ -534,8 +534,8 @@
       "Orthodox": "Following Shaul's death, Baal-hanan son of Achbor became king.",
       "Other": "When Shaul died, Baal-Hanan son of Akbor succeeded him as king.",
       "Prefer not to say": "When Shaul died, Baal-Hanan son of Akbor succeeded him as king."
-    },
-    "39": {
+  },
+  "39": {
       "General": "When Baal-Hanan son of Akbor died, Hadad succeeded him as king. His city was named Pau, and his wife's name was Mehetabel daughter of Matred, the daughter of Me-Zahab.",
       "Non-Denominational": "When Baal-Hanan son of Akbor died, Hadad succeeded him as king. His city was named Pau, and his wife's name was Mehetabel daughter of Matred, the daughter of Me-Zahab.",
       "Baptist": "Upon the death of Baal-hanan son of Achbor, Hadad (or Hadar) became king. His capital city was Pau. His wife's name is also given: Mehetabel, daughter of Matred, daughter of Mezahab. The mention of the wife is unusual in these lists.",
@@ -548,8 +548,8 @@
       "Orthodox": "Upon the death of Baal-hanan son of Achbor, Hadad (or Hadad) became king. His royal city was Pau, and his wife was Mehetabel, daughter of Matred, daughter of Mezahab.",
       "Other": "When Baal-Hanan son of Akbor died, Hadad succeeded him as king. His city was named Pau, and his wife's name was Mehetabel daughter of Matred, the daughter of Me-Zahab.",
       "Prefer not to say": "When Baal-Hanan son of Akbor died, Hadad succeeded him as king. His city was named Pau, and his wife's name was Mehetabel daughter of Matred, the daughter of Me-Zahab."
-    },
-    "40": {
+  },
+  "40": {
       "General": "These were the chiefs descended from Esau, by name, according to their clans and regions: Timna, Alvah, Jetheth,",
       "Non-Denominational": "These were the chiefs descended from Esau, by name, according to their clans and regions: Timna, Alvah, Jetheth,",
       "Baptist": "Begins a final list, presenting chiefs of Edom apparently organized by clan and location, possibly representing a later period or a different administrative structure than the earlier list of chiefs (vv. 15-19). Lists Chiefs Timna, Alvah, Jetheth.",
@@ -562,8 +562,8 @@
       "Orthodox": "Initiates a concluding list of Edomite chiefs, potentially from a later era or organized geographically/by clan: Chief Timna, Chief Alvah, Chief Jetheth.",
       "Other": "These were the chiefs descended from Esau, by name, according to their clans and regions: Timna, Alvah, Jetheth,",
       "Prefer not to say": "These were the chiefs descended from Esau, by name, according to their clans and regions: Timna, Alvah, Jetheth,"
-    },
-    "41": {
+  },
+  "41": {
       "General": "Oholibamah, Elah, Pinon,",
       "Non-Denominational": "Oholibamah, Elah, Pinon,",
       "Baptist": "Continues the list of chiefs: Oholibamah, Elah, Pinon.",
@@ -576,8 +576,8 @@
       "Orthodox": "Continues the list: Chief Oholibamah, Chief Elah, Chief Pinon.",
       "Other": "Oholibamah, Elah, Pinon,",
       "Prefer not to say": "Oholibamah, Elah, Pinon,"
-    },
-    "42": {
+  },
+  "42": {
       "General": "Kenaz, Teman, Mibzar,",
       "Non-Denominational": "Kenaz, Teman, Mibzar,",
       "Baptist": "Continues the list of chiefs: Kenaz, Teman, Mibzar.",
@@ -590,8 +590,8 @@
       "Orthodox": "Continues the list: Chief Kenaz, Chief Teman, Chief Mibzar.",
       "Other": "Kenaz, Teman, Mibzar,",
       "Prefer not to say": "Kenaz, Teman, Mibzar,"
-    },
-    "43": {
+  },
+  "43": {
       "General": "Magdiel and Iram. These were the chiefs of Edom, according to their settlements in the land they occupied. This was Esau the father of the Edomites.",
       "Non-Denominational": "Magdiel and Iram. These were the chiefs of Edom, according to their settlements in the land they occupied. This was Esau the father of the Edomites.",
       "Baptist": "Completes the list of chiefs: Magdiel, Iram. Summarizes that these were the chiefs of Edom according to their settlements in the land they possessed. The chapter concludes by emphatically restating the main subject: Esau, the father of the Edomites.",

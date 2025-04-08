@@ -3,7 +3,7 @@
   "book": "Genesis",
   "chapter": "24",
   "verses": {
-    "1": {
+  "1": {
       "General": "Abraham was now very old, and the Lord had blessed him in every way.",
       "Non-Denominational": "Abraham was now very old, and the Lord had blessed him in every way.",
       "Baptist": "Sets the stage: Abraham is elderly and blessed by God, focusing now on securing Isaac's future.",
@@ -16,8 +16,8 @@
       "Orthodox": "Establishes Abraham's advanced age and God's manifold blessings as the context for ensuring Isaac's marriage.",
       "Other": "Abraham was now very old, and the Lord had blessed him in every way.",
       "Prefer not to say": "Abraham was now very old, and the Lord had blessed him in every way."
-    },
-    "2": {
+  },
+  "2": {
       "General": "He said to the chief servant in his household, the one in charge of all that he had, 'Put your hand under my thigh.'",
       "Non-Denominational": "He said to the chief servant in his household, the one in charge of all that he had, 'Put your hand under my thigh.'",
       "Baptist": "Abraham instructs his most trusted servant (likely Eliezer) to take a solemn oath regarding a crucial mission.",
@@ -30,8 +30,8 @@
       "Orthodox": "Abraham charges his chief servant with a critical mission, initiating it with a solemn oath gesture.",
       "Other": "He said to the chief servant in his household, the one in charge of all that he had, 'Put your hand under my thigh.'",
       "Prefer not to say": "He said to the chief servant in his household, the one in charge of all that he had, 'Put your hand under my thigh.'"
-    },
-    "3": {
+  },
+  "3": {
       "General": "'I want you to swear by the Lord, the God of heaven and the God of earth, that you will not get a wife for my son from the daughters of the Canaanites, among whom I am living,'",
       "Non-Denominational": "'I want you to swear by the Lord, the God of heaven and the God of earth, that you will not get a wife for my son from the daughters of the Canaanites, among whom I am living,'",
       "Baptist": "The oath's core: secure a wife for Isaac from Abraham's kin, not from the local Canaanites, invoking God's supreme authority.",
@@ -44,8 +44,8 @@
       "Orthodox": "Abraham demands an oath invoking God's universal authority, forbidding marriage for Isaac among the Canaanites to maintain covenant faithfulness.",
       "Other": "'I want you to swear by the Lord, the God of heaven and the God of earth, that you will not get a wife for my son from the daughters of the Canaanites, among whom I am living,'",
       "Prefer not to say": "'I want you to swear by the Lord, the God of heaven and the God of earth, that you will not get a wife for my son from the daughters of the Canaanites, among whom I am living,'"
-    },
-    "4": {
+  },
+  "4": {
       "General": "'but will go to my country and my own relatives and get a wife for my son Isaac.'",
       "Non-Denominational": "'but will go to my country and my own relatives and get a wife for my son Isaac.'",
       "Baptist": "The mission objective: travel to Abraham's homeland (Mesopotamia) and find a wife for Isaac from his extended family.",
@@ -58,8 +58,8 @@
       "Orthodox": "The specific task: the servant must journey to Abraham's ancestral homeland to select a wife for Isaac from among their kin.",
       "Other": "'but will go to my country and my own relatives and get a wife for my son Isaac.'",
       "Prefer not to say": "'but will go to my country and my own relatives and get a wife for my son Isaac.'"
-    },
-    "5": {
+  },
+  "5": {
       "General": "The servant asked him, 'What if the woman is unwilling to come back with me to this land? Shall I then take your son back to the country you came from?'",
       "Non-Denominational": "The servant asked him, 'What if the woman is unwilling to come back with me to this land? Shall I then take your son back to the country you came from?'",
       "Baptist": "The servant raises a practical objection/question: What if the chosen woman refuses to leave her home? Should Isaac go there instead?",
@@ -72,8 +72,8 @@
       "Orthodox": "The servant prudently inquires about the contingency of the woman refusing to leave her homeland.",
       "Other": "The servant asked him, 'What if the woman is unwilling to come back with me to this land? Shall I then take your son back to the country you came from?'",
       "Prefer not to say": "The servant asked him, 'What if the woman is unwilling to come back with me to this land? Shall I then take your son back to the country you came from?'"
-    },
-    "6": {
+  },
+  "6": {
       "General": "'Make sure that you do not take my son back there,' Abraham said.",
       "Non-Denominational": "'Make sure that you do not take my son back there,' Abraham said.",
       "Baptist": "Abraham adamantly forbids Isaac returning to Mesopotamia, emphasizing residence in the Promised Land.",
@@ -86,8 +86,8 @@
       "Orthodox": "Abraham absolutely forbids Isaac's return to Mesopotamia, underscoring the necessity of remaining in the land of promise.",
       "Other": "'Make sure that you do not take my son back there,' Abraham said.",
       "Prefer not to say": "'Make sure that you do not take my son back there,' Abraham said."
-    },
-    "7": {
+  },
+  "7": {
       "General": "'The Lord, the God of heaven, who brought me out of my father's household and my native land and who spoke to me and promised me on oath, saying, 'To your offspring I will give this land'—he will send his angel before you so that you can get a wife for my son from there.'",
       "Non-Denominational": "'The Lord, the God of heaven, who brought me out of my father's household and my native land and who spoke to me and promised me on oath, saying, 'To your offspring I will give this land'—he will send his angel before you so that you can get a wife for my son from there.'",
       "Baptist": "Abraham expresses faith in God's guidance, recalling God's promises and assuring the servant of divine/angelic assistance in the mission.",
@@ -100,8 +100,8 @@
       "Orthodox": "Abraham voices his unwavering faith, recalling God's guidance and sworn promises, and assures the servant of divine (angelic) assistance.",
       "Other": "'The Lord, the God of heaven, who brought me out of my father's household and my native land and who spoke to me and promised me on oath, saying, 'To your offspring I will give this land'—he will send his angel before you so that you can get a wife for my son from there.'",
       "Prefer not to say": "'The Lord, the God of heaven, who brought me out of my father's household and my native land and who spoke to me and promised me on oath, saying, 'To your offspring I will give this land'—he will send his angel before you so that you can get a wife for my son from there.'"
-    },
-    "8": {
+  },
+  "8": {
       "General": "'If the woman is unwilling to come back with you, then you will be released from this oath of mine. Only do not take my son back there.'",
       "Non-Denominational": "'If the woman is unwilling to come back with you, then you will be released from this oath of mine. Only do not take my son back there.'",
       "Baptist": "Abraham provides a release clause: if the woman refuses, the servant is freed from the oath, but Isaac must still not return.",
@@ -114,8 +114,8 @@
       "Orthodox": "Abraham provides for the possibility of failure, releasing the servant from the oath if the woman refuses, while firmly maintaining Isaac must not leave Canaan.",
       "Other": "'If the woman is unwilling to come back with you, then you will be released from this oath of mine. Only do not take my son back there.'",
       "Prefer not to say": "'If the woman is unwilling to come back with you, then you will be released from this oath of mine. Only do not take my son back there.'"
-    },
-    "9": {
+  },
+  "9": {
       "General": "So the servant put his hand under the thigh of his master Abraham and swore an oath to him concerning this matter.",
       "Non-Denominational": "So the servant put his hand under the thigh of his master Abraham and swore an oath to him concerning this matter.",
       "Baptist": "The servant formally takes the oath as instructed.",
@@ -128,8 +128,8 @@
       "Orthodox": "The servant formally binds himself by the oath as instructed by Abraham.",
       "Other": "So the servant put his hand under the thigh of his master Abraham and swore an oath to him concerning this matter.",
       "Prefer not to say": "So the servant put his hand under the thigh of his master Abraham and swore an oath to him concerning this matter."
-    },
-    "10": {
+  },
+  "10": {
       "General": "Then the servant left, taking with him ten of his master's camels loaded with all kinds of good things from his master. He set out for Aram Naharaim and made his way to the town of Nahor.",
       "Non-Denominational": "Then the servant left, taking with him ten of his master's camels loaded with all kinds of good things from his master. He set out for Aram Naharaim and made his way to the town of Nahor.",
       "Baptist": "The servant departs, well-equipped with camels and valuable gifts (bride-price/dowry), heading towards Nahor's town in Mesopotamia.",
@@ -142,8 +142,8 @@
       "Orthodox": "The servant commences his journey with a well-equipped caravan, including valuable gifts, heading towards the city of Nahor in Mesopotamia.",
       "Other": "Then the servant left, taking with him ten of his master's camels loaded with all kinds of good things from his master. He set out for Aram Naharaim and made his way to the town of Nahor.",
       "Prefer not to say": "Then the servant left, taking with him ten of his master's camels loaded with all kinds of good things from his master. He set out for Aram Naharaim and made his way to the town of Nahor."
-    },
-    "11": {
+  },
+  "11": {
       "General": "He had the camels kneel down near the well outside the town; it was toward evening, the time the women go out to draw water.",
       "Non-Denominational": "He had the camels kneel down near the well outside the town; it was toward evening, the time the women go out to draw water.",
       "Baptist": "The servant arrives and strategically positions himself at the town well in the evening, knowing this is when women gather.",
@@ -156,8 +156,8 @@
       "Orthodox": "The servant strategically positions himself by the well at the customary time for women to gather, awaiting guidance.",
       "Other": "He had the camels kneel down near the well outside the town; it was toward evening, the time the women go out to draw water.",
       "Prefer not to say": "He had the camels kneel down near the well outside the town; it was toward evening, the time the women go out to draw water."
-    },
-    "12": {
+  },
+  "12": {
       "General": "Then he prayed, 'Lord, God of my master Abraham, make me successful today, and show kindness to my master Abraham.'",
       "Non-Denominational": "Then he prayed, 'Lord, God of my master Abraham, make me successful today, and show kindness to my master Abraham.'",
       "Baptist": "The servant prays for success, invoking God's relationship with Abraham and asking for divine favor (kindness/hesed) upon his master.",
@@ -170,8 +170,8 @@
       "Orthodox": "The servant begins with prayer, addressing God as the God of Abraham and seeking success based on God's covenant faithfulness (hesed) to his master.",
       "Other": "Then he prayed, 'Lord, God of my master Abraham, make me successful today, and show kindness to my master Abraham.'",
       "Prefer not to say": "Then he prayed, 'Lord, God of my master Abraham, make me successful today, and show kindness to my master Abraham.'"
-    },
-    "13": {
+  },
+  "13": {
       "General": "'See, I am standing beside this spring, and the daughters of the townspeople are coming out to draw water.'",
       "Non-Denominational": "'See, I am standing beside this spring, and the daughters of the townspeople are coming out to draw water.'",
       "Baptist": "He states his position and observes the expected arrival of the young women.",
@@ -184,8 +184,8 @@
       "Orthodox": "He describes the setting of his prayer, awaiting the arrival of the women.",
       "Other": "'See, I am standing beside this spring, and the daughters of the townspeople are coming out to draw water.'",
       "Prefer not to say": "'See, I am standing beside this spring, and the daughters of the townspeople are coming out to draw water.'"
-    },
-    "14": {
+  },
+  "14": {
       "General": "'May it be that when I say to a young woman, 'Please let down your jar that I may have a drink,' and she says, 'Drink, and I'll water your camels too'—let her be the one you have chosen for your servant Isaac. By this I will know that you have shown kindness to my master.'",
       "Non-Denominational": "'May it be that when I say to a young woman, 'Please let down your jar that I may have a drink,' and she says, 'Drink, and I'll water your camels too'—let her be the one you have chosen for your servant Isaac. By this I will know that you have shown kindness to my master.'",
       "Baptist": "The servant proposes a specific sign: the woman who offers water not only to him but also spontaneously to his camels will be God's chosen one.",
@@ -198,8 +198,8 @@
       "Orthodox": "He proposes a specific test involving extraordinary hospitality—offering water to him and his camels—as the sign identifying God's chosen bride for Isaac.",
       "Other": "'May it be that when I say to a young woman, 'Please let down your jar that I may have a drink,' and she says, 'Drink, and I'll water your camels too'—let her be the one you have chosen for your servant Isaac. By this I will know that you have shown kindness to my master.'",
       "Prefer not to say": "'May it be that when I say to a young woman, 'Please let down your jar that I may have a drink,' and she says, 'Drink, and I'll water your camels too'—let her be the one you have chosen for your servant Isaac. By this I will know that you have shown kindness to my master.'"
-    },
-    "15": {
+  },
+  "15": {
       "General": "Before he even finished praying, Rebekah came out with her jar on her shoulder. She was the daughter of Bethuel son of Milkah, who was the wife of Abraham's brother Nahor.",
       "Non-Denominational": "Before he even finished praying, Rebekah came out with her jar on her shoulder. She was the daughter of Bethuel son of Milkah, who was the wife of Abraham's brother Nahor.",
       "Baptist": "God's immediate answer: Rebekah appears before the prayer is even finished, identified as belonging to Abraham's relatives.",
@@ -212,8 +212,8 @@
       "Orthodox": "God responds immediately to the prayer: Rebekah, identified as part of Abraham's extended family, arrives at the well.",
       "Other": "Before he even finished praying, Rebekah came out with her jar on her shoulder. She was the daughter of Bethuel son of Milkah, who was the wife of Abraham's brother Nahor.",
       "Prefer not to say": "Before he even finished praying, Rebekah came out with her jar on her shoulder. She was the daughter of Bethuel son of Milkah, who was the wife of Abraham's brother Nahor."
-    },
-    "16": {
+  },
+  "16": {
       "General": "The woman was very beautiful, a virgin; no man had ever slept with her. She went down to the spring, filled her jar and came up again.",
       "Non-Denominational": "The woman was very beautiful, a virgin; no man had ever slept with her. She went down to the spring, filled her jar and came up again.",
       "Baptist": "Describes Rebekah's positive attributes (beauty, virginity) and her actions at the well.",
@@ -226,8 +226,8 @@
       "Orthodox": "Notes Rebekah's physical beauty and status as a virgin, highlighting her suitability.",
       "Other": "The woman was very beautiful, a virgin; no man had ever slept with her. She went down to the spring, filled her jar and came up again.",
       "Prefer not to say": "The woman was very beautiful, a virgin; no man had ever slept with her. She went down to the spring, filled her jar and came up again."
-    },
-    "17": {
+  },
+  "17": {
       "General": "The servant hurried to meet her and said, 'Please give me a little water from your jar.'",
       "Non-Denominational": "The servant hurried to meet her and said, 'Please give me a little water from your jar.'",
       "Baptist": "The servant initiates the test, politely requesting water from Rebekah.",
@@ -240,8 +240,8 @@
       "Orthodox": "The servant approaches Rebekah and politely requests water, beginning the proposed test.",
       "Other": "The servant hurried to meet her and said, 'Please give me a little water from your jar.'",
       "Prefer not to say": "The servant hurried to meet her and said, 'Please give me a little water from your jar.'"
-    },
-    "18": {
+  },
+  "18": {
       "General": "'Drink, my lord,' she said, and quickly lowered the jar to her hands and gave him a drink.",
       "Non-Denominational": "'Drink, my lord,' she said, and quickly lowered the jar to her hands and gave him a drink.",
       "Baptist": "Rebekah readily complies with the first part of the sign, offering him water graciously.",
@@ -254,8 +254,8 @@
       "Orthodox": "Rebekah responds swiftly and graciously, offering him water as requested.",
       "Other": "'Drink, my lord,' she said, and quickly lowered the jar to her hands and gave him a drink.",
       "Prefer not to say": "'Drink, my lord,' she said, and quickly lowered the jar to her hands and gave him a drink."
-    },
-    "19": {
+  },
+  "19": {
       "General": "After she had given him a drink, she said, 'I'll draw water for your camels too, until they have had enough to drink.'",
       "Non-Denominational": "After she had given him a drink, she said, 'I'll draw water for your camels too, until they have had enough to drink.'",
       "Baptist": "Rebekah goes above and beyond, spontaneously offering to water the camels, fulfilling the second, crucial part of the sign.",
@@ -268,8 +268,8 @@
       "Orthodox": "Rebekah then goes beyond the request and offers to water the camels, fulfilling the specific sign the servant had sought.",
       "Other": "After she had given him a drink, she said, 'I'll draw water for your camels too, until they have had enough to drink.'",
       "Prefer not to say": "After she had given him a drink, she said, 'I'll draw water for your camels too, until they have had enough to drink.'"
-    },
-    "20": {
+  },
+  "20": {
       "General": "So she quickly emptied her jar into the trough, ran back to the well to draw more water, and drew enough for all his camels.",
       "Non-Denominational": "So she quickly emptied her jar into the trough, ran back to the well to draw more water, and drew enough for all his camels.",
       "Baptist": "Demonstrates Rebekah's energy and commitment as she diligently waters all ten camels.",
@@ -282,8 +282,8 @@
       "Orthodox": "Details Rebekah's prompt and laborious effort in watering all the camels.",
       "Other": "So she quickly emptied her jar into the trough, ran back to the well to draw more water, and drew enough for all his camels.",
       "Prefer not to say": "So she quickly emptied her jar into the trough, ran back to the well to draw more water, and drew enough for all his camels."
-    },
-    "21": {
+  },
+  "21": {
       "General": "The servant watched her silently, waiting to learn whether or not the Lord had made his journey successful.",
       "Non-Denominational": "The servant watched her silently, waiting to learn whether or not the Lord had made his journey successful.",
       "Baptist": "The servant silently observes, waiting to see the full confirmation of God's guidance through Rebekah's actions.",
@@ -296,8 +296,8 @@
       "Orthodox": "The servant observes Rebekah in silence, recognizing the fulfillment of the sign and God's confirmation.",
       "Other": "The servant watched her silently, waiting to learn whether or not the Lord had made his journey successful.",
       "Prefer not to say": "The servant watched her silently, waiting to learn whether or not the Lord had made his journey successful."
-    },
-    "22": {
+  },
+  "22": {
       "General": "When the camels finished drinking, the man took out a gold nose ring weighing a beka and two gold bracelets weighing ten shekels.",
       "Non-Denominational": "When the camels finished drinking, the man took out a gold nose ring weighing a beka and two gold bracelets weighing ten shekels.",
       "Baptist": "Once the sign is complete, the servant presents Rebekah with valuable gold jewelry as an initial gift/betrothal token.",
@@ -310,8 +310,8 @@
       "Orthodox": "Upon completion of the task, the servant presents Rebekah with significant gifts of gold jewelry.",
       "Other": "When the camels finished drinking, the man took out a gold nose ring weighing a beka and two gold bracelets weighing ten shekels.",
       "Prefer not to say": "When the camels finished drinking, the man took out a gold nose ring weighing a beka and two gold bracelets weighing ten shekels."
-    },
-    "23": {
+  },
+  "23": {
       "General": "He asked Rebekah, 'Whose daughter are you? Please tell me, is there room in your father's house for us to spend the night?'",
       "Non-Denominational": "He asked Rebekah, 'Whose daughter are you? Please tell me, is there room in your father's house for us to spend the night?'",
       "Baptist": "He inquires about her lineage and asks about lodging for himself and his entourage.",
@@ -324,8 +324,8 @@
       "Orthodox": "The servant inquires about Rebekah's parentage and asks for hospitality.",
       "Other": "He asked Rebekah, 'Whose daughter are you? Please tell me, is there room in your father's house for us to spend the night?'",
       "Prefer not to say": "He asked Rebekah, 'Whose daughter are you? Please tell me, is there room in your father's house for us to spend the night?'"
-    },
-    "24": {
+  },
+  "24": {
       "General": "She answered him, 'I am the daughter of Bethuel, the son that Milcah bore to Nahor.'",
       "Non-Denominational": "She answered him, 'I am the daughter of Bethuel, the son that Milcah bore to Nahor.'",
       "Baptist": "Rebekah identifies herself, confirming she is indeed from Abraham's relatives.",
@@ -338,8 +338,8 @@
       "Orthodox": "Rebekah reveals her lineage, confirming she is directly related to Abraham's brother Nahor.",
       "Other": "She answered him, 'I am the daughter of Bethuel, the son that Milcah bore to Nahor.'",
       "Prefer not to say": "She answered him, 'I am the daughter of Bethuel, the son that Milcah bore to Nahor.'"
-    },
-    "25": {
+  },
+  "25": {
       "General": "She assured him they have plenty of straw and fodder, as well as room for lodging.",
       "Non-Denominational": "She assured him they have plenty of straw and fodder, as well as room for lodging.",
       "Baptist": "Rebekah confirms ample provisions and lodging are available, extending hospitality.",
@@ -352,8 +352,8 @@
       "Orthodox": "Rebekah readily offers hospitality, assuring the servant of ample provisions and space.",
       "Other": "She assured him they have plenty of straw and fodder, as well as room for lodging.",
       "Prefer not to say": "She assured him they have plenty of straw and fodder, as well as room for lodging."
-    },
-    "26": {
+  },
+  "26": {
       "General": "Then the man bowed down and worshiped the Lord, saying, 'Praise be to the Lord, the God of my master Abraham, who has not abandoned his kindness and faithfulness to my master. As for me, the Lord has led me on the journey to the house of my master's relatives.'",
       "Non-Denominational": "Then the man bowed down and worshiped the Lord, saying, 'Praise be to the Lord, the God of my master Abraham, who has not abandoned his kindness and faithfulness to my master. As for me, the Lord has led me on the journey to the house of my master's relatives.'",
       "Baptist": "He recounts his worship and praise to God for leading him directly and successfully to the intended relative.",
@@ -366,8 +366,8 @@
       "Orthodox": "He describes his subsequent worship and praise to God for guiding him directly to the appropriate relative.",
       "Other": "Then the man bowed down and worshiped the Lord, saying, 'Praise be to the Lord, the God of my master Abraham, who has not abandoned his kindness and faithfulness to my master. As for me, the Lord has led me on the journey to the house of my master's relatives.'",
       "Prefer not to say": "Then the man bowed down and worshiped the Lord, saying, 'Praise be to the Lord, the God of my master Abraham, who has not abandoned his kindness and faithfulness to my master. As for me, the Lord has led me on the journey to the house of my master's relatives.'"
-    },
-    "27": {
+  },
+  "27": {
       "General": "Rebekah ran and told her mother's household about these things.",
       "Non-Denominational": "Rebekah ran and told her mother's household about these things.",
       "Baptist": "Rebekah hurries home to report the encounter and the valuable gifts.",
@@ -380,8 +380,8 @@
       "Orthodox": "Rebekah quickly returns home to relay the news of the encounter to her family.",
       "Other": "Rebekah ran and told her mother's household about these things.",
       "Prefer not to say": "Rebekah ran and told her mother's household about these things."
-    },
-    "28": {
+  },
+  "28": {
       "General": "Rebekah had a brother named Laban, who hurried out to the spring to meet the man.",
       "Non-Denominational": "Rebekah had a brother named Laban, who hurried out to the spring to meet the man.",
       "Baptist": "Introduces Laban, Rebekah's brother, who takes an active role upon hearing the news.",
@@ -394,8 +394,8 @@
       "Orthodox": "Introduces Laban, Rebekah's brother, who quickly goes to meet the visitor.",
       "Other": "Rebekah had a brother named Laban, who hurried out to the spring to meet the man.",
       "Prefer not to say": "Rebekah had a brother named Laban, who hurried out to the spring to meet the man."
-    },
-    "29": {
+  },
+  "29": {
       "General": "As soon as Laban saw the nose ring and the bracelets on his sister's arms, and had heard Rebekah tell what the man said to her, he went out to the man and found him standing by the camels near the spring.",
       "Non-Denominational": "As soon as Laban saw the nose ring and the bracelets on his sister's arms, and had heard Rebekah tell what the man said to her, he went out to the man and found him standing by the camels near the spring.",
       "Baptist": "Laban's motivation is highlighted: seeing the valuable gifts and hearing the story prompts his quick response.",
@@ -408,8 +408,8 @@
       "Orthodox": "Laban, prompted by the sight of the valuable gifts and Rebekah's account, goes to meet the servant.",
       "Other": "As soon as Laban saw the nose ring and the bracelets on his sister's arms, and had heard Rebekah tell what the man said to her, he went out to the man and found him standing by the camels near the spring.",
       "Prefer not to say": "As soon as Laban saw the nose ring and the bracelets on his sister's arms, and had heard Rebekah tell what the man said to her, he went out to the man and found him standing by the camels near the spring."
-    },
-    "30": {
+  },
+  "30": {
       "General": "Laban invited the man in, addressing him as 'blessed by the Lord,' questioning why he was standing outside when a room and place for the camels had been prepared.",
       "Non-Denominational": "Laban invited the man in, addressing him as 'blessed by the Lord,' questioning why he was standing outside when a room and place for the camels had been prepared.",
       "Baptist": "Laban extends a warm invitation, acknowledging the servant as blessed and offering prepared hospitality.",
@@ -422,8 +422,8 @@
       "Orthodox": "Laban offers a warm welcome, acknowledging the visitor as blessed and assuring him of prepared hospitality.",
       "Other": "Laban invited the man in, addressing him as 'blessed by the Lord,' questioning why he was standing outside when a room and place for the camels had been prepared.",
       "Prefer not to say": "Laban invited the man in, addressing him as 'blessed by the Lord,' questioning why he was standing outside when a room and place for the camels had been prepared."
-    },
-    "31": {
+  },
+  "31": {
       "General": "The man went to the house, and the camels were unloaded. Straw and fodder were brought for the camels, and water for him and his men to wash their feet.",
       "Non-Denominational": "The man went to the house, and the camels were unloaded. Straw and fodder were brought for the camels, and water for him and his men to wash their feet.",
       "Baptist": "The servant accepts the hospitality; provisions are made for the camels and customary foot-washing is offered.",
@@ -436,8 +436,8 @@
       "Orthodox": "The servant accepts the hospitality, and care is provided for both the camels and the visitors (including foot washing).",
       "Other": "The man went to the house, and the camels were unloaded. Straw and fodder were brought for the camels, and water for him and his men to wash their feet.",
       "Prefer not to say": "The man went to the house, and the camels were unloaded. Straw and fodder were brought for the camels, and water for him and his men to wash their feet."
-    },
-    "32": {
+  },
+  "32": {
       "General": "When food was set before him, the man refused to eat until he had stated his business.",
       "Non-Denominational": "When food was set before him, the man refused to eat until he had stated his business.",
       "Baptist": "The servant prioritizes his mission over personal needs (eating), insisting on explaining his purpose first.",
@@ -450,8 +450,8 @@
       "Orthodox": "The servant prioritizes his mission over refreshment, insisting on stating his purpose before eating.",
       "Other": "When food was set before him, the man refused to eat until he had stated his business.",
       "Prefer not to say": "When food was set before him, the man refused to eat until he had stated his business."
-    },
-    "33": {
+  },
+  "33": {
       "General": "He identified himself: 'I am Abraham's servant.'",
       "Non-Denominational": "He identified himself: 'I am Abraham's servant.'",
       "Baptist": "He begins his explanation by identifying himself in relation to his prominent master, Abraham.",
@@ -464,8 +464,8 @@
       "Orthodox": "He begins his explanation by stating his identity as Abraham's servant.",
       "Other": "He identified himself: 'I am Abraham's servant.'",
       "Prefer not to say": "He identified himself: 'I am Abraham's servant.'"
-    },
-    "34": {
+  },
+  "34": {
       "General": "He explained the Lord has greatly blessed Abraham, making him wealthy. He has given him sheep and cattle, silver and gold, male and female servants, and camels and donkeys.",
       "Non-Denominational": "He explained the Lord has greatly blessed Abraham, making him wealthy. He has given him sheep and cattle, silver and gold, male and female servants, and camels and donkeys.",
       "Baptist": "He emphasizes Abraham's great wealth and God's blessing upon him, implying Isaac will be well provided for.",
@@ -478,8 +478,8 @@
       "Orthodox": "He details Abraham's significant wealth, stressing it stems from God's abundant blessing.",
       "Other": "He explained the Lord has greatly blessed Abraham, making him wealthy. He has given him sheep and cattle, silver and gold, male and female servants, and camels and donkeys.",
       "Prefer not to say": "He explained the Lord has greatly blessed Abraham, making him wealthy. He has given him sheep and cattle, silver and gold, male and female servants, and camels and donkeys."
-    },
-    "35": {
+  },
+  "35": {
       "General": "He mentioned Sarah bearing Isaac in her old age, and that Abraham has given everything to Isaac.",
       "Non-Denominational": "He mentioned Sarah bearing Isaac in her old age, and that Abraham has given everything to Isaac.",
       "Baptist": "Identifies Isaac as the miraculous son born to Sarah in old age and confirms he is Abraham's sole heir.",
@@ -492,8 +492,8 @@
       "Orthodox": "He identifies Isaac as the son miraculously born to Sarah and confirms his status as Abraham's sole heir.",
       "Other": "He mentioned Sarah bearing Isaac in her old age, and that Abraham has given everything to Isaac.",
       "Prefer not to say": "He mentioned Sarah bearing Isaac in her old age, and that Abraham has given everything to Isaac."
-    },
-    "36": {
+  },
+  "36": {
       "General": "He recounts the oath Abraham made him swear: not to get a wife for Isaac from the daughters of the Canaanites.",
       "Non-Denominational": "He recounts the oath Abraham made him swear: not to get a wife for Isaac from the daughters of the Canaanites.",
       "Baptist": "He recounts the oath Abraham made him swear: not to get a wife for Isaac from the daughters of the Canaanites.",
@@ -506,8 +506,8 @@
       "Orthodox": "He explains the oath imposed by Abraham, beginning with the prohibition against a Canaanite wife.",
       "Other": "He recounts the oath Abraham made him swear: not to get a wife for Isaac from the daughters of the Canaanites.",
       "Prefer not to say": "He recounts the oath Abraham made him swear: not to get a wife for Isaac from the daughters of the Canaanites."
-    },
-    "37": {
+  },
+  "37": {
       "General": "'And my master made me swear an oath, and said, 'You must not get a wife for my son from the daughters of the Canaanites, in whose land I live,'",
       "Non-Denominational": "'And my master made me swear an oath, and said, 'You must not get a wife for my son from the daughters of the Canaanites, in whose land I live,'",
       "Baptist": "He recounts the oath Abraham required, forbidding a Canaanite wife for Isaac.",
@@ -520,8 +520,8 @@
       "Orthodox": "He explains the oath imposed by Abraham, beginning with the prohibition against a Canaanite wife.",
       "Other": "'And my master made me swear an oath, and said, 'You must not get a wife for my son from the daughters of the Canaanites, in whose land I live,'",
       "Prefer not to say": "'And my master made me swear an oath, and said, 'You must not get a wife for my son from the daughters of the Canaanites, in whose land I live,'"
-    },
-    "38": {
+  },
+  "38": {
       "General": "'but go to my father's family and to my own clan, and get a wife for my son.'",
       "Non-Denominational": "'but go to my father's family and to my own clan, and get a wife for my son.'",
       "Baptist": "He states the positive requirement of the oath: to find a wife from Abraham's own relatives.",
@@ -534,8 +534,8 @@
       "Orthodox": "He explains the positive requirement of the oath: to seek a wife from Abraham's kin.",
       "Other": "'but go to my father's family and to my own clan, and get a wife for my son.'",
       "Prefer not to say": "'but go to my father's family and to my own clan, and get a wife for my son.'"
-    },
-    "39": {
+  },
+  "39": {
       "General": "'Then I asked my master, 'What if the woman will not come back with me?''",
       "Non-Denominational": "'Then I asked my master, 'What if the woman will not come back with me?''",
       "Baptist": "He recounts raising the practical concern about the woman's willingness to relocate.",
@@ -548,8 +548,8 @@
       "Orthodox": "He recounts his practical inquiry to Abraham about the woman's possible refusal.",
       "Other": "'Then I asked my master, 'What if the woman will not come back with me?''",
       "Prefer not to say": "'Then I asked my master, 'What if the woman will not come back with me?''"
-    },
-    "40": {
+  },
+  "40": {
       "General": "'He replied, 'The Lord, before whom I have walked faithfully, will send his angel with you and make your journey a success, so that you can get a wife for my son from my own clan and from my father's family.''",
       "Non-Denominational": "'He replied, 'The Lord, before whom I have walked faithfully, will send his angel with you and make your journey a success, so that you can get a wife for my son from my own clan and from my father's family.''",
       "Baptist": "He recounts Abraham's assurance of God's angelic guidance, based on Abraham's faithful walk with God.",
@@ -562,8 +562,8 @@
       "Orthodox": "He recounts Abraham's faithful assurance that God would provide angelic guidance for the mission's success.",
       "Other": "'He replied, 'The Lord, before whom I have walked faithfully, will send his angel with you and make your journey a success, so that you can get a wife for my son from my own clan and from my father's family.''",
       "Prefer not to say": "'He replied, 'The Lord, before whom I have walked faithfully, will send his angel with you and make your journey a success, so that you can get a wife for my son from my own clan and from my father's family.''"
-    },
-    "41": {
+  },
+  "41": {
       "General": "'You will be released from my oath if you go to my clan and they refuse to give her to you—then you will be released from my oath.'",
       "Non-Denominational": "'You will be released from my oath if you go to my clan and they refuse to give her to you—then you will be released from my oath.'",
       "Baptist": "He recounts the release clause: if the family refuses, the servant is absolved.",
@@ -576,8 +576,8 @@
       "Orthodox": "He repeats the condition releasing him from the oath should the family refuse.",
       "Other": "'You will be released from my oath if you go to my clan and they refuse to give her to you—then you will be released from my oath.'",
       "Prefer not to say": "'You will be released from my oath if you go to my clan and they refuse to give her to you—then you will be released from my oath.'"
-    },
-    "42": {
+  },
+  "42": {
       "General": "'When I came to the spring today, I said, 'Lord, God of my master Abraham, if you will, please grant success to the journey on which I have come.''",
       "Non-Denominational": "'When I came to the spring today, I said, 'Lord, God of my master Abraham, if you will, please grant success to the journey on which I have come.''",
       "Baptist": "He recounts his arrival at the well and his prayer for the mission's success.",
@@ -590,8 +590,8 @@
       "Orthodox": "He narrates his arrival at the spring and his prayer seeking God's blessing for success.",
       "Other": "'When I came to the spring today, I said, 'Lord, God of my master Abraham, if you will, please grant success to the journey on which I have come.''",
       "Prefer not to say": "'When I came to the spring today, I said, 'Lord, God of my master Abraham, if you will, please grant success to the journey on which I have come.''"
-    },
-    "43": {
+  },
+  "43": {
       "General": "'See, I am standing beside this spring. If a young woman comes out to draw water and I say to her, 'Please give me a little water from your jar,'",
       "Non-Denominational": "'See, I am standing beside this spring. If a young woman comes out to draw water and I say to her, 'Please give me a little water from your jar,'",
       "Baptist": "He recounts setting up the first part of the proposed sign in his prayer.",
@@ -604,8 +604,8 @@
       "Orthodox": "He reiterates the first part of the test proposed in his prayer.",
       "Other": "'See, I am standing beside this spring. If a young woman comes out to draw water and I say to her, 'Please give me a little water from your jar,'",
       "Prefer not to say": "'See, I am standing beside this spring. If a young woman comes out to draw water and I say to her, 'Please give me a little water from your jar,'"
-    },
-    "44": {
+  },
+  "44": {
       "General": "'and she says to me, 'Drink, and I'll draw water for your camels too,' let her be the one the Lord has chosen for my master's son.'",
       "Non-Denominational": "'and she says to me, 'Drink, and I'll draw water for your camels too,' let her be the one the Lord has chosen for my master's son.'",
       "Baptist": "He recounts the second, confirming part of the sign: the woman offering to water the camels would be God's choice.",
@@ -618,8 +618,8 @@
       "Orthodox": "He reiterates the specific test involving watering the camels as the sign of God's chosen one.",
       "Other": "'and she says to me, 'Drink, and I'll draw water for your camels too,' let her be the one the Lord has chosen for my master's son.'",
       "Prefer not to say": "'and she says to me, 'Drink, and I'll draw water for your camels too,' let her be the one the Lord has chosen for my master's son.'"
-    },
-    "45": {
+  },
+  "45": {
       "General": "'Before I finished praying in my heart, Rebekah came out, with her jar on her shoulder. She went down to the spring and drew water, and I said to her, 'Please give me a drink.'",
       "Non-Denominational": "'Before I finished praying in my heart, Rebekah came out, with her jar on her shoulder. She went down to the spring and drew water, and I said to her, 'Please give me a drink.'",
       "Baptist": "He emphasizes the immediacy of the answer: before he even finished his silent prayer, Rebekah appeared.",
@@ -632,8 +632,8 @@
       "Orthodox": "He stresses the swiftness of God's response, with Rebekah appearing even before his prayer concluded, and recounts asking her for water.",
       "Other": "'Before I finished praying in my heart, Rebekah came out, with her jar on her shoulder. She went down to the spring and drew water, and I said to her, 'Please give me a drink.'",
       "Prefer not to say": "'Before I finished praying in my heart, Rebekah came out, with her jar on her shoulder. She went down to the spring and drew water, and I said to her, 'Please give me a drink.'"
-    },
-    "46": {
+  },
+  "46": {
       "General": "'She quickly lowered her jar from her shoulder and said, 'Drink, and I'll water your camels too.' So I drank, and she watered the camels also.'",
       "Non-Denominational": "'She quickly lowered her jar from her shoulder and said, 'Drink, and I'll water your camels too.' So I drank, and she watered the camels also.'",
       "Baptist": "He recounts Rebekah perfectly fulfilling both parts of the requested sign.",
@@ -646,8 +646,8 @@
       "Orthodox": "He details how Rebekah perfectly matched the specific conditions of the sign he requested.",
       "Other": "'She quickly lowered her jar from her shoulder and said, 'Drink, and I'll water your camels too.' So I drank, and she watered the camels also.'",
       "Prefer not to say": "'She quickly lowered her jar from her shoulder and said, 'Drink, and I'll water your camels too.' So I drank, and she watered the camels also.'"
-    },
-    "47": {
+  },
+  "47": {
       "General": "'I asked her, 'Whose daughter are you?' She said, 'The daughter of Bethuel son of Nahor, whom Milcah bore to him.' Then I put the ring on her nose and the bracelets on her arms,'",
       "Non-Denominational": "'I asked her, 'Whose daughter are you?' She said, 'The daughter of Bethuel son of Nahor, whom Milcah bore to him.' Then I put the ring on her nose and the bracelets on her arms,'",
       "Baptist": "He recounts confirming her lineage (from Abraham's relatives) and presenting the gifts.",
@@ -660,8 +660,8 @@
       "Orthodox": "He describes confirming her identity as belonging to Abraham's kin and then bestowing the gifts.",
       "Other": "'I asked her, 'Whose daughter are you?' She said, 'The daughter of Bethuel son of Nahor, whom Milcah bore to him.' Then I put the ring on her nose and the bracelets on her arms,'",
       "Prefer not to say": "'I asked her, 'Whose daughter are you?' She said, 'The daughter of Bethuel son of Nahor, whom Milcah bore to him.' Then I put the ring on her nose and the bracelets on her arms,'"
-    },
-    "48": {
+  },
+  "48": {
       "General": "'and I bowed down and worshiped the Lord. I praised the Lord, the God of my master Abraham, who had led me on the right road to get the granddaughter of my master's brother for his son.'",
       "Non-Denominational": "'and I bowed down and worshiped the Lord. I praised the Lord, the God of my master Abraham, who had led me on the right road to get the granddaughter of my master's brother for his son.'",
       "Baptist": "He recounts his worship and praise to God for leading him directly and successfully to the intended relative.",
@@ -674,8 +674,8 @@
       "Orthodox": "He describes his subsequent worship and praise to God for guiding him directly to the appropriate relative.",
       "Other": "'and I bowed down and worshiped the Lord. I praised the Lord, the God of my master Abraham, who had led me on the right road to get the granddaughter of my master's brother for his son.'",
       "Prefer not to say": "'and I bowed down and worshiped the Lord. I praised the Lord, the God of my master Abraham, who had led me on the right road to get the granddaughter of my master's brother for his son.'"
-    },
-    "49": {
+  },
+  "49": {
       "General": "'Now if you will show kindness and faithfulness to my master, tell me; and if not, tell me, so I may know which way to turn.'",
       "Non-Denominational": "'Now if you will show kindness and faithfulness to my master, tell me; and if not, tell me, so I may know which way to turn.'",
       "Baptist": "He concludes by asking for a clear decision from Rebekah's family, appealing to their kindness and faithfulness towards Abraham.",
@@ -688,8 +688,8 @@
       "Orthodox": "He concludes by requesting a decision from the family, appealing to their obligation of kinship loyalty (hesed and emet) towards Abraham.",
       "Other": "'Now if you will show kindness and faithfulness to my master, tell me; and if not, tell me, so I may know which way to turn.'",
       "Prefer not to say": "'Now if you will show kindness and faithfulness to my master, tell me; and if not, tell me, so I may know which way to turn.'"
-    },
-    "50": {
+  },
+  "50": {
       "General": "They consented: 'Here is Rebekah; take her and go, and let her become the wife of your master's son, as the Lord has directed.'",
       "Non-Denominational": "They consented: 'Here is Rebekah; take her and go, and let her become the wife of your master's son, as the Lord has directed.'",
       "Baptist": "They formally give consent for Rebekah to marry Isaac, affirming it aligns with God's direction.",
@@ -702,8 +702,8 @@
       "Orthodox": "They formally agree to the union, presenting Rebekah to become Isaac's wife in accordance with God's evident will.",
       "Other": "They consented: 'Here is Rebekah; take her and go, and let her become the wife of your master's son, as the Lord has directed.'",
       "Prefer not to say": "They consented: 'Here is Rebekah; take her and go, and let her become the wife of your master's son, as the Lord has directed.'"
-    },
-    "51": {
+  },
+  "51": {
       "General": "Upon hearing their words, Abraham's servant bowed down to the ground before the Lord.",
       "Non-Denominational": "Upon hearing their words, Abraham's servant bowed down to the ground before the Lord.",
       "Baptist": "Upon hearing their consent, the servant again responds with worship and gratitude to God.",
@@ -716,8 +716,8 @@
       "Orthodox": "Hearing their agreement, the servant again responds with an act of worship and gratitude to God.",
       "Other": "Upon hearing their words, Abraham's servant bowed down to the ground before the Lord.",
       "Prefer not to say": "Upon hearing their words, Abraham's servant bowed down to the ground before the Lord."
-    },
-    "52": {
+  },
+  "52": {
       "General": "The servant then brought out expensive gifts of silver, gold, and clothing for Rebekah, and also gave costly gifts to her brother and to her mother.",
       "Non-Denominational": "The servant then brought out expensive gifts of silver, gold, and clothing for Rebekah, and also gave costly gifts to her brother and to her mother.",
       "Baptist": "The servant presents formal betrothal gifts to Rebekah and valuable gifts to her key family members (Laban and her mother).",
@@ -730,8 +730,8 @@
       "Orthodox": "The servant formally presents betrothal gifts to Rebekah and additional valuable gifts to her brother and mother.",
       "Other": "The servant then brought out expensive gifts of silver, gold, and clothing for Rebekah, and also gave costly gifts to her brother and to her mother.",
       "Prefer not to say": "The servant then brought out expensive gifts of silver, gold, and clothing for Rebekah, and also gave costly gifts to her brother and to her mother."
-    },
-    "53": {
+  },
+  "53": {
       "General": "The servant and his men ate, drank, and spent the night there. In the morning, the servant requested to be sent back to his master.",
       "Non-Denominational": "The servant and his men ate, drank, and spent the night there. In the morning, the servant requested to be sent back to his master.",
       "Baptist": "After concluding the arrangements and accepting hospitality, the servant is eager to return to Abraham promptly.",
@@ -744,8 +744,8 @@
       "Orthodox": "The servant and his party accept hospitality overnight but request to depart promptly the next morning.",
       "Other": "The servant and his men ate, drank, and spent the night there. In the morning, the servant requested to be sent back to his master.",
       "Prefer not to say": "The servant and his men ate, drank, and spent the night there. In the morning, the servant requested to be sent back to his master."
-    },
-    "54": {
+  },
+  "54": {
       "General": "Rebekah's brother and mother asked for her to stay with them for about ten more days before leaving.",
       "Non-Denominational": "Rebekah's brother and mother asked for her to stay with them for about ten more days before leaving.",
       "Baptist": "The family requests a customary delay (around ten days) for farewells before Rebekah departs.",
@@ -758,8 +758,8 @@
       "Orthodox": "The family requests a customary brief period for farewells before Rebekah's departure.",
       "Other": "Rebekah's brother and mother asked for her to stay with them for about ten more days before leaving.",
       "Prefer not to say": "Rebekah's brother and mother asked for her to stay with them for about ten more days before leaving."
-    },
-    "55": {
+  },
+  "55": {
       "General": "But her brother and mother replied, 'Let the young woman remain with us ten days or so; then you may go.'",
       "Non-Denominational": "But her brother and mother replied, 'Let the young woman remain with us ten days or so; then you may go.'",
       "Baptist": "The family requests a customary delay (around ten days) for farewells before Rebekah departs.",
@@ -772,8 +772,8 @@
       "Orthodox": "The family requests a customary brief period for farewells before Rebekah's departure.",
       "Other": "But her brother and mother replied, 'Let the young woman remain with us ten days or so; then you may go.'",
       "Prefer not to say": "But her brother and mother replied, 'Let the young woman remain with us ten days or so; then you may go.'"
-    },
-    "56": {
+  },
+  "56": {
       "General": "But he said to them, 'Do not detain me, now that the Lord has granted success to my journey. Send me on my way so I may go to my master.'",
       "Non-Denominational": "But he said to them, 'Do not detain me, now that the Lord has granted success to my journey. Send me on my way so I may go to my master.'",
       "Baptist": "The servant politely insists on immediate departure, attributing his success to God and feeling urgency to report back.",
@@ -786,8 +786,8 @@
       "Orthodox": "The servant politely insists on prompt departure, wishing to return without delay now that God has granted success.",
       "Other": "But he said to them, 'Do not detain me, now that the Lord has granted success to my journey. Send me on my way so I may go to my master.'",
       "Prefer not to say": "But he said to them, 'Do not detain me, now that the Lord has granted success to my journey. Send me on my way so I may go to my master.'"
-    },
-    "57": {
+  },
+  "57": {
       "General": "Then they said, 'Let's call the young woman and ask her about it.'",
       "Non-Denominational": "Then they said, 'Let's call the young woman and ask her about it.'",
       "Baptist": "The family decides to consult Rebekah herself regarding the departure time.",
@@ -800,8 +800,8 @@
       "Orthodox": "The family decides to consult Rebekah herself for her decision on the departure.",
       "Other": "Then they said, 'Let's call the young woman and ask her about it.'",
       "Prefer not to say": "Then they said, 'Let's call the young woman and ask her about it.'"
-    },
-    "58": {
+  },
+  "58": {
       "General": "So they called Rebekah and asked her, 'Will you go with this man?' 'I will go,' she said.",
       "Non-Denominational": "So they called Rebekah and asked her, 'Will you go with this man?' 'I will go,' she said.",
       "Baptist": "Rebekah decisively consents to leave immediately, demonstrating faith and resolve.",
@@ -814,8 +814,8 @@
       "Orthodox": "Rebekah gives her clear and immediate consent to depart with the servant.",
       "Other": "So they called Rebekah and asked her, 'Will you go with this man?' 'I will go,' she said.",
       "Prefer not to say": "So they called Rebekah and asked her, 'Will you go with this man?' 'I will go,' she said."
-    },
-    "59": {
+  },
+  "59": {
       "General": "And they blessed Rebekah and said to her, 'Our sister, may you increase to thousands upon thousands; may your offspring possess the gates of their enemies.'",
       "Non-Denominational": "And they blessed Rebekah and said to her, 'Our sister, may you increase to thousands upon thousands; may your offspring possess the gates of their enemies.'",
       "Baptist": "The family bestows a blessing upon Rebekah, wishing her great fertility and powerful descendants, echoing aspects of the Abrahamic promise.",
@@ -838,8 +838,8 @@
       "Orthodox": "Rebekah receives a parting blessing from her family, invoking great fruitfulness and power for her descendants.",
       "Other": "And they blessed Rebekah and said to her, 'Our sister, may you increase to thousands upon thousands; may your offspring possess the gates of their enemies.'",
       "Prefer not to say": "And they blessed Rebekah and said to her, 'Our sister, may you increase to thousands upon thousands; may your offspring possess the gates of their enemies.'"
-    },
-    "60": {
+  },
+  "60": {
       "General": "Rebekah and her attendants got ready, mounted the camels, and went back with the man. So the servant took Rebekah and left.",
       "Non-Denominational": "Rebekah and her attendants got ready, mounted the camels, and went back with the man. So the servant took Rebekah and left.",
       "Baptist": "Rebekah and her attendants depart with the servant, beginning the journey to Canaan.",
@@ -852,8 +852,8 @@
       "Orthodox": "Rebekah and her attendants prepare and depart with the servant's caravan.",
       "Other": "Rebekah and her attendants got ready, mounted the camels, and went back with the man. So the servant took Rebekah and left.",
       "Prefer not to say": "Rebekah and her attendants got ready, mounted the camels, and went back with the man. So the servant took Rebekah and left."
-    },
-    "61": {
+  },
+  "61": {
       "General": "Meanwhile, Isaac had come from Beer Lahai Roi (where Hagar encountered God) and was living in the Negev.",
       "Non-Denominational": "Meanwhile, Isaac had come from Beer Lahai Roi (where Hagar encountered God) and was living in the Negev.",
       "Baptist": "Shifts focus to Isaac, locating him in the Negev region, having come from Beer Lahai Roi (Well of the Living One Who Sees Me).",
@@ -866,8 +866,8 @@
       "Orthodox": "The narrative focus moves to Isaac, residing in the Negev, having journeyed from Beer Lahai Roi.",
       "Other": "Meanwhile, Isaac had come from Beer Lahai Roi (where Hagar encountered God) and was living in the Negev.",
       "Prefer not to say": "Meanwhile, Isaac had come from Beer Lahai Roi (where Hagar encountered God) and was living in the Negev."
-    },
-    "62": {
+  },
+  "62": {
       "General": "Isaac went out to the field one evening to meditate, and as he looked up, he saw camels approaching.",
       "Non-Denominational": "Isaac went out to the field one evening to meditate, and as he looked up, he saw camels approaching.",
       "Baptist": "Describes Isaac meditating/praying in the field in the evening when he sees the approaching caravan.",
@@ -880,8 +880,8 @@
       "Orthodox": "Describes Isaac in the field engaged in meditation or prayer during the evening when he observes the approaching caravan.",
       "Other": "Isaac went out to the field one evening to meditate, and as he looked up, he saw camels approaching.",
       "Prefer not to say": "Isaac went out to the field one evening to meditate, and as he looked up, he saw camels approaching."
-    },
-    "63": {
+  },
+  "63": {
       "General": "Rebekah also looked up, saw Isaac, and got down from her camel.",
       "Non-Denominational": "Rebekah also looked up, saw Isaac, and got down from her camel.",
       "Baptist": "Rebekah sees Isaac and dismounts from her camel, a sign of respect.",
@@ -894,8 +894,8 @@
       "Orthodox": "Upon seeing Isaac, Rebekah dismounts from her camel in a gesture of respect.",
       "Other": "Rebekah also looked up, saw Isaac, and got down from her camel.",
       "Prefer not to say": "Rebekah also looked up, saw Isaac, and got down from her camel."
-    },
-    "64": {
+  },
+  "64": {
       "General": "She asked the servant who the man walking in the field to meet them is. The servant identified him as his master, Isaac. So she took her veil and covered herself.",
       "Non-Denominational": "She asked the servant who the man walking in the field to meet them is. The servant identified him as his master, Isaac. So she took her veil and covered herself.",
       "Baptist": "Rebekah inquires about the man's identity. Learning it is Isaac (her future husband), she veils herself according to custom.",
@@ -908,8 +908,8 @@
       "Orthodox": "Upon identifying the man as Isaac, Rebekah covers herself with a veil, observing bridal custom and modesty.",
       "Other": "She asked the servant who the man walking in the field to meet them is. The servant identified him as his master, Isaac. So she took her veil and covered herself.",
       "Prefer not to say": "She asked the servant who the man walking in the field to meet them is. The servant identified him as his master, Isaac. So she took her veil and covered herself."
-    },
-    "65": {
+  },
+  "65": {
       "General": "The servant told Isaac everything that had happened on the journey.",
       "Non-Denominational": "The servant told Isaac everything that had happened on the journey.",
       "Baptist": "The servant reports the details of his successful mission to Isaac.",
@@ -922,8 +922,8 @@
       "Orthodox": "The servant provides Isaac with a complete account of his journey and its divinely guided outcome.",
       "Other": "The servant told Isaac everything that had happened on the journey.",
       "Prefer not to say": "The servant told Isaac everything that had happened on the journey."
-    },
-    "66": {
+  },
+  "66": {
       "General": "Isaac brought Rebekah into the tent of his mother, Sarah. He married Rebekah, loves her, and finds comfort after his mother's death.",
       "Non-Denominational": "Isaac brought Rebekah into the tent of his mother, Sarah. He married Rebekah, loves her, and finds comfort after his mother's death.",
       "Baptist": "Isaac marries Rebekah, loves her, and finds comfort after his mother's death.",
@@ -936,8 +936,8 @@
       "Orthodox": "Isaac takes Rebekah into his mother's tent, marries her, and develops love for her. This relationship provides comfort for Isaac after his mother's passing.",
       "Other": "Isaac brought Rebekah into the tent of his mother, Sarah. He married Rebekah, loves her, and finds comfort after his mother's death.",
       "Prefer not to say": "Isaac brought Rebekah into the tent of his mother, Sarah. He married Rebekah, loves her, and finds comfort after his mother's death."
-    },
-    "67": {
+  },
+  "67": {
       "General": "Isaac brought Rebekah into the tent of his mother, Sarah. He married Rebekah, loves her, and finds comfort after his mother's death.",
       "Non-Denominational": "Isaac brought Rebekah into the tent of his mother, Sarah. He married Rebekah, loves her, and finds comfort after his mother's death.",
       "Baptist": "Isaac marries Rebekah, brings her into Sarah's tent, marries her, loves her, and finds comfort after his mother's death.",

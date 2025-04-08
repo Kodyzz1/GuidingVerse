@@ -1,0 +1,545 @@
+{
+  "chapter": 21,
+  "verses": [
+    {
+      "verse": 1,
+      "interpretations": {
+        "General": "The introduction of ordinances reflects God's justice and the importance of fair treatment.",
+        "Non-Denominational": "The introduction of ordinances demonstrates God's justice and the importance of fair treatment.",
+        "Baptist": "The introduction of ordinances represents God's justice and the importance of biblical faith in fair treatment.",
+        "Catholic": "The introduction of ordinances reflects the Catholic understanding of God's justice and the importance of fair treatment.",
+        "Methodist": "The introduction of ordinances demonstrates God's justice and the need for faithful service in fair treatment.",
+        "Lutheran": "The introduction of ordinances represents God's justice and the importance of biblical faith in fair treatment.",
+        "Presbyterian": "The introduction of ordinances reflects God's covenantal faithfulness and the importance of fair treatment.",
+        "Pentecostal": "The introduction of ordinances demonstrates God's justice and the need for spiritual faith in fair treatment.",
+        "Anglican": "The introduction of ordinances represents God's justice and the need for faithful service in fair treatment.",
+        "Orthodox": "The introduction of ordinances reflects the Orthodox understanding of God's justice and the importance of fair treatment."
+      }
+    },
+    {
+      "verse": 2,
+      "interpretations": {
+        "General": "The law about Hebrew servants reflects God's mercy and the importance of freedom.",
+        "Non-Denominational": "The law about Hebrew servants demonstrates God's mercy and the importance of freedom.",
+        "Baptist": "The law about Hebrew servants represents God's mercy and the importance of biblical faith in freedom.",
+        "Catholic": "The law about Hebrew servants reflects the Catholic understanding of God's mercy and the importance of freedom.",
+        "Methodist": "The law about Hebrew servants demonstrates God's mercy and the need for faithful service in freedom.",
+        "Lutheran": "The law about Hebrew servants represents God's mercy and the importance of biblical faith in freedom.",
+        "Presbyterian": "The law about Hebrew servants reflects God's covenantal faithfulness and the importance of freedom.",
+        "Pentecostal": "The law about Hebrew servants demonstrates God's mercy and the need for spiritual faith in freedom.",
+        "Anglican": "The law about Hebrew servants represents God's mercy and the need for faithful service in freedom.",
+        "Orthodox": "The law about Hebrew servants reflects the Orthodox understanding of God's mercy and the importance of freedom."
+      }
+    },
+    {
+      "verse": 3,
+      "interpretations": {
+        "General": "The single man's freedom reflects God's justice and the importance of individual rights.",
+        "Non-Denominational": "The single man's freedom demonstrates God's justice and the importance of individual rights.",
+        "Baptist": "The single man's freedom represents God's justice and the importance of biblical faith in individual rights.",
+        "Catholic": "The single man's freedom reflects the Catholic understanding of God's justice and the importance of individual rights.",
+        "Methodist": "The single man's freedom demonstrates God's justice and the need for faithful service in individual rights.",
+        "Lutheran": "The single man's freedom represents God's justice and the importance of biblical faith in individual rights.",
+        "Presbyterian": "The single man's freedom reflects God's covenantal faithfulness and the importance of individual rights.",
+        "Pentecostal": "The single man's freedom demonstrates God's justice and the need for spiritual faith in individual rights.",
+        "Anglican": "The single man's freedom represents God's justice and the need for faithful service in individual rights.",
+        "Orthodox": "The single man's freedom represents the Orthodox understanding of God's justice and the importance of individual rights."
+      }
+    },
+    {
+      "verse": 4,
+      "interpretations": {
+        "General": "The married man's situation reflects God's order and the importance of family.",
+        "Non-Denominational": "The married man's situation demonstrates God's order and the importance of family.",
+        "Baptist": "The married man's situation represents God's order and the importance of biblical faith in family.",
+        "Catholic": "The married man's situation reflects the Catholic understanding of God's order and the importance of family.",
+        "Methodist": "The married man's situation demonstrates God's order and the need for faithful service in family.",
+        "Lutheran": "The married man's situation represents God's order and the importance of biblical faith in family.",
+        "Presbyterian": "The married man's situation reflects God's covenantal faithfulness and the importance of family.",
+        "Pentecostal": "The married man's situation demonstrates God's order and the need for spiritual faith in family.",
+        "Anglican": "The married man's situation represents God's order and the need for faithful service in family.",
+        "Orthodox": "The married man's situation represents the Orthodox understanding of God's order and the importance of family."
+      }
+    },
+    {
+      "verse": 5,
+      "interpretations": {
+        "General": "The servant's choice reflects God's love and the importance of commitment.",
+        "Non-Denominational": "The servant's choice demonstrates God's love and the importance of commitment.",
+        "Baptist": "The servant's choice represents God's love and the importance of biblical faith in commitment.",
+        "Catholic": "The servant's choice reflects the Catholic understanding of God's love and the importance of commitment.",
+        "Methodist": "The servant's choice demonstrates God's love and the need for faithful service in commitment.",
+        "Lutheran": "The servant's choice represents God's love and the importance of biblical faith in commitment.",
+        "Presbyterian": "The servant's choice reflects God's covenantal faithfulness and the importance of commitment.",
+        "Pentecostal": "The servant's choice demonstrates God's love and the need for spiritual faith in commitment.",
+        "Anglican": "The servant's choice represents God's love and the need for faithful service in commitment.",
+        "Orthodox": "The servant's choice represents the Orthodox understanding of God's love and the importance of commitment."
+      }
+    },
+    {
+      "verse": 6,
+      "interpretations": {
+        "General": "The ear piercing reflects God's covenant and the importance of permanent commitment.",
+        "Non-Denominational": "The ear piercing demonstrates God's covenant and the importance of permanent commitment.",
+        "Baptist": "The ear piercing represents God's covenant and the importance of biblical faith in permanent commitment.",
+        "Catholic": "The ear piercing reflects the Catholic understanding of God's covenant and the importance of permanent commitment.",
+        "Methodist": "The ear piercing demonstrates God's covenant and the need for faithful service in permanent commitment.",
+        "Lutheran": "The ear piercing represents God's covenant and the importance of biblical faith in permanent commitment.",
+        "Presbyterian": "The ear piercing reflects God's covenantal faithfulness and the importance of permanent commitment.",
+        "Pentecostal": "The ear piercing demonstrates God's covenant and the need for spiritual faith in permanent commitment.",
+        "Anglican": "The ear piercing represents God's covenant and the need for faithful service in permanent commitment.",
+        "Orthodox": "The ear piercing represents the Orthodox understanding of God's covenant and the importance of permanent commitment."
+      }
+    },
+    {
+      "verse": 7,
+      "interpretations": {
+        "General": "The female servant law reflects God's protection and the importance of women's rights.",
+        "Non-Denominational": "The female servant law demonstrates God's protection and the importance of women's rights.",
+        "Baptist": "The female servant law represents God's protection and the importance of biblical faith in women's rights.",
+        "Catholic": "The female servant law reflects the Catholic understanding of God's protection and the importance of women's rights.",
+        "Methodist": "The female servant law demonstrates God's protection and the need for faithful service in women's rights.",
+        "Lutheran": "The female servant law represents God's protection and the importance of biblical faith in women's rights.",
+        "Presbyterian": "The female servant law reflects God's covenantal faithfulness and the importance of women's rights.",
+        "Pentecostal": "The female servant law demonstrates God's protection and the need for spiritual faith in women's rights.",
+        "Anglican": "The female servant law represents God's protection and the need for faithful service in women's rights.",
+        "Orthodox": "The female servant law reflects the Orthodox understanding of God's protection and the importance of women's rights."
+      }
+    },
+    {
+      "verse": 8,
+      "interpretations": {
+        "General": "The master's responsibility reflects God's justice and the importance of fair treatment.",
+        "Non-Denominational": "The master's responsibility demonstrates God's justice and the importance of fair treatment.",
+        "Baptist": "The master's responsibility represents God's justice and the importance of biblical faith in fair treatment.",
+        "Catholic": "The master's responsibility reflects the Catholic understanding of God's justice and the importance of fair treatment.",
+        "Methodist": "The master's responsibility demonstrates God's justice and the need for faithful service in fair treatment.",
+        "Lutheran": "The master's responsibility represents God's justice and the importance of biblical faith in fair treatment.",
+        "Presbyterian": "The master's responsibility reflects God's covenantal faithfulness and the importance of fair treatment.",
+        "Pentecostal": "The master's responsibility demonstrates God's justice and the need for spiritual faith in fair treatment.",
+        "Anglican": "The master's responsibility represents God's justice and the need for faithful service in fair treatment.",
+        "Orthodox": "The master's responsibility represents the Orthodox understanding of God's justice and the importance of fair treatment."
+      }
+    },
+    {
+      "verse": 9,
+      "interpretations": {
+        "General": "The son's rights reflect God's order and the importance of family.",
+        "Non-Denominational": "The son's rights demonstrate God's order and the importance of family.",
+        "Baptist": "The son's rights represent God's order and the importance of biblical faith in family.",
+        "Catholic": "The son's rights reflect the Catholic understanding of God's order and the importance of family.",
+        "Methodist": "The son's rights demonstrate God's order and the need for faithful service in family.",
+        "Lutheran": "The son's rights represent God's order and the importance of biblical faith in family.",
+        "Presbyterian": "The son's rights reflect God's covenantal faithfulness and the importance of family.",
+        "Pentecostal": "The son's rights demonstrate God's order and the need for spiritual faith in family.",
+        "Anglican": "The son's rights represent God's order and the need for faithful service in family.",
+        "Orthodox": "The son's rights represent the Orthodox understanding of God's order and the importance of family."
+      }
+    },
+    {
+      "verse": 10,
+      "interpretations": {
+        "General": "The multiple wives law reflects God's justice and the importance of equal treatment.",
+        "Non-Denominational": "The multiple wives law demonstrates God's justice and the importance of equal treatment.",
+        "Baptist": "The multiple wives law represents God's justice and the importance of biblical faith in equal treatment.",
+        "Catholic": "The multiple wives law reflects the Catholic understanding of God's justice and the importance of equal treatment.",
+        "Methodist": "The multiple wives law demonstrates God's justice and the need for faithful service in equal treatment.",
+        "Lutheran": "The multiple wives law represents God's justice and the importance of biblical faith in equal treatment.",
+        "Presbyterian": "The multiple wives law reflects God's covenantal faithfulness and the importance of equal treatment.",
+        "Pentecostal": "The multiple wives law demonstrates God's justice and the need for spiritual faith in equal treatment.",
+        "Anglican": "The multiple wives law represents God's justice and the need for faithful service in equal treatment.",
+        "Orthodox": "The multiple wives law reflects the Orthodox understanding of God's justice and the importance of equal treatment."
+      }
+    },
+    {
+      "verse": 11,
+      "interpretations": {
+        "General": "The release law reflects God's mercy and the importance of freedom.",
+        "Non-Denominational": "The release law demonstrates God's mercy and the importance of freedom.",
+        "Baptist": "The release law represents God's mercy and the importance of biblical faith in freedom.",
+        "Catholic": "The release law reflects the Catholic understanding of God's mercy and the importance of freedom.",
+        "Methodist": "The release law demonstrates God's mercy and the need for faithful service in freedom.",
+        "Lutheran": "The release law represents God's mercy and the importance of biblical faith in freedom.",
+        "Presbyterian": "The release law reflects God's covenantal faithfulness and the importance of freedom.",
+        "Pentecostal": "The release law demonstrates God's mercy and the need for spiritual faith in freedom.",
+        "Anglican": "The release law represents God's mercy and the need for faithful service in freedom.",
+        "Orthodox": "The release law reflects the Orthodox understanding of God's mercy and the importance of freedom."
+      }
+    },
+    {
+      "verse": 12,
+      "interpretations": {
+        "General": "The murder law reflects God's justice and the importance of life.",
+        "Non-Denominational": "The murder law demonstrates God's justice and the importance of life.",
+        "Baptist": "The murder law represents God's justice and the importance of biblical faith in life.",
+        "Catholic": "The murder law reflects the Catholic understanding of God's justice and the importance of life.",
+        "Methodist": "The murder law demonstrates God's justice and the need for faithful service in life.",
+        "Lutheran": "The murder law represents God's justice and the importance of biblical faith in life.",
+        "Presbyterian": "The murder law reflects God's covenantal faithfulness and the importance of life.",
+        "Pentecostal": "The murder law demonstrates God's justice and the need for spiritual faith in life.",
+        "Anglican": "The murder law represents God's justice and the need for faithful service in life.",
+        "Orthodox": "The murder law reflects the Orthodox understanding of God's justice and the importance of life."
+      }
+    },
+    {
+      "verse": 13,
+      "interpretations": {
+        "General": "The accidental killing law reflects God's mercy and the importance of intent.",
+        "Non-Denominational": "The accidental killing law demonstrates God's mercy and the importance of intent.",
+        "Baptist": "The accidental killing law represents God's mercy and the importance of biblical faith in intent.",
+        "Catholic": "The accidental killing law reflects the Catholic understanding of God's mercy and the importance of intent.",
+        "Methodist": "The accidental killing law demonstrates God's mercy and the need for faithful service in intent.",
+        "Lutheran": "The accidental killing law represents God's mercy and the importance of biblical faith in intent.",
+        "Presbyterian": "The accidental killing law reflects God's covenantal faithfulness and the importance of intent.",
+        "Pentecostal": "The accidental killing law demonstrates God's mercy and the need for spiritual faith in intent.",
+        "Anglican": "The accidental killing law represents God's mercy and the need for faithful service in intent.",
+        "Orthodox": "The accidental killing law reflects the Orthodox understanding of God's mercy and the importance of intent."
+      }
+    },
+    {
+      "verse": 14,
+      "interpretations": {
+        "General": "The premeditated murder law reflects God's justice and the importance of accountability.",
+        "Non-Denominational": "The premeditated murder law demonstrates God's justice and the importance of accountability.",
+        "Baptist": "The premeditated murder law represents God's justice and the importance of biblical faith in accountability.",
+        "Catholic": "The premeditated murder law reflects the Catholic understanding of God's justice and the importance of accountability.",
+        "Methodist": "The premeditated murder law demonstrates God's justice and the need for faithful service in accountability.",
+        "Lutheran": "The premeditated murder law represents God's justice and the importance of biblical faith in accountability.",
+        "Presbyterian": "The premeditated murder law reflects God's covenantal faithfulness and the importance of accountability.",
+        "Pentecostal": "The premeditated murder law demonstrates God's justice and the need for spiritual faith in accountability.",
+        "Anglican": "The premeditated murder law represents God's justice and the need for faithful service in accountability.",
+        "Orthodox": "The premeditated murder law reflects the Orthodox understanding of God's justice and the importance of accountability."
+      }
+    },
+    {
+      "verse": 15,
+      "interpretations": {
+        "General": "The parent striking law reflects God's order and the importance of family respect.",
+        "Non-Denominational": "The parent striking law demonstrates God's order and the importance of family respect.",
+        "Baptist": "The parent striking law represents God's order and the importance of biblical faith in family respect.",
+        "Catholic": "The parent striking law reflects the Catholic understanding of God's order and the importance of family respect.",
+        "Methodist": "The parent striking law demonstrates God's order and the need for faithful service in family respect.",
+        "Lutheran": "The parent striking law represents God's order and the importance of biblical faith in family respect.",
+        "Presbyterian": "The parent striking law reflects God's covenantal faithfulness and the importance of family respect.",
+        "Pentecostal": "The parent striking law demonstrates God's order and the need for spiritual faith in family respect.",
+        "Anglican": "The parent striking law represents God's order and the need for faithful service in family respect.",
+        "Orthodox": "The parent striking law reflects the Orthodox understanding of God's order and the importance of family respect."
+      }
+    },
+    {
+      "verse": 16,
+      "interpretations": {
+        "General": "The kidnapping law reflects God's justice and the importance of freedom.",
+        "Non-Denominational": "The kidnapping law demonstrates God's justice and the importance of freedom.",
+        "Baptist": "The kidnapping law represents God's justice and the importance of biblical faith in freedom.",
+        "Catholic": "The kidnapping law reflects the Catholic understanding of God's justice and the importance of freedom.",
+        "Methodist": "The kidnapping law demonstrates God's justice and the need for faithful service in freedom.",
+        "Lutheran": "The kidnapping law represents God's justice and the importance of biblical faith in freedom.",
+        "Presbyterian": "The kidnapping law reflects God's covenantal faithfulness and the importance of freedom.",
+        "Pentecostal": "The kidnapping law demonstrates God's justice and the need for spiritual faith in freedom.",
+        "Anglican": "The kidnapping law represents God's justice and the need for faithful service in freedom.",
+        "Orthodox": "The kidnapping law reflects the Orthodox understanding of God's justice and the importance of freedom."
+      }
+    },
+    {
+      "verse": 17,
+      "interpretations": {
+        "General": "The parent cursing law reflects God's order and the importance of family honor.",
+        "Non-Denominational": "The parent cursing law demonstrates God's order and the importance of family honor.",
+        "Baptist": "The parent cursing law represents God's order and the importance of biblical faith in family honor.",
+        "Catholic": "The parent cursing law reflects the Catholic understanding of God's order and the importance of family honor.",
+        "Methodist": "The parent cursing law demonstrates God's order and the need for faithful service in family honor.",
+        "Lutheran": "The parent cursing law represents God's order and the importance of biblical faith in family honor.",
+        "Presbyterian": "The parent cursing law reflects God's covenantal faithfulness and the importance of family honor.",
+        "Pentecostal": "The parent cursing law demonstrates God's order and the need for spiritual faith in family honor.",
+        "Anglican": "The parent cursing law represents God's order and the need for faithful service in family honor.",
+        "Orthodox": "The parent cursing law reflects the Orthodox understanding of God's order and the importance of family honor."
+      }
+    },
+    {
+      "verse": 18,
+      "interpretations": {
+        "General": "The injury law reflects God's justice and the importance of restitution.",
+        "Non-Denominational": "The injury law demonstrates God's justice and the importance of restitution.",
+        "Baptist": "The injury law represents God's justice and the importance of biblical faith in restitution.",
+        "Catholic": "The injury law reflects the Catholic understanding of God's justice and the importance of restitution.",
+        "Methodist": "The injury law demonstrates God's justice and the need for faithful service in restitution.",
+        "Lutheran": "The injury law represents God's justice and the importance of biblical faith in restitution.",
+        "Presbyterian": "The injury law reflects God's covenantal faithfulness and the importance of restitution.",
+        "Pentecostal": "The injury law demonstrates God's justice and the need for spiritual faith in restitution.",
+        "Anglican": "The injury law represents God's justice and the need for faithful service in restitution.",
+        "Orthodox": "The injury law reflects the Orthodox understanding of God's justice and the importance of restitution."
+      }
+    },
+    {
+      "verse": 19,
+      "interpretations": {
+        "General": "The recovery law reflects God's mercy and the importance of healing.",
+        "Non-Denominational": "The recovery law demonstrates God's mercy and the importance of healing.",
+        "Baptist": "The recovery law represents God's mercy and the importance of biblical faith in healing.",
+        "Catholic": "The recovery law reflects the Catholic understanding of God's mercy and the importance of healing.",
+        "Methodist": "The recovery law demonstrates God's mercy and the need for faithful service in healing.",
+        "Lutheran": "The recovery law represents God's mercy and the importance of biblical faith in healing.",
+        "Presbyterian": "The recovery law reflects God's covenantal faithfulness and the importance of healing.",
+        "Pentecostal": "The recovery law demonstrates God's mercy and the need for spiritual faith in healing.",
+        "Anglican": "The recovery law represents God's mercy and the need for faithful service in healing.",
+        "Orthodox": "The recovery law reflects the Orthodox understanding of God's mercy and the importance of healing."
+      }
+    },
+    {
+      "verse": 20,
+      "interpretations": {
+        "General": "The servant beating law reflects God's justice and the importance of fair treatment.",
+        "Non-Denominational": "The servant beating law demonstrates God's justice and the importance of fair treatment.",
+        "Baptist": "The servant beating law represents God's justice and the importance of biblical faith in fair treatment.",
+        "Catholic": "The servant beating law reflects the Catholic understanding of God's justice and the importance of fair treatment.",
+        "Methodist": "The servant beating law demonstrates God's justice and the need for faithful service in fair treatment.",
+        "Lutheran": "The servant beating law represents God's justice and the importance of biblical faith in fair treatment.",
+        "Presbyterian": "The servant beating law reflects God's covenantal faithfulness and the importance of fair treatment.",
+        "Pentecostal": "The servant beating law demonstrates God's justice and the need for spiritual faith in fair treatment.",
+        "Anglican": "The servant beating law represents God's justice and the need for faithful service in fair treatment.",
+        "Orthodox": "The servant beating law reflects the Orthodox understanding of God's justice and the importance of fair treatment."
+      }
+    },
+    {
+      "verse": 21,
+      "interpretations": {
+        "General": "The servant survival law reflects God's mercy and the importance of life.",
+        "Non-Denominational": "The servant survival law demonstrates God's mercy and the importance of life.",
+        "Baptist": "The servant survival law represents God's mercy and the importance of biblical faith in life.",
+        "Catholic": "The servant survival law reflects the Catholic understanding of God's mercy and the importance of life.",
+        "Methodist": "The servant survival law demonstrates God's mercy and the need for faithful service in life.",
+        "Lutheran": "The servant survival law represents God's mercy and the importance of biblical faith in life.",
+        "Presbyterian": "The servant survival law reflects God's covenantal faithfulness and the importance of life.",
+        "Pentecostal": "The servant survival law demonstrates God's mercy and the need for spiritual faith in life.",
+        "Anglican": "The servant survival law represents God's mercy and the need for faithful service in life.",
+        "Orthodox": "The servant survival law reflects the Orthodox understanding of God's mercy and the importance of life."
+      }
+    },
+    {
+      "verse": 22,
+      "interpretations": {
+        "General": "The pregnant woman law reflects God's protection and the importance of life.",
+        "Non-Denominational": "The pregnant woman law demonstrates God's protection and the importance of life.",
+        "Baptist": "The pregnant woman law represents God's protection and the importance of biblical faith in life.",
+        "Catholic": "The pregnant woman law reflects the Catholic understanding of God's protection and the importance of life.",
+        "Methodist": "The pregnant woman law demonstrates God's protection and the need for faithful service in life.",
+        "Lutheran": "The pregnant woman law represents God's protection and the importance of biblical faith in life.",
+        "Presbyterian": "The pregnant woman law reflects God's covenantal faithfulness and the importance of life.",
+        "Pentecostal": "The pregnant woman law demonstrates God's protection and the need for spiritual faith in life.",
+        "Anglican": "The pregnant woman law represents God's protection and the need for faithful service in life.",
+        "Orthodox": "The pregnant woman law reflects the Orthodox understanding of God's protection and the importance of life."
+      }
+    },
+    {
+      "verse": 23,
+      "interpretations": {
+        "General": "The life for life law reflects God's justice and the importance of accountability.",
+        "Non-Denominational": "The life for life law demonstrates God's justice and the importance of accountability.",
+        "Baptist": "The life for life law represents God's justice and the importance of biblical faith in accountability.",
+        "Catholic": "The life for life law reflects the Catholic understanding of God's justice and the importance of accountability.",
+        "Methodist": "The life for life law demonstrates God's justice and the need for faithful service in accountability.",
+        "Lutheran": "The life for life law represents God's justice and the importance of biblical faith in accountability.",
+        "Presbyterian": "The life for life law reflects God's covenantal faithfulness and the importance of accountability.",
+        "Pentecostal": "The life for life law demonstrates God's justice and the need for spiritual faith in accountability.",
+        "Anglican": "The life for life law represents God's justice and the need for faithful service in accountability.",
+        "Orthodox": "The life for life law reflects the Orthodox understanding of God's justice and the importance of accountability."
+      }
+    },
+    {
+      "verse": 24,
+      "interpretations": {
+        "General": "The eye for eye law reflects God's justice and the importance of proportional justice.",
+        "Non-Denominational": "The eye for eye law demonstrates God's justice and the importance of proportional justice.",
+        "Baptist": "The eye for eye law represents God's justice and the importance of biblical faith in proportional justice.",
+        "Catholic": "The eye for eye law reflects the Catholic understanding of God's justice and the importance of proportional justice.",
+        "Methodist": "The eye for eye law demonstrates God's justice and the need for faithful service in proportional justice.",
+        "Lutheran": "The eye for eye law represents God's justice and the importance of biblical faith in proportional justice.",
+        "Presbyterian": "The eye for eye law reflects God's covenantal faithfulness and the importance of proportional justice.",
+        "Pentecostal": "The eye for eye law demonstrates God's justice and the need for spiritual faith in proportional justice.",
+        "Anglican": "The eye for eye law represents God's justice and the need for faithful service in proportional justice.",
+        "Orthodox": "The eye for eye law reflects the Orthodox understanding of God's justice and the importance of proportional justice."
+      }
+    },
+    {
+      "verse": 25,
+      "interpretations": {
+        "General": "The burn for burn law reflects God's justice and the importance of fair punishment.",
+        "Non-Denominational": "The burn for burn law demonstrates God's justice and the importance of fair punishment.",
+        "Baptist": "The burn for burn law represents God's justice and the importance of biblical faith in fair punishment.",
+        "Catholic": "The burn for burn law reflects the Catholic understanding of God's justice and the importance of fair punishment.",
+        "Methodist": "The burn for burn law demonstrates God's justice and the need for faithful service in fair punishment.",
+        "Lutheran": "The burn for burn law represents God's justice and the importance of biblical faith in fair punishment.",
+        "Presbyterian": "The burn for burn law reflects God's covenantal faithfulness and the importance of fair punishment.",
+        "Pentecostal": "The burn for burn law demonstrates God's justice and the need for spiritual faith in fair punishment.",
+        "Anglican": "The burn for burn law represents God's justice and the need for faithful service in fair punishment.",
+        "Orthodox": "The burn for burn law reflects the Orthodox understanding of God's justice and the importance of fair punishment."
+      }
+    },
+    {
+      "verse": 26,
+      "interpretations": {
+        "General": "The eye injury law reflects God's mercy and the importance of freedom.",
+        "Non-Denominational": "The eye injury law demonstrates God's mercy and the importance of freedom.",
+        "Baptist": "The eye injury law represents God's mercy and the importance of biblical faith in freedom.",
+        "Catholic": "The eye injury law reflects the Catholic understanding of God's mercy and the importance of freedom.",
+        "Methodist": "The eye injury law demonstrates God's mercy and the need for faithful service in freedom.",
+        "Lutheran": "The eye injury law represents God's mercy and the importance of biblical faith in freedom.",
+        "Presbyterian": "The eye injury law reflects God's covenantal faithfulness and the importance of freedom.",
+        "Pentecostal": "The eye injury law demonstrates God's mercy and the need for spiritual faith in freedom.",
+        "Anglican": "The eye injury law represents God's mercy and the need for faithful service in freedom.",
+        "Orthodox": "The eye injury law reflects the Orthodox understanding of God's mercy and the importance of freedom."
+      }
+    },
+    {
+      "verse": 27,
+      "interpretations": {
+        "General": "The tooth injury law reflects God's mercy and the importance of freedom.",
+        "Non-Denominational": "The tooth injury law demonstrates God's mercy and the importance of freedom.",
+        "Baptist": "The tooth injury law represents God's mercy and the importance of biblical faith in freedom.",
+        "Catholic": "The tooth injury law reflects the Catholic understanding of God's mercy and the importance of freedom.",
+        "Methodist": "The tooth injury law demonstrates God's mercy and the need for faithful service in freedom.",
+        "Lutheran": "The tooth injury law represents God's mercy and the importance of biblical faith in freedom.",
+        "Presbyterian": "The tooth injury law reflects God's covenantal faithfulness and the importance of freedom.",
+        "Pentecostal": "The tooth injury law demonstrates God's mercy and the need for spiritual faith in freedom.",
+        "Anglican": "The tooth injury law represents God's mercy and the need for faithful service in freedom.",
+        "Orthodox": "The tooth injury law reflects the Orthodox understanding of God's mercy and the importance of freedom."
+      }
+    },
+    {
+      "verse": 28,
+      "interpretations": {
+        "General": "The ox goring law reflects God's justice and the importance of responsibility.",
+        "Non-Denominational": "The ox goring law demonstrates God's justice and the importance of responsibility.",
+        "Baptist": "The ox goring law represents God's justice and the importance of biblical faith in responsibility.",
+        "Catholic": "The ox goring law reflects the Catholic understanding of God's justice and the importance of responsibility.",
+        "Methodist": "The ox goring law demonstrates God's justice and the need for faithful service in responsibility.",
+        "Lutheran": "The ox goring law represents God's justice and the importance of biblical faith in responsibility.",
+        "Presbyterian": "The ox goring law reflects God's covenantal faithfulness and the importance of responsibility.",
+        "Pentecostal": "The ox goring law demonstrates God's justice and the need for spiritual faith in responsibility.",
+        "Anglican": "The ox goring law represents God's justice and the need for faithful service in responsibility.",
+        "Orthodox": "The ox goring law reflects the Orthodox understanding of God's justice and the importance of responsibility."
+      }
+    },
+    {
+      "verse": 29,
+      "interpretations": {
+        "General": "The known ox law reflects God's justice and the importance of accountability.",
+        "Non-Denominational": "The known ox law demonstrates God's justice and the importance of accountability.",
+        "Baptist": "The known ox law represents God's justice and the importance of biblical faith in accountability.",
+        "Catholic": "The known ox law reflects the Catholic understanding of God's justice and the importance of accountability.",
+        "Methodist": "The known ox law demonstrates God's justice and the need for faithful service in accountability.",
+        "Lutheran": "The known ox law represents God's justice and the importance of biblical faith in accountability.",
+        "Presbyterian": "The known ox law reflects God's covenantal faithfulness and the importance of accountability.",
+        "Pentecostal": "The known ox law demonstrates God's justice and the need for spiritual faith in accountability.",
+        "Anglican": "The known ox law represents God's justice and the need for faithful service in accountability.",
+        "Orthodox": "The known ox law reflects the Orthodox understanding of God's justice and the importance of accountability."
+      }
+    },
+    {
+      "verse": 30,
+      "interpretations": {
+        "General": "The ransom law reflects God's mercy and the importance of redemption.",
+        "Non-Denominational": "The ransom law demonstrates God's mercy and the importance of redemption.",
+        "Baptist": "The ransom law represents God's mercy and the importance of biblical faith in redemption.",
+        "Catholic": "The ransom law reflects the Catholic understanding of God's mercy and the importance of redemption.",
+        "Methodist": "The ransom law demonstrates God's mercy and the need for faithful service in redemption.",
+        "Lutheran": "The ransom law represents God's mercy and the importance of biblical faith in redemption.",
+        "Presbyterian": "The ransom law reflects God's covenantal faithfulness and the importance of redemption.",
+        "Pentecostal": "The ransom law demonstrates God's mercy and the need for spiritual faith in redemption.",
+        "Anglican": "The ransom law represents God's mercy and the need for faithful service in redemption.",
+        "Orthodox": "The ransom law reflects the Orthodox understanding of God's mercy and the importance of redemption."
+      }
+    },
+    {
+      "verse": 31,
+      "interpretations": {
+        "General": "The son or daughter law reflects God's justice and the importance of equal treatment.",
+        "Non-Denominational": "The son or daughter law demonstrates God's justice and the importance of equal treatment.",
+        "Baptist": "The son or daughter law represents God's justice and the importance of biblical faith in equal treatment.",
+        "Catholic": "The son or daughter law reflects the Catholic understanding of God's justice and the importance of equal treatment.",
+        "Methodist": "The son or daughter law demonstrates God's justice and the need for faithful service in equal treatment.",
+        "Lutheran": "The son or daughter law represents God's justice and the importance of biblical faith in equal treatment.",
+        "Presbyterian": "The son or daughter law reflects God's covenantal faithfulness and the importance of equal treatment.",
+        "Pentecostal": "The son or daughter law demonstrates God's justice and the need for spiritual faith in equal treatment.",
+        "Anglican": "The son or daughter law represents God's justice and the need for faithful service in equal treatment.",
+        "Orthodox": "The son or daughter law reflects the Orthodox understanding of God's justice and the importance of equal treatment."
+      }
+    },
+    {
+      "verse": 32,
+      "interpretations": {
+        "General": "The servant goring law reflects God's justice and the importance of value.",
+        "Non-Denominational": "The servant goring law demonstrates God's justice and the importance of value.",
+        "Baptist": "The servant goring law represents God's justice and the importance of biblical faith in value.",
+        "Catholic": "The servant goring law reflects the Catholic understanding of God's justice and the importance of value.",
+        "Methodist": "The servant goring law demonstrates God's justice and the need for faithful service in value.",
+        "Lutheran": "The servant goring law represents God's justice and the importance of biblical faith in value.",
+        "Presbyterian": "The servant goring law reflects God's covenantal faithfulness and the importance of value.",
+        "Pentecostal": "The servant goring law demonstrates God's justice and the need for spiritual faith in value.",
+        "Anglican": "The servant goring law represents God's justice and the need for faithful service in value.",
+        "Orthodox": "The servant goring law reflects the Orthodox understanding of God's justice and the importance of value."
+      }
+    },
+    {
+      "verse": 33,
+      "interpretations": {
+        "General": "The pit law reflects God's justice and the importance of responsibility.",
+        "Non-Denominational": "The pit law demonstrates God's justice and the importance of responsibility.",
+        "Baptist": "The pit law represents God's justice and the importance of biblical faith in responsibility.",
+        "Catholic": "The pit law reflects the Catholic understanding of God's justice and the importance of responsibility.",
+        "Methodist": "The pit law demonstrates God's justice and the need for faithful service in responsibility.",
+        "Lutheran": "The pit law represents God's justice and the importance of biblical faith in responsibility.",
+        "Presbyterian": "The pit law reflects God's covenantal faithfulness and the importance of responsibility.",
+        "Pentecostal": "The pit law demonstrates God's justice and the need for spiritual faith in responsibility.",
+        "Anglican": "The pit law represents God's justice and the need for faithful service in responsibility.",
+        "Orthodox": "The pit law reflects the Orthodox understanding of God's justice and the importance of responsibility."
+      }
+    },
+    {
+      "verse": 34,
+      "interpretations": {
+        "General": "The restitution law reflects God's justice and the importance of making things right.",
+        "Non-Denominational": "The restitution law demonstrates God's justice and the importance of making things right.",
+        "Baptist": "The restitution law represents God's justice and the importance of biblical faith in making things right.",
+        "Catholic": "The restitution law reflects the Catholic understanding of God's justice and the importance of making things right.",
+        "Methodist": "The restitution law demonstrates God's justice and the need for faithful service in making things right.",
+        "Lutheran": "The restitution law represents God's justice and the importance of biblical faith in making things right.",
+        "Presbyterian": "The restitution law reflects God's covenantal faithfulness and the importance of making things right.",
+        "Pentecostal": "The restitution law demonstrates God's justice and the need for spiritual faith in making things right.",
+        "Anglican": "The restitution law represents God's justice and the need for faithful service in making things right.",
+        "Orthodox": "The restitution law reflects the Orthodox understanding of God's justice and the importance of making things right."
+      }
+    },
+    {
+      "verse": 35,
+      "interpretations": {
+        "General": "The ox fighting law reflects God's justice and the importance of fair division.",
+        "Non-Denominational": "The ox fighting law demonstrates God's justice and the importance of fair division.",
+        "Baptist": "The ox fighting law represents God's justice and the importance of biblical faith in fair division.",
+        "Catholic": "The ox fighting law reflects the Catholic understanding of God's justice and the importance of fair division.",
+        "Methodist": "The ox fighting law demonstrates God's justice and the need for faithful service in fair division.",
+        "Lutheran": "The ox fighting law represents God's justice and the importance of biblical faith in fair division.",
+        "Presbyterian": "The ox fighting law reflects God's covenantal faithfulness and the importance of fair division.",
+        "Pentecostal": "The ox fighting law demonstrates God's justice and the need for spiritual faith in fair division.",
+        "Anglican": "The ox fighting law represents God's justice and the need for faithful service in fair division.",
+        "Orthodox": "The ox fighting law reflects the Orthodox understanding of God's justice and the importance of fair division."
+      }
+    },
+    {
+      "verse": 36,
+      "interpretations": {
+        "General": "The known ox fighting law reflects God's justice and the importance of accountability.",
+        "Non-Denominational": "The known ox fighting law demonstrates God's justice and the importance of accountability.",
+        "Baptist": "The known ox fighting law represents God's justice and the importance of biblical faith in accountability.",
+        "Catholic": "The known ox fighting law reflects the Catholic understanding of God's justice and the importance of accountability.",
+        "Methodist": "The known ox fighting law demonstrates God's justice and the need for faithful service in accountability.",
+        "Lutheran": "The known ox fighting law represents God's justice and the importance of biblical faith in accountability.",
+        "Presbyterian": "The known ox fighting law reflects God's covenantal faithfulness and the importance of accountability.",
+        "Pentecostal": "The known ox fighting law demonstrates God's justice and the need for spiritual faith in accountability.",
+        "Anglican": "The known ox fighting law represents God's justice and the need for faithful service in accountability.",
+        "Orthodox": "The known ox fighting law reflects the Orthodox understanding of God's justice and the importance of accountability."
+      }
+    }
+  ]
+} 

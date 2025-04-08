@@ -1,0 +1,164 @@
+{
+  "chapterSummary": {
+    "General": "The consecration of the firstborn and the establishment of the Feast of Unleavened Bread, emphasizing the importance of dedicating all things to God and remembering His mighty acts.",
+    "Non-Denominational": "The sanctification of the firstborn and the institution of the Feast of Unleavened Bread, highlighting the need to dedicate all things to God and remember His deliverance.",
+    "Baptist": "The consecration of the firstborn and the establishment of sacred observances, emphasizing the importance of dedicating all things to God and maintaining biblical traditions.",
+    "Catholic": "The consecration of the firstborn and the establishment of the Feast of Unleavened Bread, emphasizing the importance of dedicating all things to God and remembering His mighty acts.",
+    "Methodist": "The sanctification of the firstborn and the institution of the Feast of Unleavened Bread, highlighting the need to dedicate all things to God and remember His deliverance.",
+    "Lutheran": "The consecration of the firstborn and the establishment of sacred observances, emphasizing the importance of dedicating all things to God and maintaining biblical traditions.",
+    "Presbyterian": "The sanctification of the firstborn and the institution of the Feast of Unleavened Bread, establishing the importance of dedicating the firstborn to God and remembering the Exodus.",
+    "Pentecostal": "The consecration of the firstborn and the establishment of sacred ordinances, teaching the importance of dedicating all things to God and remembering His mighty acts.",
+    "Anglican": "The consecration of the firstborn and the establishment of the Feast of Unleavened Bread, emphasizing the importance of dedicating all things to God and remembering His mighty acts.",
+    "Orthodox": "The consecration of the firstborn and the establishment of sacred observances, emphasizing the importance of dedicating all things to God and maintaining sacred traditions."
+  },
+  "1": {
+    "General": "The consecration of the firstborn reflects the importance of dedicating all things to God",
+    "Non-Denominational": "The consecration of the firstborn demonstrates the importance of dedicating all things to God",
+    "Baptist": "The consecration of the firstborn represents the importance of dedicating all things to God and biblical obedience",
+    "Catholic": "The consecration of the firstborn reflects the Catholic understanding of the importance of dedicating all things to God",
+    "Methodist": "The consecration of the firstborn demonstrates the importance of dedicating all things to God and faithful service",
+    "Lutheran": "The consecration of the firstborn represents the importance of dedicating all things to God and biblical obedience",
+    "Presbyterian": "The consecration of the firstborn reflects God's covenantal faithfulness and the importance of dedication",
+    "Pentecostal": "The consecration of the firstborn demonstrates the importance of dedicating all things to God and spiritual empowerment",
+    "Anglican": "The consecration of the firstborn represents the importance of dedicating all things to God and faithful service",
+    "Orthodox": "The consecration of the firstborn reflects the Orthodox understanding of the importance of dedicating all things to God"
+  },
+  "2": {
+    "General": "The sanctification of the firstborn reflects the importance of setting apart what is holy to God",
+    "Non-Denominational": "The sanctification of the firstborn demonstrates the importance of setting apart what is holy to God",
+    "Baptist": "The sanctification of the firstborn represents the importance of setting apart what is holy to God and biblical obedience",
+    "Catholic": "The sanctification of the firstborn reflects the Catholic understanding of the importance of setting apart what is holy to God",
+    "Methodist": "The sanctification of the firstborn demonstrates the importance of setting apart what is holy to God and faithful service",
+    "Lutheran": "The sanctification of the firstborn represents the importance of setting apart what is holy to God and biblical obedience",
+    "Presbyterian": "The sanctification of the firstborn reflects God's covenantal faithfulness and the importance of holiness",
+    "Pentecostal": "The sanctification of the firstborn demonstrates the importance of setting apart what is holy to God and spiritual empowerment",
+    "Anglican": "The sanctification of the firstborn represents the importance of setting apart what is holy to God and faithful service",
+    "Orthodox": "The sanctification of the firstborn reflects the Orthodox understanding of the importance of setting apart what is holy to God"
+  },
+  "3": {
+    "Catholic": "The remembrance of the Exodus reflects the Catholic understanding of the importance of remembering God's mighty acts and the need to teach them to future generations.",
+    "Protestant": "The remembrance of the Exodus demonstrates the importance of remembering God's mighty acts and the need to teach them to future generations.",
+    "Orthodox": "The remembrance of the Exodus represents the Orthodox understanding of the importance of remembering God's mighty acts and the need to teach them to future generations.",
+    "Jewish": "The remembrance of the Exodus establishes the importance of remembering God's mighty act of deliverance and teaching it to future generations.",
+    "Mormon": "The remembrance of the Exodus teaches the importance of remembering God's mighty acts and teaching them to future generations."
+  },
+  "4": {
+    "Catholic": "The month of Abib reflects the Catholic understanding of the importance of sacred time and the need to remember God's mighty acts in their proper season.",
+    "Protestant": "The month of Abib demonstrates the importance of sacred time and the need to remember God's mighty acts in their proper season.",
+    "Orthodox": "The month of Abib represents the Orthodox understanding of the importance of sacred time and the need to remember God's mighty acts in their proper season.",
+    "Jewish": "The month of Abib establishes the importance of remembering the Exodus in its proper season and the significance of the Jewish calendar.",
+    "Mormon": "The month of Abib teaches the importance of sacred time and remembering God's mighty acts in their proper season."
+  },
+  "5": {
+    "Catholic": "The promise of the land reflects the Catholic understanding of God's faithfulness to His promises and the importance of the Promised Land in His plan.",
+    "Protestant": "The promise of the land demonstrates God's faithfulness to His promises and the importance of the Promised Land in His plan.",
+    "Orthodox": "The promise of the land represents the Orthodox understanding of God's faithfulness to His promises and the importance of the Promised Land in His plan.",
+    "Jewish": "The promise of the land establishes God's faithfulness to His promise to Abraham and the importance of the Promised Land in Jewish tradition.",
+    "Mormon": "The promise of the land teaches God's faithfulness to His promises and the importance of the Promised Land in His plan."
+  },
+  "6": {
+    "Catholic": "The seven days of unleavened bread reflects the Catholic understanding of the need for purity and the importance of maintaining spiritual purity.",
+    "Protestant": "The seven days of unleavened bread demonstrates the need for purity and the importance of maintaining spiritual purity.",
+    "Orthodox": "The seven days of unleavened bread represents the Orthodox understanding of the need for purity and the importance of maintaining spiritual purity.",
+    "Jewish": "The seven days of unleavened bread establishes the importance of maintaining purity during the Feast of Unleavened Bread.",
+    "Mormon": "The seven days of unleavened bread teaches the need for purity and the importance of maintaining spiritual purity."
+  },
+  "7": {
+    "Catholic": "The prohibition of leaven reflects the Catholic understanding of the need to remove all sin and corruption from the Christian life.",
+    "Protestant": "The prohibition of leaven demonstrates the need to remove all sin and corruption from the Christian life.",
+    "Orthodox": "The prohibition of leaven represents the Orthodox understanding of the need to remove all sin and corruption from the Christian life.",
+    "Jewish": "The prohibition of leaven establishes the importance of removing all leaven during the Feast of Unleavened Bread.",
+    "Mormon": "The prohibition of leaven teaches the need to remove all sin and corruption from one's life."
+  },
+  "8": {
+    "Catholic": "The explanation to children reflects the Catholic understanding of the importance of catechesis and passing on the faith to future generations.",
+    "Protestant": "The explanation to children demonstrates the importance of teaching the faith to future generations.",
+    "Orthodox": "The explanation to children represents the Orthodox understanding of the importance of teaching the faith to future generations.",
+    "Jewish": "The explanation to children establishes the importance of the Seder as a teaching moment and passing on Jewish tradition.",
+    "Mormon": "The explanation to children teaches the importance of teaching the gospel to future generations."
+  },
+  "9": {
+    "Catholic": "The sign on the hand and forehead reflects the Catholic understanding of the importance of keeping God's commands always before us.",
+    "Protestant": "The sign on the hand and forehead demonstrates the importance of keeping God's commands always before us.",
+    "Orthodox": "The sign on the hand and forehead represents the Orthodox understanding of the importance of keeping God's commands always before us.",
+    "Jewish": "The sign on the hand and forehead establishes the importance of keeping God's commands always before us in Jewish tradition.",
+    "Mormon": "The sign on the hand and forehead teaches the importance of keeping God's commands always before us."
+  },
+  "10": {
+    "Catholic": "The perpetual ordinance reflects the Catholic understanding of the importance of maintaining sacred traditions and the continuity of God's saving acts.",
+    "Protestant": "The perpetual ordinance demonstrates the importance of maintaining sacred traditions and the continuity of God's saving acts.",
+    "Orthodox": "The perpetual ordinance represents the Orthodox understanding of the importance of maintaining sacred traditions and the continuity of God's saving acts.",
+    "Jewish": "The perpetual ordinance establishes the importance of maintaining the Feast of Unleavened Bread throughout all generations.",
+    "Mormon": "The perpetual ordinance teaches the importance of maintaining sacred traditions and the continuity of God's saving acts."
+  },
+  "11": {
+    "Catholic": "The promise of the land reflects the Catholic understanding of God's faithfulness to His promises and the importance of the Promised Land in His plan.",
+    "Protestant": "The promise of the land demonstrates God's faithfulness to His promises and the importance of the Promised Land in His plan.",
+    "Orthodox": "The promise of the land represents the Orthodox understanding of God's faithfulness to His promises and the importance of the Promised Land in His plan.",
+    "Jewish": "The promise of the land establishes God's faithfulness to His promise to Abraham and the importance of the Promised Land in Jewish tradition.",
+    "Mormon": "The promise of the land teaches God's faithfulness to His promises and the importance of the Promised Land in His plan."
+  },
+  "12": {
+    "Catholic": "The consecration of the firstborn reflects the Catholic understanding of the importance of dedicating all things to God and the special role of firstborn sons in His plan.",
+    "Protestant": "The consecration of the firstborn demonstrates the importance of dedicating all things to God and the special role of firstborn sons in His plan.",
+    "Orthodox": "The consecration of the firstborn represents the Orthodox understanding of the importance of dedicating all things to God and the special role of firstborn sons in His plan.",
+    "Jewish": "The consecration of the firstborn establishes the importance of dedicating the firstborn to God and the special role of firstborn sons in Jewish tradition.",
+    "Mormon": "The consecration of the firstborn teaches the importance of dedicating all things to God and the special role of firstborn sons in His plan."
+  },
+  "13": {
+    "Catholic": "The redemption of the firstborn reflects the Catholic understanding of the importance of Christ's sacrifice and the need for redemption.",
+    "Protestant": "The redemption of the firstborn demonstrates the importance of Christ's sacrifice and the need for redemption.",
+    "Orthodox": "The redemption of the firstborn represents the Orthodox understanding of the importance of Christ's sacrifice and the need for redemption.",
+    "Jewish": "The redemption of the firstborn establishes the importance of redeeming the firstborn and the role of sacrifice in Jewish tradition.",
+    "Mormon": "The redemption of the firstborn teaches the importance of Christ's sacrifice and the need for redemption."
+  },
+  "14": {
+    "Catholic": "The explanation to children reflects the Catholic understanding of the importance of catechesis and passing on the faith to future generations.",
+    "Protestant": "The explanation to children demonstrates the importance of teaching the faith to future generations.",
+    "Orthodox": "The explanation to children represents the Orthodox understanding of the importance of teaching the faith to future generations.",
+    "Jewish": "The explanation to children establishes the importance of teaching children about God's mighty acts and Jewish tradition.",
+    "Mormon": "The explanation to children teaches the importance of teaching the gospel to future generations."
+  },
+  "15": {
+    "Catholic": "The death of the firstborn reflects the Catholic understanding of the seriousness of sin and the need for Christ's sacrifice to deliver from death.",
+    "Protestant": "The death of the firstborn demonstrates the seriousness of sin and the need for Christ's sacrifice to deliver from death.",
+    "Orthodox": "The death of the firstborn represents the Orthodox understanding of the consequences of sin and the need for God's deliverance.",
+    "Jewish": "The death of the firstborn establishes the severity of Pharaoh's refusal to let Israel go and the power of God's judgment.",
+    "Mormon": "The death of the firstborn teaches the seriousness of opposing God's will and the need for His deliverance through obedience."
+  },
+  "16": {
+    "Catholic": "The sign on the hand and forehead reflects the Catholic understanding of the importance of keeping God's commands always before us.",
+    "Protestant": "The sign on the hand and forehead demonstrates the importance of keeping God's commands always before us.",
+    "Orthodox": "The sign on the hand and forehead represents the Orthodox understanding of the importance of keeping God's commands always before us.",
+    "Jewish": "The sign on the hand and forehead establishes the importance of keeping God's commands always before us in Jewish tradition.",
+    "Mormon": "The sign on the hand and forehead teaches the importance of keeping God's commands always before us."
+  },
+  "17": {
+    "Catholic": "The way of the Philistines reflects the Catholic understanding of God's wisdom in guiding His people and the need to trust in His ways.",
+    "Protestant": "The way of the Philistines demonstrates God's wisdom in guiding His people and the need to trust in His ways.",
+    "Orthodox": "The way of the Philistines represents the Orthodox understanding of God's wisdom in guiding His people and the need to trust in His ways.",
+    "Jewish": "The way of the Philistines establishes God's wisdom in guiding Israel and the need to trust in His ways.",
+    "Mormon": "The way of the Philistines teaches God's wisdom in guiding His people and the need to trust in His ways."
+  },
+  "18": {
+    "Catholic": "The way of the wilderness reflects the Catholic understanding of God's wisdom in guiding His people and the need to trust in His ways.",
+    "Protestant": "The way of the wilderness demonstrates God's wisdom in guiding His people and the need to trust in His ways.",
+    "Orthodox": "The way of the wilderness represents the Orthodox understanding of God's wisdom in guiding His people and the need to trust in His ways.",
+    "Jewish": "The way of the wilderness establishes God's wisdom in guiding Israel and the need to trust in His ways.",
+    "Mormon": "The way of the wilderness teaches God's wisdom in guiding His people and the need to trust in His ways."
+  },
+  "19": {
+    "Catholic": "The bones of Joseph reflect the Catholic understanding of the importance of keeping promises and the continuity of God's plan through generations.",
+    "Protestant": "The bones of Joseph demonstrates the importance of keeping promises and the continuity of God's plan through generations.",
+    "Orthodox": "The bones of Joseph represents the Orthodox understanding of the importance of keeping promises and the continuity of God's plan through generations.",
+    "Jewish": "The bones of Joseph establishes the importance of keeping promises and the continuity of God's plan through generations in Jewish tradition.",
+    "Mormon": "The bones of Joseph teaches the importance of keeping promises and the continuity of God's plan through generations."
+  },
+  "20": {
+    "Catholic": "The journey to Succoth reflects the Catholic understanding of the Church's pilgrimage through history and the importance of following God's guidance.",
+    "Protestant": "The journey to Succoth demonstrates the importance of following God's guidance and the beginning of the spiritual journey.",
+    "Orthodox": "The journey to Succoth represents the Orthodox understanding of the Church's pilgrimage and the importance of following God's guidance.",
+    "Jewish": "The journey to Succoth establishes the beginning of Israel's journey to the Promised Land and the importance of following God's guidance.",
+    "Mormon": "The journey to Succoth teaches the importance of following God's guidance and beginning the journey to the promised land."
+  }
+} 

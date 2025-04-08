@@ -1,0 +1,335 @@
+{
+  "chapter": 23,
+  "verses": [
+    {
+      "verse": 1,
+      "interpretations": {
+        "Catholic": "The false report law reflects the Catholic understanding of God's truth and the importance of justice.",
+        "Protestant": "The false report law demonstrates God's truth and the importance of justice.",
+        "Orthodox": "The false report law represents the Orthodox understanding of God's truth and the importance of justice.",
+        "Jewish": "The false report law establishes God's truth and the importance of justice.",
+        "Mormon": "The false report law teaches that God is truthful and the importance of justice."
+      }
+    },
+    {
+      "verse": 2,
+      "interpretations": {
+        "Catholic": "The majority influence law reflects the Catholic understanding of God's justice and the importance of individual conscience.",
+        "Protestant": "The majority influence law demonstrates God's justice and the importance of individual conscience.",
+        "Orthodox": "The majority influence law represents the Orthodox understanding of God's justice and the importance of individual conscience.",
+        "Jewish": "The majority influence law establishes God's justice and the importance of individual conscience.",
+        "Mormon": "The majority influence law teaches that God is just and the importance of individual conscience."
+      }
+    },
+    {
+      "verse": 3,
+      "interpretations": {
+        "Catholic": "The poor favor law reflects the Catholic understanding of God's justice and the importance of impartiality.",
+        "Protestant": "The poor favor law demonstrates God's justice and the importance of impartiality.",
+        "Orthodox": "The poor favor law represents the Orthodox understanding of God's justice and the importance of impartiality.",
+        "Jewish": "The poor favor law establishes God's justice and the importance of impartiality.",
+        "Mormon": "The poor favor law teaches that God is just and the importance of impartiality."
+      }
+    },
+    {
+      "verse": 4,
+      "interpretations": {
+        "Catholic": "The enemy's animal law reflects the Catholic understanding of God's love and the importance of kindness.",
+        "Protestant": "The enemy's animal law demonstrates God's love and the importance of kindness.",
+        "Orthodox": "The enemy's animal law represents the Orthodox understanding of God's love and the importance of kindness.",
+        "Jewish": "The enemy's animal law establishes God's love and the importance of kindness.",
+        "Mormon": "The enemy's animal law teaches that God is loving and the importance of kindness."
+      }
+    },
+    {
+      "verse": 5,
+      "interpretations": {
+        "Catholic": "The burden help law reflects the Catholic understanding of God's mercy and the importance of compassion.",
+        "Protestant": "The burden help law demonstrates God's mercy and the importance of compassion.",
+        "Orthodox": "The burden help law represents the Orthodox understanding of God's mercy and the importance of compassion.",
+        "Jewish": "The burden help law establishes God's mercy and the importance of compassion.",
+        "Mormon": "The burden help law teaches that God is merciful and the importance of compassion."
+      }
+    },
+    {
+      "verse": 6,
+      "interpretations": {
+        "Catholic": "The poor justice law reflects the Catholic understanding of God's justice and the importance of fairness.",
+        "Protestant": "The poor justice law demonstrates God's justice and the importance of fairness.",
+        "Orthodox": "The poor justice law represents the Orthodox understanding of God's justice and the importance of fairness.",
+        "Jewish": "The poor justice law establishes God's justice and the importance of fairness.",
+        "Mormon": "The poor justice law teaches that God is just and the importance of fairness."
+      }
+    },
+    {
+      "verse": 7,
+      "interpretations": {
+        "Catholic": "The false charge law reflects the Catholic understanding of God's truth and the importance of integrity.",
+        "Protestant": "The false charge law demonstrates God's truth and the importance of integrity.",
+        "Orthodox": "The false charge law represents the Orthodox understanding of God's truth and the importance of integrity.",
+        "Jewish": "The false charge law establishes God's truth and the importance of integrity.",
+        "Mormon": "The false charge law teaches that God is truthful and the importance of integrity."
+      }
+    },
+    {
+      "verse": 8,
+      "interpretations": {
+        "Catholic": "The bribe law reflects the Catholic understanding of God's justice and the importance of righteousness.",
+        "Protestant": "The bribe law demonstrates God's justice and the importance of righteousness.",
+        "Orthodox": "The bribe law represents the Orthodox understanding of God's justice and the importance of righteousness.",
+        "Jewish": "The bribe law establishes God's justice and the importance of righteousness.",
+        "Mormon": "The bribe law teaches that God is just and the importance of righteousness."
+      }
+    },
+    {
+      "verse": 9,
+      "interpretations": {
+        "Catholic": "The stranger oppression law reflects the Catholic understanding of God's love and the importance of hospitality.",
+        "Protestant": "The stranger oppression law demonstrates God's love and the importance of hospitality.",
+        "Orthodox": "The stranger oppression law represents the Orthodox understanding of God's love and the importance of hospitality.",
+        "Jewish": "The stranger oppression law establishes God's love and the importance of hospitality.",
+        "Mormon": "The stranger oppression law teaches that God is loving and the importance of hospitality."
+      }
+    },
+    {
+      "verse": 10,
+      "interpretations": {
+        "Catholic": "The Sabbath year law reflects the Catholic understanding of God's provision and the importance of rest.",
+        "Protestant": "The Sabbath year law demonstrates God's provision and the importance of rest.",
+        "Orthodox": "The Sabbath year law represents the Orthodox understanding of God's provision and the importance of rest.",
+        "Jewish": "The Sabbath year law establishes God's provision and the importance of rest.",
+        "Mormon": "The Sabbath year law teaches that God provides and the importance of rest."
+      }
+    },
+    {
+      "verse": 11,
+      "interpretations": {
+        "Catholic": "The poor provision law reflects the Catholic understanding of God's mercy and the importance of generosity.",
+        "Protestant": "The poor provision law demonstrates God's mercy and the importance of generosity.",
+        "Orthodox": "The poor provision law represents the Orthodox understanding of God's mercy and the importance of generosity.",
+        "Jewish": "The poor provision law establishes God's mercy and the importance of generosity.",
+        "Mormon": "The poor provision law teaches that God is merciful and the importance of generosity."
+      }
+    },
+    {
+      "verse": 12,
+      "interpretations": {
+        "Catholic": "The Sabbath day law reflects the Catholic understanding of God's holiness and the importance of worship.",
+        "Protestant": "The Sabbath day law demonstrates God's holiness and the importance of worship.",
+        "Orthodox": "The Sabbath day law represents the Orthodox understanding of God's holiness and the importance of worship.",
+        "Jewish": "The Sabbath day law establishes God's holiness and the importance of worship.",
+        "Mormon": "The Sabbath day law teaches that God is holy and the importance of worship."
+      }
+    },
+    {
+      "verse": 13,
+      "interpretations": {
+        "Catholic": "The idol name law reflects the Catholic understanding of God's uniqueness and the importance of worship.",
+        "Protestant": "The idol name law demonstrates God's uniqueness and the importance of worship.",
+        "Orthodox": "The idol name law represents the Orthodox understanding of God's uniqueness and the importance of worship.",
+        "Jewish": "The idol name law establishes God's uniqueness and the importance of worship.",
+        "Mormon": "The idol name law teaches that God is unique and the importance of worship."
+      }
+    },
+    {
+      "verse": 14,
+      "interpretations": {
+        "Catholic": "The festival law reflects the Catholic understanding of God's holiness and the importance of celebration.",
+        "Protestant": "The festival law demonstrates God's holiness and the importance of celebration.",
+        "Orthodox": "The festival law represents the Orthodox understanding of God's holiness and the importance of celebration.",
+        "Jewish": "The festival law establishes God's holiness and the importance of celebration.",
+        "Mormon": "The festival law teaches that God is holy and the importance of celebration."
+      }
+    },
+    {
+      "verse": 15,
+      "interpretations": {
+        "Catholic": "The unleavened bread law reflects the Catholic understanding of God's deliverance and the importance of remembrance.",
+        "Protestant": "The unleavened bread law demonstrates God's deliverance and the importance of remembrance.",
+        "Orthodox": "The unleavened bread law represents the Orthodox understanding of God's deliverance and the importance of remembrance.",
+        "Jewish": "The unleavened bread law establishes God's deliverance and the importance of remembrance.",
+        "Mormon": "The unleavened bread law teaches that God delivers and the importance of remembrance."
+      }
+    },
+    {
+      "verse": 16,
+      "interpretations": {
+        "Catholic": "The harvest festival law reflects the Catholic understanding of God's provision and the importance of gratitude.",
+        "Protestant": "The harvest festival law demonstrates God's provision and the importance of gratitude.",
+        "Orthodox": "The harvest festival law represents the Orthodox understanding of God's provision and the importance of gratitude.",
+        "Jewish": "The harvest festival law establishes God's provision and the importance of gratitude.",
+        "Mormon": "The harvest festival law teaches that God provides and the importance of gratitude."
+      }
+    },
+    {
+      "verse": 17,
+      "interpretations": {
+        "Catholic": "The appearance law reflects the Catholic understanding of God's presence and the importance of worship.",
+        "Protestant": "The appearance law demonstrates God's presence and the importance of worship.",
+        "Orthodox": "The appearance law represents the Orthodox understanding of God's presence and the importance of worship.",
+        "Jewish": "The appearance law establishes God's presence and the importance of worship.",
+        "Mormon": "The appearance law teaches that God is present and the importance of worship."
+      }
+    },
+    {
+      "verse": 18,
+      "interpretations": {
+        "Catholic": "The sacrifice law reflects the Catholic understanding of God's holiness and the importance of purity.",
+        "Protestant": "The sacrifice law demonstrates God's holiness and the importance of purity.",
+        "Orthodox": "The sacrifice law represents the Orthodox understanding of God's holiness and the importance of purity.",
+        "Jewish": "The sacrifice law establishes God's holiness and the importance of purity.",
+        "Mormon": "The sacrifice law teaches that God is holy and the importance of purity."
+      }
+    },
+    {
+      "verse": 19,
+      "interpretations": {
+        "Catholic": "The firstfruits law reflects the Catholic understanding of God's provision and the importance of offering.",
+        "Protestant": "The firstfruits law demonstrates God's provision and the importance of offering.",
+        "Orthodox": "The firstfruits law represents the Orthodox understanding of God's provision and the importance of offering.",
+        "Jewish": "The firstfruits law establishes God's provision and the importance of offering.",
+        "Mormon": "The firstfruits law teaches that God provides and the importance of offering."
+      }
+    },
+    {
+      "verse": 20,
+      "interpretations": {
+        "Catholic": "The angel guidance law reflects the Catholic understanding of God's protection and the importance of obedience.",
+        "Protestant": "The angel guidance law demonstrates God's protection and the importance of obedience.",
+        "Orthodox": "The angel guidance law represents the Orthodox understanding of God's protection and the importance of obedience.",
+        "Jewish": "The angel guidance law establishes God's protection and the importance of obedience.",
+        "Mormon": "The angel guidance law teaches that God protects and the importance of obedience."
+      }
+    },
+    {
+      "verse": 21,
+      "interpretations": {
+        "Catholic": "The angel obedience law reflects the Catholic understanding of God's authority and the importance of submission.",
+        "Protestant": "The angel obedience law demonstrates God's authority and the importance of submission.",
+        "Orthodox": "The angel obedience law represents the Orthodox understanding of God's authority and the importance of submission.",
+        "Jewish": "The angel obedience law establishes God's authority and the importance of submission.",
+        "Mormon": "The angel obedience law teaches that God has authority and the importance of submission."
+      }
+    },
+    {
+      "verse": 22,
+      "interpretations": {
+        "Catholic": "The enemy defeat law reflects the Catholic understanding of God's power and the importance of trust.",
+        "Protestant": "The enemy defeat law demonstrates God's power and the importance of trust.",
+        "Orthodox": "The enemy defeat law represents the Orthodox understanding of God's power and the importance of trust.",
+        "Jewish": "The enemy defeat law establishes God's power and the importance of trust.",
+        "Mormon": "The enemy defeat law teaches that God is powerful and the importance of trust."
+      }
+    },
+    {
+      "verse": 23,
+      "interpretations": {
+        "Catholic": "The enemy removal law reflects the Catholic understanding of God's justice and the importance of holiness.",
+        "Protestant": "The enemy removal law demonstrates God's justice and the importance of holiness.",
+        "Orthodox": "The enemy removal law represents the Orthodox understanding of God's justice and the importance of holiness.",
+        "Jewish": "The enemy removal law establishes God's justice and the importance of holiness.",
+        "Mormon": "The enemy removal law teaches that God is just and the importance of holiness."
+      }
+    },
+    {
+      "verse": 24,
+      "interpretations": {
+        "Catholic": "The idol destruction law reflects the Catholic understanding of God's uniqueness and the importance of worship.",
+        "Protestant": "The idol destruction law demonstrates God's uniqueness and the importance of worship.",
+        "Orthodox": "The idol destruction law represents the Orthodox understanding of God's uniqueness and the importance of worship.",
+        "Jewish": "The idol destruction law establishes God's uniqueness and the importance of worship.",
+        "Mormon": "The idol destruction law teaches that God is unique and the importance of worship."
+      }
+    },
+    {
+      "verse": 25,
+      "interpretations": {
+        "Catholic": "The blessing law reflects the Catholic understanding of God's goodness and the importance of service.",
+        "Protestant": "The blessing law demonstrates God's goodness and the importance of service.",
+        "Orthodox": "The blessing law represents the Orthodox understanding of God's goodness and the importance of service.",
+        "Jewish": "The blessing law establishes God's goodness and the importance of service.",
+        "Mormon": "The blessing law teaches that God is good and the importance of service."
+      }
+    },
+    {
+      "verse": 26,
+      "interpretations": {
+        "Catholic": "The fruitfulness law reflects the Catholic understanding of God's blessing and the importance of life.",
+        "Protestant": "The fruitfulness law demonstrates God's blessing and the importance of life.",
+        "Orthodox": "The fruitfulness law represents the Orthodox understanding of God's blessing and the importance of life.",
+        "Jewish": "The fruitfulness law establishes God's blessing and the importance of life.",
+        "Mormon": "The fruitfulness law teaches that God blesses and the importance of life."
+      }
+    },
+    {
+      "verse": 27,
+      "interpretations": {
+        "Catholic": "The fear law reflects the Catholic understanding of God's power and the importance of reverence.",
+        "Protestant": "The fear law demonstrates God's power and the importance of reverence.",
+        "Orthodox": "The fear law represents the Orthodox understanding of God's power and the importance of reverence.",
+        "Jewish": "The fear law establishes God's power and the importance of reverence.",
+        "Mormon": "The fear law teaches that God is powerful and the importance of reverence."
+      }
+    },
+    {
+      "verse": 28,
+      "interpretations": {
+        "Catholic": "The hornet law reflects the Catholic understanding of God's power and the importance of trust.",
+        "Protestant": "The hornet law demonstrates God's power and the importance of trust.",
+        "Orthodox": "The hornet law represents the Orthodox understanding of God's power and the importance of trust.",
+        "Jewish": "The hornet law establishes God's power and the importance of trust.",
+        "Mormon": "The hornet law teaches that God is powerful and the importance of trust."
+      }
+    },
+    {
+      "verse": 29,
+      "interpretations": {
+        "Catholic": "The gradual conquest law reflects the Catholic understanding of God's wisdom and the importance of timing.",
+        "Protestant": "The gradual conquest law demonstrates God's wisdom and the importance of timing.",
+        "Orthodox": "The gradual conquest law represents the Orthodox understanding of God's wisdom and the importance of timing.",
+        "Jewish": "The gradual conquest law establishes God's wisdom and the importance of timing.",
+        "Mormon": "The gradual conquest law teaches that God is wise and the importance of timing."
+      }
+    },
+    {
+      "verse": 30,
+      "interpretations": {
+        "Catholic": "The inheritance law reflects the Catholic understanding of God's promise and the importance of patience.",
+        "Protestant": "The inheritance law demonstrates God's promise and the importance of patience.",
+        "Orthodox": "The inheritance law represents the Orthodox understanding of God's promise and the importance of patience.",
+        "Jewish": "The inheritance law establishes God's promise and the importance of patience.",
+        "Mormon": "The inheritance law teaches that God keeps promises and the importance of patience."
+      }
+    },
+    {
+      "verse": 31,
+      "interpretations": {
+        "Catholic": "The boundary law reflects the Catholic understanding of God's sovereignty and the importance of territory.",
+        "Protestant": "The boundary law demonstrates God's sovereignty and the importance of territory.",
+        "Orthodox": "The boundary law represents the Orthodox understanding of God's sovereignty and the importance of territory.",
+        "Jewish": "The boundary law establishes God's sovereignty and the importance of territory.",
+        "Mormon": "The boundary law teaches that God is sovereign and the importance of territory."
+      }
+    },
+    {
+      "verse": 32,
+      "interpretations": {
+        "Catholic": "The covenant law reflects the Catholic understanding of God's holiness and the importance of separation.",
+        "Protestant": "The covenant law demonstrates God's holiness and the importance of separation.",
+        "Orthodox": "The covenant law represents the Orthodox understanding of God's holiness and the importance of separation.",
+        "Jewish": "The covenant law establishes God's holiness and the importance of separation.",
+        "Mormon": "The covenant law teaches that God is holy and the importance of separation."
+      }
+    },
+    {
+      "verse": 33,
+      "interpretations": {
+        "Catholic": "The idol worship law reflects the Catholic understanding of God's uniqueness and the importance of loyalty.",
+        "Protestant": "The idol worship law demonstrates God's uniqueness and the importance of loyalty.",
+        "Orthodox": "The idol worship law represents the Orthodox understanding of God's uniqueness and the importance of loyalty.",
+        "Jewish": "The idol worship law establishes God's uniqueness and the importance of loyalty.",
+        "Mormon": "The idol worship law teaches that God is unique and the importance of loyalty."
+      }
+    }
+  ]
+} 

@@ -3,7 +3,7 @@
   "book": "Genesis",
   "chapter": "31",
   "verses": {
-    "1": {
+  "1": {
       "General": "Jacob heard that Laban's sons were saying, \"Jacob has taken everything our father owned and has gained all this wealth from what belonged to our father.\"",
       "Non-Denominational": "Jacob heard that Laban's sons were saying, \"Jacob has taken everything our father owned and has gained all this wealth from what belonged to our father.\"",
       "Baptist": "Jacob overhears Laban's sons grumbling, resentfully accusing Jacob of acquiring his wealth by taking what rightfully belonged to their father, Laban.",
@@ -16,8 +16,8 @@
       "Orthodox": "Jacob overhears Laban's sons expressing resentment, accusing him of amassing his wealth by misappropriating their father's assets.",
       "Other": "Jacob heard that Laban's sons were saying, \"Jacob has taken everything our father owned and has gained all this wealth from what belonged to our father.\"",
       "Prefer not to say": "Jacob heard that Laban's sons were saying, \"Jacob has taken everything our father owned and has gained all this wealth from what belonged to our father.\""
-    },
-    "2": {
+  },
+  "2": {
       "General": "And Jacob noticed that Laban's attitude toward him was not what it had been.",
       "Non-Denominational": "And Jacob noticed that Laban's attitude toward him was not what it had been.",
       "Baptist": "Jacob also perceives a change in Laban himself; Laban's facial expression and demeanor towards Jacob are no longer friendly or favorable as before.",
@@ -30,8 +30,8 @@
       "Orthodox": "Jacob observes a distinct cooling in Laban's attitude towards him compared to previous times.",
       "Other": "And Jacob noticed that Laban's attitude toward him was not what it had been.",
       "Prefer not to say": "And Jacob noticed that Laban's attitude toward him was not what it had been."
-    },
-    "3": {
+  },
+  "3": {
       "General": "The Lord said to Jacob, 'Go back to the land of your fathers and to your relatives, and I will be with you.'",
       "Non-Denominational": "The Lord said to Jacob, 'Go back to the land of your fathers and to your relatives, and I will be with you.'",
       "Baptist": "Amidst this growing tension, God speaks directly to Jacob, commanding him to return to Canaan ('the land of your fathers and to your kindred') and reaffirming the promise of His presence ('I will be with you').",
@@ -44,8 +44,8 @@
       "Orthodox": "The Lord instructs Jacob to return to his ancestral homeland and relatives, assuring him of the divine presence.",
       "Other": "The Lord said to Jacob, 'Go back to the land of your fathers and to your relatives, and I will be with you.'",
       "Prefer not to say": "The Lord said to Jacob, 'Go back to the land of your fathers and to your relatives, and I will be with you.'."
-    },
-    "4": {
+  },
+  "4": {
       "General": "So Jacob sent word to Rachel and Leah to come out to the fields where his flocks were.",
       "Non-Denominational": "So Jacob sent word to Rachel and Leah to come out to the fields where his flocks were.",
       "Baptist": "Jacob summons Rachel and Leah to meet him privately in the field among his flocks, away from Laban's household, to discuss his plan.",
@@ -58,8 +58,8 @@
       "Orthodox": "Jacob summons Rachel and Leah for a private consultation in the field where his flocks are pastured.",
       "Other": "So Jacob sent word to Rachel and Leah to come out to the fields where his flocks were.",
       "Prefer not to say": "So Jacob sent word to Rachel and Leah to come out to the fields where his flocks were."
-    },
-    "5": {
+  },
+  "5": {
       "General": "He said to them, 'I see that your father's attitude toward me is not what it was before, but the God of my father has been with me.'",
       "Non-Denominational": "He said to them, 'I see that your father's attitude toward me is not what it was before, but the God of my father has been with me.'",
       "Baptist": "Jacob explains the situation to his wives: he observes their father Laban's changed, unfavorable attitude, but contrasts this with the consistent faithfulness of God ('the God of my father') who has been with him.",
@@ -72,8 +72,8 @@
       "Orthodox": "Jacob communicates to his wives his observation of Laban's altered demeanor, contrasting it with the steadfast presence of the God of his ancestors.",
       "Other": "He said to them, 'I see that your father's attitude toward me is not what it was before, but the God of my father has been with me.'",
       "Prefer not to say": "He said to them, 'I see that your father's attitude toward me is not what it was before, but the God of my father has been with me.'"
-    },
-    "6": {
+  },
+  "6": {
       "General": "You know that I've worked for your father with all my strength,",
       "Non-Denominational": "You know that I've worked for your father with all my strength,",
       "Baptist": "He reminds them of his own diligent and faithful service to Laban over the years, appealing to their personal knowledge of his hard work.",
@@ -86,8 +86,8 @@
       "Orthodox": "He reminds them of his unwavering diligence and effort in serving Laban.",
       "Other": "You know that I've worked for your father with all my strength,",
       "Prefer not to say": "You know that I've worked for your father with all my strength,"
-    },
-    "7": {
+  },
+  "7": {
       "General": "yet your father has cheated me by changing my wages ten times. However, God has not allowed him to harm me.",
       "Non-Denominational": "yet your father has cheated me by changing my wages ten times. However, God has not allowed him to harm me.",
       "Baptist": "He accuses Laban of repeatedly cheating him by changing the terms of his wages multiple times ('ten times' signifying repeatedly). Despite Laban's attempts to exploit him, Jacob testifies that God providentially protected him from harm or loss.",
@@ -100,8 +100,8 @@
       "Orthodox": "He recounts Laban's repeated duplicity in altering his wages ('ten times' indicating frequency), while affirming God's providential protection prevented Laban from causing him significant harm.",
       "Other": "yet your father has cheated me by changing my wages ten times. However, God has not allowed him to harm me.",
       "Prefer not to say": "yet your father has cheated me by changing my wages ten times. However, God has not allowed him to harm me."
-    },
-    "8": {
+  },
+  "8": {
       "General": "If he said, 'The speckled ones will be your wages,' then all the flocks gave birth to speckled young; and if he said, 'The streaked ones will be your wages,' then all the flocks bore streaked young.",
       "Non-Denominational": "If he said, 'The speckled ones will be your wages,' then all the flocks gave birth to speckled young; and if he said, 'The streaked ones will be your wages,' then all the flocks bore streaked young.",
       "Baptist": "Jacob illustrates God's intervention: whenever Laban tried to change the agreement to his own advantage (e.g., only speckled are Jacob's wages), God caused the flocks to produce precisely those kinds of offspring, frustrating Laban's schemes and blessing Jacob.",
@@ -114,8 +114,8 @@
       "Orthodox": "Jacob provides examples of divine intervention: regardless of how Laban altered the terms of payment (speckled or streaked), God ensured the flocks produced offspring matching those terms, thereby blessing Jacob.",
       "Other": "If he said, 'The speckled ones will be your wages,' then all the flocks gave birth to speckled young; and if he said, 'The streaked ones will be your wages,' then all the flocks bore streaked young.",
       "Prefer not to say": "If he said, 'The speckled ones will be your wages,' then all the flocks gave birth to speckled young; and if he said, 'The streaked ones will be your wages,' then all the flocks bore streaked young."
-    },
-    "9": {
+  },
+  "9": {
       "General": "So God has taken away your father's livestock and has given them to me.",
       "Non-Denominational": "So God has taken away your father's livestock and has given them to me.",
       "Baptist": "Jacob explicitly attributes the transfer of wealth not to his own cunning or Laban's sons' accusations of theft, but to God's sovereign action: God took Laban's livestock and gave it to him.",
@@ -128,8 +128,8 @@
       "Orthodox": "Jacob directly attributes the shift in wealth to divine action, asserting that God appropriated Laban's livestock and bestowed it upon him.",
       "Other": "So God has taken away your father's livestock and has given them to me.",
       "Prefer not to say": "So God has taken away your father's livestock and has given them to me."
-    },
-    "10": {
+  },
+  "10": {
       "General": "In breeding season I once had a dream in which I looked up and saw that the male goats mating with the flock were streaked, speckled or spotted.",
       "Non-Denominational": "In breeding season I once had a dream in which I looked up and saw that the male goats mating with the flock were streaked, speckled or spotted.",
       "Baptist": "Jacob recounts a dream he had during breeding season where he saw that the male goats mating were the very types (streaked, speckled, spotted) that produced his wages, revealing divine insight into the process.",
@@ -142,8 +142,8 @@
       "Orthodox": "Jacob relates a dream wherein he observed during mating season that the breeding males were precisely those with the markings designated for his wages.",
       "Other": "In breeding season I once had a dream in which I looked up and saw that the male goats mating with the flock were streaked, speckled or spotted.",
       "Prefer not to say": "In breeding season I once had a dream in which I looked up and saw that the male goats mating with the flock were streaked, speckled or spotted."
-    },
-    "11": {
+  },
+  "11": {
       "General": "The angel of God said to me in the dream, 'Jacob.' I answered, 'Here I am.'",
       "Non-Denominational": "The angel of God said to me in the dream, 'Jacob.' I answered, 'Here I am.'",
       "Baptist": "He further explains that the angel of God spoke to him within this dream, calling him by name.",
@@ -156,8 +156,8 @@
       "Orthodox": "He clarifies that the Angel of God addressed him within this dream.",
       "Other": "The angel of God said to me in the dream, 'Jacob.' I answered, 'Here I am.'",
       "Prefer not to say": "The angel of God said to me in the dream, 'Jacob.' I answered, 'Here I am.'"
-    },
-    "12": {
+  },
+  "12": {
       "General": "And he said, 'Look up and see that all the male goats mating with the flock are streaked, speckled or spotted, for I have seen all that Laban has been doing to you.'",
       "Non-Denominational": "And he said, 'Look up and see that all the male goats mating with the flock are streaked, speckled or spotted, for I have seen all that Laban has been doing to you.'",
       "Baptist": "The angel confirmed the observation in the dream (the marked males were breeding) and explicitly linked God's intervention to Laban's mistreatment: God saw Laban's injustice and was acting on Jacob's behalf.",
@@ -170,8 +170,8 @@
       "Orthodox": "The Angel confirmed Jacob's observation about the breeding males and explicitly stated this divine orchestration was a response to God's awareness of Laban's unjust treatment of Jacob.",
       "Other": "And he said, 'Look up and see that all the male goats mating with the flock are streaked, speckled or spotted, for I have seen all that Laban has been doing to you.'",
       "Prefer not to say": "And he said, 'Look up and see that all the male goats mating with the flock are streaked, speckled or spotted, for I have seen all that Laban has been doing to you.'"
-    },
-    "13": {
+  },
+  "13": {
       "General": "I am the God of Bethel, where you anointed a pillar and where you made a vow to me. Now leave this land at once and go back to your native land.'",
       "Non-Denominational": "I am the God of Bethel, where you anointed a pillar and where you made a vow to me. Now leave this land at once and go back to your native land.'",
       "Baptist": "The angel identifies himself as 'the God of Bethel,' reminding Jacob of his earlier encounter, the consecrated pillar, and the vow made there. This divine voice now commands Jacob to leave Harran immediately and return to Canaan.",
@@ -184,8 +184,8 @@
       "Orthodox": "The divine messenger identifies Himself as the God encountered at Bethel, referencing the anointed pillar and Jacob's vow, and commands Jacob's immediate departure and return to his homeland.",
       "Other": "I am the God of Bethel, where you anointed a pillar and where you made a vow to me. Now leave this land at once and go back to your native land.'",
       "Prefer not to say": "I am the God of Bethel, where you anointed a pillar and where you made a vow to me. Now leave this land at once and go back to your native land.'"
-    },
-    "14": {
+  },
+  "14": {
       "General": "Then Rachel and Leah replied, 'Do we still have any share in the inheritance of our father's estate?'",
       "Non-Denominational": "Then Rachel and Leah replied, 'Do we still have any share in the inheritance of our father's estate?'",
       "Baptist": "Rachel and Leah respond to Jacob, beginning with a rhetorical question expressing their alienation from their father's household: they no longer expect any inheritance or portion from Laban.",
@@ -198,10 +198,10 @@
       "Orthodox": "Rachel and Leah concur with Jacob, rhetorically asking if any portion or inheritance remains for them within their father's estate.",
       "Other": "Then Rachel and Leah replied, 'Do we still have any share in the inheritance of our father's estate?'",
       "Prefer not to say": "Then Rachel and Leah replied, 'Do we still have any share in the inheritance of our father's estate?'"
-    },
-    "15": {
+  },
+  "15": {
       "General": "They feel Laban treats them like foreigners, having sold them and used up the money paid for them (referring to Jacob's labor).",
-      "Non-Denominational": "They feel Laban treats them like foreigners, having sold them and used up the money paid for them (referring to Jacob's labor).",
+    "Non-Denominational": "They feel Laban treats them like foreigners, having sold them and used up the money paid for them (referring to Jacob's labor).",
       "Baptist": "They feel Laban treats them like foreigners, not daughters. They accuse him of essentially 'selling' them (using Jacob's extensive labor, which served as their bride price) and then consuming that wealth himself instead of setting it aside for them or their dowry, as custom might dictate.",
       "Catholic": "They elaborate on their feeling of alienation: 'Are we not regarded by him as foreigners? For he has sold us, and he has indeed consumed our money (the bride price Jacob paid through labor).' They feel Laban treated them as commodities, benefiting from their marriage price (Jacob's 14 years of service) without providing them the security or dowry expected.",
       "Methodist": "They feel Laban treats them as foreigners, having 'sold' them (benefited from Jacob's service as bride price) and used the proceeds himself.",
@@ -212,8 +212,8 @@
       "Orthodox": "They articulate their sense of estrangement, stating Laban treats them as foreigners, having effectively sold them and consumed the bride price (Jacob's labor) himself.",
       "Other": "They feel Laban treats them like foreigners, having sold them and used up the money paid for them (referring to Jacob's labor).",
       "Prefer not to say": "They feel Laban treats them like foreigners, having sold them and used up the money paid for them (referring to Jacob's labor)."
-    },
-    "16": {
+  },
+  "16": {
       "General": "Surely all the wealth that God took away from our father belongs to us and our children. So do whatever God has told you.'",
       "Non-Denominational": "Surely all the wealth that God took away from our father belongs to us and our children. So do whatever God has told you.'",
       "Baptist": "Therefore, they view the wealth Jacob gained (which God took from Laban) as rightfully belonging to them and their children, compensating for what Laban withheld. They fully support Jacob following God's command to leave.",
@@ -226,8 +226,8 @@
       "Orthodox": "They conclude that the wealth divinely transferred from Laban rightfully belongs to them and their offspring, thereby wholeheartedly endorsing Jacob's decision to follow God's directive.",
       "Other": "Surely all the wealth that God took away from our father belongs to us and our children. So do whatever God has told you.'",
       "Prefer not to say": "Surely all the wealth that God took away from our father belongs to us and our children. So do whatever God has told you.'"
-    },
-    "17": {
+  },
+  "17": {
       "General": "Then Jacob put his children and his wives on camels,",
       "Non-Denominational": "Then Jacob put his children and his wives on camels,",
       "Baptist": "Having secured his wives' agreement, Jacob immediately prepares for departure, mounting his family on camels.",
@@ -240,8 +240,8 @@
       "Orthodox": "Jacob commences preparations for departure, mounting his children and wives on camels.",
       "Other": "Then Jacob put his children and his wives on camels,",
       "Prefer not to say": "Then Jacob put his children and his wives on camels,"
-    },
-    "18": {
+  },
+  "18": {
       "General": "and he drove all his livestock ahead of him, along with all the goods he had accumulated in Paddan Aram, to go to his father Isaac in the land of Canaan.",
       "Non-Denominational": "and he drove all his livestock ahead of him, along with all the goods he had accumulated in Paddan Aram, to go to his father Isaac in the land of Canaan.",
       "Baptist": "He gathers all his livestock and possessions acquired in Paddan Aram and sets out towards Canaan to return to his father Isaac.",
@@ -254,8 +254,8 @@
       "Orthodox": "He gathers his livestock and all the possessions acquired in Paddan-aram, embarking on the journey to his father Isaac in the land of Canaan.",
       "Other": "and he drove all his livestock ahead of him, along with all the goods he had accumulated in Paddan Aram, to go to his father Isaac in the land of Canaan.",
       "Prefer not to say": "and he drove all his livestock ahead of him, along with all the goods he had accumulated in Paddan Aram, to go to his father Isaac in the land of Canaan."
-    },
-    "19": {
+  },
+  "19": {
       "General": "When Laban had gone to shear his sheep, Rachel stole her father's household gods.",
       "Non-Denominational": "When Laban had gone to shear his sheep, Rachel stole her father's household gods.",
       "Baptist": "Taking advantage of Laban's absence (he was away shearing sheep, a time-consuming task often done at a distance), Rachel secretly steals Laban's 'teraphim' (household idols or gods). Her motives are debated (sentiment, belief in their power, claim to inheritance, spite).",
@@ -268,8 +268,8 @@
       "Orthodox": "During Laban's absence for sheep shearing, Rachel steals his household idols (teraphim).",
       "Other": "When Laban had gone to shear his sheep, Rachel stole her father's household gods.",
       "Prefer not to say": "When Laban had gone to shear his sheep, Rachel stole her father's household gods."
-    },
-    "20": {
+  },
+  "20": {
       "General": "Moreover, Jacob deceived Laban the Aramean by not telling him he was running away.",
       "Non-Denominational": "Moreover, Jacob deceived Laban the Aramean by not telling him he was running away.",
       "Baptist": "Jacob also acts deceitfully ('stole the heart of Laban' - an idiom for deception) by concealing his departure from Laban.",
@@ -282,8 +282,8 @@
       "Orthodox": "Jacob practices deception by concealing his departure from Laban.",
       "Other": "Moreover, Jacob deceived Laban the Aramean by not telling him he was running away.",
       "Prefer not to say": "Moreover, Jacob deceived Laban the Aramean by not telling him he was running away."
-    },
-    "21": {
+  },
+  "21": {
       "General": "So he fled with all he had, and crossing the Euphrates River, he headed for the hill country of Gilead.",
       "Non-Denominational": "So he fled with all he had, and crossing the Euphrates River, he headed for the hill country of Gilead.",
       "Baptist": "Jacob flees with all his possessions, crosses the Euphrates River (a major geographical boundary), and travels towards the region of Gilead (east of the Jordan River).",
@@ -296,8 +296,8 @@
       "Orthodox": "Jacob departs covertly with all his belongings, crosses the Euphrates River, and proceeds towards the hill country of Gilead.",
       "Other": "So he fled with all he had, and crossing the Euphrates River, he headed for the hill country of Gilead.",
       "Prefer not to say": "So he fled with all he had, and crossing the Euphrates River, he headed for the hill country of Gilead."
-    },
-    "22": {
+  },
+  "22": {
       "General": "On the third day, Laban was told that Jacob had fled.",
       "Non-Denominational": "On the third day, Laban was told that Jacob had fled.",
       "Baptist": "It takes three days for the news of Jacob's departure to reach Laban (likely still away shearing).",
@@ -310,8 +310,8 @@
       "Orthodox": "Laban receives word of Jacob's departure on the third day.",
       "Other": "On the third day Laban was told that Jacob had fled.",
       "Prefer not to say": "On the third day Laban was told that Jacob had fled."
-    },
-    "23": {
+  },
+  "23": {
       "General": "Taking his relatives with him, he pursued Jacob for seven days and caught up with him in the hill country of Gilead.",
       "Non-Denominational": "Taking his relatives with him, he pursued Jacob for seven days and caught up with him in the hill country of Gilead.",
       "Baptist": "Laban immediately gathers his kinsmen and sets off in pursuit. After a seven-day chase, he overtakes Jacob's slower-moving caravan in Gilead.",
@@ -324,8 +324,8 @@
       "Orthodox": "Laban assembles his kinsmen and pursues Jacob for seven days, eventually overtaking him in the Gilead region.",
       "Other": "Taking his relatives with him, he pursued Jacob for seven days and caught up with him in the hill country of Gilead.",
       "Prefer not to say": "Taking his relatives with him, he pursued Jacob for seven days and caught up with him in the hill country of Gilead."
-    },
-    "24": {
+  },
+  "24": {
       "General": "Then God came to Laban the Aramean in a dream at night and said to him, 'Be careful not to say anything to Jacob, either good or bad.'",
       "Non-Denominational": "Then God came to Laban the Aramean in a dream at night and said to him, 'Be careful not to say anything to Jacob, either good or bad.'",
       "Baptist": "Before Laban can confront Jacob, God intervenes by appearing to Laban in a dream. God warns Laban sternly to be careful and not speak to Jacob in any way that constitutes a threat or attempts to force his return ('speak to Jacob neither good nor bad' - i.e., do not interfere forcefully or judgmentally).",
@@ -338,8 +338,8 @@
       "Orthodox": "God appears to Laban in a dream, cautioning him against speaking to Jacob in any manner, whether favorable or unfavorable, implying a warning against coercion or harm.",
       "Other": "Then God came to Laban the Aramean in a dream at night and said to him, 'Be careful not to say anything to Jacob, either good or bad.'",
       "Prefer not to say": "Then God came to Laban the Aramean in a dream at night and said to him, 'Be careful not to say anything to Jacob, either good or bad.'"
-    },
-    "25": {
+  },
+  "25": {
       "General": "Laban overtakes Jacob, who had pitched his tent in the hill country; Laban and his relatives camped nearby in Gilead.",
       "Non-Denominational": "Laban overtakes Jacob, who had pitched his tent in the hill country; Laban and his relatives camped nearby in Gilead.",
       "Baptist": "Describes the scene: Jacob has made camp in Gilead when Laban and his kinsmen arrive and camp nearby, setting the stage for the confrontation.",
@@ -352,8 +352,8 @@
       "Orthodox": "Laban overtakes Jacob, who has already established camp in Gilead; Laban and his kinsmen set up their camp in the vicinity.",
       "Other": "Laban overtakes Jacob, who had pitched his tent in the hill country; Laban and his relatives camped nearby in Gilead.",
       "Prefer not to say": "Laban overtakes Jacob, who had pitched his tent in the hill country; Laban and his relatives camped nearby in Gilead."
-    },
-    "26": {
+  },
+  "26": {
       "General": "Then Laban said to Jacob, 'What have you done? You've deceived me, and you've carried off my daughters like captives in war.'",
       "Non-Denominational": "Then Laban said to Jacob, 'What have you done? You've deceived me, and you've carried off my daughters like captives in war.'",
       "Baptist": "Laban confronts Jacob, starting with an accusation: 'What have you done?' He accuses Jacob of deception ('stolen my heart') and of treating his daughters like prisoners of war by taking them away secretly.",
@@ -366,8 +366,8 @@
       "Orthodox": "Laban confronts Jacob, accusing him of deceit and of taking his daughters away as if they were captives of war.",
       "Other": "Then Laban said to Jacob, 'What have you done? You've deceived me, and you've carried off my daughters like captives in war.'",
       "Prefer not to say": "Then Laban said to Jacob, 'What have you done? You've deceived me, and you've carried off my daughters like captives in war.'"
-    },
-    "27": {
+  },
+  "27": {
       "General": "Why did you run off secretly and deceive me? Why didn't you tell me, so I could send you away with joy and singing to the music of timbrels and harps?",
       "Non-Denominational": "Why did you run off secretly and deceive me? Why didn't you tell me, so I could send you away with joy and singing to the music of timbrels and harps?",
       "Baptist": "Laban questions Jacob's secrecy, claiming (perhaps disingenuously) that if Jacob had told him, he would have given him a proper, festive farewell with music and celebration.",
@@ -380,8 +380,8 @@
       "Orthodox": "Laban questions the necessity for secrecy, claiming (perhaps insincerely) that he would have arranged a festive farewell with music had he been informed.",
       "Other": "Why did you run off secretly and deceive me? Why didn't you tell me, so I could send you away with joy and singing to the music of timbrels and harps?",
       "Prefer not to say": "Why did you run off secretly and deceive me? Why didn't you tell me, so I could send you away with joy and singing to the music of timbrels and harps?"
-    },
-    "28": {
+  },
+  "28": {
       "General": "You didn't even let me kiss my grandchildren and my daughters goodbye. You have done a foolish thing.",
       "Non-Denominational": "You didn't even let me kiss my grandchildren and my daughters goodbye. You have done a foolish thing.",
       "Baptist": "He further reproaches Jacob for denying him the chance to kiss his daughters and grandchildren goodbye, calling Jacob's secretive actions foolish.",
@@ -394,8 +394,8 @@
       "Orthodox": "He reproaches Jacob for depriving him of the opportunity to bid farewell to his daughters and grandchildren with a kiss, deeming Jacob's actions foolish.",
       "Other": "You didn't even let me kiss my grandchildren and my daughters goodbye. You have done a foolish thing.",
       "Prefer not to say": "You didn't even let me kiss my grandchildren and my daughters goodbye. You have done a foolish thing."
-    },
-    "29": {
+  },
+  "29": {
       "General": "I have the power to harm you; but last night the God of your father warned me, 'Be careful not to say anything to Jacob, either good or bad.'",
       "Non-Denominational": "I have the power to harm you; but last night the God of your father warned me, 'Be careful not to say anything to Jacob, either good or bad.'",
       "Baptist": "Laban asserts his capability to harm Jacob ('It is in the power of my hand to do you harm') but admits he is constrained by the warning God gave him in the dream the previous night.",
@@ -408,8 +408,8 @@
       "Orthodox": "Laban asserts his capability to inflict harm but discloses that the God of Jacob's father warned him in a dream against interfering, whether positively or negatively.",
       "Other": "I have the power to harm you; but last night the God of your father warned me, 'Be careful not to say anything to Jacob, either good or bad.'",
       "Prefer not to say": "I have the power to harm you; but last night the God of your father warned me, 'Be careful not to say anything to Jacob, either good or bad.'"
-    },
-    "30": {
+  },
+  "30": {
       "General": "Now you have gone off because you longed to return to your father's household. But why did you steal my gods?'",
       "Non-Denominational": "Now you have gone off because you longed to return to your father's household. But why did you steal my gods?'",
       "Baptist": "Laban concedes Jacob's longing for home as a possible motive for leaving, but then pivots to his main grievance: the theft of his household gods (teraphim).",
@@ -422,8 +422,8 @@
       "Orthodox": "Laban acknowledges Jacob's yearning for his ancestral home but directly questions the theft of his household gods.",
       "Other": "Now you have gone off because you longed to return to your father's household. But why did you steal my gods?'",
       "Prefer not to say": "Now you have gone off because you longed to return to your father's household. But why did you steal my gods?'"
-    },
-    "31": {
+  },
+  "31": {
       "General": "Jacob answered Laban, 'I was afraid, because I thought you would take your daughters away from me by force.'",
       "Non-Denominational": "Jacob answered Laban, 'I was afraid, because I thought you would take your daughters away from me by force.'",
       "Baptist": "Jacob explains his secretive departure: he was afraid Laban would forcibly prevent him from leaving, potentially taking back his daughters (Jacob's wives).",
@@ -436,10 +436,10 @@
       "Orthodox": "Jacob justifies his clandestine departure by expressing fear that Laban would have forcibly prevented him from leaving with his daughters.",
       "Other": "Jacob answered Laban, 'I was afraid, because I thought you would take your daughters away from me by force.'",
       "Prefer not to say": "Jacob answered Laban, 'I was afraid, because I thought you would take your daughters away from me by force.'"
-    },
-    "32": {
+  },
+  "32": {
       "General": "Regarding the idols, Jacob, unaware Rachel took them, confidently declares that anyone found with Laban's gods shall not live, inviting Laban to search and take anything that is his.",
-      "Non-Denominational": "Regarding the idols, Jacob, unaware Rachel took them, confidently declares that anyone found with Laban's gods shall not live, inviting Laban to search and take anything that is his.",
+    "Non-Denominational": "Regarding the idols, Jacob, unaware Rachel took them, confidently declares that anyone found with Laban's gods shall not live, inviting Laban to search and take anything that is his.",
       "Baptist": "Regarding the stolen gods, Jacob, unaware Rachel took them, confidently declares that whoever has them deserves death. He invites Laban to search his belongings thoroughly in front of everyone.",
       "Catholic": "Regarding the stolen gods, Jacob, completely unaware of Rachel's culpability, makes a rash and dangerous vow: 'Anyone with whom you find your gods shall not live.' He invites Laban to conduct a thorough search in the presence of their kinsmen: 'In the presence of our kinsmen point out what I have that is yours, and take it.' The narrator explicitly notes Jacob's ignorance of Rachel's theft.",
       "Methodist": "Unaware of Rachel's theft, Jacob rashly declares the thief should die and invites Laban to search his belongings.",
@@ -450,8 +450,8 @@
       "Orthodox": "Ignorant of Rachel's actions, Jacob rashly pronounces a death sentence upon whomever is found with the idols and invites Laban to conduct a search.",
       "Other": "Regarding the idols, Jacob, unaware Rachel took them, confidently declares that anyone found with Laban's gods shall not live, inviting Laban to search and take anything that is his.",
       "Prefer not to say": "Regarding the idols, Jacob, unaware Rachel took them, confidently declares that anyone found with Laban's gods shall not live, inviting Laban to search and take anything that is his."
-    },
-    "33": {
+  },
+  "33": {
       "General": "Laban searched Jacob's tent, Leah's tent, and the tents of the two female servants, but found nothing.",
       "Non-Denominational": "Laban searched Jacob's tent, Leah's tent, and the tents of the two female servants, but found nothing.",
       "Baptist": "Laban conducts the search, checking Jacob's tent, Leah's tent, and the tents of Bilhah and Zilpah, finding nothing. He then proceeds to Rachel's tent.",
@@ -464,8 +464,8 @@
       "Orthodox": "Laban conducts a search through Jacob's tent, Leah's tent, and the tents of the two handmaids without finding the idols, before proceeding to Rachel's tent.",
       "Other": "Laban searched Jacob's tent, Leah's tent, and the tents of the two female servants, but found nothing.",
       "Prefer not to say": "Laban searched Jacob's tent, Leah's tent, and the tents of the two female servants, but found nothing."
-    },
-    "34": {
+  },
+  "34": {
       "General": "Now Rachel had taken the household gods and put them inside her camel's saddle and was sitting on them. Laban searched through everything in the tent but found nothing.",
       "Non-Denominational": "Now Rachel had taken the household gods and put them inside her camel's saddle and was sitting on them. Laban searched through everything in the tent but found nothing.",
       "Baptist": "Rachel had hidden the teraphim in her camel's saddlebag and was sitting on it during the search. Laban searches her tent thoroughly but fails to find the idols due to her deception.",
@@ -478,8 +478,8 @@
       "Orthodox": "Rachel had concealed the idols within her camel's saddle and was seated upon it. Laban searches the tent thoroughly but fails to locate them.",
       "Other": "Now Rachel had taken the household gods and put them inside her camel's saddle and was sitting on them. Laban searched through everything in the tent but found nothing.",
       "Prefer not to say": "Now Rachel had taken the household gods and put them inside her camel's saddle and was sitting on them. Laban searched through everything in the tent but found nothing."
-    },
-    "35": {
+  },
+  "35": {
       "General": "Rachel said to her father, 'Don't be angry, my lord, that I cannot stand up in your presence; I'm having my period.' So he searched but could not find the household gods.",
       "Non-Denominational": "Rachel said to her father, 'Don't be angry, my lord, that I cannot stand up in your presence; I'm having my period.' So he searched but could not find the household gods.",
       "Baptist": "Rachel uses the excuse of menstruation ('the way of women is upon me') as a reason for not standing up out of respect for her father, thereby preventing him from disturbing her seat (and the hidden idols). Laban accepts this and completes his unsuccessful search.",
@@ -492,8 +492,8 @@
       "Orthodox": "Rachel excuses herself from rising by claiming menstruation, a culturally accepted reason that prevents Laban from disturbing her position and discovering the idols. The search concludes unsuccessfully.",
       "Other": "Rachel said to her father, 'Don't be angry, my lord, that I cannot stand up in your presence; I'm having my period.' So he searched but could not find the household gods.",
       "Prefer not to say": "Rachel said to her father, 'Don't be angry, my lord, that I cannot stand up in your presence; I'm having my period.' So he searched but could not find the household gods."
-    },
-    "36": {
+  },
+  "36": {
       "General": "Jacob became angry and took Laban to task. 'What is my crime?' he asked Laban. 'How have I wronged you that you hunt me down?'",
       "Non-Denominational": "Jacob became angry and took Laban to task. 'What is my crime?' he asked Laban. 'How have I wronged you that you hunt me down?'",
       "Baptist": "Vindicated by the unsuccessful search, Jacob becomes angry and confronts Laban sharply, demanding to know what offense he committed to warrant such hostile pursuit.",
@@ -506,8 +506,8 @@
       "Orthodox": "Infuriated by the unfounded accusation, Jacob confronts Laban sharply, demanding to know what crime justified such aggressive pursuit.",
       "Other": "Jacob became angry and took Laban to task. 'What is my crime?' he asked Laban. 'How have I wronged you that you hunt me down?'",
       "Prefer not to say": "Jacob became angry and took Laban to task. 'What is my crime?' he asked Laban. 'How have I wronged you that you hunt me down?'"
-    },
-    "37": {
+  },
+  "37": {
       "General": "Now that you have searched through all my goods, what have you found that belongs to your household? Put it here in front of your relatives and mine, and let them judge between the two of us.'",
       "Non-Denominational": "Now that you have searched through all my goods, what have you found that belongs to your household? Put it here in front of your relatives and mine, and let them judge between the two of us.'",
       "Baptist": "Jacob challenges Laban to produce any stolen item found during the exhaustive search. He demands that any such item be placed before both Laban's and Jacob's relatives (present as witnesses) to judge the matter fairly.",
@@ -520,8 +520,8 @@
       "Orthodox": "Jacob challenges Laban to produce any of his possessions found among Jacob's belongings and proposes that their assembled relatives arbitrate the dispute.",
       "Other": "Now that you have searched through all my goods, what have you found that belongs to your household? Put it here in front of your relatives and mine, and let them judge between the two of us.'",
       "Prefer not to say": "Now that you have searched through all my goods, what have you found that belongs to your household? Put it here in front of your relatives and mine, and let them judge between the two of us.'"
-    },
-    "38": {
+  },
+  "38": {
       "General": "I have been with you for twenty years now. Your sheep and goats have not miscarried, nor have I eaten rams from your flocks.",
       "Non-Denominational": "I have been with you for twenty years now. Your sheep and goats have not miscarried, nor have I eaten rams from your flocks.",
       "Baptist": "Jacob launches into a defense of his 20 years of service, highlighting his faithful stewardship: Laban's flocks thrived (no miscarriages), and Jacob never took even the rams for his own consumption.",
@@ -534,8 +534,8 @@
       "Orthodox": "Jacob commences his defense by highlighting his twenty years of service, emphasizing the fecundity of the flocks under his care and his personal integrity in not consuming Laban's rams.",
       "Other": "I have been with you for twenty years now. Your sheep and goats have not miscarried, nor have I eaten rams from your flocks.",
       "Prefer not to say": "I have been with you for twenty years now. Your sheep and goats have not miscarried, nor have I eaten rams from your flocks."
-    },
-    "39": {
+  },
+  "39": {
       "General": "I did not bring you animals torn by wild beasts; I bore the loss myself. And you demanded payment from me for whatever was stolen by day or night.",
       "Non-Denominational": "I did not bring you animals torn by wild beasts; I bore the loss myself. And you demanded payment from me for whatever was stolen by day or night.",
       "Baptist": "He further states he personally absorbed losses from wild animals (instead of bringing the carcasses as proof, as a shepherd might normally do to avoid liability) and that Laban held him responsible for *any* stolen animals, day or night, contrary to typical arrangements.",
@@ -548,8 +548,8 @@
       "Orthodox": "He asserts that he personally absorbed losses from predators rather than presenting evidence to Laban, and that Laban held him accountable for any theft, regardless of circumstance.",
       "Other": "I did not bring you animals torn by wild beasts; I bore the loss myself. And you demanded payment from me for whatever was stolen by day or night.",
       "Prefer not to say": "I did not bring you animals torn by wild beasts; I bore the loss myself. And you demanded payment from me for whatever was stolen by day or night."
-    },
-    "40": {
+  },
+  "40": {
       "General": "This was my situation: The heat consumed me in the daytime and the cold at night, and sleep fled from my eyes.",
       "Non-Denominational": "This was my situation: The heat consumed me in the daytime and the cold at night, and sleep fled from my eyes.",
       "Baptist": "He describes the harsh conditions and his constant vigilance: enduring extreme heat by day and cold by night, often losing sleep to protect the flocks.",
@@ -562,8 +562,8 @@
       "Orthodox": "He depicts the arduous conditions of his service, enduring extreme temperatures day and night and suffering from lack of sleep.",
       "Other": "This was my situation: The heat consumed me in the daytime and the cold at night, and sleep fled from my eyes.",
       "Prefer not to say": "This was my situation: The heat consumed me in the daytime and the cold at night, and sleep fled from my eyes."
-    },
-    "41": {
+  },
+  "41": {
       "General": "It was like this for the twenty years I was in your household. I worked for you fourteen years for your two daughters and six years for your flocks, and you changed my wages ten times.",
       "Non-Denominational": "It was like this for the twenty years I was in your household. I worked for you fourteen years for your two daughters and six years for your flocks, and you changed my wages ten times.",
       "Baptist": "Jacob summarizes his 20 years: 14 years of labor for Rachel and Leah, and 6 years for the flocks, during which Laban repeatedly changed his wages.",
@@ -576,8 +576,8 @@
       "Orthodox": "He recapitulates his twenty years in Laban's household, detailing fourteen years of service for the two daughters and six years for the flocks, while reiterating Laban's frequent alteration of his wages.",
       "Other": "It was like this for the twenty years I was in your household. I worked for you fourteen years for your two daughters and six years for your flocks, and you changed my wages ten times.",
       "Prefer not to say": "It was like this for the twenty years I was in your household. I worked for you fourteen years for your two daughters and six years for your flocks, and you changed my wages ten times."
-    },
-    "42": {
+  },
+  "42": {
       "General": "If the God of my father, the God of Abraham and the Fear of Isaac, had not been with me, you would surely have sent me away empty-handed. But God has seen my hardship and the toil of my hands, and last night he rebuked you.'",
       "Non-Denominational": "If the God of my father, the God of Abraham and the Fear of Isaac, had not been with me, you would surely have sent me away empty-handed. But God has seen my hardship and the toil of my hands, and last night he rebuked you.'",
       "Baptist": "Jacob credits his survival and success solely to God's presence ('the God of my father, the God of Abraham, and the Fear of Isaac'). Without God, he believes Laban would have exploited him completely. He asserts God saw his suffering and hard work, and intervened by rebuking Laban the previous night.",
@@ -590,8 +590,8 @@
       "Orthodox": "Jacob attributes his avoidance of complete ruin solely to the intervention of the God of his ancestors ('God of Abraham', 'Fear of Isaac'), asserting that God observed his suffering and labor, and consequently rebuked Laban the previous night.",
       "Other": "If the God of my father, the God of Abraham and the Fear of Isaac, had not been with me, you would surely have sent me away empty-handed. But God has seen my hardship and the toil of my hands, and last night he rebuked you.'",
       "Prefer not to say": "If the God of my father, the God of Abraham and the Fear of Isaac, had not been with me, you would surely have sent me away empty-handed. But God has seen my hardship and the toil of my hands, and last night he rebuked you.'"
-    },
-    "43": {
+  },
+  "43": {
       "General": "Laban responded Jacob, 'The women are my daughters, the children are my children, and the flocks are my flocks. All you see is mine. Yet what can I do today about these daughters of mine, or about the children they have borne?'",
       "Non-Denominational": "Laban responded Jacob, 'The women are my daughters, the children are my children, and the flocks are my flocks. All you see is mine. Yet what can I do today about these daughters of mine, or about the children they have borne?'",
       "Baptist": "Laban responds, not by addressing Jacob's defense, but by reasserting his claim over everything: the daughters, the grandchildren, the flocks – 'All that you see is mine.' However, acknowledging God's warning (implicitly) and the reality of the situation, he concedes helplessness: 'Yet what can I do...?'.",
@@ -604,8 +604,8 @@
       "Orthodox": "Laban sidesteps Jacob's defense by broadly asserting ownership over the daughters, grandchildren, and flocks, yet simultaneously acknowledges his inability to act against them.",
       "Other": "Laban responded Jacob, 'The women are my daughters, the children are my children, and the flocks are my flocks. All you see is mine. Yet what can I do today about these daughters of mine, or about the children they have borne?'",
       "Prefer not to say": "Laban responded Jacob, 'The women are my daughters, the children are my children, and the flocks are my flocks. All you see is mine. Yet what can I do today about these daughters of mine, or about the children they have borne?'"
-    },
-    "44": {
+  },
+  "44": {
       "General": "Come now, let's make a covenant, you and I, and let it serve as a witness.'",
       "Non-Denominational": "Come now, let's make a covenant, you and I, and let it serve as a witness.'",
       "Baptist": "Recognizing the impasse and likely desiring some face-saving resolution and boundary, Laban proposes making a formal covenant or treaty between himself and Jacob, which will serve as a binding witness to their agreement.",
@@ -618,8 +618,8 @@
       "Orthodox": "Laban proposes the establishment of a covenant between them to serve as a formal witness to their agreement.",
       "Other": "Come now, let's make a covenant, you and I, and let it serve as a witness.'",
       "Prefer not to say": "Come now, let's make a covenant, you and I, and let it serve as a witness.'"
-    },
-    "45": {
+  },
+  "45": {
       "General": "So Jacob took a stone and set it up as a pillar.",
       "Non-Denominational": "So Jacob took a stone and set it up as a pillar.",
       "Baptist": "Jacob agrees and initiates the covenant ceremony by taking a large stone and setting it upright as a pillar, a common practice for marking significant events or agreements.",
@@ -632,8 +632,8 @@
       "Orthodox": "Jacob takes a stone and erects it as a pillar to commemorate the agreement.",
       "Other": "So Jacob took a stone and set it up as a pillar.",
       "Prefer not to say": "So Jacob took a stone and set it up as a pillar."
-    },
-    "46": {
+  },
+  "46": {
       "General": "He instructed his relatives to gather stones, which they piled into a heap. They then ate a meal there by the heap.",
       "Non-Denominational": "He instructed his relatives to gather stones, which they piled into a heap. They then ate a meal there by the heap.",
       "Baptist": "Jacob instructs his relatives to gather more stones, which they pile into a heap or cairn. They then share a covenant meal together beside the heap of stones.",
@@ -646,8 +646,8 @@
       "Orthodox": "Jacob directs his kinsmen to gather stones, forming a heap, beside which they partake in a covenantal meal.",
       "Other": "He instructed his relatives to gather stones, which they piled into a heap. They then ate a meal there by the heap.",
       "Prefer not to say": "He instructed his relatives to gather stones, which they piled into a heap. They then ate a meal there by the heap."
-    },
-    "47": {
+  },
+  "47": {
       "General": "Laban called it Jegar Sahadutha, and Jacob called it Galeed.",
       "Non-Denominational": "Laban called it Jegar Sahadutha, and Jacob called it Galeed.",
       "Baptist": "Laban names the heap in Aramaic (Jegar-sahadutha) and Jacob names it in Hebrew (Galeed). Both names mean 'Heap of Witness', reflecting the purpose of the stone pile.",
@@ -660,8 +660,8 @@
       "Orthodox": "Laban designates the heap 'Jegar-sahadutha' (Aramaic), while Jacob calls it 'Galeed' (Hebrew); both names signify 'Heap of Witness'.",
       "Other": "Laban called it Jegar Sahadutha, and Jacob called it Galeed.",
       "Prefer not to say": "Laban called it Jegar Sahadutha, and Jacob called it Galeed."
-    },
-    "48": {
+  },
+  "48": {
       "General": "Laban declared the heap is a witness between them that day.",
       "Non-Denominational": "Laban declared the heap is a witness between them that day.",
       "Baptist": "Laban explicitly states the function of the heap: it serves as a perpetual witness to the agreement established between them that day. The verse confirms this is the origin of the name Galeed.",
@@ -674,8 +674,8 @@
       "Orthodox": "Laban formally states that the heap serves as a witness between them, explaining the origin of the name Galeed.",
       "Other": "Laban declared the heap is a witness between them that day.",
       "Prefer not to say": "Laban declared the heap is a witness between them that day."
-    },
-    "49": {
+  },
+  "49": {
       "General": "It was also called Mizpah, because he said, 'May the Lord keep watch between you and me when we are away from each other.'",
       "Non-Denominational": "It was also called Mizpah, because he said, 'May the Lord keep watch between you and me when we are away from each other.'",
       "Baptist": "The place/heap is also given another name, Mizpah (meaning 'Watchpost'). Laban invokes God as the divine Watchman to oversee their adherence to the covenant when they are separated and cannot watch each other.",
@@ -688,8 +688,8 @@
       "Orthodox": "The location is also named Mizpah ('Watchpost'), accompanied by Laban's invocation for the Lord to maintain watch over both parties when they are separated.",
       "Other": "It was also called Mizpah, because he said, 'May the Lord keep watch between you and me when we are away from each other.'",
       "Prefer not to say": "It was also called Mizpah, because he said, 'May the Lord keep watch between you and me when we are away from each other.'"
-    },
-    "50": {
+  },
+  "50": {
       "General": "Laban warned Jacob: if Jacob mistreats Laban's daughters or takes other wives, even though no one is with us, remember that God is a witness between you and me.'",
       "Non-Denominational": "Laban warned Jacob: if Jacob mistreats Laban's daughters or takes other wives, even though no one is with us, remember that God is a witness between you and me.'",
       "Baptist": "Laban specifies terms of the covenant related to Jacob's treatment of Leah and Rachel: Jacob must not mistreat them or take additional wives beyond them. Laban reminds Jacob that even with no human witnesses, God Himself witnesses this agreement.",
@@ -702,8 +702,8 @@
       "Orthodox": "Laban stipulates conditions under divine watch: Jacob must not mistreat Laban's daughters nor take additional wives, reminding him that God serves as witness even in the absence of human observers.",
       "Other": "Laban warned Jacob: if Jacob mistreats Laban's daughters or takes other wives, even though no one is with us, remember that God is a witness between you and me.'",
       "Prefer not to say": "Laban warned Jacob: if Jacob mistreats Laban's daughters or takes other wives, even though no one is with us, remember that God is a witness between you and me.'"
-    },
-    "51": {
+  },
+  "51": {
       "General": "Laban pointed to the heap and the pillar as witnesses of their agreement.",
       "Non-Denominational": "Laban pointed to the heap and the pillar as witnesses of their agreement.",
       "Baptist": "Laban points again to the physical markers – the heap and the pillar – emphasizing their role as tangible witnesses to the covenant boundary.",
@@ -716,8 +716,8 @@
       "Orthodox": "Laban gestures towards the heap and the pillar as the physical markers established between them.",
       "Other": "Laban pointed to the heap and the pillar as witnesses of their agreement.",
       "Prefer not to say": "Laban pointed to the heap and the pillar as witnesses of their agreement."
-    },
-    "52": {
+  },
+  "52": {
       "General": "He stated the terms: the heap and pillar are boundaries neither will cross to harm the other.",
       "Non-Denominational": "He stated the terms: the heap and pillar are boundaries neither will cross to harm the other.",
       "Baptist": "He defines the boundary explicitly: neither party is to cross the heap/pillar to inflict harm on the other. It marks a non-aggression pact and territorial boundary.",
@@ -730,8 +730,8 @@
       "Orthodox": "He explicitly defines the heap and pillar as boundary markers, testifying to a mutual agreement not to cross this line with harmful intent towards the other party.",
       "Other": "He stated the terms: the heap and pillar are boundaries neither will cross to harm the other.",
       "Prefer not to say": "He stated the terms: the heap and pillar are boundaries neither will cross to harm the other."
-    },
-    "53": {
+  },
+  "53": {
       "General": "Laban invoked the God of Abraham and the God of Nahor, the God of their father, judge between them. Jacob took an oath in the name of the Fear of his father Isaac.",
       "Non-Denominational": "Laban invoked the God of Abraham and the God of Nahor, the God of their father, judge between them. Jacob took an oath in the name of the Fear of his father Isaac.",
       "Baptist": "Laban invokes the God of their common ancestors to judge. Jacob swears his oath specifically by the 'Fear of his father Isaac'.",
@@ -744,8 +744,8 @@
       "Orthodox": "Laban invokes the God of their common ancestors to arbitrate between them. Jacob takes his oath specifically in the name of the 'Fear of his father Isaac', possibly distinguishing his monotheistic commitment.",
       "Other": "Laban invoked the God of Abraham and the God of Nahor, the God of their father, judge between them. Jacob took an oath in the name of the 'Fear of his father Isaac.'",
       "Prefer not to say": "Laban invoked the God of Abraham and the God of Nahor, the God of their father, judge between them. Jacob took an oath in the name of the 'Fear of his father Isaac.'"
-    },
-    "54": {
+  },
+  "54": {
       "General": "Jacob offered a sacrifice there in the hill country and invited his relatives to eat the meal. They ate and spent the night there.",
       "Non-Denominational": "Jacob offered a sacrifice there in the hill country and invited his relatives to eat the meal. They ate and spent the night there.",
       "Baptist": "Jacob seals the covenant by offering a sacrifice and hosting a communal meal for all the relatives present (both his and Laban's). They spend the night there together.",
@@ -758,8 +758,8 @@
       "Orthodox": "Jacob offers a sacrifice in the hill country and invites his relatives to partake in a meal, solidifying the covenant. They remain there overnight.",
       "Other": "Jacob offered a sacrifice there in the hill country and invited his relatives to eat the meal. They ate and spent the night there.",
       "Prefer not to say": "Jacob offered a sacrifice there in the hill country and invited his relatives to eat the meal. They ate and spent the night there."
-    },
-    "55": {
+  },
+  "55": {
       "General": "Early the next morning Laban kissed his grandchildren and his daughters and blessed them. Then he left and returned home.",
       "Non-Denominational": "Early the next morning Laban kissed his grandchildren and his daughters and blessed them. Then he left and returned home.",
       "Baptist": "The next morning, Laban takes his leave. He gives the farewell denied earlier, kissing his daughters and grandchildren and blessing them, before departing back to Harran.",

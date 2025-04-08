@@ -1,0 +1,122 @@
+{
+  "chapterSummary": {
+    "General": "God continues to demonstrate His power through three more plagues: frogs, gnats, and flies. Each plague targets different aspects of Egyptian life and religion, showing God's supremacy over their gods.",
+    "Non-Denominational": "Focuses on God's demonstration of power through multiple plagues targeting Egyptian life and religion, showing His supremacy over false gods.",
+    "Baptist": "Emphasizes God's sovereign power in judging Egypt's gods and demonstrating His authority over creation.",
+    "Catholic": "Highlights God's demonstration of power through multiple plagues, showing His supremacy over Egyptian deities and His care for His people.",
+    "Methodist": "Focuses on God's judgment of Egyptian oppression and His demonstration of power through nature.",
+    "Lutheran": "Emphasizes God's supremacy over Egyptian gods and His demonstration of power through creation.",
+    "Presbyterian": "Stresses God's covenantal faithfulness in judging Egypt and demonstrating His authority.",
+    "Pentecostal": "Highlights God's supernatural power in judging Egypt's gods and demonstrating His authority.",
+    "Anglican": "Emphasizes God's demonstration of power through multiple plagues, showing His supremacy over Egyptian deities.",
+    "Orthodox": "Focuses on God's supremacy over Egyptian gods through successive plagues and His care for His people."
+  },
+  "1": {
+    "General": "The divine warning before judgment, demonstrating God's mercy and patience",
+    "Non-Denominational": "The Lord's gracious warning before judgment, showing His mercy and desire for repentance",
+    "Baptist": "The divine warning before judgment, demonstrating God's mercy and His desire for Pharaoh's repentance",
+    "Catholic": "The Lord's gracious warning before judgment, showing His mercy and the opportunity for conversion",
+    "Methodist": "The divine warning before judgment, demonstrating God's mercy and His desire for justice",
+    "Lutheran": "The Lord's gracious warning before judgment, showing His mercy and His desire for repentance",
+    "Presbyterian": "The divine warning before judgment, demonstrating God's mercy and His covenantal faithfulness",
+    "Pentecostal": "The Lord's gracious warning before judgment, showing His mercy and His power to bring change",
+    "Anglican": "The divine warning before judgment, demonstrating God's mercy and His desire for justice",
+    "Orthodox": "The Lord's gracious warning before judgment, showing His mercy and His care for His people"
+  },
+  "2": {
+    "General": "The divine judgment on creation, demonstrating God's power over nature",
+    "Non-Denominational": "The Lord's control over nature, showing His authority and power",
+    "Baptist": "The divine judgment on creation, demonstrating God's sovereignty over all things",
+    "Catholic": "The Lord's control over nature, showing His authority and care for creation",
+    "Methodist": "The divine judgment on creation, demonstrating God's power and justice",
+    "Lutheran": "The Lord's control over nature, showing His authority and power",
+    "Presbyterian": "The divine judgment on creation, demonstrating God's sovereignty and justice",
+    "Pentecostal": "The Lord's control over nature, showing His supernatural power",
+    "Anglican": "The divine judgment on creation, demonstrating God's authority and care for creation",
+    "Orthodox": "The Lord's control over nature, showing His authority and power over creation"
+  },
+  "3": {
+    "Catholic": "The divine invasion of personal space, demonstrating God's reach",
+    "Protestant": "The Lord's penetration of privacy, showing His presence",
+    "Orthodox": "The divine invasion of personal space, demonstrating God's reach",
+    "Jewish": "The Lord's penetration of privacy, showing His presence",
+    "Mormon": "The divine invasion of personal space, demonstrating God's reach"
+  },
+  "4": {
+    "Catholic": "The divine personal judgment, demonstrating God's authority",
+    "Protestant": "The Lord's direct confrontation, showing His power",
+    "Orthodox": "The divine personal judgment, demonstrating God's authority",
+    "Jewish": "The Lord's direct confrontation, showing His power",
+    "Mormon": "The divine personal judgment, demonstrating God's authority"
+  },
+  "5": {
+    "Catholic": "The divine delegation of authority, demonstrating God's order",
+    "Protestant": "The Lord's appointment of helpers, showing His wisdom",
+    "Orthodox": "The divine delegation of authority, demonstrating God's order",
+    "Jewish": "The Lord's appointment of helpers, showing His wisdom",
+    "Mormon": "The divine delegation of authority, demonstrating God's order"
+  },
+  "6": {
+    "Catholic": "The human execution of divine will, demonstrating obedience",
+    "Protestant": "The fleshly carrying out of God's command, showing faith",
+    "Orthodox": "The human execution of divine will, demonstrating obedience",
+    "Jewish": "The fleshly carrying out of God's command, showing faith",
+    "Mormon": "The human execution of divine will, demonstrating obedience"
+  },
+  "7": {
+    "Catholic": "The human imitation of divine power, demonstrating deception",
+    "Protestant": "The fleshly counterfeiting of God's works, showing sin",
+    "Orthodox": "The human imitation of divine power, demonstrating deception",
+    "Jewish": "The fleshly counterfeiting of God's works, showing sin",
+    "Mormon": "The human imitation of divine power, demonstrating deception"
+  },
+  "8": {
+    "Catholic": "The human recognition of divine power, demonstrating need",
+    "Protestant": "The fleshly acknowledgment of God's authority, showing desperation",
+    "Orthodox": "The human recognition of divine power, demonstrating need",
+    "Jewish": "The fleshly acknowledgment of God's authority, showing desperation",
+    "Mormon": "The human recognition of divine power, demonstrating need"
+  },
+  "9": {
+    "Catholic": "The divine accommodation of human will, demonstrating mercy",
+    "Protestant": "The Lord's allowance of choice, showing His grace",
+    "Orthodox": "The divine accommodation of human will, demonstrating mercy",
+    "Jewish": "The Lord's allowance of choice, showing His grace",
+    "Mormon": "The divine accommodation of human will, demonstrating mercy"
+  },
+  "10": {
+    "Catholic": "The human intercession for others, demonstrating compassion",
+    "Protestant": "The fleshly prayer for enemies, showing mercy",
+    "Orthodox": "The human intercession for others, demonstrating compassion",
+    "Jewish": "The fleshly prayer for enemies, showing mercy",
+    "Mormon": "The human intercession for others, demonstrating compassion"
+  },
+  "11": {
+    "Catholic": "The divine removal of judgment, demonstrating mercy",
+    "Protestant": "The Lord's cessation of plague, showing His grace",
+    "Orthodox": "The divine removal of judgment, demonstrating mercy",
+    "Jewish": "The Lord's cessation of plague, showing His grace",
+    "Mormon": "The divine removal of judgment, demonstrating mercy"
+  },
+  "12": {
+    "Catholic": "The human resistance to God's mercy, demonstrating sin",
+    "Protestant": "The fleshly rejection of grace, showing rebellion",
+    "Orthodox": "The human resistance to God's mercy, demonstrating sin",
+    "Jewish": "The fleshly rejection of grace, showing rebellion",
+    "Mormon": "The human resistance to God's mercy, demonstrating sin"
+  },
+  "13": {
+    "Catholic": "The divine escalation of judgment, demonstrating power",
+    "Protestant": "The Lord's increase of plague, showing His might",
+    "Orthodox": "The divine escalation of judgment, demonstrating power",
+    "Jewish": "The Lord's increase of plague, showing His might",
+    "Mormon": "The divine escalation of judgment, demonstrating power"
+  },
+  "14": {
+    "Catholic": "The divine judgment on all life, demonstrating authority",
+    "Protestant": "The Lord's plague on creation, showing His power",
+    "Orthodox": "The divine judgment on all life, demonstrating authority",
+    "Jewish": "The Lord's plague on creation, showing His power",
+    "Mormon": "The divine judgment on all life, demonstrating authority"
+  }
+} 

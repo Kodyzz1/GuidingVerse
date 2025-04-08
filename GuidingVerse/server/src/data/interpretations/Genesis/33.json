@@ -3,7 +3,7 @@
   "book": "Genesis",
   "chapter": "33",
   "verses": {
-    "1": {
+  "1": {
       "General": "Jacob looked up and there was Esau, coming with his four hundred men; so he divided the children among Leah, Rachel and the two female servants.",
       "Non-Denominational": "Jacob looked up and there was Esau, coming with his four hundred men; so he divided the children among Leah, Rachel and the two female servants.",
       "Baptist": "Jacob sees Esau approaching with his large company of 400 men. In a final act of cautious preparation, he arranges his children with their respective mothers (Leah, Rachel, and the handmaids).",
@@ -16,8 +16,8 @@
       "Orthodox": "Jacob observes Esau approaching with his contingent of 400 men and strategically divides the children among Leah, Rachel, and the two handmaids.",
       "Other": "Jacob looked up and there was Esau, coming with his four hundred men; so he divided the children among Leah, Rachel and the two female servants.",
       "Prefer not to say": "Jacob looked up and there was Esau, coming with his four hundred men; so he divided the children among Leah, Rachel and the two female servants."
-    },
-    "2": {
+  },
+  "2": {
       "General": "He put the female servants and their children in front, Leah and her children next, and Rachel and Joseph in the rear.",
       "Non-Denominational": "He put the female servants and their children in front, Leah and her children next, and Rachel and Joseph in the rear.",
       "Baptist": "He arranges them strategically, placing the handmaids and their children first (most expendable in his fear?), followed by Leah and her children, and finally Rachel and Joseph (his most beloved wife and son) in the safest position at the rear.",
@@ -30,8 +30,8 @@
       "Orthodox": "He arranges the procession strategically, placing the handmaids and their children foremost, followed by Leah and her children, with Rachel and Joseph positioned in the rearmost, presumably safest, location.",
       "Other": "He put the female servants and their children in front, Leah and her children next, and Rachel and Joseph in the rear.",
       "Prefer not to say": "He put the female servants and their children in front, Leah and her children next, and Rachel and Joseph in the rear."
-    },
-    "3": {
+  },
+  "3": {
       "General": "He himself went on ahead and bowed down to the ground seven times as he approached his brother.",
       "Non-Denominational": "He himself went on ahead and bowed down to the ground seven times as he approached his brother.",
       "Baptist": "Jacob himself takes the lead, demonstrating extreme humility and submission by bowing down to the ground seven times as he approaches Esau – a gesture of profound respect or obeisance.",
@@ -44,8 +44,8 @@
       "Orthodox": "Jacob proceeds ahead of his family and performs seven prostrations on the ground as he approaches Esau, signifying profound deference.",
       "Other": "He himself went on ahead and bowed down to the ground seven times as he approached his brother.",
       "Prefer not to say": "He himself went on ahead and bowed down to the ground seven times as he approached his brother."
-    },
-    "4": {
+  },
+  "4": {
       "General": "But Esau ran to meet Jacob and embraced him; he threw his arms around his neck and kissed him. And they wept.",
       "Non-Denominational": "But Esau ran to meet Jacob and embraced him; he threw his arms around his neck and kissed him. And they wept.",
       "Baptist": "Contrary to Jacob's fears, Esau's reaction is one of immediate forgiveness and affection. Esau runs to Jacob, embraces him warmly, kisses him, and both brothers weep together in a moment of emotional reconciliation.",
@@ -58,8 +58,8 @@
       "Orthodox": "Dispelling Jacob's fears, Esau runs to meet him, embraces him, falls upon his neck, kisses him, and both brothers weep in an emotional reunion.",
       "Other": "But Esau ran to meet Jacob and embraced him; he threw his arms around his neck and kissed him. And they wept.",
       "Prefer not to say": "But Esau ran to meet Jacob and embraced him; he threw his arms around his neck and kissed him. And they wept."
-    },
-    "5": {
+  },
+  "5": {
       "General": "Then Esau looked up and saw the women and children. \"Who are these with you?\" he asked. Jacob answered, \"They are the children God has graciously given your servant.\"",
       "Non-Denominational": "Then Esau looked up and saw the women and children. \"Who are these with you?\" he asked. Jacob answered, \"They are the children God has graciously given your servant.\"",
       "Baptist": "Esau notices Jacob's family and inquires about them. Jacob introduces them, attributing his children to God's graciousness while maintaining his deferential stance ('your servant').",
@@ -72,8 +72,8 @@
       "Orthodox": "Esau inquires about the women and children with Jacob. Jacob identifies them as the children bestowed upon him by God's grace, maintaining his deferential posture.",
       "Other": "Then Esau looked up and saw the women and children. \"Who are these with you?\" he asked. Jacob answered, \"They are the children God has graciously given your servant.\"",
       "Prefer not to say": "Then Esau looked up and saw the women and children. \"Who are these with you?\" he asked. Jacob answered, \"They are the children God has graciously given your servant.\""
-    },
-    "6": {
+  },
+  "6": {
       "General": "Then the female servants and their children approached and bowed down.",
       "Non-Denominational": "Then the female servants and their children approached and bowed down.",
       "Baptist": "Following Jacob's earlier arrangement and example, the handmaids (Bilhah and Zilpah) and their children come forward first and bow down before Esau in respect.",
@@ -86,8 +86,8 @@
       "Orthodox": "The handmaids and their children approach first and bow down in deference to Esau.",
       "Other": "Then the female servants and their children approached and bowed down.",
       "Prefer not to say": "Then the female servants and their children approached and bowed down."
-    },
-    "7": {
+  },
+  "7": {
       "General": "Next, Leah and her children came and bowed down. Last of all came Joseph and Rachel, and they too bowed down.",
       "Non-Denominational": "Next, Leah and her children came and bowed down. Last of all came Joseph and Rachel, and they too bowed down.",
       "Baptist": "Leah and her children follow, also bowing down. Finally, Joseph and Rachel approach and perform the same gesture of respect.",
@@ -100,8 +100,8 @@
       "Orthodox": "Subsequently, Leah and her children approach and bow down, followed finally by Joseph and Rachel, who also perform the gesture of obeisance.",
       "Other": "Next, Leah and her children came and bowed down. Last of all came Joseph and Rachel, and they too bowed down.",
       "Prefer not to say": "Next, Leah and her children came and bowed down. Last of all came Joseph and Rachel, and they too bowed down."
-    },
-    "8": {
+  },
+  "8": {
       "General": "Esau asked, \"What's the meaning of all these flocks and herds I met?\" \"To find favor in your eyes, my lord,\" he said.",
       "Non-Denominational": "Esau asked, \"What's the meaning of all these flocks and herds I met?\" \"To find favor in your eyes, my lord,\" he said.",
       "Baptist": "Esau inquires about the purpose of the large droves of animals he encountered on his way. Jacob reiterates that they were a gift intended to gain Esau's favor and goodwill.",
@@ -114,8 +114,8 @@
       "Orthodox": "Esau inquires about the significance of the large droves of animals he encountered. Jacob clarifies they were a gift intended to secure Esau's favor.",
       "Other": "Esau asked, \"What's the meaning of all these flocks and herds I met?\" \"To find favor in your eyes, my lord,\" he said.",
       "Prefer not to say": "Esau asked, \"What's the meaning of all these flocks and herds I met?\" \"To find favor in your eyes, my lord,\" he said."
-    },
-    "9": {
+  },
+  "9": {
       "General": "But Esau said, \"I already have plenty, my brother. Keep what you have for yourself.\"",
       "Non-Denominational": "But Esau said, \"I already have plenty, my brother. Keep what you have for yourself.\"",
       "Baptist": "Esau graciously declines the gift, stating he is already prosperous ('I have enough, my brother') and tells Jacob to keep his possessions.",
@@ -128,8 +128,8 @@
       "Orthodox": "Esau graciously declines the gift, assuring Jacob that he possesses sufficient wealth and urging Jacob to retain his own property.",
       "Other": "But Esau said, \"I already have plenty, my brother. Keep what you have for yourself.\"",
       "Prefer not to say": "But Esau said, \"I already have plenty, my brother. Keep what you have for yourself.\""
-    },
-    "10": {
+  },
+  "10": {
       "General": "\"No, please!\" said Jacob. \"If I have found favor in your eyes, accept this gift from me. For to see your face is like seeing the face of God, now that you have received me favorably.",
       "Non-Denominational": "\"No, please!\" said Jacob. \"If I have found favor in your eyes, accept this gift from me. For to see your face is like seeing the face of God, now that you have received me favorably.",
       "Baptist": "Jacob insists Esau accept the gift as a token of reconciliation and goodwill. He uses a powerful, perhaps hyperbolic, expression, comparing seeing Esau's accepting face to seeing the face of God, signifying the immense relief and blessing of this reconciliation.",
@@ -142,8 +142,8 @@
       "Orthodox": "Jacob implores Esau to accept the gift as a tangible sign of his favor, employing the powerful metaphor that seeing Esau's accepting countenance is akin to seeing the face of God.",
       "Other": "\"No, please!\" said Jacob. \"If I have found favor in your eyes, accept this gift from me. For to see your face is like seeing the face of God, now that you have received me favorably.",
       "Prefer not to say": "\"No, please!\" said Jacob. \"If I have found favor in your eyes, accept this gift from me. For to see your face is like seeing the face of God, now that you have received me favorably."
-    },
-    "11": {
+  },
+  "11": {
       "General": "Please accept the present that was brought to you, for God has been gracious to me and I have all I need.\" And because Jacob insisted, Esau accepted it.",
       "Non-Denominational": "Please accept the present that was brought to you, for God has been gracious to me and I have all I need.\" And because Jacob insisted, Esau accepted it.",
       "Baptist": "Jacob again urges acceptance, attributing his ability to give the gift to God's grace and stating he has enough ('all I need'). Due to Jacob's persistence, Esau finally accepts the gift.",
@@ -156,8 +156,8 @@
       "Orthodox": "Jacob reiterates his plea for Esau to accept the present ('blessing'), attributing his ability to give generously to God's grace. Yielding to Jacob's persistence, Esau accepts the gift.",
       "Other": "Please accept the present that was brought to you, for God has been gracious to me and I have all I need.\" And because Jacob insisted, Esau accepted it.",
       "Prefer not to say": "Please accept the present that was brought to you, for God has been gracious to me and I have all I need.\" And because Jacob insisted, Esau accepted it."
-    },
-    "12": {
+  },
+  "12": {
       "General": "Then Esau said, \"Let us be on our way; I'll accompany you.\"",
       "Non-Denominational": "Then Esau said, \"Let us be on our way; I'll accompany you.\"",
       "Baptist": "Having reconciled, Esau suggests they travel on together, offering to accompany Jacob.",
@@ -170,8 +170,8 @@
       "Orthodox": "Esau proposes that they proceed on their journey together.",
       "Other": "Then Esau said, \"Let us be on our way; I'll accompany you.\"",
       "Prefer not to say": "Then Esau said, \"Let us be on our way; I'll accompany you.\""
-    },
-    "13": {
+  },
+  "13": {
       "General": "But Jacob said to him, \"My lord knows that the children are tender and that I must care for the ewes and cows that are nursing their young. If they are driven hard just one day, all the animals will die.",
       "Non-Denominational": "But Jacob said to him, \"My lord knows that the children are tender and that I must care for the ewes and cows that are nursing their young. If they are driven hard just one day, all the animals will die.",
       "Baptist": "Jacob politely declines Esau's offer, citing the need to travel slowly due to the young children and nursing animals in his caravan, which cannot keep pace with Esau's likely faster group.",
@@ -184,8 +184,8 @@
       "Orthodox": "Jacob tactfully declines Esau's proposal, explaining the necessity of traveling slowly to accommodate the young children and nursing livestock in his caravan.",
       "Other": "But Jacob said to him, \"My lord knows that the children are tender and that I must care for the ewes and cows that are nursing their young. If they are driven hard just one day, all the animals will die.",
       "Prefer not to say": "But Jacob said to him, \"My lord knows that the children are tender and that I must care for the ewes and cows that are nursing their young. If they are driven hard just one day, all the animals will die."
-    },
-    "14": {
+  },
+  "14": {
       "General": "So let my lord go on ahead of his servant, while I move along slowly at the pace of the flocks and herds before me and the pace of the children, until I come to my lord in Seir.\"",
       "Non-Denominational": "So let my lord go on ahead of his servant, while I move along slowly at the pace of the flocks and herds before me and the pace of the children, until I come to my lord in Seir.\"",
       "Baptist": "Jacob suggests Esau proceed ahead while he follows at the slower pace dictated by his children and livestock. He states his intention (perhaps not entirely truthfully) to eventually meet Esau in Seir.",
@@ -198,8 +198,8 @@
       "Orthodox": "Jacob proposes that Esau proceed ahead while he travels at a slower pace appropriate for his children and livestock, stating an intention to eventually join Esau in Seir.",
       "Other": "So let my lord go on ahead of his servant, while I move along slowly at the pace of the flocks and herds before me and the pace of the children, until I come to my lord in Seir.\"",
       "Prefer not to say": "So let my lord go on ahead of his servant, while I move along slowly at the pace of the flocks and herds before me and the pace of the children, until I come to my lord in Seir.\""
-    },
-    "15": {
+  },
+  "15": {
       "General": "Esau said, \"Then let me leave some of my men with you.\" \"But why do that?\" Jacob asked. \"Just let me find favor in the eyes of my lord.\"",
       "Non-Denominational": "Esau said, \"Then let me leave some of my men with you.\" \"But why do that?\" Jacob asked. \"Just let me find favor in the eyes of my lord.\"",
       "Baptist": "Esau offers to leave some of his men as an escort or guard for Jacob. Jacob politely refuses this offer as well, indicating he doesn't need the help and simply desires Esau's continued goodwill ('Let me find favor in the sight of my lord').",
@@ -212,8 +212,8 @@
       "Orthodox": "Esau offers to assign some of his men to accompany Jacob, but Jacob politely refuses the assistance, suggesting that Esau's goodwill alone is sufficient.",
       "Other": "Esau said, \"Then let me leave some of my men with you.\" \"But why do that?\" Jacob asked. \"Just let me find favor in the eyes of my lord.\"",
       "Prefer not to say": "Esau said, \"Then let me leave some of my men with you.\" \"But why do that?\" Jacob asked. \"Just let me find favor in the eyes of my lord.\""
-    },
-    "16": {
+  },
+  "16": {
       "General": "So that day Esau started on his way back to Seir.",
       "Non-Denominational": "So that day Esau started on his way back to Seir.",
       "Baptist": "Esau accepts Jacob's decision and departs that same day, returning towards his home in Seir.",
@@ -226,8 +226,8 @@
       "Orthodox": "Esau departs on the same day, returning towards his home in Seir.",
       "Other": "So that day Esau started on his way back to Seir.",
       "Prefer not to say": "So that day Esau started on his way back to Seir."
-    },
-    "17": {
+  },
+  "17": {
       "General": "Jacob, however, went to Succoth, where he built a place for himself and made shelters for his livestock. That is why the place is called Succoth.",
       "Non-Denominational": "Jacob, however, went to Succoth, where he built a place for himself and made shelters for his livestock. That is why the place is called Succoth.",
       "Baptist": "Instead of following Esau to Seir, Jacob travels in a different direction to Succoth (east of the Jordan, north of the Jabbok). There he settles temporarily, building a house for himself and booths (sukkot) or shelters for his livestock, giving the place its name.",
@@ -240,8 +240,8 @@
       "Orthodox": "Jacob, contrary to his stated intention to Esau, proceeds to Succoth, where he constructs dwellings for himself and shelters (booths) for his livestock, thereby giving the location its name.",
       "Other": "Jacob, however, went to Succoth, where he built a place for himself and made shelters for his livestock. That is why the place is called Succoth.",
       "Prefer not to say": "Jacob, however, went to Succoth, where he built a place for himself and made shelters for his livestock. That is why the place is called Succoth."
-    },
-    "18": {
+  },
+  "18": {
       "General": "After Jacob came from Paddan Aram, he arrived safely at the city of Shechem in Canaan and camped within sight of the city.",
       "Non-Denominational": "After Jacob came from Paddan Aram, he arrived safely at the city of Shechem in Canaan and camped within sight of the city.",
       "Baptist": "Jacob eventually crosses the Jordan River and arrives safely back in Canaan, specifically at the city of Shechem. He sets up camp near the city.",
@@ -254,8 +254,8 @@
       "Orthodox": "Jacob arrives safely from Paddan-aram, reaching the city of Shechem within the land of Canaan, and establishes his camp in proximity to the city.",
       "Other": "After Jacob came from Paddan Aram, he arrived safely at the city of Shechem in Canaan and camped within sight of the city.",
       "Prefer not to say": "After Jacob came from Paddan Aram, he arrived safely at the city of Shechem in Canaan and camped within sight of the city."
-    },
-    "19": {
+  },
+  "19": {
       "General": "For a hundred pieces of silver, he bought from the sons of Hamor, the father of Shechem, the plot of ground where he pitched his tent.",
       "Non-Denominational": "For a hundred pieces of silver, he bought from the sons of Hamor, the father of Shechem, the plot of ground where he pitched his tent.",
       "Baptist": "Jacob purchases the piece of land where he has camped from the local Canaanite family, the sons of Hamor (father of the city's namesake, Shechem), for a hundred pieces of silver (kesitah - a unit of uncertain value). This echoes Abraham's purchase at Machpelah.",
@@ -268,8 +268,8 @@
       "Orthodox": "Jacob purchases the parcel of land where he had established his camp from the sons of Hamor, the father of Shechem, for one hundred pieces of silver (qesitah), thus acquiring property in Canaan.",
       "Other": "For a hundred pieces of silver, he bought from the sons of Hamor, the father of Shechem, the plot of ground where he pitched his tent.",
       "Prefer not to say": "For a hundred pieces of silver, he bought from the sons of Hamor, the father of Shechem, the plot of ground where he pitched his tent."
-    },
-    "20": {
+  },
+  "20": {
       "General": "There he set up an altar and called it El Elohe Israel.",
       "Non-Denominational": "There he set up an altar and called it El Elohe Israel.",
       "Baptist": "On the land he purchased, Jacob erects an altar for worship and names it El-Elohe-Israel, meaning 'God, the God of Israel,' acknowledging God's faithfulness and claiming his new identity (Israel) in relation to God within the Promised Land.",

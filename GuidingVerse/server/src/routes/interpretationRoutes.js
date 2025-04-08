@@ -14,28 +14,47 @@ const interpretationsBasePath = path.join(__dirname, '../data/interpretations');
 // Cache loaded chapters to avoid repeated file reads
 const chapterCache = {}; 
 
+function clearChapterCache() {
+  Object.keys(chapterCache).forEach(key => delete chapterCache[key]);
+}
+
 function getChapterInterpretations(book, chapter) {
   const cacheKey = `${book}-${chapter}`;
+  
+  // Clear cache if it gets too large (optional)
+  if (Object.keys(chapterCache).length > 100) {
+    clearChapterCache();
+  }
+  
   if (chapterCache[cacheKey]) {
+    console.log(`Returning cached interpretation for ${book} ${chapter}`);
     return chapterCache[cacheKey]; // Return from cache if available
   }
 
   const filePath = path.join(interpretationsBasePath, book, `${chapter}.json`);
+  console.log(`Loading interpretation from file: ${filePath}`);
+  
   try {
     if (fs.existsSync(filePath)) {
       const rawData = fs.readFileSync(filePath, 'utf-8');
-      const chapterData = JSON.parse(rawData);
-      chapterCache[cacheKey] = chapterData; // Store in cache
-      console.log(`Successfully loaded interpretation data for: ${book} ${chapter}`);
-      return chapterData;
+      try {
+        const chapterData = JSON.parse(rawData);
+        chapterCache[cacheKey] = chapterData; // Store in cache
+        console.log(`Successfully loaded and cached interpretation data for: ${book} ${chapter}`);
+        return chapterData;
+      } catch (parseError) {
+        console.error(`Error parsing JSON for ${book} ${chapter}:`, parseError);
+        delete chapterCache[cacheKey]; // Remove failed parse from cache
+        return null;
+      }
     } else {
       console.warn(`Interpretation file not found: ${filePath}`);
       chapterCache[cacheKey] = null; // Cache the fact that it wasn't found
       return null;
     }
   } catch (error) {
-    console.error(`Error loading or parsing interpretation file: ${filePath}`, error);
-    chapterCache[cacheKey] = null; // Cache error state
+    console.error(`Error accessing interpretation file: ${filePath}`, error);
+    delete chapterCache[cacheKey]; // Remove error state from cache
     return null;
   }
 }
@@ -156,25 +175,27 @@ router.get('/:reference', (req, res) => {
   
   if (!match) {
       console.error('Invalid verse reference format:', rawReference);
-      // Return 400 only if it doesn't look like a verse ref; otherwise, let other routes handle it maybe?
-      // For now, assume specific format is required for this endpoint.
       return res.status(400).json({ message: 'Invalid verse reference format. Use format like "Genesis 1:1".' });
   }
 
   const book = match[1].trim(); 
   const chapter = match[2]; 
   const verse = match[3]; 
+  console.log('Parsed reference:', { book, chapter, verse });
 
   // --- Validation ---
   if (!book || !chapter || !verse) {
+    console.error('Missing reference components:', { book, chapter, verse });
     return res.status(400).json({ message: 'Invalid reference components.' });
   }
 
   // --- Data Lookup Logic ---
   try {
+    console.log('Attempting to load chapter data for:', { book, chapter });
     const chapterData = getChapterInterpretations(book, chapter);
 
     if (chapterData) {
+      console.log('Found chapter data, looking for verse:', verse);
       const verseInterpretations = chapterData[verse];
 
       if (verseInterpretations) {
@@ -185,32 +206,33 @@ router.get('/:reference', (req, res) => {
           if (denomination && denomination !== 'Prefer not to say' && verseInterpretations[denomination]) {
             interpretationText = verseInterpretations[denomination];
             sourceDenomination = denomination;
-            console.log(`Found verse interpretation for: ${book} ${chapter}:${verse} (Denomination: ${denomination})`);
+            console.log(`Found specific denomination interpretation for: ${book} ${chapter}:${verse} (${denomination})`);
           } 
           else if (verseInterpretations["General"]) {
             interpretationText = verseInterpretations["General"];
             sourceDenomination = "General";
-            console.log(`Found verse interpretation for: ${book} ${chapter}:${verse} (Denomination: General - Fallback)`);
+            console.log(`Using General interpretation for: ${book} ${chapter}:${verse} (fallback)`);
           }
 
           if (interpretationText !== null) {
+            console.log('Sending successful response with interpretation');
             res.json({ 
               reference: rawReference, 
               interpretation: interpretationText, 
               source: 'static',
-              type: 'verse', // Indicate type
+              type: 'verse',
               sourceDenomination: sourceDenomination
             });
           } else {
-            console.log(`No suitable verse interpretation (Specific or General) found for: ${book} ${chapter}:${verse}`);
+            console.log(`No suitable interpretation found for: ${book} ${chapter}:${verse}`);
             res.status(404).json({ message: `No suitable interpretation found for ${rawReference}.` });
           }
       } else {
-          console.log(`Verse ${verse} not found in interpretation data for ${book} ${chapter}`);
+          console.error(`Verse ${verse} not found in chapter data for ${book} ${chapter}`);
           res.status(404).json({ message: `No interpretation data found for verse ${verse} of ${book} ${chapter}.` });
       }
     } else {
-      console.log(`No interpretation data file found for ${book} ${chapter}.`);
+      console.error(`No chapter data found for ${book} ${chapter}`);
       res.status(404).json({ message: `No interpretation data found for ${book} chapter ${chapter}.` });
     }
 

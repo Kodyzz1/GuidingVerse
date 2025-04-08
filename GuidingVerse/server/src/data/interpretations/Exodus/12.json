@@ -1,0 +1,164 @@
+{
+  "chapterSummary": {
+    "General": "The institution of Passover and the Feast of Unleavened Bread, establishing sacred time and rituals that prefigure Christ's sacrifice and the Eucharist.",
+    "Non-Denominational": "The establishment of Passover and the Feast of Unleavened Bread, marking Israel's deliverance and pointing to Christ's ultimate sacrifice.",
+    "Baptist": "The institution of sacred ordinances that teach principles of sacrifice, purity, and obedience to God's commandments.",
+    "Catholic": "The institution of Passover and the Feast of Unleavened Bread, establishing sacred time and rituals that prefigure Christ's sacrifice and the Eucharist.",
+    "Methodist": "The establishment of Passover and the Feast of Unleavened Bread, marking Israel's deliverance and pointing to Christ's ultimate sacrifice.",
+    "Lutheran": "The institution of sacred time and rituals that prefigure Christ's sacrifice and the importance of proper liturgical observance.",
+    "Presbyterian": "The establishment of Passover and the Feast of Unleavened Bread as central observances in Christian worship and identity.",
+    "Pentecostal": "The institution of sacred ordinances that teach principles of sacrifice, purity, and obedience to God's commandments.",
+    "Anglican": "The institution of Passover and the Feast of Unleavened Bread, establishing sacred time and rituals that prefigure Christ's sacrifice and the Eucharist.",
+    "Orthodox": "The institution of sacred time and rituals that prefigure Christ's sacrifice and the importance of proper liturgical observance."
+  },
+  "1": {
+    "General": "The Lord establishes a new beginning for Israel, marking the first month as the beginning of months",
+    "Non-Denominational": "God institutes a new calendar for Israel, signifying their transition from slavery to freedom",
+    "Baptist": "The establishment of the first month represents God's authority to establish new beginnings and His sovereignty over time",
+    "Catholic": "The Lord's establishment of a new calendar reflects His sovereignty in establishing sacred time and the importance of liturgical calendars",
+    "Methodist": "God's institution of a new calendar demonstrates His authority to establish new beginnings and His care for His people",
+    "Lutheran": "The establishment of the first month represents God's ordering of time and the importance of liturgical cycles",
+    "Presbyterian": "The Lord's institution of a new calendar demonstrates His covenantal faithfulness and authority over time",
+    "Pentecostal": "God's establishment of a new calendar shows His authority to institute new beginnings and His supernatural guidance",
+    "Anglican": "The establishment of the first month reflects God's sovereignty in establishing sacred time and the importance of liturgical calendars",
+    "Orthodox": "The Lord's institution of a new calendar represents His ordering of time and the importance of liturgical cycles"
+  },
+  "2": {
+    "General": "The instruction to take a lamb reflects Christ as the perfect Lamb of God",
+    "Non-Denominational": "The selection of an unblemished lamb points to Christ's sinless nature and His role as the perfect sacrifice",
+    "Baptist": "The requirement for an unblemished lamb symbolizes the purity and perfection required for sacrifice",
+    "Catholic": "The instruction to take a lamb reflects the Catholic understanding of Christ as the perfect Lamb of God",
+    "Methodist": "The selection of an unblemished lamb points to Christ's sinless nature and His role as the perfect sacrifice",
+    "Lutheran": "The requirement for an unblemished lamb symbolizes the purity and perfection required for sacrifice",
+    "Presbyterian": "The instruction to take a lamb reflects God's covenantal faithfulness and the need for perfect sacrifice",
+    "Pentecostal": "The selection of an unblemished lamb points to Christ's sinless nature and His supernatural purity",
+    "Anglican": "The requirement for an unblemished lamb symbolizes the purity and perfection required for sacrifice",
+    "Orthodox": "The instruction to take a lamb reflects the Orthodox understanding of Christ as the perfect Lamb of God"
+  },
+  "3": {
+    "Catholic": "The communal aspect of the Passover lamb reflects the Catholic understanding of the Church as one body, sharing in the one sacrifice of Christ.",
+    "Protestant": "The instruction for each household to take a lamb emphasizes individual and family responsibility in worship and the personal nature of salvation.",
+    "Orthodox": "The household-based observance reflects the Orthodox understanding of the family as the domestic church and the importance of communal worship within the family unit.",
+    "Jewish": "The instruction for each household to take a lamb establishes the family as the primary unit for Passover observance, a tradition that continues in Jewish practice to this day.",
+    "Mormon": "The household-based instruction reflects the LDS emphasis on family-centered worship and the importance of teaching children the ways of the Lord within the family unit."
+  },
+  "4": {
+    "Catholic": "The sharing of the lamb between households reflects the Catholic understanding of the communal nature of the Eucharist and the sharing of spiritual goods.",
+    "Protestant": "The provision for sharing the lamb demonstrates God's concern for practical needs and His desire for all to participate in worship, regardless of household size.",
+    "Orthodox": "The instruction to share the lamb with neighbors reflects the Orthodox emphasis on community and mutual support within the body of believers.",
+    "Jewish": "The provision for sharing the Passover lamb demonstrates the importance of including all members of the community in worship and the value of hospitality.",
+    "Mormon": "The instruction to share the lamb with neighbors reflects the LDS emphasis on caring for one another and ensuring all have the opportunity to participate in sacred ordinances."
+  },
+  "5": {
+    "Catholic": "The requirement for an unblemished male lamb points to Christ's perfect sacrifice and His role as the spotless Lamb of God, central to Catholic Eucharistic theology.",
+    "Protestant": "The specifications for the Passover lamb emphasize the need for a perfect sacrifice, pointing to Christ's sinless nature and His role as the ultimate sacrifice for sin.",
+    "Orthodox": "The requirement for a perfect lamb symbolizes the need for purity in worship and prefigures Christ's perfect sacrifice, central to Orthodox understanding of salvation.",
+    "Jewish": "The detailed requirements for the Passover lamb reflect the importance of following God's specific instructions in worship and the value of offering the best to God.",
+    "Mormon": "The specifications for the Passover lamb teach the importance of exactness in following God's commandments and point to the need for a perfect sacrifice, fulfilled in Christ."
+  },
+  "6": {
+    "Catholic": "The timing of the sacrifice at twilight reflects the Catholic understanding of Christ's sacrifice occurring at the appointed time, prefiguring the timing of the Last Supper and Crucifixion.",
+    "Protestant": "The specific timing of the sacrifice demonstrates God's precision in His plans and points to the perfect timing of Christ's sacrifice for humanity's salvation.",
+    "Orthodox": "The evening sacrifice reflects the Orthodox understanding of the day beginning at sunset and the importance of proper timing in liturgical observance.",
+    "Jewish": "The instruction to keep the lamb until the fourteenth day and sacrifice it at twilight establishes the precise timing of the Passover sacrifice, a detail carefully preserved in Jewish tradition.",
+    "Mormon": "The specific timing of the sacrifice teaches the importance of following God's timetable and points to the precision of God's plan of salvation."
+  },
+  "7": {
+    "Catholic": "The application of the blood to the doorposts prefigures the saving power of Christ's blood and the protection it offers to believers, reflected in Catholic sacramental theology.",
+    "Protestant": "The blood on the doorposts symbolizes the necessity of Christ's blood for salvation and the protection it provides from God's judgment.",
+    "Orthodox": "The marking of the doorposts with blood represents the seal of God's protection and prefigures the sealing of believers through baptism and chrismation.",
+    "Jewish": "The application of blood to the doorposts represents the sign of protection and the importance of actively participating in God's deliverance, a key aspect of Jewish understanding of the Exodus.",
+    "Mormon": "The blood on the doorposts symbolizes the protective power of the Atonement and the importance of making one's home a place of spiritual safety through obedience."
+  },
+  "8": {
+    "Catholic": "The roasted lamb with unleavened bread and bitter herbs prefigures the Eucharist and the necessity of spiritual preparation and repentance in receiving Christ.",
+    "Protestant": "The specific manner of preparing and eating the Passover meal points to the need for proper preparation in receiving Christ and remembering His sacrifice.",
+    "Orthodox": "The prescribed manner of eating the Passover reflects the Orthodox understanding of the importance of proper preparation and reverence in partaking of holy things.",
+    "Jewish": "The specific instructions for preparing and eating the Passover meal establish the traditional manner of observing the Seder, with each element carrying symbolic meaning.",
+    "Mormon": "The manner of eating the Passover teaches the importance of proper preparation and reverence in partaking of sacred ordinances, principles emphasized in LDS temple worship."
+  },
+  "9": {
+    "Catholic": "The instruction not to eat the lamb raw or boiled in water reflects the Catholic understanding of the need for proper preparation in receiving the Eucharist and the importance of the sacrifice being complete.",
+    "Protestant": "The specific cooking instructions emphasize the need for the sacrifice to be properly prepared and completely offered, pointing to the completeness of Christ's sacrifice.",
+    "Orthodox": "The requirement to roast the lamb whole symbolizes the need for complete dedication to God and the importance of proper preparation in worship.",
+    "Jewish": "The specific cooking instructions establish the traditional method of preparing the Passover lamb, emphasizing the importance of following God's commands exactly.",
+    "Mormon": "The cooking instructions teach the importance of exactness in following God's commandments and the need for proper preparation in sacred ordinances."
+  },
+  "10": {
+    "Catholic": "The instruction to burn any leftovers reflects the Catholic understanding of the sacred nature of the Eucharist and the proper handling of consecrated elements.",
+    "Protestant": "The command to burn leftovers emphasizes the sacred nature of the sacrifice and the importance of not treating holy things as common.",
+    "Orthodox": "The requirement to burn leftovers reflects the Orthodox understanding of the proper handling of holy things and the importance of reverence in worship.",
+    "Jewish": "The instruction to burn leftovers establishes the principle of not profaning holy things and the importance of proper disposal of sacred items.",
+    "Mormon": "The command to burn leftovers teaches the importance of proper handling of sacred things and the need to maintain reverence for holy ordinances."
+  },
+  "11": {
+    "Catholic": "The instruction to eat in haste with staff in hand prefigures the readiness required of Christians to follow Christ and the urgency of the spiritual journey.",
+    "Protestant": "The manner of eating reflects the urgency of salvation and the need to be prepared to follow God's call at any moment.",
+    "Orthodox": "The hasty meal with staff in hand symbolizes the pilgrim nature of the Christian life and the need to be always ready for spiritual journey.",
+    "Jewish": "The instruction to eat in haste with staff in hand represents the urgency of the Exodus and the need to be ready to follow God's call immediately.",
+    "Mormon": "The manner of eating teaches the importance of being prepared for sudden changes and ready to follow God's guidance at any moment."
+  },
+  "12": {
+    "Catholic": "God's judgment on Egypt's gods reflects the Catholic understanding of Christ's victory over all false gods and the establishment of His kingdom.",
+    "Protestant": "The judgment on Egypt's gods demonstrates God's sovereignty over all powers and His ability to deliver His people from all forms of oppression.",
+    "Orthodox": "The smiting of Egypt's gods represents the victory of the true God over all false deities and the establishment of His reign.",
+    "Jewish": "The judgment on Egypt's gods represents God's demonstration of power over all other deities and the vindication of His name and authority.",
+    "Mormon": "The smiting of Egypt's gods teaches that the Lord will judge all false gods and demonstrate His power to deliver His people."
+  },
+  "13": {
+    "Catholic": "The blood as a sign of protection prefigures the saving power of Christ's blood in the sacraments, particularly baptism and the Eucharist.",
+    "Protestant": "The blood as a sign of protection points to the saving power of Christ's blood and the security it provides for believers from God's judgment.",
+    "Orthodox": "The blood as a sign represents the seal of God's protection and the mark of His chosen people, prefiguring the sacraments of initiation.",
+    "Jewish": "The blood as a sign of protection represents the covenant between God and Israel and the importance of following His specific instructions for deliverance.",
+    "Mormon": "The blood as a sign teaches that obedience to God's specific commandments brings protection and deliverance from destruction."
+  },
+  "14": {
+    "Catholic": "The establishment of Passover as a perpetual ordinance prefigures the institution of the Eucharist as the new Passover, to be observed until Christ's return.",
+    "Protestant": "The perpetual observance of Passover points to the ongoing need to remember God's deliverance and prefigures the Lord's Supper as a memorial of Christ's sacrifice.",
+    "Orthodox": "The perpetual ordinance reflects the Orthodox understanding of the importance of maintaining sacred traditions and the continuity of God's saving acts.",
+    "Jewish": "The establishment of Passover as a perpetual ordinance establishes the foundation of Jewish liturgical practice and the importance of remembering the Exodus.",
+    "Mormon": "The perpetual ordinance teaches the importance of regular remembrance of God's deliverance and the establishment of sacred traditions for future generations."
+  },
+  "15": {
+    "Catholic": "The seven days of unleavened bread prefigure the need for purity and removal of sin in the Christian life, reflected in the sacrament of reconciliation.",
+    "Protestant": "The removal of leaven symbolizes the need to remove sin from one's life and maintain spiritual purity in following Christ.",
+    "Orthodox": "The unleavened bread represents the purity required in the Christian life and the importance of removing all corruption from one's soul.",
+    "Jewish": "The seven days of unleavened bread establish the Feast of Unleavened Bread as a separate but connected observance to Passover, emphasizing purity and haste.",
+    "Mormon": "The removal of leaven teaches the importance of removing all corruption and sin from one's life to maintain spiritual purity."
+  },
+  "16": {
+    "Catholic": "The holy convocations reflect the Catholic understanding of the importance of communal worship and the obligation to participate in the liturgy.",
+    "Protestant": "The holy convocations emphasize the importance of gathering for worship and the need to set aside regular times for focusing on God.",
+    "Orthodox": "The holy convocations represent the Orthodox emphasis on corporate worship and the importance of the liturgical assembly.",
+    "Jewish": "The holy convocations establish the pattern of Sabbath observance and the importance of gathering for worship on appointed days.",
+    "Mormon": "The holy convocations teach the importance of regular Sabbath worship and the need to set aside time for spiritual focus and renewal."
+  },
+  "17": {
+    "Catholic": "The Feast of Unleavened Bread as a perpetual ordinance reflects the Catholic understanding of the importance of maintaining sacred traditions and the continuity of God's saving acts.",
+    "Protestant": "The perpetual observance of the feast emphasizes the ongoing need to remember God's deliverance and maintain spiritual purity.",
+    "Orthodox": "The perpetual ordinance reflects the Orthodox emphasis on maintaining sacred traditions and the importance of regular spiritual renewal.",
+    "Jewish": "The establishment of the Feast of Unleavened Bread as a perpetual ordinance cements its place in Jewish practice and the importance of remembering the Exodus.",
+    "Mormon": "The perpetual ordinance teaches the importance of maintaining sacred traditions and regularly remembering God's mighty acts of deliverance."
+  },
+  "18": {
+    "Catholic": "The specific timing of the feast reflects the Catholic understanding of the importance of liturgical calendars and the proper observance of sacred time.",
+    "Protestant": "The precise timing of the feast demonstrates God's attention to detail and the importance of following His appointed times for worship.",
+    "Orthodox": "The specific dates for the feast reflect the Orthodox emphasis on proper timing in liturgical observance and the importance of sacred calendars.",
+    "Jewish": "The detailed timing instructions establish the exact observance of the Feast of Unleavened Bread according to the Jewish calendar.",
+    "Mormon": "The specific timing teaches the importance of following God's appointed times and maintaining exactness in sacred observances."
+  },
+  "19": {
+    "Catholic": "The prohibition of leaven reflects the Catholic understanding of the need to remove all sin and corruption from the Christian life.",
+    "Protestant": "The removal of leaven symbolizes the need for complete purification and the importance of maintaining spiritual purity.",
+    "Orthodox": "The prohibition of leaven represents the Orthodox emphasis on purity and the need to remove all corruption from one's life.",
+    "Jewish": "The strict prohibition of leaven establishes the importance of complete removal of all leaven during the feast, a practice carefully maintained in Jewish observance.",
+    "Mormon": "The prohibition of leaven teaches the importance of complete obedience and the need to remove all corruption from one's life and home."
+  },
+  "20": {
+    "Catholic": "The complete prohibition of leaven reflects the Catholic understanding of the need for thorough purification and the importance of maintaining spiritual purity in all aspects of life.",
+    "Protestant": "The comprehensive prohibition emphasizes the need for complete dedication to God and the importance of maintaining purity in all areas of life.",
+    "Orthodox": "The total prohibition of leaven represents the Orthodox emphasis on complete dedication to God and the need for thorough spiritual purification.",
+    "Jewish": "The comprehensive prohibition establishes the strict dietary requirements for the Feast of Unleavened Bread, a practice carefully maintained in Jewish homes.",
+    "Mormon": "The complete prohibition of leaven teaches the importance of thorough obedience and the need to maintain purity in all aspects of life and worship."
+  }
+}
