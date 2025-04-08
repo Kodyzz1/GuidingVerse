@@ -261,33 +261,21 @@ function BibleReaderPage() {
         </div>
       </div>
 
-      {/* --- Bible Text Display Area --- */}
-      <div className={styles.textDisplayArea}>
-        <BibleTextDisplay
-          passage={selectedPassage}
-          fontSize={settings.fontSize}
-          lineSpacing={settings.lineSpacing}
-          showVerseNumbers={settings.showVerseNumbers}
-        />
+      {/* --- Main Content Area --- */}
+      <div className={styles.mainContent}>
+        <div className={styles.textDisplayContainer}>
+          <BibleTextDisplay 
+            passage={selectedPassage} 
+            key={`${selectedPassage.book}-${selectedPassage.chapter}`}
+          />
+        </div>
       </div>
 
-      {/* --- Navigation Buttons --- */}
+      {/* --- Navigation Buttons (Optional) --- */}
       {settings.showNextPrevButtons && (
         <div className={styles.navigationButtons}>
-          <button
-            onClick={goToPreviousChapter}
-            className={styles.navButton}
-            disabled={selectedPassage.book === 'Genesis' && selectedPassage.chapter === 1}
-          >
-            &lt; Previous Chapter
-          </button>
-          <button
-            onClick={goToNextChapter}
-            className={styles.navButton}
-            disabled={selectedPassage.book === 'Revelation' && selectedPassage.chapter === BIBLE_CHAPTER_COUNTS['Revelation']}
-          >
-            Next Chapter &gt;
-          </button>
+          <button onClick={goToPreviousChapter} className={styles.navButton}>&larr; Previous</button>
+          <button onClick={goToNextChapter} className={styles.navButton}>Next &rarr;</button>
         </div>
       )}
     </div>

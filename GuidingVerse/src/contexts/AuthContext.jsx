@@ -21,45 +21,119 @@ export function AuthProvider({ children }) {
 
   // --- Effect for Initial Auth Check ---
   useEffect(() => {
-    // Simulate checking stored token/session on initial load
-    const timer = setTimeout(() => {
-      // In a real app: verify token, fetch user, setIsAuthenticated(true), setUser(...)
+    // Check localStorage for persisted user data on initial load
+    try {
+      const storedUser = localStorage.getItem('guidingVerseUser');
+      if (storedUser) {
+        const parsedUser = JSON.parse(storedUser);
+        setUser(parsedUser);
+        setIsAuthenticated(true);
+        console.log('Auth state loaded from localStorage');
+      }
+    } catch (error) {
+      console.error('Failed to parse stored user data:', error);
+      localStorage.removeItem('guidingVerseUser'); // Clear corrupted data
+    } finally {
       setIsLoading(false); // Finished initial check
-    }, 500); // Simulate check time
-
-    return () => clearTimeout(timer); // Cleanup timeout on unmount
+    }
   }, []); // Run only once on mount
 
-  // --- Auth Functions (Mock Implementation) ---
-  // eslint-disable-next-line no-unused-vars
-  const login = useCallback(async (email, _password) => {
+  // --- Auth Functions (Real Implementation) ---
+  const login = useCallback(async (email, password) => {
     setIsLoading(true);
-    // Simulate API Call (TODO: Replace with actual API call)
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    const mockUserData = { id: '123', name: 'Test User', email: email, denomination: 'Unknown' };
-    setUser(mockUserData);
-    setIsAuthenticated(true);
-    setIsLoading(false);
-    return true;
+    try {
+      const response = await fetch('/api/auth/login', { // Assumes proxy or same origin
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json(); // Always try to parse JSON
+
+      if (!response.ok) {
+        // Throw error with message from backend if available
+        throw new Error(data.message || `Login failed with status ${response.status}`);
+      }
+
+      // Login successful
+      const userData = {
+          // Map data from backend response (ensure fields match)
+          id: data._id, 
+          name: data.username, 
+          email: data.email,
+          denomination: data.denomination
+      }; 
+      setUser(userData);
+      setIsAuthenticated(true);
+      localStorage.setItem('guidingVerseUser', JSON.stringify(userData)); // Persist user
+      console.log('Login successful, user state updated & persisted.');
+      return true; // Indicate success
+
+    } catch (error) {
+      console.error('Login API call failed:', error);
+      // Clear any potentially outdated user state on login failure
+      setUser(null);
+      setIsAuthenticated(false);
+      localStorage.removeItem('guidingVerseUser');
+      throw error; // Re-throw the error so LoginPage can catch it and display message
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
-  const signup = useCallback(async (name, email, password, denomination) => {
+  // --- Signup Function --- //
+  const signup = useCallback(async (username, email, password, denomination) => {
     setIsLoading(true);
-    // Simulate API Call (TODO: Replace with actual API call)
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    const mockUserData = { id: '456', name: name, email: email, denomination: denomination };
-    setUser(mockUserData);
-    setIsAuthenticated(true);
-    setIsLoading(false);
-    return true;
+    try {
+      const response = await fetch('/api/auth/register', { // Assumes proxy or same origin
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, email, password, denomination }),
+      });
+
+      const data = await response.json(); // Always try to parse JSON
+
+      if (!response.ok) {
+        // Throw error with message from backend if available
+        throw new Error(data.message || `Signup failed with status ${response.status}`);
+      }
+
+      // Signup successful - Log the user in immediately
+      const userData = {
+          id: data._id, 
+          name: data.username,
+          email: data.email,
+          denomination: data.denomination
+      };
+      setUser(userData);
+      setIsAuthenticated(true);
+      localStorage.setItem('guidingVerseUser', JSON.stringify(userData)); // Persist user
+      console.log('Signup successful, user logged in, state updated & persisted.');
+      return true; // Indicate success
+
+    } catch (error) {
+      console.error('Signup API call failed:', error);
+      // Ensure user state is cleared if signup fails after a potential previous login
+      setUser(null);
+      setIsAuthenticated(false);
+      localStorage.removeItem('guidingVerseUser');
+      throw error; // Re-throw the error so SignupPage can catch it and display message
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
   const logout = useCallback(async () => {
     setIsLoading(true);
-    // Simulate API Call (TODO: Replace with actual API call)
-    await new Promise(resolve => setTimeout(resolve, 300));
+    // TODO: Add API call to backend logout endpoint if needed (e.g., to invalidate tokens)
     setUser(null);
     setIsAuthenticated(false);
+    localStorage.removeItem('guidingVerseUser'); // Clear persisted data
+    console.log('User logged out, state cleared.');
     setIsLoading(false);
     return true;
   }, []);

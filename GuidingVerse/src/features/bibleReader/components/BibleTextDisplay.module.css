@@ -312,8 +312,8 @@
     .interpretationError {
       color: #ff8a8a;
     }
-    .entrySeparator {
-      border-top: 1px dashed #555;
+    .interpretationEntry:not(:last-child) {
+      border-bottom: 2px dashed #888;
     }
   }
 
@@ -341,8 +341,8 @@
     .interpretationError {
       color: #d00; 
     }
-    .entrySeparator {
-      border-top-color: #ddd;
+    .interpretationEntry:not(:last-child) {
+      border-bottom: 2px dashed #bbb;
     }
   }
 
@@ -382,12 +382,6 @@
     /* color: #555; */
   }
 
-  /* Separator for interpretation entries */
-  .entrySeparator {
-    border: none;
-    margin: 15px 0;
-  }
-
   /* Existing style for highlighted verse (ensure it doesn't conflict) */
   .highlighted {
     background-color: #f0e68c;
@@ -398,4 +392,9 @@
   .selectionStart {
     /* Example: Add a slightly different background or border */
     /* background-color: #e0d67c; */ 
+  }
+
+  .interpretationEntry {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
   }

@@ -1,129 +1,386 @@
 {
   "chapterSummary": {
-    "General": "Genesis 1 outlines the foundational narrative of creation, detailing God's orderly and purposeful formation of the heavens, earth, light, sky, land, seas, vegetation, celestial bodies, sea creatures, birds, land animals, and culminating in the creation of humanity in His image over six distinct 'days'. Each stage is declared 'good' by God, with the complete creation deemed 'very good'."
+    "General": "Genesis 1 outlines the foundational narrative of creation, detailing God's orderly and purposeful formation of the heavens, earth, light, sky, land, seas, vegetation, celestial bodies, sea creatures, birds, land animals, and culminating in the creation of humanity in His image over six distinct 'days'. Each stage is declared 'good' by God, with the complete creation deemed 'very good'.",
+    "Non-Denominational": "Focuses on God as the sovereign Creator, the orderliness and purposefulness of creation, the concept of creation 'ex nihilo' (out of nothing) by God's spoken word, the inherent goodness of the created order, and humanity's unique place as image-bearers with delegated authority.",
+    "Baptist": "Emphasizes God's absolute sovereignty and power displayed in creation 'ex nihilo'. Views the six days as literal 24-hour periods (common interpretation). Highlights the goodness of creation before the Fall and humanity's creation in God's image as foundational for human dignity and purpose.",
+    "Catholic": "Affirms God as the sole Creator of all things, visible and invisible. Interprets the 'days' often figuratively as logical stages or periods, not necessarily 24-hour days. Stresses the inherent goodness of creation, the Trinitarian hints (Spirit hovering, Word spoken), and the dignity of humanity created in God's image ('imago Dei') destined for communion with Him.",
+    "Methodist": "Focuses on God's majestic power and wisdom in bringing order out of chaos. Sees the goodness of creation reflecting God's nature. Emphasizes humanity's creation in God's image, implying relationship, responsibility (stewardship), and potential for holiness. Often open to various interpretations of the 'days'.",
+    "Lutheran": "Highlights creation by God's powerful Word ('Let there be...'). Views the account as historical fact, affirming God's complete authority over creation. Emphasizes the goodness of the original creation and humanity's unique status as reflecting God's image, later marred by sin.",
+    "Presbyterian": "Stresses God's sovereignty, purposefulness, and methodical ordering of creation. Affirms creation 'ex nihilo' and the goodness of God's work. Interprets the 'days' often as a literary framework (Framework Hypothesis) or analogous days. Emphasizes the covenantal aspect, with humanity created in God's image to be His representatives and stewards.",
+    "Pentecostal": "Often emphasizes a literal six-day creation. Highlights the active role of the Holy Spirit (v. 2) in creation. Focuses on God's power displayed through spoken commands and the supernatural origin of life. Sees humanity's creation in God's image as imparting spiritual capacity and authority.",
+    "Anglican": "Affirms the doctrine of creation by God. Allows for diverse interpretations of the 'days' (literal, figurative, literary). Stresses the order, beauty, and goodness of God's creation and humanity's unique creation in the 'imago Dei', reflecting God's rationality, relationship, and dominion.",
+    "Orthodox": "Views creation as a liturgical act of God, bringing order and beauty from chaos. Interprets the 'days' often symbolically or liturgically. Emphasizes the role of the divine Logos (Word) and Spirit in creation. Sees the cosmos as inherently good and humanity created in God's image and likeness, called to grow into the likeness through synergy with God."
   },
   "1": {
     "Non-Denominational": "This foundational verse declares God as the sole, sovereign creator of everything that exists, establishing the beginning of time and space.",
-    "General": "This foundational verse declares God as the sole, sovereign creator of everything that exists, establishing the beginning of time and space."
+    "General": "This foundational verse declares God as the sole, sovereign creator of everything that exists, establishing the beginning of time and space.",
+    "Baptist": "Affirms God's eternal pre-existence and power as the uncaused First Cause of all reality.",
+    "Catholic": "Declares the fundamental truth of creation 'ex nihilo' by the one God.",
+    "Methodist": "Establishes God's ultimate authority and ownership over all creation.",
+    "Lutheran": "Asserts God as the Creator against all forms of polytheism or naturalism.",
+    "Presbyterian": "States the absolute sovereignty of God over all things from the very beginning.",
+    "Pentecostal": "Highlights God's power to bring the universe into existence from nothing.",
+    "Anglican": "The foundational statement of God as the origin and Creator of the entire cosmos.",
+    "Orthodox": "Affirms the universe is not eternal but had a beginning through the will of God."
   },
   "2": {
     "Non-Denominational": "Describes the initial state of the earth as chaotic and empty, with God's Spirit actively present, ready to bring order and life.",
-    "General": "Describes the initial state of the earth as chaotic and empty, with God's Spirit actively present, ready to bring order and life."
+    "General": "Describes the initial state of the earth as chaotic and empty, with God's Spirit actively present, ready to bring order and life.",
+    "Baptist": "Shows the formless matter upon which God began His creative work, with the Holy Spirit's active involvement.",
+    "Catholic": "Depicts the primordial state before God's ordering work, highlighting the presence and dynamism of the Holy Spirit.",
+    "Methodist": "Emphasizes the potentiality within the chaos, presided over by God's active Spirit.",
+    "Lutheran": "Describes the undeveloped state of creation before God imposed order, with the Spirit's presence.",
+    "Presbyterian": "Highlights the initial state as 'unformed and unfilled', awaiting God's purposeful structuring, with the Spirit's active role.",
+    "Pentecostal": "Emphasizes the active, hovering presence of the Holy Spirit, anticipating the coming acts of power.",
+    "Anglican": "Describes the primordial condition - unformed and dark - with the significant presence of God's Spirit.",
+    "Orthodox": "Views the 'abyss' and 'darkness' as representative of non-being or chaos, over which the life-giving Spirit of God moves."
   },
   "3": {
     "Non-Denominational": "God's first creative command brings light into existence, separating it from darkness and demonstrating His power through His spoken word.",
-    "General": "God's first creative command brings light into existence, separating it from darkness and demonstrating His power through His spoken word."
+    "General": "God's first creative command brings light into existence, separating it from darkness and demonstrating His power through His spoken word.",
+    "Baptist": "Demonstrates the power and authority of God's Word to bring reality into being.",
+    "Catholic": "God's Word (Logos) acts efficaciously, bringing forth light, the first element of the ordered creation.",
+    "Methodist": "Highlights the immediacy and power of God's command resulting in creation.",
+    "Lutheran": "Creation by the Word: God speaks, and it happens, demonstrating His omnipotence.",
+    "Presbyterian": "God's sovereign decree brings forth light, initiating the ordering process.",
+    "Pentecostal": "Shows the creative power released through God's spoken Word.",
+    "Anglican": "God's first creative act, initiated by His command, brings forth light.",
+    "Orthodox": "The divine Logos (Word) brings forth light, dispelling darkness and beginning the ordering of creation."
   },
   "4": {
     "Non-Denominational": "God assesses His creation of light as 'good,' indicating its perfect alignment with His purpose and inherent quality. He establishes the distinction between light and darkness.",
-    "General": "God assesses His creation of light as 'good,' indicating its perfect alignment with His purpose and inherent quality. He establishes the distinction between light and darkness."
+    "General": "God assesses His creation of light as 'good,' indicating its perfect alignment with His purpose and inherent quality. He establishes the distinction between light and darkness.",
+    "Baptist": "God's evaluation confirms the perfection and purposefulness of His creation.",
+    "Catholic": "God's judgment ('good') signifies creation's intrinsic value and participation in His own goodness. The separation indicates order.",
+    "Methodist": "God affirms the inherent goodness of light, reflecting His own nature.",
+    "Lutheran": "God declares His work good, setting the standard for creation's value.",
+    "Presbyterian": "God's declaration of 'good' affirms that creation perfectly fulfills His intended purpose.",
+    "Pentecostal": "God recognizes the perfection and inherent goodness of His creative act.",
+    "Anglican": "God assesses His creation, declaring light 'good', establishing its value and the principle of order through separation.",
+    "Orthodox": "God affirms the created light as 'kalos' (good, beautiful, fitting), reflecting His own divine nature."
   },
   "5": {
     "Non-Denominational": "God names the light 'day' and the darkness 'night,' establishing the fundamental cycle of time that governs the created order. This marks the completion of the first creative 'day'.",
-    "General": "God names the light 'day' and the darkness 'night,' establishing the fundamental cycle of time that governs the created order. This marks the completion of the first creative 'day'."
+    "General": "God names the light 'day' and the darkness 'night,' establishing the fundamental cycle of time that governs the created order. This marks the completion of the first creative 'day'.",
+    "Baptist": "God establishes the rhythm of time, concluding the first literal 24-hour day.",
+    "Catholic": "God imposes order through naming, establishing the temporal cycle. The 'day' signifies a completed stage in God's work.",
+    "Methodist": "God institutes the basic structure of time, marking the conclusion of the first creative period.",
+    "Lutheran": "God defines time by naming Day and Night, completing the first phase of creation.",
+    "Presbyterian": "God establishes the temporal order by naming, concluding the first literary/analogical 'day' or phase.",
+    "Pentecostal": "God sets the sequence of time in motion, concluding the first day's work.",
+    "Anglican": "God assigns names, signifying His authority and establishing the fundamental rhythm of time, concluding the first 'day'.",
+    "Orthodox": "Through naming, God establishes the cosmic rhythm. The 'first day' marks a distinct phase of divine creative activity."
   },
   "6": {
     "Non-Denominational": "God commands the creation of an 'expanse' (often understood as the sky or atmosphere) to separate the waters, bringing further structure to the formless void.",
-    "General": "God commands the creation of an 'expanse' (often understood as the sky or atmosphere) to separate the waters, bringing further structure to the formless void."
+    "General": "God commands the creation of an 'expanse' (often understood as the sky or atmosphere) to separate the waters, bringing further structure to the formless void.",
+    "Baptist": "God continues His ordering work by creating the atmosphere/sky.",
+    "Catholic": "God's Word commands the formation of the firmament to impose structure and separation within the created order.",
+    "Methodist": "God introduces further organization by separating the waters.",
+    "Lutheran": "God's Word commands the creation of the sky to divide the waters.",
+    "Presbyterian": "God decrees the formation of the expanse, continuing the process of ordering the cosmos.",
+    "Pentecostal": "God speaks forth the next element of creation: the dividing expanse.",
+    "Anglican": "God commands the creation of an expanse (firmament/sky) to bring order by separating the waters.",
+    "Orthodox": "God commands the establishment of the 'stereoma' (firmament), bringing spatial order."
   },
   "7": {
     "Non-Denominational": "God executes His command, making the expanse that physically separates the waters above (clouds, atmospheric moisture) from the waters below (seas, oceans).",
-    "General": "God executes His command, making the expanse that physically separates the waters above (clouds, atmospheric moisture) from the waters below (seas, oceans)."
+    "General": "God executes His command, making the expanse that physically separates the waters above (clouds, atmospheric moisture) from the waters below (seas, oceans).",
+    "Baptist": "God actively brings the commanded expanse into existence.",
+    "Catholic": "God implements His command, creating the physical reality of the sky separating atmospheric and terrestrial waters.",
+    "Methodist": "God brings about the commanded separation, establishing atmospheric structure.",
+    "Lutheran": "God makes the sky as commanded, dividing the waters.",
+    "Presbyterian": "God fulfills His decree, creating the expanse to separate the waters.",
+    "Pentecostal": "God brings into being the dividing expanse He commanded.",
+    "Anglican": "God carries out His command, creating the expanse that separates waters above and below.",
+    "Orthodox": "God actualizes His command, establishing the firmament separating the upper and lower waters."
   },
   "8": {
     "Non-Denominational": "God names the expanse 'sky' (or 'heaven' in some translations), signifying its role and place in the created order. This concludes the second creative 'day'.",
-    "General": "God names the expanse 'sky' (or 'heaven' in some translations), signifying its role and place in the created order. This concludes the second creative 'day'."
+    "General": "God names the expanse 'sky' (or 'heaven' in some translations), signifying its role and place in the created order. This concludes the second creative 'day'.",
+    "Baptist": "God names the sky, establishing its identity, concluding the second literal day.",
+    "Catholic": "God names the firmament 'Heaven/Sky,' defining its place. Concludes the second stage.",
+    "Methodist": "God assigns a name, completing the work of the second creative period.",
+    "Lutheran": "God names the sky, completing the second phase.",
+    "Presbyterian": "God names the expanse 'Sky/Heaven', concluding the second 'day'/phase.",
+    "Pentecostal": "God names this part of creation, concluding the second day's work.",
+    "Anglican": "God names the expanse 'Sky' ('Heaven'), completing the work of the second 'day'.",
+    "Orthodox": "God names the firmament 'Heaven,' marking the end of the second phase of creation."
   },
   "9": {
     "Non-Denominational": "God commands the waters under the sky to gather together, causing dry ground to appear, further organizing the physical world.",
-    "General": "God commands the waters under the sky to gather together, causing dry ground to appear, further organizing the physical world."
+    "General": "God commands the waters under the sky to gather together, causing dry ground to appear, further organizing the physical world.",
+    "Baptist": "God continues structuring the earth by separating land and water.",
+    "Catholic": "God's Word commands the emergence of land, establishing the terrestrial sphere.",
+    "Methodist": "God brings forth dry land through His commanding Word.",
+    "Lutheran": "God commands the separation of water and land.",
+    "Presbyterian": "God decrees the gathering of waters and appearance of land.",
+    "Pentecostal": "God speaks forth the separation of land and sea.",
+    "Anglican": "God commands the separation of land and water, bringing forth dry ground.",
+    "Orthodox": "God commands the waters to gather, allowing the dry land to emerge."
   },
   "10": {
     "Non-Denominational": "God names the dry ground 'land' and the gathered waters 'seas,' defining these major geographical features. He again affirms that this part of creation is 'good'.",
-    "General": "God names the dry ground 'land' and the gathered waters 'seas,' defining these major geographical features. He again affirms that this part of creation is 'good'."
+    "General": "God names the dry ground 'land' and the gathered waters 'seas,' defining these major geographical features. He again affirms that this part of creation is 'good'.",
+    "Baptist": "God names the distinct geographical areas and declares them good.",
+    "Catholic": "God names 'Land' and 'Seas,' establishing order and affirms their goodness.",
+    "Methodist": "God defines and approves the newly formed land and seas.",
+    "Lutheran": "God names Land and Seas, declaring this separation 'good'.",
+    "Presbyterian": "God names the land and seas, affirming the goodness of this structured environment.",
+    "Pentecostal": "God defines the new elements and declares their goodness.",
+    "Anglican": "God names the 'Land' and 'Seas', establishing their identities, and declares this arrangement 'good'.",
+    "Orthodox": "God names the 'Land' and 'Seas,' establishing their distinct identities, and affirms their inherent goodness/beauty."
   },
   "11": {
     "Non-Denominational": "God commands the land to produce vegetation: plants yielding seeds and trees bearing fruit with seeds inside, establishing the principle of reproduction according to their kinds.",
-    "General": "God commands the land to produce vegetation: plants yielding seeds and trees bearing fruit with seeds inside, establishing the principle of reproduction according to their kinds."
+    "General": "God commands the land to produce vegetation: plants yielding seeds and trees bearing fruit with seeds inside, establishing the principle of reproduction according to their kinds.",
+    "Baptist": "God commands the creation of plant life with inherent reproductive capability.",
+    "Catholic": "God decrees the emergence of plant life, endowing it with the ability to propagate 'according to its kind'.",
+    "Methodist": "God populates the land with vegetation, designed for self-propagation.",
+    "Lutheran": "God commands the earth to bring forth diverse plant life capable of reproduction.",
+    "Presbyterian": "God decrees the creation of vegetation, establishing biological order and continuity ('kinds').",
+    "Pentecostal": "God speaks forth the creation of plant life with inbuilt reproductive power.",
+    "Anglican": "God commands the land to produce vegetation, emphasizing reproduction 'according to their kinds'.",
+    "Orthodox": "God commands the earth to sprout forth vegetation, establishing the diverse kinds of plant life."
   },
   "12": {
     "Non-Denominational": "The land obeys God's command, bringing forth diverse vegetation, each capable of reproducing after its own kind. God confirms this creation is 'good'.",
-    "General": "The land obeys God's command, bringing forth diverse vegetation, each capable of reproducing after its own kind. God confirms this creation is 'good'."
+    "General": "The land obeys God's command, bringing forth diverse vegetation, each capable of reproducing after its own kind. God confirms this creation is 'good'.",
+    "Baptist": "The earth yields plant life as commanded; God affirms its goodness.",
+    "Catholic": "The earth brings forth vegetation as decreed; God approves this stage as good.",
+    "Methodist": "Plant life emerges as commanded; God declares it good.",
+    "Lutheran": "Vegetation appears as commanded; God declares it good.",
+    "Presbyterian": "The land produces vegetation according to God's decree; God affirms its goodness.",
+    "Pentecostal": "The earth responds to God's Word; He confirms its goodness.",
+    "Anglican": "The land brings forth vegetation as commanded; God again declares His creation 'good'.",
+    "Orthodox": "The earth produces diverse vegetation; God affirms the goodness/beauty of plant life."
   },
   "13": {
     "Non-Denominational": "Marks the completion of the third creative 'day,' during which dry land, seas, and plant life were established.",
-    "General": "Marks the completion of the third creative 'day,' during which dry land, seas, and plant life were established."
+    "General": "Marks the completion of the third creative 'day,' during which dry land, seas, and plant life were established.",
+    "Baptist": "Concludes the third literal 24-hour day.",
+    "Catholic": "Marks the end of the third stage, establishing the terrestrial environment and basic life.",
+    "Methodist": "Concludes the third creative period, focused on land, seas, and plants.",
+    "Lutheran": "Completes the third phase: land, seas, vegetation.",
+    "Presbyterian": "Concludes the third 'day'/phase: formation of land/seas and vegetation.",
+    "Pentecostal": "Concludes the third day's creative acts.",
+    "Anglican": "Marks the end of the third 'day' of creation.",
+    "Orthodox": "Completes the third phase of creation's ordering."
   },
   "14": {
     "Non-Denominational": "God commands the creation of lights in the expanse of the sky (sun, moon, stars) to separate day from night and to serve as markers for signs, seasons, days, and years.",
-    "General": "God commands the creation of lights in the expanse of the sky (sun, moon, stars) to separate day from night and to serve as markers for signs, seasons, days, and years."
+    "General": "God commands the creation of lights in the expanse of the sky (sun, moon, stars) to separate day from night and to serve as markers for signs, seasons, days, and years.",
+    "Baptist": "God creates the celestial bodies to govern time and seasons.",
+    "Catholic": "God decrees the formation of celestial luminaries to regulate time and serve as signs.",
+    "Methodist": "God establishes the heavenly bodies for temporal order and signs.",
+    "Lutheran": "God commands the creation of sun, moon, and stars for light and timekeeping.",
+    "Presbyterian": "God decrees the creation of luminaries to govern time and mark appointed times (signs).",
+    "Pentecostal": "God speaks forth the celestial lights to rule time and seasons.",
+    "Anglican": "God commands the appearance of lights in the sky to mark time (days, years, seasons) and serve as signs.",
+    "Orthodox": "God commands the creation of luminaries in the firmament for signs, seasons, and time regulation."
   },
   "15": {
     "Non-Denominational": "These celestial lights are designated to shine upon the earth, providing illumination and fulfilling their role in the cosmic order.",
-    "General": "These celestial lights are designated to shine upon the earth, providing illumination and fulfilling their role in the cosmic order."
+    "General": "These celestial lights are designated to shine upon the earth, providing illumination and fulfilling their role in the cosmic order.",
+    "Baptist": "Specifies their function: to provide light for the earth.",
+    "Catholic": "Highlights the purpose of the luminaries: to illuminate the earth.",
+    "Methodist": "States the primary function of these lights for the earth.",
+    "Lutheran": "Their purpose is to give light upon the earth.",
+    "Presbyterian": "Affirms the function of the luminaries to light the earth.",
+    "Pentecostal": "Declares their purpose to illuminate the earth.",
+    "Anglican": "Reiterates their purpose to provide light for the earth.",
+    "Orthodox": "Affirms their designated role to illuminate the earth."
   },
   "16": {
     "Non-Denominational": "God creates two primary lights – the sun to govern the day and the moon to govern the night – along with the stars, setting them in their designated places.",
-    "General": "God creates two primary lights – the sun to govern the day and the moon to govern the night – along with the stars, setting them in their designated places."
+    "General": "God creates two primary lights – the sun to govern the day and the moon to govern the night – along with the stars, setting them in their designated places.",
+    "Baptist": "God makes the specific celestial bodies: sun, moon, and stars.",
+    "Catholic": "God creates the sun, moon, and stars, assigning their respective roles in governing day and night.",
+    "Methodist": "God fashions the sun, moon, and stars for their specific functions.",
+    "Lutheran": "God makes the sun, moon, and stars.",
+    "Presbyterian": "God creates the specific luminaries (sun, moon, stars) to fulfill their ordained roles.",
+    "Pentecostal": "God brings forth the sun, moon, and stars by His power.",
+    "Anglican": "God makes the 'greater light' (sun) and 'lesser light' (moon), plus the stars.",
+    "Orthodox": "God creates the two great lights (sun, moon) and the stars, establishing cosmic order."
   },
   "17": {
     "Non-Denominational": "Reiterates that God placed these lights in the sky specifically to illuminate the earth.",
-    "General": "Reiterates that God placed these lights in the sky specifically to illuminate the earth."
+    "General": "Reiterates that God placed these lights in the sky specifically to illuminate the earth.",
+    "Baptist": "Emphasizes God's placement and purpose for these lights.",
+    "Catholic": "God positions the luminaries in the heavens for the benefit of the earth.",
+    "Methodist": "God sets the lights in place to fulfill their purpose.",
+    "Lutheran": "God places them in the sky to light the earth.",
+    "Presbyterian": "God sets the luminaries in the expanse for the purpose of lighting the earth.",
+    "Pentecostal": "God positions the lights in the heavens for earth's illumination.",
+    "Anglican": "God sets these lights in the expanse to fulfill their purpose of lighting the earth.",
+    "Orthodox": "God establishes the luminaries in the firmament to illuminate the earth."
   },
   "18": {
     "Non-Denominational": "Highlights the function of the sun and moon to govern day and night and maintain the separation between light and darkness. God affirms this part of creation is 'good'.",
-    "General": "Highlights the function of the sun and moon to govern day and night and maintain the separation between light and darkness. God affirms this part of creation is 'good'."
+    "General": "Highlights the function of the sun and moon to govern day and night and maintain the separation between light and darkness. God affirms this part of creation is 'good'.",
+    "Baptist": "Their roles in governance and separation are affirmed as good.",
+    "Catholic": "Confirms their governing roles and the goodness of this established cosmic order.",
+    "Methodist": "Emphasizes their governing function; God declares this arrangement good.",
+    "Lutheran": "Their function is to rule and separate; God declares it good.",
+    "Presbyterian": "Affirms their ordained function and its inherent goodness.",
+    "Pentecostal": "Highlights their ruling function; God confirms its goodness.",
+    "Anglican": "Emphasizes their role in governing and separating light/darkness; God declares it 'good'.",
+    "Orthodox": "Confirms their roles in governing time and separating light; God affirms their goodness/beauty."
   },
   "19": {
     "Non-Denominational": "Marks the completion of the fourth creative 'day,' characterized by the formation and placement of the celestial bodies.",
-    "General": "Marks the completion of the fourth creative 'day,' characterized by the formation and placement of the celestial bodies."
+    "General": "Marks the completion of the fourth creative 'day,' characterized by the formation and placement of the celestial bodies.",
+    "Baptist": "Concludes the fourth literal 24-hour day.",
+    "Catholic": "Marks the end of the fourth stage, establishing the celestial order.",
+    "Methodist": "Concludes the fourth creative period, focused on heavenly bodies.",
+    "Lutheran": "Completes the fourth phase: sun, moon, stars.",
+    "Presbyterian": "Concludes the fourth 'day'/phase: creation of luminaries.",
+    "Pentecostal": "Concludes the fourth day's creative acts.",
+    "Anglican": "Marks the end of the fourth 'day' of creation.",
+    "Orthodox": "Completes the fourth phase, establishing the celestial lights."
   },
   "20": {
     "Non-Denominational": "God commands the waters to teem with living creatures and birds to fly across the expanse of the sky, introducing animal life into creation.",
-    "General": "God commands the waters to teem with living creatures and birds to fly across the expanse of the sky, introducing animal life into creation."
+    "General": "God commands the waters to teem with living creatures and birds to fly across the expanse of the sky, introducing animal life into creation.",
+    "Baptist": "God commands the creation of sea life and birds.",
+    "Catholic": "God decrees the emergence of aquatic and avian life, populating the seas and sky.",
+    "Methodist": "God calls forth animal life in the waters and the air.",
+    "Lutheran": "God commands the waters and sky to be filled with living creatures.",
+    "Presbyterian": "God decrees the creation of sea creatures and birds.",
+    "Pentecostal": "God speaks forth the creation of living creatures in water and air.",
+    "Anglican": "God commands the waters to swarm with life and birds to fly, initiating the creation of animals.",
+    "Orthodox": "God commands the waters and air to be filled with living souls (nephesh)."
   },
   "21": {
     "Non-Denominational": "God creates the great sea creatures and all types of aquatic life, as well as every kind of bird, each according to its kind. He affirms this creation is 'good'.",
-    "General": "God creates the great sea creatures and all types of aquatic life, as well as every kind of bird, each according to its kind. He affirms this creation is 'good'."
+    "General": "God creates the great sea creatures and all types of aquatic life, as well as every kind of bird, each according to its kind. He affirms this creation is 'good'.",
+    "Baptist": "God creates diverse sea and air creatures 'after their kind'; declares them good.",
+    "Catholic": "God creates the various species of sea creatures and birds, affirming their goodness.",
+    "Methodist": "God brings forth diverse sea and air life; declares it good.",
+    "Lutheran": "God creates sea life and birds according to their kinds; declares them good.",
+    "Presbyterian": "God creates sea creatures and birds according to their kinds; affirms their goodness.",
+    "Pentecostal": "God creates the water and air creatures; confirms their goodness.",
+    "Anglican": "God creates the great sea monsters, other sea life, and birds 'according to their kinds'; declares them 'good'.",
+    "Orthodox": "God creates the great sea creatures and birds according to their kinds; affirms their goodness/beauty."
   },
   "22": {
     "Non-Denominational": "God blesses the newly created sea creatures and birds, commanding them to be fruitful, multiply, and fill their respective domains (waters and earth).",
-    "General": "God blesses the newly created sea creatures and birds, commanding them to be fruitful, multiply, and fill their respective domains (waters and earth)."
+    "General": "God blesses the newly created sea creatures and birds, commanding them to be fruitful, multiply, and fill their respective domains (waters and earth).",
+    "Baptist": "God bestows His blessing for reproduction and flourishing upon animal life.",
+    "Catholic": "God confers His blessing upon aquatic and avian life, commanding them to propagate.",
+    "Methodist": "God blesses animal life with the capacity for multiplication.",
+    "Lutheran": "God blesses the creatures, commanding them to multiply.",
+    "Presbyterian": "God blesses the sea creatures and birds, commanding them to be fruitful.",
+    "Pentecostal": "God releases a blessing for multiplication upon the animals.",
+    "Anglican": "God blesses the sea creatures and birds, giving them the mandate to multiply and fill their environments.",
+    "Orthodox": "God blesses the living creatures of sea and air, commanding them to increase."
   },
   "23": {
     "Non-Denominational": "Marks the completion of the fifth creative 'day,' focused on the creation of sea life and birds.",
-    "General": "Marks the completion of the fifth creative 'day,' focused on the creation of sea life and birds."
+    "General": "Marks the completion of the fifth creative 'day,' focused on the creation of sea life and birds.",
+    "Baptist": "Concludes the fifth literal 24-hour day.",
+    "Catholic": "Marks the end of the fifth stage, focused on populating the seas and skies.",
+    "Methodist": "Concludes the fifth creative period, introducing animal life.",
+    "Lutheran": "Completes the fifth phase: sea life and birds.",
+    "Presbyterian": "Concludes the fifth 'day'/phase: creation of sea creatures and birds.",
+    "Pentecostal": "Concludes the fifth day's creative acts.",
+    "Anglican": "Marks the end of the fifth 'day' of creation.",
+    "Orthodox": "Completes the fifth phase, populating the waters and air."
   },
   "24": {
     "Non-Denominational": "God commands the land to produce living creatures according to their kinds: livestock, creatures that move along the ground, and wild animals.",
-    "General": "God commands the land to produce living creatures according to their kinds: livestock, creatures that move along the ground, and wild animals."
+    "General": "God commands the land to produce living creatures according to their kinds: livestock, creatures that move along the ground, and wild animals.",
+    "Baptist": "God commands the creation of land animals in their distinct kinds.",
+    "Catholic": "God decrees the emergence of terrestrial animals, categorized by type.",
+    "Methodist": "God calls forth land animals according to their various kinds.",
+    "Lutheran": "God commands the earth to bring forth land animals of various kinds.",
+    "Presbyterian": "God decrees the creation of land animals according to their kinds.",
+    "Pentecostal": "God speaks forth the creation of land animals.",
+    "Anglican": "God commands the land to bring forth living creatures: livestock, creeping things, and wild animals, each 'according to its kind'.",
+    "Orthodox": "God commands the earth to bring forth living souls (animals) according to their kinds."
   },
   "25": {
     "Non-Denominational": "God executes His command, creating the various kinds of land animals. He affirms that this part of His creation is also 'good'.",
-    "General": "God executes His command, creating the various kinds of land animals. He affirms that this part of His creation is also 'good'."
+    "General": "God executes His command, creating the various kinds of land animals. He affirms that this part of His creation is also 'good'.",
+    "Baptist": "God creates the land animals as commanded; declares them good.",
+    "Catholic": "God creates the different kinds of land animals, affirming their goodness.",
+    "Methodist": "God brings forth land animals; declares them good.",
+    "Lutheran": "God makes the land animals; declares them good.",
+    "Presbyterian": "God creates the land animals according to their kinds; affirms their goodness.",
+    "Pentecostal": "God creates the land animals; confirms their goodness.",
+    "Anglican": "God makes the various kinds of land animals; declares them 'good'.",
+    "Orthodox": "God creates the land animals according to their kinds; affirms their goodness/beauty."
   },
   "26": {
     "Non-Denominational": "The pinnacle of creation: God declares His intention to make mankind in His own image and likeness, giving them dominion over all other living creatures.",
-    "General": "The pinnacle of creation: God declares His intention to make mankind in His own image and likeness, giving them dominion over all other living creatures."
+    "General": "The pinnacle of creation: God declares His intention to make mankind in His own image and likeness, giving them dominion over all other living creatures.",
+    "Baptist": "The apex of creation: humanity uniquely made in God's image, given stewardship authority.",
+    "Catholic": "The solemn divine counsel ('Let us make...') precedes the creation of humanity in the divine image and likeness, endowed with dominion.",
+    "Methodist": "The unique status of humanity, created reflect God and exercise responsible authority over creation.",
+    "Lutheran": "Humanity created uniquely in God's image, distinct from animals, given ruling authority.",
+    "Presbyterian": "The creation of humanity in God's image as His covenant representatives, tasked with exercising dominion.",
+    "Pentecostal": "Humanity created as spiritual beings reflecting God's nature, given authority.",
+    "Anglican": "The climax: God's decision (note the plural 'us') to create humanity in His image and likeness, granting dominion.",
+    "Orthodox": "The divine counsel ('Let us...') precedes the creation of man in God's image (reflecting inherent capacities) and likeness (potential for divine conformity), given dominion."
   },
   "27": {
     "Non-Denominational": "God creates humanity in His divine image, uniquely reflecting aspects of His nature. He creates them male and female, establishing the foundation for human society.",
-    "General": "God creates humanity in His divine image, uniquely reflecting aspects of His nature. He creates them male and female, establishing the foundation for human society."
+    "General": "God creates humanity in His divine image, uniquely reflecting aspects of His nature. He creates them male and female, establishing the foundation for human society.",
+    "Baptist": "Affirms the reality of the 'imago Dei' in both male and female, foundational for equality and complementarity.",
+    "Catholic": "Humanity, created male and female, fully bears the divine image, establishing the basis for human dignity and complementarity.",
+    "Methodist": "God creates humanity, both male and female, reflecting His image and establishing relationality.",
+    "Lutheran": "Humanity, male and female, created in God's image, reflecting original righteousness (lost in Fall).",
+    "Presbyterian": "God creates humanity, male and female, together constituting the image of God.",
+    "Pentecostal": "God creates male and female in His image, establishing gender distinction from the beginning.",
+    "Anglican": "God creates humanity ('adam') in His image, specifying this includes both male and female.",
+    "Orthodox": "God creates the human being ('anthropos') in His image, manifesting as male and female."
   },
   "28": {
     "Non-Denominational": "God blesses humankind and gives them the mandate to be fruitful, multiply, fill the earth, subdue it, and exercise responsible rule over all living creatures.",
-    "General": "God blesses humankind and gives them the mandate to be fruitful, multiply, fill the earth, subdue it, and exercise responsible rule over all living creatures."
+    "General": "God blesses humankind and gives them the mandate to be fruitful, multiply, fill the earth, subdue it, and exercise responsible rule over all living creatures.",
+    "Baptist": "The cultural mandate: God blesses humanity and commissions them to populate, manage, and rule the earth.",
+    "Catholic": "God bestows His blessing and confers the responsibilities of procreation, stewardship ('subdue'), and dominion over creation.",
+    "Methodist": "God blesses humanity with fruitfulness and gives them the task of responsible stewardship over the earth.",
+    "Lutheran": "God blesses humanity with procreation and dominion over the creation.",
+    "Presbyterian": "The creation mandate/blessing: God commands humanity to fill, subdue, and rule the earth as His vice-regents.",
+    "Pentecostal": "God releases His blessing and delegates authority to humanity over the earth.",
+    "Anglican": "God blesses humanity and gives them the mandate to procreate, populate, manage ('subdue'), and exercise dominion.",
+    "Orthodox": "God blesses humanity, commanding them to multiply and to exercise loving, responsible dominion (not exploitation) over creation."
   },
   "29": {
     "Non-Denominational": "God designates seed-bearing plants and fruit from trees as food for humanity, providing for their sustenance.",
-    "General": "God designates seed-bearing plants and fruit from trees as food for humanity, providing for their sustenance."
+    "General": "God designates seed-bearing plants and fruit from trees as food for humanity, providing for their sustenance.",
+    "Baptist": "God provides vegetarian sustenance for humanity in the original creation.",
+    "Catholic": "God provides for humanity's needs, originally designating plants as their food source.",
+    "Methodist": "God graciously provides food appropriate for humanity's original state.",
+    "Lutheran": "God provides plants as the original food source for humans.",
+    "Presbyterian": "God provides vegetation as the food source for humanity in the initial creation order.",
+    "Pentecostal": "God's provision for humanity's physical needs is established.",
+    "Anglican": "God designates a vegetarian diet for humanity in the beginning.",
+    "Orthodox": "God provides plant-based food for humanity in the original, unfallen creation."
   },
   "30": {
     "Non-Denominational": "God designates all green plants as food for all the land animals and birds, providing for their sustenance as well.",
-    "General": "God designates all green plants as food for all the land animals and birds, providing for their sustenance as well."
+    "General": "God designates all green plants as food for all the land animals and birds, providing for their sustenance as well.",
+    "Baptist": "Establishes the original vegetarian diet for animals as well.",
+    "Catholic": "God also provides plants as the food source for animals in the original creation.",
+    "Methodist": "God's provision extends to the animal kingdom.",
+    "Lutheran": "God provides plants as the original food source for animals.",
+    "Presbyterian": "God provides vegetation as the food source for animals in the initial creation order.",
+    "Pentecostal": "God's provision extends to all living creatures.",
+    "Anglican": "God designates plants as the food source for animals as well.",
+    "Orthodox": "God provides plant-based food for the animals, indicating original harmony."
   },
   "31": {
     "Non-Denominational": "God reviews all He has made and declares it 'very good,' signifying the perfection, completion, and harmony of His entire creation. This marks the end of the sixth creative 'day'.",
-    "General": "God reviews all He has made and declares it 'very good,' signifying the perfection, completion, and harmony of His entire creation. This marks the end of the sixth creative 'day'."
+    "General": "God reviews all He has made and declares it 'very good,' signifying the perfection, completion, and harmony of His entire creation. This marks the end of the sixth creative 'day'.",
+    "Baptist": "The emphatic conclusion: God's completed creation was perfect, without flaw, concluding the sixth literal day.",
+    "Catholic": "God's final assessment ('very good') declares the perfection, beauty, and integrity of the whole created order, culminating the work of the sixth stage.",
+    "Methodist": "God affirms the absolute goodness and completeness of His entire creation before rest.",
+    "Lutheran": "God declares the totality of His creation 'very good,' reflecting its original perfection. Concludes the sixth phase.",
+    "Presbyterian": "God's final evaluation: the entire creation system, including humanity, is 'very good,' perfectly achieving His purposes. Concludes the sixth 'day'/phase.",
+    "Pentecostal": "God's ultimate satisfaction with His perfect, harmonious creation. Concludes the sixth day.",
+    "Anglican": "God surveys the entirety of creation and declares it 'very good', signifying its completion, perfection, and harmony. Marks the end of the sixth 'day'.",
+    "Orthodox": "God affirms the whole creation as 'lian kalos' (exceedingly good/beautiful), signifying its perfection and harmony. Concludes the sixth phase."
   }
 } 

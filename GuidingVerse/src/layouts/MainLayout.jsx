@@ -240,6 +240,9 @@ function MainLayout() {
 
         <div className={styles.footerBottom}>
           <p className={styles.copyright}>&copy; {new Date().getFullYear()} GuidingVerse. All rights reserved.</p>
+          <p className={styles.attribution}>
+            <a target="_blank" href="https://icons8.com/icon/m2PjufwRQ03T/holy-bible" rel="noopener noreferrer">Bible</a> icon by <a target="_blank" href="https://icons8.com" rel="noopener noreferrer">Icons8</a>
+          </p>
         </div>
       </footer>
     </div>

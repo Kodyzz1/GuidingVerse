@@ -11,6 +11,13 @@ function PassageSelector({ onPassageChange, initialBook = BIBLE_BOOKS[0], initia
   const [selectedBook, setSelectedBook] = useState(initialBook);
   const [selectedChapter, setSelectedChapter] = useState(String(initialChapter));
 
+  // --- Effect to Sync with Props --- //
+  // Update internal state if initial props change (e.g., from history navigation)
+  useEffect(() => {
+    setSelectedBook(initialBook);
+    setSelectedChapter(String(initialChapter));
+  }, [initialBook, initialChapter]); // Re-run effect if these props change
+
   // --- Handlers ---
   const handleBookChange = (event) => {
     const newBook = event.target.value;
