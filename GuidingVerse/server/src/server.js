@@ -1,6 +1,8 @@
 // --- Imports ---
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import bibleRoutes from './routes/bibleRoutes.js';
 import searchRoutes from './routes/searchRoutes.js';
 // Use standard static import for the router
@@ -11,6 +13,10 @@ import 'dotenv/config'; // Ensure .env is loaded early (if not already by db.js)
 
 // --- Connect to Database --- //
 connectDB(); // Call the connection function
+
+// --- Get __dirname equivalent ---
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // --- Configuration ---
 const PORT = process.env.PORT || 3000;
@@ -29,9 +35,17 @@ app.use('/api/bible', bibleRoutes);
 app.use('/api/search', searchRoutes);
 app.use('/api/interpret', interpretationRoutes); // Use the imported router directly
 
-// --- Basic Root Route ---
-app.get('/', (req, res) => {
-  res.send('GuidingVerse API is running!');
+// --- Serve Static Frontend Files (for Production) ---
+// Determine the correct path to the 'public' directory relative to the built 'dist' folder
+// When running the built code from 'dist/server.js', __dirname will be 'dist'
+const publicPath = path.join(__dirname, '..', 'public');
+app.use(express.static(publicPath));
+
+// --- Catch-all for client-side routing ---
+// This needs to be after API routes but before 404/error handlers
+app.get('*', (req, res) => {
+    // Send 'index.html' from the 'public' directory for any other GET request
+    res.sendFile(path.resolve(publicPath, 'index.html'));
 });
 
 // --- Error Handling Middleware ---

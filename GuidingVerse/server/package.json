@@ -2,37 +2,44 @@
   "name": "guidingverse-server",
   "version": "1.0.0",
   "description": "Server for GuidingVerse Bible application",
-  "main": "src/index.js",
+  "main": "dist/server.js",
+  "type": "module",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.js",
     "test": "jest",
     "lint": "eslint .",
-    "build": "babel src -d dist",
-    "start:prod": "NODE_ENV=production node dist/index.js",
-    "postinstall": "npm run build"
+    "build:client": "cd ../ && npm run build",
+    "clean:server": "rimraf dist public",
+    "copy:client": "copyfiles -u 1 ../dist/**/* public/",
+    "build:server": "babel src -d dist --copy-files",
+    "build": "npm run clean:server && npm run build:client && npm run copy:client && npm run build:server",
+    "start:prod": "NODE_ENV=production node dist/server.js",
+    "postinstall": "echo \"Skipping postinstall build during deployment\""
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "express-rate-limit": "^5.5.0",
-    "helmet": "^4.6.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.3",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^6.0.12",
-    "winston": "^3.3.3"
+    "mongoose": "^8.2.0",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.0",
-    "eslint": "^8.1.0",
-    "jest": "^27.3.1",
-    "nodemon": "^2.0.14"
+    "@babel/cli": "^7.24.0",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "rimraf": "^5.0.0",
+    "copyfiles": "^2.4.1"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=22.0.0"
   }
 }
