@@ -19,3 +19,7 @@ Thumbs.db
 
 # Add any other backend-specific files or directories to ignore
 # (e.g., build output if you use TypeScript and compile)
+
+# Build output
+/dist
+/public
