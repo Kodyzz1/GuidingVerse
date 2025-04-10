@@ -1,7 +1,7 @@
 import 'dotenv/config'; // Load .env variables FIRST (might not be needed anymore, but safe to keep)
 // --- Imports ---
 import express from 'express';
-import fs from 'fs'; // Node.js file system module
+import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url'; // To resolve __dirname in ES Modules
 
@@ -35,23 +35,11 @@ function getChapterInterpretations(book, chapter) {
   console.log(`Loading interpretation from file: ${filePath}`);
   
   try {
-    if (fs.existsSync(filePath)) {
-      const rawData = fs.readFileSync(filePath, 'utf-8');
-      try {
-        const chapterData = JSON.parse(rawData);
-        chapterCache[cacheKey] = chapterData; // Store in cache
-        console.log(`Successfully loaded and cached interpretation data for: ${book} ${chapter}`);
-        return chapterData;
-      } catch (parseError) {
-        console.error(`Error parsing JSON for ${book} ${chapter}:`, parseError);
-        delete chapterCache[cacheKey]; // Remove failed parse from cache
-        return null;
-      }
-    } else {
-      console.warn(`Interpretation file not found: ${filePath}`);
-      chapterCache[cacheKey] = null; // Cache the fact that it wasn't found
-      return null;
-    }
+    const fileContent = await fs.readFile(filePath, 'utf-8');
+    const chapterData = JSON.parse(fileContent);
+    chapterCache[cacheKey] = chapterData; // Store in cache
+    console.log(`Successfully loaded and cached interpretation data for: ${book} ${chapter}`);
+    return chapterData;
   } catch (error) {
     console.error(`Error accessing interpretation file: ${filePath}`, error);
     delete chapterCache[cacheKey]; // Remove error state from cache
