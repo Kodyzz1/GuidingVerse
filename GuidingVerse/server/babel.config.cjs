@@ -6,6 +6,7 @@ module.exports = {
         targets: {
           node: '22',
         },
+        modules: false,
       },
     ],
   ],
