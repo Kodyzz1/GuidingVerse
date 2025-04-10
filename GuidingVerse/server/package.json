@@ -9,7 +9,7 @@
     "dev": "nodemon src/server.js",
     "test": "jest",
     "lint": "eslint .",
-    "build:client": "cd ../ && npm run build",
+    "build:client": "cd ../ && npm install && npm run build",
     "clean:server": "npx rimraf dist public",
     "copy:client": "copyfiles -u 1 ../dist/**/* public/",
     "build:server": "babel src -d dist --copy-files",
