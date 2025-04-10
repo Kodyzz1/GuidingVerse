@@ -11,9 +11,9 @@
     "lint": "eslint .",
     "build:client": "cd ../ && npm install --include=dev && npm run build",
     "clean:server": "npx rimraf dist public",
-    "copy:client": "npx copyfiles -u 1 -V ../dist/**/* public/",
+    "copy:client": "npx copyfiles -V ../dist/** public/",
     "build:server": "npx babel src -d dist --copy-files",
-    "build": "npm run clean:server && npm run build:client && npm run copy:client && npm run build:server",
+    "build": "npm run clean:server && npm run build:client && npm run copy:client && echo '--- Contents of server/public after copy: ---' && ls -la public && echo '--- End of public contents ---' && npm run build:server",
     "start:prod": "NODE_ENV=production node dist/server.js",
     "postinstall": "echo \"Skipping postinstall build during deployment\""
   },
