@@ -8,6 +8,7 @@ import {
   useCallback
 } from 'react';
 import PropTypes from 'prop-types';
+import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 
 // --- Context Creation ---
 const AuthContext = createContext(null);
@@ -150,11 +151,10 @@ export function AuthProvider({ children }) {
   }), [user, isAuthenticated, isLoading, login, signup, logout]);
 
   // --- Provider JSX ---
-  // Render children only after initial loading check is complete
   return (
     <AuthContext.Provider value={value}>
       {isLoading ? (
-        <div>Loading Application...</div> // Optional: Replace with a loading component
+        <LoadingScreen />
       ) : (
         children
       )}

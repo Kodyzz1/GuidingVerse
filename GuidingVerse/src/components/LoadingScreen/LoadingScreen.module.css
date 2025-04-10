@@ -1,0 +1,33 @@
+.loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--surface-background);
+  z-index: 9999;
+}
+
+.verseContainer {
+  margin-top: 2rem;
+  text-align: center;
+  max-width: 600px;
+  padding: 0 1rem;
+}
+
+.reference {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-style: italic;
+  line-height: 1.4;
+} 
