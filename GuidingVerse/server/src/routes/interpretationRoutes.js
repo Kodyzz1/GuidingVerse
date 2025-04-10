@@ -3,12 +3,10 @@ import 'dotenv/config'; // Load .env variables FIRST (might not be needed anymor
 import express from 'express';
 import fs from 'fs/promises';
 import path from 'path';
-import { fileURLToPath } from 'url'; // To resolve __dirname in ES Modules
 
-// --- Determine Directory Path --- //
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const interpretationsBasePath = path.join(__dirname, '../data/interpretations');
+// Get the root directory and construct the path to interpretations data
+const rootDir = process.cwd();
+const interpretationsBasePath = path.join(rootDir, 'src', 'data', 'interpretations');
 
 // --- Helper Function to Load Chapter Data --- //
 // Cache loaded chapters to avoid repeated file reads
@@ -18,7 +16,7 @@ function clearChapterCache() {
   Object.keys(chapterCache).forEach(key => delete chapterCache[key]);
 }
 
-function getChapterInterpretations(book, chapter) {
+async function getChapterInterpretations(book, chapter) {
   const cacheKey = `${book}-${chapter}`;
   
   // Clear cache if it gets too large (optional)
@@ -51,7 +49,7 @@ function getChapterInterpretations(book, chapter) {
 const router = express.Router();
 
 // --- Route for Chapter Summary (GET /chapter/:book/:chapter?denomination=...) --- //
-router.get('/chapter/:book/:chapter', (req, res) => {
+router.get('/chapter/:book/:chapter', async (req, res) => {
   const { book, chapter } = req.params;
   const denomination = req.query.denomination;
   console.log('Received chapter summary request:', { book, chapter, denomination });
@@ -61,7 +59,7 @@ router.get('/chapter/:book/:chapter', (req, res) => {
   }
 
   try {
-    const chapterData = getChapterInterpretations(book, chapter); // Reuse existing helper
+    const chapterData = await getChapterInterpretations(book, chapter);
 
     if (chapterData && chapterData.chapterSummary) { // Look for "chapterSummary" key
       const summaryInterpretations = chapterData.chapterSummary;
@@ -101,7 +99,7 @@ router.get('/chapter/:book/:chapter', (req, res) => {
 });
 
 // --- Route for Book Summary (GET /book/:book?denomination=...) --- //
-router.get('/book/:book', (req, res) => {
+router.get('/book/:book', async (req, res) => {
   const { book } = req.params;
   const denomination = req.query.denomination;
   console.log('Received book summary request:', { book, denomination });
@@ -112,38 +110,33 @@ router.get('/book/:book', (req, res) => {
 
   const filePath = path.join(interpretationsBasePath, book, `_bookSummary.json`);
   try {
-    if (fs.existsSync(filePath)) {
-      const rawData = fs.readFileSync(filePath, 'utf-8');
-      const bookSummaryData = JSON.parse(rawData);
+    const fileContent = await fs.readFile(filePath, 'utf-8');
+    const bookSummaryData = JSON.parse(fileContent);
 
-      let interpretationText = null;
-      let sourceDenomination = null;
+    let interpretationText = null;
+    let sourceDenomination = null;
 
-      // Apply denomination fallback logic
-      if (denomination && denomination !== 'Prefer not to say' && bookSummaryData[denomination]) {
-        interpretationText = bookSummaryData[denomination];
-        sourceDenomination = denomination;
-      } else if (bookSummaryData["General"]) {
-        interpretationText = bookSummaryData["General"];
-        sourceDenomination = "General";
-      }
+    // Apply denomination fallback logic
+    if (denomination && denomination !== 'Prefer not to say' && bookSummaryData[denomination]) {
+      interpretationText = bookSummaryData[denomination];
+      sourceDenomination = denomination;
+    } else if (bookSummaryData["General"]) {
+      interpretationText = bookSummaryData["General"];
+      sourceDenomination = "General";
+    }
 
-      if (interpretationText !== null) {
-        console.log(`Found book summary for: ${book} (Denomination: ${sourceDenomination})`);
-        res.json({ 
-          reference: `${book} (Book Summary)`, 
-          interpretation: interpretationText, 
-          source: 'static',
-          type: 'book', // Indicate type
-          sourceDenomination: sourceDenomination
-        });
-      } else {
-         console.log(`No suitable book summary (Specific or General) found for: ${book}`);
-         res.status(404).json({ message: `No suitable book summary found for ${book}.` });
-      }
+    if (interpretationText !== null) {
+      console.log(`Found book summary for: ${book} (Denomination: ${sourceDenomination})`);
+      res.json({ 
+        reference: `${book} (Book Summary)`, 
+        interpretation: interpretationText, 
+        source: 'static',
+        type: 'book', // Indicate type
+        sourceDenomination: sourceDenomination
+      });
     } else {
-      console.log(`Book summary file not found: ${filePath}`);
-      res.status(404).json({ message: `No book summary data found for ${book}.` });
+       console.log(`No suitable book summary (Specific or General) found for: ${book}`);
+       res.status(404).json({ message: `No suitable book summary found for ${book}.` });
     }
   } catch (error) {
     console.error(`Error loading or parsing book summary file: ${filePath}`, error);
@@ -152,7 +145,7 @@ router.get('/book/:book', (req, res) => {
 });
 
 // --- Route for Specific Verse (GET /:reference?denomination=...) --- //
-router.get('/:reference', (req, res) => {
+router.get('/:reference', async (req, res) => {
   // --- Request Info --- //
   const rawReference = req.params.reference; // e.g., "Genesis 1:2" or "John 3:16-17"
   const denomination = req.query.denomination;
@@ -180,7 +173,7 @@ router.get('/:reference', (req, res) => {
   // --- Data Lookup Logic ---
   try {
     console.log('Attempting to load chapter data for:', { book, chapter });
-    const chapterData = getChapterInterpretations(book, chapter);
+    const chapterData = await getChapterInterpretations(book, chapter);
 
     if (chapterData) {
       console.log('Found chapter data, looking for verse:', verse);
