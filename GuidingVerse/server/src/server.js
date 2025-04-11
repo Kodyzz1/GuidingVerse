@@ -61,9 +61,15 @@ app.use('/api/interpret', interpretationRoutes);
 // --- Serve Static Frontend Files (for Production) ---
 const rootDir = process.cwd();
 const publicPath = path.join(rootDir, 'public');
+const assetsPath = path.join(publicPath, 'assets');
+
+// Serve static files from the 'assets' subdirectory
+app.use('/assets', express.static(assetsPath));
+
+// Serve other static files (like index.html, favicon.ico) from the root of 'public'
 app.use(express.static(publicPath));
 
-// --- Catch-all for client-side routing ---
+// --- Catch-all for client-side routing (MUST be AFTER static files) ---
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(publicPath, 'index.html'));
 });
