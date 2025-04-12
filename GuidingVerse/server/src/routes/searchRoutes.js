@@ -2,13 +2,16 @@
 import express from 'express';
 import path from 'path';
 import fs from 'fs/promises';
+import { fileURLToPath } from 'url';
 
 // --- Router Setup ---
 const router = express.Router();
 
 // --- Constants & Helpers ---
-const rootDir = process.cwd();
-const bibleDataPath = path.join(rootDir, 'src', 'data', 'BibleJSON', 'JSON');
+const currentFileUrl = import.meta.url;
+const currentFilePath = fileURLToPath(currentFileUrl);
+const currentDir = path.dirname(currentFilePath);
+const bibleDataPath = path.resolve(currentDir, '../data/BibleJSON/JSON');
 
 // --- Route Definition (GET /) ---
 router.get('/', async (req, res) => {

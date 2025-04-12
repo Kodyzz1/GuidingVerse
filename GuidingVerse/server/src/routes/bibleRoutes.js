@@ -2,13 +2,17 @@
 import express from 'express';
 import path from 'path';
 import fs from 'fs/promises';
+import { fileURLToPath } from 'url';
 
 // --- Router Setup ---
 const router = express.Router();
 
-// Get the root directory and construct the path to Bible data
-const rootDir = process.cwd();
-const bibleDataPath = path.join(rootDir, 'src', 'data', 'BibleJSON', 'JSON');
+// Get the directory name using import.meta.url
+const currentFileUrl = import.meta.url;
+const currentFilePath = fileURLToPath(currentFileUrl);
+const currentDir = path.dirname(currentFilePath);
+// Path relative to the current file in dist (dist/routes -> dist)
+const bibleDataPath = path.resolve(currentDir, '../data/BibleJSON/JSON');
 
 // --- Route Definition (GET /kjv/:book/:chapter) ---
 router.get('/kjv/:book/:chapter', async (req, res) => {
@@ -19,6 +23,7 @@ router.get('/kjv/:book/:chapter', async (req, res) => {
   }
 
   try {
+    // Construct the correct path relative to the built file
     const filePath = path.join(bibleDataPath, book, `${chapter}.json`);
     const fileContent = await fs.readFile(filePath, 'utf-8');
     const jsonData = JSON.parse(fileContent);

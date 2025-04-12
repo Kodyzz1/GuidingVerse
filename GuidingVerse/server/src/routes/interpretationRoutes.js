@@ -3,10 +3,14 @@ import 'dotenv/config'; // Load .env variables FIRST (might not be needed anymor
 import express from 'express';
 import fs from 'fs/promises';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Get the root directory and construct the path to interpretations data
-const rootDir = process.cwd();
-const interpretationsBasePath = path.join(rootDir, 'src', 'data', 'interpretations');
+// Get the directory name using import.meta.url
+const currentFileUrl = import.meta.url;
+const currentFilePath = fileURLToPath(currentFileUrl);
+const currentDir = path.dirname(currentFilePath);
+// Path relative to the current file in dist (dist/routes -> dist)
+const interpretationsBasePath = path.resolve(currentDir, '../data/interpretations');
 
 // --- Helper Function to Load Chapter Data --- //
 // Cache loaded chapters to avoid repeated file reads
