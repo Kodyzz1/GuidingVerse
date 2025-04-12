@@ -8,7 +8,6 @@ import {
   useCallback
 } from 'react';
 import PropTypes from 'prop-types';
-import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 
 // --- Context Creation ---
 const AuthContext = createContext(null);
@@ -154,7 +153,7 @@ export function AuthProvider({ children }) {
   return (
     <AuthContext.Provider value={value}>
       {isLoading ? (
-        <LoadingScreen />
+        null
       ) : (
         children
       )}
