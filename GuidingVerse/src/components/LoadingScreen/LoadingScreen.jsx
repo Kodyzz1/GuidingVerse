@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import styles from './LoadingScreen.module.css';

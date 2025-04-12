@@ -11,6 +11,7 @@ const router = express.Router();
 const currentFileUrl = import.meta.url;
 const currentFilePath = fileURLToPath(currentFileUrl);
 const currentDir = path.dirname(currentFilePath);
+console.log(`[bibleRoutes] Current directory (currentDir): ${currentDir}`); // Log currentDir
 // Path relative to the current file in dist (dist/routes -> dist/data)
 const bibleDataPath = path.resolve(currentDir, '../data/BibleJSON/JSON');
 console.log(`[bibleRoutes] Base data path calculated: ${bibleDataPath}`); // Log base path
