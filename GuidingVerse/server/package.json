@@ -13,8 +13,8 @@
     "clean:server": "npx rimraf dist public",
     "copy:client": "cp -r ../dist/* public/",
     "build:server": "npx babel src -d dist --copy-files",
-    "copy:data": "cp -r data dist/data",
-    "build": "npm run clean:server && mkdir public && npm run build:client && npm run copy:client && npm run build:server && npm run copy:data && echo '--- Contents of dist/data after copy: ---' && ls -Rla dist/data && echo '--- End of data diagnostics ---'",
+    "copy:data": "cp -r data/* dist/data/",
+    "build": "npm run clean:server && mkdir public && npm run build:client && npm run copy:client && npm run build:server && npm run copy:data",
     "start:prod": "NODE_ENV=production node dist/server.js",
     "postinstall": "echo \"Skipping postinstall build during deployment\""
   },
