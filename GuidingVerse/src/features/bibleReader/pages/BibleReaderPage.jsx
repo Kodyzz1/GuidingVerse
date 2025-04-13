@@ -64,6 +64,8 @@ function BibleReaderPage() {
 
   // Update URL and reading history when passage changes
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     setSearchParams({ book: selectedPassage.book, chapter: selectedPassage.chapter });
 
     if (isAuthenticated && selectedPassage.book && selectedPassage.chapter) {
@@ -266,7 +268,9 @@ function BibleReaderPage() {
         <div className={styles.textDisplayContainer}>
           <BibleTextDisplay 
             passage={selectedPassage} 
-            key={`${selectedPassage.book}-${selectedPassage.chapter}`}
+            fontSize={settings.fontSize}
+            lineSpacing={settings.lineSpacing}
+            showVerseNumbers={settings.showVerseNumbers}
           />
         </div>
       </div>

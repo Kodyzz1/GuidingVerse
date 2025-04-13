@@ -19,12 +19,12 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      // Proxy requests starting with /api to your backend server
+      // Proxy API requests to the backend server
       '/api': {
-        target: 'http://localhost:3000', // Point to backend port 3000
-        changeOrigin: true, // Recommended for virtual hosted sites
-        // secure: false, // Uncomment if backend is http and you have issues
-        // rewrite: (path) => path.replace(/^\/api/, ''), // Uncomment if your backend *doesn't* expect /api prefix
+        target: 'http://localhost:3000', // Your local backend port
+        changeOrigin: true,
+        secure: false,      // Often needed for localhost development
+        // rewrite: (path) => path.replace(/^\/api/, ''), // Uncomment if your backend routes don't start with /api
       }
     }
   }

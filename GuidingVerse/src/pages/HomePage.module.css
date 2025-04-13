@@ -4,323 +4,397 @@
  */
 
 /* ===================
-   GENERAL CONTAINER
+   GENERAL CONTAINER & BASE
    =================== */
-   .home-container {
-    max-width: 1200px;
+   .homeContainer {
+    max-width: 1100px; /* Slightly wider */
     margin: 0 auto;
     padding: 0 1rem;
+    overflow-x: hidden; /* Prevent horizontal scroll */
   }
-  
-  /* ===================
-     SECTION STYLING
-     =================== */
+
+  /* Standardize section padding */
   section {
-    margin: 4rem 0;
-    padding: 1rem 0;
+    margin: 3rem 0; /* Consistent vertical margin */
+    padding: 3rem 1rem; /* Consistent vertical padding, keep horizontal */
+  }
+
+  /* Optional: Alternate section backgrounds */
+  section:nth-child(odd) {
+    background-color: var(--surface-ground); /* Use a subtle background if defined */
+  }
+
+  .sectionTitle {
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
+    margin-bottom: 2rem; /* Increased spacing */
+    color: var(--heading-color, var(--text-color)); /* Use heading color if defined */
+    font-weight: 600;
   }
   
-  .section-title {
+  .sectionSubtitle {
     text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-color);
-  }
-  
-  .section-subtitle {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    max-width: 700px;
+    font-size: clamp(1rem, 3vw, 1.2rem); /* Responsive font size */
+    margin-bottom: 2.5rem; /* Increased spacing */
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
-    color: var(--text-color);
-    opacity: 0.8;
+    color: var(--muted-foreground, var(--text-color)); /* Use muted color if defined */
+    opacity: 0.9;
+    line-height: 1.6;
   }
-  
-  /* ===================
-     HERO SECTION
-     =================== */
-  .hero-section {
+
+/* ===================
+   HERO SECTION
+   =================== */
+  .heroSection {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin-top: 2rem;
     text-align: center;
+    padding: 4rem 1rem; /* More padding */
+    margin: 0; /* Remove default section margin */
+    background: none; /* Override alternating background */
   }
   
-  .hero-content {
-    max-width: 800px;
+  .heroContent {
+    max-width: 750px;
   }
   
-  .hero-section h1 {
-    font-size: 2.75rem;
+  .heroSection h1 {
+    font-size: clamp(2.2rem, 7vw, 3.5rem); /* Responsive H1 */
     line-height: 1.2;
-    margin-bottom: 1.5rem;
-    color: var(--text-color);
+    margin-bottom: 1rem;
+    color: var(--heading-color, var(--text-color));
+    font-weight: 700;
   }
   
-  .hero-subtitle {
-    font-size: 1.25rem;
+  .heroSubtitle {
+    font-size: clamp(1.1rem, 3vw, 1.3rem); /* Responsive subtitle */
     margin-bottom: 2rem;
-    color: var(--text-color);
+    color: var(--muted-foreground, var(--text-color));
     opacity: 0.9;
   }
   
-  .hero-buttons {
+  .heroButtons {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     justify-content: center;
     margin-top: 2rem;
+    align-items: center; /* Center buttons vertically */
+  }
+
+  /* Refine Button Styles (assuming base styles exist in index.css or similar) */
+  .primaryButton, .secondaryButton {
+    padding: 0.8rem 1.8rem; 
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-block; 
+    min-width: 150px; /* Give buttons minimum width */
+    text-align: center;
+  }
+
+  .primaryButton {
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+  }
+
+  .primaryButton:hover {
+    background-color: var(--primary-hover-color, #0056b3); /* Add hover state */
+    transform: translateY(-2px);
+  }
+
+  .secondaryButton {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+  }
+
+  .secondaryButton:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.1); /* Subtle background on hover */
+    transform: translateY(-2px);
   }
   
-  .hero-image {
+  .heroImage {
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 450px; /* Adjust size */
+    margin-top: 2rem; /* Add space above image */
   }
   
-  .image-placeholder {
-    background-color: var(--surface-background);
-    color: var(--text-color);
-    padding: 8rem 2rem;
+  .imagePlaceholder {
+    background-color: var(--surface-ground);
+    border: 1px dashed var(--border-color);
+    color: var(--muted-foreground);
+    padding: 6rem 2rem;
     text-align: center;
     border-radius: 8px;
     opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px; /* Ensure it has some height */
   }
-  
-  /* ===================
-     FEATURES SECTION
-     =================== */
-  .features-grid {
+
+/* ===================
+   FEATURES SECTION
+   =================== */
+  .featuresSection { /* Add specific class if needed */
+     background-color: var(--surface-background); /* Example background */
+  }
+
+  .featuresGrid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
     gap: 2rem;
     margin-top: 3rem;
   }
   
-  .feature-card {
-    background-color: var(--surface-background);
+  .featureCard {
+    background-color: var(--card-background, var(--surface-background));
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .feature-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .feature-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .feature-card h3 {
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-    font-size: 1.3rem;
-  }
-  
-  /* ===================
-     TESTIMONIALS SECTION
-     =================== */
-  .testimonials-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-  
-  .testimonial-card {
-    background-color: var(--surface-background);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    position: relative;
-  }
-  
-  .testimonial-card::before {
-    content: "";
-    position: absolute;
-    top: 0.5rem;
-    left: 1rem;
-    font-size: 4rem;
-    color: var(--primary-color);
-    opacity: 0.2;
-    line-height: 1;
-  }
-  
-  .testimonial-text {
-    font-style: italic;
-    margin-bottom: 1rem;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .testimonial-author {
-    text-align: right;
-    font-weight: bold;
-    color: var(--primary-color);
-  }
-  
-  /* ===================
-     SCRIPTURE SECTION
-     =================== */
-  .scripture-section {
-    text-align: center;
-  }
-  
-  .scripture-card {
-    background-color: var(--surface-background);
-    padding: 3rem 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    margin: 0 auto;
-    max-width: 800px;
-  }
-  
-  .scripture-text {
-    font-size: 1.4rem;
-    font-style: italic;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-  
-  .scripture-reference {
-    font-weight: bold;
-    color: var(--primary-color);
-  }
-  
-  /* ===================
-     GETTING STARTED SECTION
-     =================== */
-  .steps-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 3rem 0;
-  }
-  
-  .step-item {
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
   
-  .step-number {
+  .featureCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  .featureIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    line-height: 1;
+  }
+  
+  .featureCard h3 {
+    margin-bottom: 0.75rem;
+    color: var(--heading-color, var(--text-color));
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .featureCard p {
+     color: var(--muted-foreground, var(--text-color));
+     font-size: 0.95rem;
+     line-height: 1.6;
+  }
+  
+/* ===================
+   SCRIPTURE SECTION
+   =================== */
+  .scriptureSection {
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover-color) 100%); /* Example gradient */
+    color: white;
+    padding: 4rem 1rem;
+    border-radius: 8px;
+  }
+  
+  .scriptureSection .sectionTitle {
+     color: white; /* Title color on dark background */
+     margin-bottom: 2rem;
+  }
+
+  .scriptureCard {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle card background */
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
+    margin: 0 auto;
+    max-width: 700px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .scriptureText {
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+  }
+  
+  .scriptureReference {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  
+/* ===================
+   GETTING STARTED SECTION
+   =================== */
+  .gettingStartedSection {
+     background-color: var(--surface-ground); /* Example */
+  }
+
+  .stepsContainer {
+    display: grid; /* Use grid for better alignment */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    align-items: start; /* Align items at the top */
+  }
+  
+  .stepItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .stepNumber {
     background-color: var(--primary-color);
     color: white;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    flex-shrink: 0; /* Prevent shrinking */
   }
   
-  .step-item h3 {
+  .stepItem h3 {
     margin-bottom: 0.5rem;
-    color: var(--text-color);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--heading-color, var(--text-color));
+  }
+
+  .stepItem p {
+     color: var(--muted-foreground, var(--text-color));
+     font-size: 0.9rem;
+     line-height: 1.5;
   }
   
-  .cta-container {
+  .ctaContainer {
     text-align: center;
-    margin: 3rem 0;
+    margin-top: 3rem; /* Adjust spacing */
   }
   
-  .primary-button.large {
-    padding: 1rem 2.5rem;
-    font-size: 1.2rem;
+  .primaryButton.large {
+    padding: 0.9rem 2.2rem;
+    font-size: 1.1rem;
   }
   
-  /* ===================
-     COMING SOON SECTION
-     =================== */
-  .coming-soon-grid {
+/* ===================
+   COMING SOON SECTION
+   =================== */
+   .comingSoonSection {
+     background-color: var(--surface-background);
+   }
+
+  .comingSoonGrid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
   }
   
-  .coming-soon-card {
-    background-color: var(--surface-background);
+  .comingSoonCard {
+    background-color: var(--card-background, var(--surface-background));
     padding: 1.5rem;
     border-radius: 8px;
+    border: 1px solid var(--border-color);
     text-align: center;
-    border: 1px dashed var(--border-color);
+    opacity: 0.8; /* Indicate they are future features */
   }
   
-  .coming-soon-card h3 {
+  .comingSoonCard h3 {
     margin-bottom: 0.5rem;
     color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .comingSoonCard p {
+    color: var(--muted-foreground, var(--text-color));
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
   
-  /* ===================
-     RESPONSIVE STYLING
-     =================== */
+/* ===================
+   RESPONSIVE ADJUSTMENTS
+   =================== */
+
   @media (min-width: 576px) {
-    .hero-buttons {
-      flex-direction: row;
-      justify-content: center;
+    .heroButtons {
+      flex-direction: row; /* Buttons side-by-side on larger screens */
+    }
+    .primaryButton.large {
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
     }
   }
-  
+
   @media (min-width: 768px) {
-    .hero-section {
-      flex-direction: row;
+    section {
+       margin: 4rem 0; /* Increase margin */
+       padding: 4rem 1rem;
+    }
+    .heroSection {
+      flex-direction: row; /* Content and image side-by-side */
       text-align: left;
-      justify-content: space-between;
-      align-items: center;
       gap: 3rem;
+      padding: 5rem 1rem;
     }
-    
-    .hero-content {
-      flex: 1;
+    .heroContent {
+      max-width: 60%; /* Adjust content width */
     }
-    
-    .hero-image {
-      flex: 1;
+    .heroSection h1 {
+       text-align: left;
     }
-    
-    .features-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .heroSubtitle {
+       text-align: left;
+       margin-left: 0;
+       margin-right: 0;
     }
-    
-    .testimonials-container {
-      flex-direction: row;
+    .heroButtons {
+       justify-content: flex-start;
     }
-    
-    .testimonial-card {
-      flex: 1;
+    .heroImage {
+      max-width: 40%;
+      margin-top: 0;
     }
-    
-    .steps-container {
-      flex-direction: row;
-    }
-    
-    .step-item {
-      flex: 1;
-    }
-    
-    .coming-soon-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    /* .featuresGrid is already responsive */
+    /* .stepsContainer is already responsive */
+    /* .comingSoonGrid is already responsive */
   }
   
-  @media (min-width: 992px) {
-    .features-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-    
-    .coming-soon-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
+/* Remove Testimonials specific responsive rules if any existed */
+
+/* Add styles for button classes if they don't exist globally */
+/* Example:
+.primaryButton {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.secondaryButton {
+  background-color: var(--surface-background);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+*/

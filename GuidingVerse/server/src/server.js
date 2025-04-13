@@ -9,6 +9,7 @@ import bibleRoutes from './routes/bibleRoutes.js';
 import searchRoutes from './routes/searchRoutes.js';
 import interpretationRoutes from './routes/interpretationRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import verseOfTheDayRoute from './routes/verseOfTheDayRoute.js';
 import connectDB from './config/db.js';
 import { errorHandler } from './middleware/errorHandler.js';
 import { logger } from './utils/logger.js';
@@ -57,24 +58,37 @@ app.use('/api/auth', authRoutes);
 app.use('/api/bible', bibleRoutes);
 app.use('/api/search', searchRoutes);
 app.use('/api/interpret', interpretationRoutes);
+app.use('/api/verse-of-the-day', verseOfTheDayRoute);
+console.log('[Server] API routes mounted.');
 
-// --- Serve Static Frontend Files (for Production) ---
-const rootDir = process.cwd();
-const publicPath = path.join(rootDir, 'public');
-const assetsPath = path.join(publicPath, 'assets');
+// --- Production-only Static Files & Catch-all ---
+if (process.env.NODE_ENV === 'production') {
+  console.log('[Server] Production mode detected. Configuring static file serving.');
+  
+  const rootDir = process.cwd(); // Should be server/ when running from dist
+  const publicPath = path.join(rootDir, 'public');
+  const assetsPath = path.join(publicPath, 'assets');
 
-// Serve static files from the 'assets' subdirectory
-app.use('/assets', express.static(assetsPath));
+  // Serve static files from the 'assets' subdirectory
+  console.log(`[Server] Serving /assets from: ${assetsPath}`);
+  app.use('/assets', express.static(assetsPath));
 
-// Serve other static files (like index.html, favicon.ico) from the root of 'public'
-app.use(express.static(publicPath));
+  // Serve other static files (like index.html, favicon.ico) from the root of 'public'
+  console.log(`[Server] Serving static root from: ${publicPath}`);
+  app.use(express.static(publicPath));
 
-// --- Catch-all for client-side routing (MUST be AFTER static files) ---
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(publicPath, 'index.html'));
-});
+  // --- Catch-all for client-side routing (MUST be AFTER static files) ---
+  console.log('[Server] Enabling catch-all route for client-side routing.');
+  app.get('*', (req, res) => {
+    const indexPath = path.resolve(publicPath, 'index.html');
+    console.log(`[Server] Catch-all: serving ${indexPath} for ${req.originalUrl}`);
+    res.sendFile(indexPath);
+  });
+} else {
+   console.log('[Server] Development mode detected. Skipping static file serving and catch-all route.');
+}
 
-// --- Error Handling Middleware ---
+// --- Error Handling Middleware (Should be last) ---
 app.use(errorHandler);
 
 // --- Start Server ---

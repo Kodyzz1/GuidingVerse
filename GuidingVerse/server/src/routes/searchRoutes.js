@@ -11,7 +11,13 @@ const router = express.Router();
 const currentFileUrl = import.meta.url;
 const currentFilePath = fileURLToPath(currentFileUrl);
 const currentDir = path.dirname(currentFilePath);
-const bibleDataPath = path.resolve(currentDir, '../data/BibleJSON/JSON');
+
+// Determine path based on environment
+const isProduction = process.env.NODE_ENV === 'production';
+const relativeDataPath = isProduction ? '../data' : '../../data';
+const bibleDataPath = path.resolve(currentDir, relativeDataPath, 'BibleJSON/JSON');
+
+console.log(`[searchRoutes] Environment: ${process.env.NODE_ENV}, Calculated Base Path: ${bibleDataPath}`);
 
 // --- Route Definition (GET /) ---
 router.get('/', async (req, res) => {

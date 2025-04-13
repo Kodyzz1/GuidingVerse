@@ -203,13 +203,50 @@
     border: none;
     cursor: pointer;
     padding: 0;
+    position: relative;
+    transition: transform 0.3s ease;
   }
   
   .hamburgerLine {
     width: 100%;
     height: 2px;
     background-color: var(--text-color);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Styles for the button when the menu is OPEN */
+  .mobileButtonOpen .hamburgerLine:nth-child(1) {
+    transform: rotate(45deg);
+    top: 50%;
+    transform-origin: center;
+  }
+  
+  .mobileButtonOpen .hamburgerLine:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobileButtonOpen .hamburgerLine:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 50%;
+    transform-origin: center;
+  }
+  
+  /* Adjust line positioning - Example assumes lines are positioned via top/bottom or similar */
+  /* You might need to adjust these based on your exact CSS */
+  .hamburgerLine:nth-child(1) {
+    top: 25%;
+  }
+  
+  .hamburgerLine:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .hamburgerLine:nth-child(3) {
+    top: 75%;
+    transform: translateY(-100%);
   }
   
   /* Mobile navigation */

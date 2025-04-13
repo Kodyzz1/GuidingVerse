@@ -1,5 +1,5 @@
 // --- Imports ---
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import styles from './MainLayout.module.css';
@@ -11,6 +11,8 @@ function MainLayout() {
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef(null);
+  const mobileButtonRef = useRef(null);
 
   // --- Handlers & Helpers ---
   const handleLogout = async () => {
@@ -33,6 +35,31 @@ function MainLayout() {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  // --- Effect for Click Outside ---
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        mobileMenuOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target) &&
+        mobileButtonRef.current &&
+        !mobileButtonRef.current.contains(event.target)
+      ) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    if (mobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [mobileMenuOpen]);
+
   // --- JSX Structure ---
   return (
     <div className={styles.layout}>
@@ -46,9 +73,11 @@ function MainLayout() {
 
           {/* Mobile menu button */}
           <button
-            className={styles.mobileMenuButton}
+            ref={mobileButtonRef}
+            className={`${styles.mobileMenuButton} ${mobileMenuOpen ? styles.mobileButtonOpen : ''}`}
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
           >
             <span className={styles.hamburgerLine}></span>
             <span className={styles.hamburgerLine}></span>
@@ -112,7 +141,9 @@ function MainLayout() {
         </div>
 
         {/* Mobile navigation menu */}
-        <div className={`${styles.mobileNav} ${mobileMenuOpen ? styles.mobileNavOpen : ''}`}>
+        <div
+          ref={mobileMenuRef}
+          className={`${styles.mobileNav} ${mobileMenuOpen ? styles.mobileNavOpen : ''}`}>
           <nav className={styles.mobileNavLinks}>
             <Link
               to="/reader"

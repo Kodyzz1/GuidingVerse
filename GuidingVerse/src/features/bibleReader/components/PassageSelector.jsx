@@ -39,16 +39,20 @@ function PassageSelector({ onPassageChange, initialBook = BIBLE_BOOKS[0], initia
   // --- JSX Structure ---
   // Optional: Use styles.selectorContainer if using CSS Modules
   return (
-    <div>
-      <label htmlFor="book-select">Book: </label>
-      <select id="book-select" value={selectedBook} onChange={handleBookChange}>
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <label htmlFor="book-select" style={{ marginRight: '0.5rem' }}>Book: </label>
+      <select 
+        id="book-select" 
+        value={selectedBook} 
+        onChange={handleBookChange}
+        style={{ marginRight: '1rem' }}
+      >
         {BIBLE_BOOKS.map(book => (
           <option key={book} value={book}>{book}</option>
         ))}
       </select>
 
-      {/* Optional: Use styles.chapterLabel if using CSS Modules */}
-      <label htmlFor="chapter-select" className="chapter-label-spacing">Chapter: </label>
+      <label htmlFor="chapter-select" style={{ marginRight: '0.5rem' }}>Chapter: </label>
       <select id="chapter-select" value={selectedChapter} onChange={handleChapterChange}>
         {Array.from({ length: BIBLE_CHAPTER_COUNTS[selectedBook] || 1 }, (_, i) => i + 1).map(chapterNum => (
           <option key={chapterNum} value={chapterNum}>{chapterNum}</option>

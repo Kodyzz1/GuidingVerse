@@ -9,8 +9,13 @@ import { fileURLToPath } from 'url';
 const currentFileUrl = import.meta.url;
 const currentFilePath = fileURLToPath(currentFileUrl);
 const currentDir = path.dirname(currentFilePath);
-// Path relative to the current file in dist (dist/routes -> dist)
-const interpretationsBasePath = path.resolve(currentDir, '../data/interpretations');
+
+// Determine path based on environment
+const isProduction = process.env.NODE_ENV === 'production';
+const relativeDataPath = isProduction ? '../data' : '../../data';
+const interpretationsBasePath = path.resolve(currentDir, relativeDataPath, 'interpretations');
+
+console.log(`[interpretationRoutes] Environment: ${process.env.NODE_ENV}, Calculated Base Path: ${interpretationsBasePath}`);
 
 // --- Helper Function to Load Chapter Data --- //
 // Cache loaded chapters to avoid repeated file reads

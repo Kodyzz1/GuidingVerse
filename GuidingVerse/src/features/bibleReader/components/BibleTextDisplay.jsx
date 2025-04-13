@@ -5,7 +5,21 @@ import { useAuth } from '../../../contexts/AuthContext';
 import styles from './BibleTextDisplay.module.css';
 import LoadingSpinner from '../../../components/LoadingSpinner/LoadingSpinner';
 
-function BibleTextDisplay({ passage }) {
+// Define mappings for props to CSS values
+const fontSizeMap = {
+  small: '0.85em',
+  medium: '1em',  // Default
+  large: '1.2em',
+  xlarge: '1.4em' 
+};
+
+const lineSpacingMap = {
+  compact: 1.2,
+  normal: 1.5, // Default
+  relaxed: 1.8
+};
+
+function BibleTextDisplay({ passage, fontSize = 'medium', lineSpacing = 'normal', showVerseNumbers = true }) {
   const [versesData, setVersesData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
@@ -15,8 +29,6 @@ function BibleTextDisplay({ passage }) {
   const [isInterpretationLoading, setIsInterpretationLoading] = useState(false);
   const [interpretation, setInterpretation] = useState(null);
   const [showInterpretation, setShowInterpretation] = useState(false);
-  const [fontSizes, setFontSizes] = useState(['0.85em', '1em', '1.2em']);
-  const [fontSizeIndex, setFontSizeIndex] = useState(1);
 
   const { user } = useAuth();
 
@@ -45,16 +57,6 @@ function BibleTextDisplay({ passage }) {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isSelecting]);
-
-  useEffect(() => {
-    const savedSizeIndex = localStorage.getItem('guidingVerseFontSizeIndex');
-    if (savedSizeIndex !== null && !isNaN(parseInt(savedSizeIndex))) {
-      const index = parseInt(savedSizeIndex, 10);
-      if (index >= 0 && index < fontSizes.length) {
-        setFontSizeIndex(index);
-      }
-    }
-  }, []);
 
   useEffect(() => {
     if (passage.book && passage.chapter) {
@@ -316,18 +318,6 @@ function BibleTextDisplay({ passage }) {
     getBookSummary(); // Call the new function
   };
 
-  // --- Font Size Handlers --- //
-  const changeFontSize = useCallback((direction) => {
-    setFontSizeIndex(prevIndex => {
-      let newIndex = prevIndex + direction;
-      if (newIndex < 0) newIndex = 0;
-      if (newIndex >= fontSizes.length) newIndex = fontSizes.length - 1;
-      
-      localStorage.setItem('guidingVerseFontSizeIndex', newIndex.toString());
-      return newIndex;
-    });
-  }, [fontSizes.length]);
-
   // --- Conditional Rendering ---
   if (!passage.book || !passage.chapter) {
     // Handle cases where passage prop might be incomplete initially
@@ -404,66 +394,58 @@ function BibleTextDisplay({ passage }) {
     <div className={`${styles.interpretationPanel} ${showInterpretation ? styles.panelVisible : ''}`}>
       <div className={styles.panelHeader}>
         <h3>Interpretation</h3>
-        <div className={styles.fontSizeControls}>
-          <button 
-            onClick={() => changeFontSize(-1)} 
-            disabled={fontSizeIndex === 0}
-            aria-label="Decrease font size"
-            className={styles.fontSizeButton}
-          >
-            A-
-          </button>
-          <span>{['S','M','L'][fontSizeIndex]}</span>
-          <button 
-            onClick={() => changeFontSize(1)} 
-            disabled={fontSizeIndex === fontSizes.length - 1}
-            aria-label="Increase font size"
-            className={styles.fontSizeButton}
-          >
-            A+
-          </button>
-        </div>
         <button onClick={handleCloseInterpretation} className={styles.closeButton} aria-label="Close interpretation panel">
           &times;
         </button>
       </div>
       <div 
         className={styles.panelContent} 
-        style={{ fontSize: fontSizes[fontSizeIndex] }}
+        style={{ 
+            fontSize: fontSizeMap[fontSize] || fontSizeMap.medium,
+            lineHeight: lineSpacingMap[lineSpacing] || lineSpacingMap.normal
+        }}
       >
           {interpretationContent}
       </div>
     </div>
   );
 
-  // --- Final Return ---
+  // --- Main Render --- //
   return (
-    <div className={styles.container} onKeyDown={handleKeyDown} tabIndex={-1}>
-      {/* --- New Header Section --- */}
+    <div className={styles.bibleTextContainer}>
       <div className={styles.passageHeader}>
-        <span 
-          className={styles.bookTitle}
-          onClick={handleBookClick}
-          role="button"
-          tabIndex={0}
-          aria-label={`Interpret book ${passage.book}`}
-          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleBookClick(); }}
-        >
-          {passage.book}
-        </span>
-        <span 
-          className={styles.chapterNumber}
-          onClick={handleChapterClick}
-          role="button"
-          tabIndex={0}
-          aria-label={`Interpret chapter ${passage.chapter}`}
-          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleChapterClick(); }}
-        >
-          {passage.chapter}
-        </span>
+          <span 
+            className={styles.bookTitle}
+            onClick={handleBookClick}
+            role="button"
+            tabIndex={0}
+            aria-label={`Interpret book ${passage.book}`}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleBookClick(); }}
+          >
+            {passage.book}
+          </span>
+          <span 
+            className={styles.chapterNumber}
+            onClick={handleChapterClick}
+            role="button"
+            tabIndex={0}
+            aria-label={`Interpret chapter ${passage.chapter}`}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleChapterClick(); }}
+          >
+            {passage.chapter}
+          </span>
       </div>
 
-      <div className={styles.versesContainer} ref={versesContainerRef}>
+      <div 
+        ref={versesContainerRef} 
+        className={styles.versesContainer} 
+        style={{ 
+          fontSize: fontSizeMap[fontSize] || fontSizeMap.medium,
+          lineHeight: lineSpacingMap[lineSpacing] || lineSpacingMap.normal
+        }}
+        onKeyDown={handleKeyDown} 
+        tabIndex={-1}
+      >
         {versesData.map((verse) => {
           const isHighlighted = highlightedVerses.includes(verse.verse);
           const isSelectionStart = verse.verse === selectionStartVerse;
@@ -479,11 +461,14 @@ function BibleTextDisplay({ passage }) {
               aria-pressed={isHighlighted}
               aria-label={`Verse ${verse.verse}`}
             >
-              <sup className={styles.verseNumber}>{verse.verse}</sup>
+              {showVerseNumbers && <sup className={styles.verseNumber}>{verse.verse}</sup>}
               {/* Sanitize verse text allowing basic formatting */}
-              <span dangerouslySetInnerHTML={{
-                 __html: DOMPurify.sanitize(verse.text, sanitizeConfig)
-              }} />
+              <span 
+                className={styles.verseText}
+                dangerouslySetInnerHTML={{
+                  __html: DOMPurify.sanitize(verse.text, sanitizeConfig)
+                }}
+              />
               {' '}{/* Add space between verses */}
             </span>
           );
@@ -504,6 +489,9 @@ BibleTextDisplay.propTypes = {
     book: PropTypes.string.isRequired,
     chapter: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   }).isRequired,
+  fontSize: PropTypes.string,
+  lineSpacing: PropTypes.string,
+  showVerseNumbers: PropTypes.bool
 };
 
 export default BibleTextDisplay;
