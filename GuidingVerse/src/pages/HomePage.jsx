@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import styles from './HomePage.module.css';
 import { useState, useEffect } from 'react';
+import DOMPurify from 'dompurify';
 
 // --- Component Definition ---
 function HomePage() {
@@ -34,6 +35,12 @@ function HomePage() {
 
     fetchVerse();
   }, []);
+
+  // Define allowed tags for sanitization
+  const sanitizeConfig = {
+      ALLOWED_TAGS: ['i', 'em'], // Allow italics
+      ALLOWED_ATTR: [] // No attributes allowed
+  };
 
   // --- JSX Structure ---
   return (
@@ -118,7 +125,7 @@ function HomePage() {
       </section>
       */}
       
-      {/* Scripture of the Day - Now Dynamic */}
+      {/* Scripture of the Day */}
       <section className={styles.scriptureSection}>
         <h2 className={styles.sectionTitle}>Scripture of the Day</h2>
         <div className={styles.scriptureCard}>
@@ -128,7 +135,13 @@ function HomePage() {
             <p className={styles.errorText}>{verseError}</p>
           ) : verseOfTheDay ? (
             <>
-              <p className={styles.scriptureText}>&quot;{verseOfTheDay.text}&quot;</p>
+              {/* Use dangerouslySetInnerHTML for the text */}
+              <p 
+                className={styles.scriptureText}
+                dangerouslySetInnerHTML={{ 
+                  __html: `&quot;${DOMPurify.sanitize(verseOfTheDay.text, sanitizeConfig)}&quot;` 
+                }}
+              />
               <p className={styles.scriptureReference}>
                 — {verseOfTheDay.book} {verseOfTheDay.chapter}:{verseOfTheDay.verse} (KJV)
               </p>
