@@ -12,7 +12,8 @@ const currentDir = path.dirname(currentFilePath);
 
 // Determine path based on environment
 const isProduction = process.env.NODE_ENV === 'production';
-const relativeDataPath = isProduction ? '../data' : '../../data';
+// Corrected path for development: go up ONE level from routes to src, then into data
+const relativeDataPath = isProduction ? '../data' : '../data'; 
 const interpretationsBasePath = path.resolve(currentDir, relativeDataPath, 'interpretations');
 
 console.log(`[interpretationRoutes] Environment: ${process.env.NODE_ENV}, Calculated Base Path: ${interpretationsBasePath}`);

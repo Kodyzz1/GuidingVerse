@@ -1,8 +1,17 @@
 import express from 'express';
 import bcrypt from 'bcryptjs'; // Use standard import name
+import jwt from 'jsonwebtoken'; // <-- Import jsonwebtoken
 import User from '../models/User.js'; // Import the User model
+import { protect } from '../middleware/authMiddleware.js'; // Assuming protect middleware exists
 
 const router = express.Router();
+
+// --- Helper function to generate JWT ---
+const generateToken = (id) => {
+  return jwt.sign({ id }, process.env.JWT_SECRET, {
+    expiresIn: '30d', // Example expiration: 30 days
+  });
+};
 
 // --- Route Handlers (Placeholders) --- //
 
@@ -42,15 +51,18 @@ router.post('/register', async (req, res) => {
 
     console.log('User registered successfully:', newUser.email);
 
-    // --- Send Success Response (Exclude password) --- //
-    // Important: Don't send the password hash back to the client
+    // --- Send Success Response (INCLUDE TOKEN) --- //
     res.status(201).json({
       _id: newUser._id,
       username: newUser.username,
       email: newUser.email,
       denomination: newUser.denomination,
-      createdAt: newUser.createdAt
-      // Potentially add JWT token generation here later
+      lastReadBook: newUser.lastReadBook,        // Include last read
+      lastReadChapter: newUser.lastReadChapter,    // Include last read
+      bookmarkedBook: newUser.bookmarkedBook,      // Include bookmark
+      bookmarkedChapter: newUser.bookmarkedChapter, // Include bookmark
+      createdAt: newUser.createdAt,
+      token: generateToken(newUser._id) // <-- Generate and send token
     });
 
   } catch (error) {
@@ -67,7 +79,7 @@ router.post('/register', async (req, res) => {
 });
 
 // @route   POST /api/auth/login
-// @desc    Authenticate user & potentially get token later
+// @desc    Authenticate user & get token
 // @access  Public
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
@@ -93,28 +105,115 @@ router.post('/login', async (req, res) => {
     // --- Compare Passwords --- //
     const isMatch = await bcrypt.compare(password, user.password); // Compare plain text password with hash
 
-    if (!isMatch) {
+    if (isMatch) {
+      // --- Login Successful --- //
+      console.log('User logged in successfully:', user.email);
+
+      // --- Send Success Response (INCLUDE TOKEN) --- //
+      res.status(200).json({
+        _id: user._id,
+        username: user.username,
+        email: user.email,
+        denomination: user.denomination,
+        lastReadBook: user.lastReadBook,        // Include last read
+        lastReadChapter: user.lastReadChapter,    // Include last read
+        bookmarkedBook: user.bookmarkedBook,      // Include bookmark
+        bookmarkedChapter: user.bookmarkedChapter, // Include bookmark
+        createdAt: user.createdAt,
+        token: generateToken(user._id) // <-- Generate and send token
+      });
+    } else {
       console.log('Login failed: Password mismatch for email:', email.toLowerCase());
       // Use a generic message for security
       return res.status(401).json({ message: 'Invalid credentials.' });
     }
 
-    // --- Login Successful --- //
-    console.log('User logged in successfully:', user.email);
-
-    // --- Send Success Response (Exclude password) --- //
-    res.status(200).json({
-      _id: user._id,
-      username: user.username,
-      email: user.email,
-      denomination: user.denomination,
-      createdAt: user.createdAt,
-      // TODO: Generate and include JWT token here for session management
-    });
-
   } catch (error) {
     console.error('Login Error:', error);
     res.status(500).json({ message: 'Server error during login.' });
+  }
+});
+
+// @route   GET /api/auth/profile
+// @desc    Get user profile
+// @access  Private
+router.get('/profile', protect, async (req, res) => {
+  // Implementation of getUserProfile function
+});
+
+// @route   PUT /api/auth/last-read
+// @desc    Update user's last read location
+// @access  Private
+router.put('/last-read', protect, async (req, res) => {
+  const { book, chapter } = req.body;
+
+  // Basic validation
+  if (!book || typeof book !== 'string' || !chapter || typeof chapter !== 'number') {
+    return res.status(400).json({ message: 'Invalid book or chapter provided.' });
+  }
+
+  try {
+    const userId = req.user._id; // Get user ID from protect middleware
+    
+    // Find user and update their last read location
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      { lastReadBook: book, lastReadChapter: chapter },
+      { new: true } // Return the updated document
+    ).select('-password'); // Exclude password from response
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: 'User not found.' });
+    }
+
+    // Send back a success response (optional, could just send 200 OK)
+    res.status(200).json({
+      message: 'Last read location updated successfully.',
+      // Optionally send back the updated fields or user
+      // lastReadBook: updatedUser.lastReadBook,
+      // lastReadChapter: updatedUser.lastReadChapter
+    });
+
+  } catch (error) {
+    console.error('[API PUT /last-read] Error:', error);
+    res.status(500).json({ message: 'Server error updating reading history.' });
+  }
+});
+
+// @route   PUT /api/auth/bookmark
+// @desc    Update user's bookmarked location
+// @access  Private
+router.put('/bookmark', protect, async (req, res) => {
+  const { book, chapter } = req.body;
+  const userId = req.user._id; // Get user ID from protect middleware
+
+  // Basic validation
+  if (!book || typeof book !== 'string' || !chapter || typeof chapter !== 'number') {
+    return res.status(400).json({ message: 'Invalid book or chapter provided for bookmark.' });
+  }
+
+  try {
+    // Find user and update their bookmark
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      { bookmarkedBook: book, bookmarkedChapter: chapter },
+      { new: true } // Return the updated document
+    ).select('-password'); // Exclude password
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: 'User not found.' });
+    }
+
+    // Send back a success response
+    res.status(200).json({
+      message: 'Bookmark updated successfully.',
+      bookmarkedBook: updatedUser.bookmarkedBook,
+      bookmarkedChapter: updatedUser.bookmarkedChapter
+    });
+
+  } catch (error) {
+    console.error('[API PUT /bookmark] Error:', error);
+    res.status(500).json({ message: 'Server error updating bookmark.' });
   }
 });
 

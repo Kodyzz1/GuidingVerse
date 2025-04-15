@@ -1,6 +1,6 @@
 // src/features/bibleReader/pages/BibleReaderPage.jsx
 import { useState, useCallback, useEffect, useRef } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams, useLocation } from 'react-router-dom';
 import PassageSelector from '../components/PassageSelector';
 import BibleTextDisplay from '../components/BibleTextDisplay';
 import { BIBLE_BOOKS, BIBLE_CHAPTER_COUNTS } from '../../../lib/constants';
@@ -11,25 +11,37 @@ function BibleReaderPage() {
   // --- Router Hooks ---
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
-  const { isAuthenticated, user } = useAuth();
+  const location = useLocation();
+  const { isAuthenticated, user, setBookmark } = useAuth();
 
   // --- Refs ---
   const historyRef = useRef(null);
   const settingsRef = useRef(null);
 
   // --- State (Passage Selection from URL or Defaults) ---
-  const bookParam = searchParams.get('book');
-  const chapterParam = searchParams.get('chapter');
-  const isValidBook = bookParam && BIBLE_BOOKS.includes(bookParam);
-  const defaultBook = isValidBook ? bookParam : 'Genesis';
-  const maxChapters = BIBLE_CHAPTER_COUNTS[defaultBook] || 1;
-  const chapterNumber = chapterParam ? parseInt(chapterParam, 10) : 1;
-  const isValidChapter = chapterNumber && !isNaN(chapterNumber) && chapterNumber > 0 && chapterNumber <= maxChapters;
-  const defaultChapter = isValidChapter ? chapterNumber : 1;
+  const [selectedPassage, setSelectedPassage] = useState(() => {
+    const bookParam = searchParams.get('book');
+    const chapterParam = searchParams.get('chapter');
 
-  const [selectedPassage, setSelectedPassage] = useState({
-    book: defaultBook,
-    chapter: defaultChapter,
+    // 1. Prioritize URL parameters
+    if (bookParam && BIBLE_BOOKS.includes(bookParam) && chapterParam && !isNaN(parseInt(chapterParam))) {
+      const chapterNum = parseInt(chapterParam);
+      if (chapterNum > 0 && chapterNum <= BIBLE_CHAPTER_COUNTS[bookParam]) {
+        return { book: bookParam, chapter: chapterNum };
+      }
+    }
+
+    // 2. Use user's last read location if logged in and no valid URL params
+    if (isAuthenticated && user && user.lastReadBook && user.lastReadChapter) {
+      if (BIBLE_BOOKS.includes(user.lastReadBook) && user.lastReadChapter > 0 && user.lastReadChapter <= BIBLE_CHAPTER_COUNTS[user.lastReadBook]) {
+        console.log('Using last read location from user:', user.lastReadBook, user.lastReadChapter);
+        return { book: user.lastReadBook, chapter: user.lastReadChapter };
+      }
+    }
+
+    // 3. Default to Genesis 1
+    console.log('Defaulting to Genesis 1');
+    return { book: 'Genesis', chapter: 1 };
   });
 
   // --- State (Reader Settings) ---
@@ -82,6 +94,60 @@ function BibleReaderPage() {
     }
   }, [selectedPassage, setSearchParams, isAuthenticated]);
 
+  // --- Fetch interpretation data ---
+  useEffect(() => {
+    // ... existing fetch logic ...
+  }, [selectedPassage]); // Re-fetch when passage changes
+
+  // --- Update URL and SAVE last read location ---
+  useEffect(() => {
+    const params = new URLSearchParams();
+    params.set('book', selectedPassage.book);
+    params.set('chapter', selectedPassage.chapter.toString());
+    navigate(`${location.pathname}?${params.toString()}`, { replace: true });
+
+    // --- SAVE to backend IF authenticated ---
+    const saveLastRead = async () => {
+      if (isAuthenticated && user) {
+        console.log('Saving last read:', selectedPassage.book, selectedPassage.chapter);
+        try {
+          const token = localStorage.getItem('guidingVerseToken'); // Assuming token is stored here
+          if (!token) {
+              console.warn('No token found, cannot save last read.');
+              return;
+          }
+
+          const response = await fetch('/api/auth/last-read', { // Use the correct backend endpoint
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({
+              book: selectedPassage.book,
+              chapter: selectedPassage.chapter
+            })
+          });
+
+          if (!response.ok) {
+            const errorData = await response.json();
+            console.error('Failed to save last read location:', response.status, errorData.message);
+            // Handle specific errors if needed (e.g., 401 Unauthorized -> maybe logout?)
+          } else {
+            console.log('Last read location saved successfully.');
+            // Optionally update user state in context if needed, though not strictly required here
+          }
+        } catch (error) {
+          console.error('Error saving last read location:', error);
+        }
+      }
+    };
+
+    // Call the save function (consider debouncing if needed for rapid navigation)
+    saveLastRead();
+
+  }, [selectedPassage, navigate, location.pathname, isAuthenticated, user]); // Add isAuthenticated and user as dependencies
+
   // --- Handlers ---
   const handlePassageChange = useCallback((newPassage) => {
     setSelectedPassage(newPassage);
@@ -128,6 +194,21 @@ function BibleReaderPage() {
     setShowHistory(false);
   };
 
+  // --- NEW: Bookmark Handler ---
+  const handleBookmarkClick = async () => {
+    if (!selectedPassage || !setBookmark) {
+      return;
+    }
+    const success = await setBookmark(selectedPassage.book, selectedPassage.chapter);
+    if (success) {
+      // Optionally show a brief confirmation message to the user
+      alert('Bookmark saved!'); 
+    } else {
+      // Optionally show an error message
+      alert('Failed to save bookmark.');
+    }
+  };
+
   // --- Helpers ---
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -154,6 +235,18 @@ function BibleReaderPage() {
           />
 
           <div className={styles.readerControls}>
+            {/* --- NEW: Bookmark Button --- */}
+            {isAuthenticated && (
+              <button
+                className={`${styles.controlButton} ${styles.bookmarkButton}`}
+                onClick={handleBookmarkClick}
+                aria-label="Bookmark this chapter"
+                title="Bookmark this chapter"
+              >
+                <span className={styles.iconBookmark}>&#x1F516;</span> {/* Bookmark icon */} 
+              </button>
+            )}
+
             {/* History button */}
             {isAuthenticated && (
               <div className={styles.historyDropdown} ref={historyRef}>

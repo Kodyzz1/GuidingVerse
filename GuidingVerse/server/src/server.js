@@ -29,16 +29,25 @@ const app = express();
 // --- Middleware ---
 // Configure CORS to allow specific origins
 const allowedOrigins = [
-  process.env.CORS_ORIGIN,
-];
+  process.env.CORS_ORIGIN,          // Render domain (from .env.production or Render env)
+  process.env.CUSTOM_DOMAIN_WWW,    // Production www domain (from .env.production or Render env)
+  process.env.CUSTOM_DOMAIN_ROOT,   // Production root domain (from .env.production or Render env)
+  process.env.CLIENT_ORIGIN_DEV     // Development client domain (from .env)
+].filter(Boolean); // Filter out undefined/null values
+
+console.log('[Server] Allowed CORS Origins:', allowedOrigins);
 
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = `The CORS policy for this site does not allow access from the specified Origin: ${origin}`;
+      console.warn(`[CORS Blocked] Origin: ${origin}`);
+      return callback(new Error(msg), false);
     }
+    return callback(null, true);
   },
   credentials: true
 }));

@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
 
 const userSchema = new mongoose.Schema({
   username: {
@@ -24,6 +25,27 @@ const userSchema = new mongoose.Schema({
     trim: true,
     default: 'Prefer not to say', // Set a default value
   },
+  lastReadBook: {
+    type: String,
+    default: 'Genesis' // Default to Genesis if not set
+  },
+  lastReadChapter: {
+    type: Number,
+    default: 1 // Default to chapter 1 if not set
+  },
+  // --- Bookmark Fields ---
+  bookmarkedBook: {
+    type: String,
+    default: null // No default bookmark
+  },
+  bookmarkedChapter: {
+    type: Number,
+    default: null // No default bookmark
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
 }, {
   timestamps: true, // Automatically add createdAt and updatedAt fields
 });

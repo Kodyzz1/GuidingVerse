@@ -19,21 +19,22 @@
     "postinstall": "echo \"Skipping postinstall build during deployment\""
   },
   "dependencies": {
+    "@babel/cli": "^7.24.0",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
+    "copyfiles": "^2.4.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.18.3",
+    "express-async-handler": "^1.2.0",
     "express-rate-limit": "^7.1.5",
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.2.0",
-    "winston": "^3.11.0",
     "rimraf": "^5.0.0",
-    "copyfiles": "^2.4.1",
-    "@babel/cli": "^7.24.0",
-    "@babel/core": "^7.24.0",
-    "@babel/preset-env": "^7.24.0"
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
