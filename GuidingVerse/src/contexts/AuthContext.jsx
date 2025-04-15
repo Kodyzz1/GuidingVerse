@@ -211,8 +211,11 @@ export function AuthProvider({ children }) {
 
       // Update local state and localStorage
       const updatedUserData = { ...user, bookmarkedBook: book, bookmarkedChapter: chapter };
+      // console.log('[AuthContext] Before setUser:', user); // Optional: Log state before update
       setUser(updatedUserData);
       localStorage.setItem('guidingVerseUser', JSON.stringify(updatedUserData));
+      console.log('[AuthContext] SUCCESS: Local state & localStorage updated with:', updatedUserData.bookmarkedBook, updatedUserData.bookmarkedChapter); // <-- ADD THIS LOG
+      // console.log('[AuthContext] SUCCESS: Local state & localStorage updated with:', { bookmarkedBook: updatedUserData.bookmarkedBook, bookmarkedChapter: updatedUserData.bookmarkedChapter }); // Alternative format
       // console.log('[AuthContext] setBookmark SUCCESS (local & server):', book, chapter); // <-- REMOVE
       return true;
 
@@ -227,6 +230,19 @@ export function AuthProvider({ children }) {
     }
   }, [user, isAuthenticated]); // Add dependencies
 
+  // --- Function to update parts of user state locally ---
+  // Useful for non-critical updates like last read without full re-fetch
+  const updateUserState = useCallback((updatedFields) => {
+    setUser(currentUser => {
+      if (!currentUser) return null;
+      const newUserState = { ...currentUser, ...updatedFields };
+      // Also update localStorage so reloads reflect the change
+      localStorage.setItem('guidingVerseUser', JSON.stringify(newUserState));
+      console.log('[AuthContext] updateUserState updated state and localStorage:', updatedFields);
+      return newUserState;
+    });
+  }, []); // No dependencies needed as it only uses the setter
+
   // --- Memoized Context Value ---
   const value = useMemo(() => ({
     user,
@@ -235,8 +251,9 @@ export function AuthProvider({ children }) {
     login,
     signup,
     logout,
-    setBookmark // <-- Add setBookmark to context value
-  }), [user, isAuthenticated, isLoading, login, signup, logout, setBookmark]); // Add setBookmark dependency
+    setBookmark,
+    updateUserState // <-- Add updateUserState to context value
+  }), [user, isAuthenticated, isLoading, login, signup, logout, setBookmark, updateUserState]); // Add updateUserState dependency
 
   // --- Provider JSX ---
   return (

@@ -12,7 +12,7 @@ function BibleReaderPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   const location = useLocation();
-  const { isAuthenticated, user, setBookmark } = useAuth();
+  const { isAuthenticated, user, setBookmark, updateUserState } = useAuth();
 
   // --- Refs ---
   const historyRef = useRef(null);
@@ -23,24 +23,35 @@ function BibleReaderPage() {
     const bookParam = searchParams.get('book');
     const chapterParam = searchParams.get('chapter');
 
+    console.log('[BibleReaderPage Init State] Checking loading priority...', { bookParam, chapterParam, isAuthenticated, user });
+
     // 1. Prioritize URL parameters
     if (bookParam && BIBLE_BOOKS.includes(bookParam) && chapterParam && !isNaN(parseInt(chapterParam))) {
       const chapterNum = parseInt(chapterParam);
       if (chapterNum > 0 && chapterNum <= BIBLE_CHAPTER_COUNTS[bookParam]) {
+        console.log('[BibleReaderPage Init State] Using URL Params:', bookParam, chapterNum);
         return { book: bookParam, chapter: chapterNum };
       }
     }
 
-    // 2. Use user's last read location if logged in and no valid URL params
+    // 2. Use user's BOOKMARK if logged in and bookmark exists
+    if (isAuthenticated && user && user.bookmarkedBook && user.bookmarkedChapter) {
+        if (BIBLE_BOOKS.includes(user.bookmarkedBook) && user.bookmarkedChapter > 0 && user.bookmarkedChapter <= BIBLE_CHAPTER_COUNTS[user.bookmarkedBook]) {
+            console.log('[BibleReaderPage Init State] Using BOOKMARK location from user:', user.bookmarkedBook, user.bookmarkedChapter);
+            return { book: user.bookmarkedBook, chapter: user.bookmarkedChapter };
+        }
+    }
+
+    // 3. Use user's LAST READ location if logged in and NO bookmark exists
     if (isAuthenticated && user && user.lastReadBook && user.lastReadChapter) {
       if (BIBLE_BOOKS.includes(user.lastReadBook) && user.lastReadChapter > 0 && user.lastReadChapter <= BIBLE_CHAPTER_COUNTS[user.lastReadBook]) {
-        console.log('Using last read location from user:', user.lastReadBook, user.lastReadChapter);
+        console.log('[BibleReaderPage Init State] Using LAST READ location from user:', user.lastReadBook, user.lastReadChapter);
         return { book: user.lastReadBook, chapter: user.lastReadChapter };
       }
     }
 
-    // 3. Default to Genesis 1
-    console.log('Defaulting to Genesis 1');
+    // 4. Default to Genesis 1
+    console.log('[BibleReaderPage Init State] Defaulting to Genesis 1');
     return { book: 'Genesis', chapter: 1 };
   });
 
@@ -109,9 +120,15 @@ function BibleReaderPage() {
     // --- SAVE to backend IF authenticated ---
     const saveLastRead = async () => {
       if (isAuthenticated && user) {
+        // Avoid saving if the location hasn't actually changed from the user's current state
+        if (user.lastReadBook === selectedPassage.book && user.lastReadChapter === selectedPassage.chapter) {
+           // console.log('Last read location unchanged, skipping save.');
+           return; 
+        }
+        
         console.log('Saving last read:', selectedPassage.book, selectedPassage.chapter);
         try {
-          const token = localStorage.getItem('guidingVerseToken'); // Assuming token is stored here
+          const token = localStorage.getItem('guidingVerseToken');
           if (!token) {
               console.warn('No token found, cannot save last read.');
               return;
@@ -132,10 +149,16 @@ function BibleReaderPage() {
           if (!response.ok) {
             const errorData = await response.json();
             console.error('Failed to save last read location:', response.status, errorData.message);
-            // Handle specific errors if needed (e.g., 401 Unauthorized -> maybe logout?)
           } else {
-            console.log('Last read location saved successfully.');
-            // Optionally update user state in context if needed, though not strictly required here
+            console.log('Last read location saved successfully (Server).');
+            // --- UPDATE LOCAL STATE --- 
+            if (updateUserState) {
+                updateUserState({ 
+                    lastReadBook: selectedPassage.book, 
+                    lastReadChapter: selectedPassage.chapter 
+                });
+            }
+            // ------------------------
           }
         } catch (error) {
           console.error('Error saving last read location:', error);
@@ -146,7 +169,7 @@ function BibleReaderPage() {
     // Call the save function (consider debouncing if needed for rapid navigation)
     saveLastRead();
 
-  }, [selectedPassage, navigate, location.pathname, isAuthenticated, user]); // Add isAuthenticated and user as dependencies
+  }, [selectedPassage, navigate, location.pathname, isAuthenticated, user, updateUserState]); // Add dependencies
 
   // --- Handlers ---
   const handlePassageChange = useCallback((newPassage) => {
