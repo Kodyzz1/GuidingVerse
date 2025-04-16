@@ -8,21 +8,36 @@
     color-scheme: light dark;
   
     /* Color Variables - DARK MODE Defaults */
-    --text-color: rgba(255, 255, 255, 0.87);
-    --background-color: #242424;
-    --link-color: #646cff;
-    --link-hover-color: #535bf2;
-    --button-background: #1a1a1a;
-    --button-hover-border: #646cff;
-    /* Component variables */
-    --surface-background: #333;
-    --border-color: #555;
+    --text-color: rgba(255, 255, 255, 0.87); /* Primary Text */
+    --text-secondary: rgba(255, 255, 255, 0.65); /* Secondary Text */
+    --text-tertiary: rgba(255, 255, 255, 0.75); /* Tertiary Text (e.g., labels) */
+    --muted-foreground: var(--text-secondary);
+    --heading-color: rgba(255, 255, 255, 0.95); /* Slightly brighter for headings */
+    
+    --background-color: #242424; /* Main page background */
+    --surface-ground: #1e1e1e; /* Slightly different background for elevation/odd sections */
+    --surface-background: #333; /* Card/Component Background */
+    --bg-secondary: var(--surface-background); /* Alias for profile/scripture sections */
+    --card-background: var(--surface-background);
+    
+    --border-color: #555; /* Primary Border */
+    --border-secondary: #444; /* Secondary Border (slightly darker) */
+    
     --input-background: #444;
     --input-text-color: var(--text-color);
+    
+    --button-background: #1a1a1a;
     --button-text-color: var(--text-color);
+    --button-hover-border: #646cff;
+    
+    --link-color: #646cff;
+    --link-hover-color: #535bf2;
+    
     --primary-color: #646cff;
-    /* RGB values for transparency effects */
+    --primary-hover-color: #535bf2; /* Added missing variable */
     --primary-color-rgb: 100, 108, 255; /* RGB value for #646cff */
+
+    --danger-color: #ff6b6b; /* Dark mode danger */
   
     /* Rendering/Font Setup */
     font-synthesis: none;
@@ -34,30 +49,41 @@
   /* Light Mode Overrides */
   @media (prefers-color-scheme: light) {
     :root {
-      --text-color: #213547;
-      --background-color: #ffffff;
-      --link-color: #0056b3;
-      --link-hover-color: #003d80;
-      --button-background: #f9f9f9;
-      --button-hover-border: #747bff;
-      /* Override component variables for light mode */
-      --surface-background: #fff;
-      --border-color: #dee2e6;
+      --text-color: #213547; /* Primary Text */
+      --text-secondary: #5a6169; /* Secondary Text */
+      --text-tertiary: #495057; /* Tertiary Text */
+      --muted-foreground: var(--text-secondary);
+      --heading-color: #1a202c; /* Darker for headings */
+      
+      --background-color: #ffffff; /* Main page background */
+      --surface-ground: #f8f9fa; /* Light gray for elevation/odd sections */
+      --surface-background: #ffffff; /* Card/Component Background */
+      --bg-secondary: var(--surface-ground); /* Alias for profile/scripture sections */
+      --card-background: var(--surface-background);
+      
+      --border-color: #dee2e6; /* Primary Border */
+      --border-secondary: #ced4da; /* Secondary Border */
+      
       --input-background: #fff;
       --input-text-color: #495057;
+      
+      --button-background: #f9f9f9;
       --button-text-color: var(--text-color);
+      --button-hover-border: #747bff;
+      
+      --link-color: #0056b3;
+      --link-hover-color: #003d80;
+      
       --primary-color: #007bff;
-      /* RGB value for light mode primary color */
+      --primary-hover-color: #0056b3; /* Added missing variable */
       --primary-color-rgb: 0, 123, 255; /* RGB value for #007bff */
+
+      --danger-color: #dc3545; /* Light mode danger */
     }
     
-    a:hover {
-      color: var(--link-hover-color);
-    }
-    
-    button:hover {
-      border-color: var(--button-hover-border);
-    }
+    /* Don't need these hover overrides here if base link/button styles handle it */
+    /* a:hover { color: var(--link-hover-color); } */
+    /* button:hover { border-color: var(--button-hover-border); } */
   }
   
   /* --- Base Styles & Resets --- */
