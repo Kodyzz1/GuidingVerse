@@ -245,3 +245,38 @@
         border-color: #dc3545;
     }
 }
+
+/* Notification Button Style */
+.notificationButton {
+    /* Reuse some base button styles */
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    /* Specific styles */
+    color: #fff;
+    background-color: #28a745; /* Success green */
+    border: 1px solid #28a745;
+    margin-top: 0.5rem; /* Space below the paragraph */
+}
+
+.notificationButton:hover {
+    background-color: #218838; /* Darker green */
+    border-color: #1e7e34;
+}
+
+.notificationButton:disabled {
+    background-color: #8fdfa1; /* Lighter green */
+    border-color: #8fdfa1;
+    cursor: not-allowed;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* ... existing dark mode overrides ... */
+    .notificationButton:disabled {
+        background-color: #218838;
+        opacity: 0.7;
+    }
+}

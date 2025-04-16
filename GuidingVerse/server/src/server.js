@@ -10,6 +10,7 @@ import searchRoutes from './routes/searchRoutes.js';
 import interpretationRoutes from './routes/interpretationRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 import verseOfTheDayRoute from './routes/verseOfTheDayRoute.js';
+import notificationRoutes from './routes/notificationRoutes.js';
 import connectDB from './config/db.js';
 import { errorHandler } from './middleware/errorHandler.js';
 import { logger } from './utils/logger.js';
@@ -68,6 +69,7 @@ app.use('/api/bible', bibleRoutes);
 app.use('/api/search', searchRoutes);
 app.use('/api/interpret', interpretationRoutes);
 app.use('/api/verse-of-the-day', verseOfTheDayRoute);
+app.use('/api/notifications', notificationRoutes);
 console.log('[Server] API routes mounted.');
 
 // --- Production-only Static Files & Catch-all ---

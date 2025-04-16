@@ -1,12 +1,28 @@
 // --- Imports ---
-import { useState, useEffect } from 'react'; // Import useState, useEffect
+import { useState, useEffect, useCallback } from 'react'; // Import useState, useEffect, useCallback
 import { useAuth } from '../../../contexts/AuthContext';
 import styles from './ProfilePage.module.css'; // Import the CSS module
+
+// Helper function to convert Base64 URL string to Uint8Array
+function urlBase64ToUint8Array(base64String) {
+  const padding = '='.repeat((4 - base64String.length % 4) % 4);
+  const base64 = (base64String + padding)
+    .replace(/\-/g, '+')
+    .replace(/_/g, '/');
+
+  const rawData = window.atob(base64);
+  const outputArray = new Uint8Array(rawData.length);
+
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i);
+  }
+  return outputArray;
+}
 
 // --- Component Definition ---
 function ProfilePage() {
   // --- Auth Hook ---
-  const { user, updateUserState } = useAuth();
+  const { user, updateUserState, isAuthenticated } = useAuth();
 
   // --- State for Edit Mode and Form Data ---
   const [isEditing, setIsEditing] = useState(false);
@@ -17,6 +33,11 @@ function ProfilePage() {
   });
   const [isLoading, setIsLoading] = useState(false); // For save loading state
   const [error, setError] = useState(null); // For API errors
+  // Notification State
+  const [notificationsEnabled, setNotificationsEnabled] = useState(false);
+  const [isCheckingNotifications, setIsCheckingNotifications] = useState(true);
+  const [notificationError, setNotificationError] = useState(null);
+  const [isSubscribing, setIsSubscribing] = useState(false);
 
   // --- Denominations List (Can be moved to constants file) ---
   const denominations = [
@@ -43,6 +64,37 @@ function ProfilePage() {
       });
     }
   }, [user]); // Re-run if user object changes
+
+  // Check initial notification permission and subscription status
+  useEffect(() => {
+      if ('Notification' in window && 'serviceWorker' in navigator && 'PushManager' in window && user) {
+          // Check permission status
+          if (Notification.permission === 'granted') {
+              // Check if already subscribed
+              navigator.serviceWorker.ready.then(registration => {
+                  registration.pushManager.getSubscription().then(subscription => {
+                      if (subscription) {
+                          console.log('[ProfilePage] User IS subscribed.');
+                          setNotificationsEnabled(true);
+                          // Optional: Verify this subscription exists on the backend for this user
+                      } else {
+                          console.log('[ProfilePage] User IS NOT subscribed (permission granted).');
+                          setNotificationsEnabled(false);
+                      }
+                      setIsCheckingNotifications(false);
+                  });
+              });
+          } else {
+              console.log('[ProfilePage] Notification permission:', Notification.permission);
+              setNotificationsEnabled(false);
+              setIsCheckingNotifications(false);
+          }
+      } else {
+          console.warn('[ProfilePage] Push Notifications not supported by this browser or user not logged in.');
+          setNotificationError('Push notifications are not supported by your browser.');
+          setIsCheckingNotifications(false);
+      }
+  }, [user]); // Rerun when user loads
 
   // --- Handlers ---
   const handleEditClick = () => {
@@ -142,6 +194,98 @@ function ProfilePage() {
     }
   };
 
+  // --- Notification Subscription Handler ---
+  const handleSubscribeClick = useCallback(async () => {
+    if (!('serviceWorker' in navigator) || !('PushManager' in window) || !isAuthenticated) {
+      setNotificationError('Push notifications not supported or user not logged in.');
+      return;
+    }
+
+    setIsSubscribing(true);
+    setNotificationError(null);
+
+    try {
+      // --- 1. Request Permission --- 
+      const permission = await Notification.requestPermission();
+      if (permission !== 'granted') {
+        throw new Error('Notification permission denied.');
+      }
+
+      // --- 2. Get Service Worker Registration --- 
+      const registration = await navigator.serviceWorker.ready;
+      console.log('[Subscribe] Service Worker Ready');
+
+      // --- 3. Get VAPID Public Key from Backend --- 
+      const keyResponse = await fetch('/api/notifications/vapid-public-key');
+      if (!keyResponse.ok) {
+          const keyErrorData = await keyResponse.json();
+          throw new Error(keyErrorData.message || 'Failed to fetch VAPID key.');
+      }
+      const { publicKey } = await keyResponse.json();
+      if (!publicKey) {
+          throw new Error('VAPID key received from server was empty.');
+      }
+      const applicationServerKey = urlBase64ToUint8Array(publicKey);
+      console.log('[Subscribe] VAPID Public Key fetched and converted');
+
+      // --- 4. Subscribe using PushManager --- 
+      const subscription = await registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: applicationServerKey
+      });
+      console.log('[Subscribe] PushManager subscribed:', subscription);
+
+      // --- 5. Send Subscription to Backend --- 
+      const token = localStorage.getItem('guidingVerseToken');
+      if (!token) throw new Error('Authentication token not found.');
+
+      const saveResponse = await fetch('/api/notifications/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(subscription) // Send the whole subscription object
+      });
+
+      if (!saveResponse.ok) {
+          const saveData = await saveResponse.json();
+        throw new Error(saveData.message || 'Failed to save subscription on server.');
+      }
+
+      console.log('[Subscribe] Subscription saved on backend successfully.');
+      setNotificationsEnabled(true);
+      alert('Notifications enabled!');
+
+    } catch (err) {
+      console.error('[Subscribe] Error enabling notifications:', err);
+      setNotificationError(err.message || 'Could not enable notifications.');
+      setNotificationsEnabled(false);
+      // Handle specific errors (e.g., permission denied)
+      if (err.message.includes('permission denied')) {
+          alert('You denied notification permission. You may need to enable it in browser settings.');
+      } else {
+          alert(`Error: ${err.message}`);
+      }
+    } finally {
+      setIsSubscribing(false);
+    }
+  }, [isAuthenticated]); // Depend on auth status
+
+  // --- Initialize Service Worker (if not handled elsewhere) --- 
+  // This might be better placed in App.jsx or main.jsx to run once on load
+  useEffect(() => {
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js') // Path from public root
+              .then(registration => {
+                  console.log('[App] Service Worker registered with scope:', registration.scope);
+              })
+              .catch(error => {
+                  console.error('[App] Service Worker registration failed:', error);
+              });
+      }
+  }, []);
+
   // --- Conditional Render (Loading/Not Logged In) ---
   if (!user) {
     return <div className={styles.profileContainer}><p>Loading user data or not logged in...</p></div>;
@@ -238,6 +382,34 @@ function ProfilePage() {
               <dt>Bookmark:</dt>
               <dd>{user.bookmarkedBook ? `${user.bookmarkedBook} ${user.bookmarkedChapter}` : 'Not Set'}</dd>
           </dl>
+      </section>
+
+      {/* --- Notifications Section --- */}
+      <section className={styles.profileSection}>
+          <h3>Notifications</h3>
+          {isCheckingNotifications ? (
+              <p>Checking notification status...</p>
+          ) : notificationError ? (
+              <p className={styles.errorMessage}>{notificationError}</p>
+          ) : (
+              <div>
+                  {notificationsEnabled ? (
+                      <p>Push notifications are currently enabled on this device.</p>
+                      // TODO: Add an Unsubscribe button here later
+                  ) : (
+                      <>
+                          <p>Enable push notifications to receive updates (e.g., Verse of the Day).</p>
+                          <button 
+                              className={styles.notificationButton} 
+                              onClick={handleSubscribeClick} 
+                              disabled={isSubscribing}
+                          >
+                              {isSubscribing ? 'Enabling...' : 'Enable Notifications'}
+                          </button>
+                      </>
+                  )}
+              </div>
+          )}
       </section>
 
       {/* --- Security Section (Placeholder) --- */}

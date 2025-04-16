@@ -46,18 +46,18 @@ router.get('/', async (req, res) => {
   }
 
   try {
-    // Calculate deterministic index
-    const now = new Date();
-    const diffTime = Math.abs(now - EPOCH_START_DATE);
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); 
-    const verseIndex = diffDays % verseList.length;
-    const targetVerseRef = verseList[verseIndex];
+    // --- RANDOM SELECTION --- 
+    // Calculate a random index based on the list length
+    const randomIndex = Math.floor(Math.random() * verseList.length);
+    const targetVerseRef = verseList[randomIndex];
+    // --- END RANDOM SELECTION ---
 
     if (!targetVerseRef) {
-      throw new Error('Calculated verse reference is invalid.');
+      // This is less likely with random, but good to keep
+      throw new Error('Randomly selected verse reference is invalid.');
     }
 
-    console.log(`[VerseOfTheDay] Day ${diffDays}, Index ${verseIndex}, Target: ${targetVerseRef.book} ${targetVerseRef.chapter}:${targetVerseRef.verse}`);
+    console.log(`[VerseOfTheDay] Random Index ${randomIndex}, Target: ${targetVerseRef.book} ${targetVerseRef.chapter}:${targetVerseRef.verse}`);
 
     // Construct path to the chapter file
     const bibleJsonPath = path.join(baseDataPath, 'BibleJSON/JSON');
