@@ -138,7 +138,107 @@ router.post('/login', async (req, res) => {
 // @desc    Get user profile
 // @access  Private
 router.get('/profile', protect, async (req, res) => {
-  // Implementation of getUserProfile function
+  // The 'protect' middleware already found the user and attached it to req.user
+  // We just need to send back the relevant details.
+  try {
+    // req.user is populated by the protect middleware
+    const user = req.user; 
+
+    if (!user) {
+      // This shouldn't happen if protect middleware worked, but good practice to check
+      return res.status(404).json({ message: 'User not found.' });
+    }
+
+    // Send back profile data (excluding password)
+    res.status(200).json({
+      _id: user._id,
+      username: user.username,
+      email: user.email,
+      denomination: user.denomination,
+      lastReadBook: user.lastReadBook,
+      lastReadChapter: user.lastReadChapter,
+      bookmarkedBook: user.bookmarkedBook,
+      bookmarkedChapter: user.bookmarkedChapter,
+      createdAt: user.createdAt
+    });
+
+  } catch (error) {
+    console.error('[API GET /profile] Error:', error);
+    res.status(500).json({ message: 'Server error retrieving profile.' });
+  }
+});
+
+// @route   PUT /api/auth/profile
+// @desc    Update user profile
+// @access  Private
+router.put('/profile', protect, async (req, res) => {
+  const { username, email, denomination, password } = req.body;
+  const userId = req.user._id;
+
+  try {
+    const user = await User.findById(userId);
+
+    if (!user) {
+      return res.status(404).json({ message: 'User not found.' });
+    }
+
+    // Prepare updates object
+    const updates = {};
+    if (username) updates.username = username;
+    if (email) {
+        // Add validation for email format if desired
+        // Check if email is already taken by another user
+        const emailExists = await User.findOne({ email: email.toLowerCase(), _id: { $ne: userId } });
+        if (emailExists) {
+            return res.status(400).json({ message: 'Email already in use by another account.' });
+        }
+        updates.email = email; // Schema will lowercase it
+    }
+    if (denomination) updates.denomination = denomination;
+
+    // Handle password update separately (requires hashing)
+    if (password) {
+      if (password.length < 6) {
+          return res.status(400).json({ message: 'Password must be at least 6 characters long.' });
+      }
+      const salt = await bcrypt.genSalt(10);
+      updates.password = await bcrypt.hash(password, salt);
+      console.log(`[API PUT /profile] Updating password for user: ${user.email}`);
+    }
+
+    // Apply updates
+    const updatedUser = await User.findByIdAndUpdate(
+        userId,
+        { $set: updates }, 
+        { new: true, runValidators: true } // Return updated doc, run schema validators
+    ).select('-password'); // Exclude password hash from response
+
+    console.log(`[API PUT /profile] Profile updated successfully for user: ${updatedUser.email}`);
+
+    // Respond with updated profile data (and potentially a new token if email/critical info changed? Optional)
+    res.status(200).json({
+        _id: updatedUser._id,
+        username: updatedUser.username,
+        email: updatedUser.email,
+        denomination: updatedUser.denomination,
+        lastReadBook: updatedUser.lastReadBook,
+        lastReadChapter: updatedUser.lastReadChapter,
+        bookmarkedBook: updatedUser.bookmarkedBook,
+        bookmarkedChapter: updatedUser.bookmarkedChapter,
+        createdAt: updatedUser.createdAt,
+        // OPTIONAL: Generate a new token if you want sessions to reflect changes immediately
+        // token: generateToken(updatedUser._id)
+    });
+
+  } catch (error) {
+    console.error('[API PUT /profile] Error:', error);
+     // Handle specific errors like validation errors
+     if (error.name === 'ValidationError') {
+        const messages = Object.values(error.errors).map(val => val.message);
+        return res.status(400).json({ message: messages.join(' ') });
+      }
+    res.status(500).json({ message: 'Server error updating profile.' });
+  }
 });
 
 // @route   PUT /api/auth/last-read

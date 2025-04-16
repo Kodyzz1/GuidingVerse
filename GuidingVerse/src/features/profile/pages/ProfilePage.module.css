@@ -1,0 +1,247 @@
+/* ProfilePage.module.css */
+
+/* Define color variables for light and dark modes */
+.profileContainer {
+  /* Light mode defaults */
+  --bg-primary: #f9f9f9;
+  --bg-secondary: #ffffff;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --text-tertiary: #444;
+  --text-placeholder: #aaa;
+  --border-primary: #eee;
+  --border-secondary: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--bg-primary);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  font-family: sans-serif;
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  .profileContainer {
+    --bg-primary: #2c2c2c;       /* Darker background */
+    --bg-secondary: #3a3a3a;      /* Slightly lighter section background */
+    --text-primary: #e0e0e0;     /* Lighter primary text */
+    --text-secondary: #b0b0b0;   /* Lighter secondary text */
+    --text-tertiary: #c0c0c0;    /* Lighter tertiary text */
+    --text-placeholder: #666;    /* Darker placeholder text */
+    --border-primary: #444;      /* Darker primary border */
+    --border-secondary: #555;    /* Darker secondary border */
+    --shadow-color: rgba(255, 255, 255, 0.05); /* Lighter shadow */
+  }
+}
+
+.profileHeader {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.profileHeader h2 {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.profileSection {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-secondary);
+  border-radius: 6px;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.profileSection h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text-tertiary);
+  font-size: 1.3rem;
+  border-bottom: 1px solid var(--border-primary);
+  padding-bottom: 0.5rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 150px 1fr; /* Label column and value column */
+  gap: 0.8rem;
+}
+
+.infoGrid dt {
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-align: right;
+}
+
+.infoGrid dd {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.placeholder {
+  color: var(--text-placeholder);
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Container to align button(s) */
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end; /* Push content (button) to the right */
+  margin-top: 1rem; /* Space above the button row */
+}
+
+/* --- Edit Form Styles --- */
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 150px 1fr; /* Label column and value column */
+  gap: 1rem; /* Increase gap for form */
+  align-items: center;
+}
+
+.formGrid label {
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-align: right;
+}
+
+.formInput,
+.formSelect {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid var(--border-secondary);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, background-color 0.3s, color 0.3s;
+}
+
+.formInput:focus,
+.formSelect:focus {
+  outline: none;
+  border-color: var(--text-tertiary); /* Highlight focus */
+}
+
+.formActions {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-primary);
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  gap: 0.8rem;
+}
+
+.saveButton,
+.cancelButton,
+.editButton /* Share some base styles */
+{
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.saveButton {
+  color: #fff; /* White text */
+  background-color: #007bff; /* Primary blue */
+}
+
+.saveButton:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+.saveButton:disabled {
+    background-color: #a0cfff; /* Lighter blue when disabled */
+    cursor: not-allowed;
+}
+
+.cancelButton {
+  color: var(--text-secondary);
+  background-color: transparent;
+  border: 1px solid var(--border-secondary);
+}
+
+.cancelButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Adjust dark mode for buttons if needed */
+@media (prefers-color-scheme: dark) {
+  .profileContainer {
+    /* ... existing dark mode variables ... */
+  }
+  .cancelButton {
+     border-color: var(--border-primary);
+  }
+  .cancelButton:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+  }
+  .saveButton:disabled {
+      background-color: #004c8c; /* Darker disabled blue */
+  }
+}
+
+.editButton {
+  /* Shared styles from .saveButton etc. are applied above */
+  display: inline-block; 
+  color: var(--text-secondary); 
+  background-color: transparent; 
+  border: 1px solid var(--text-tertiary); 
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.editButton:hover {
+  background-color: var(--text-secondary); /* CHANGE: Use secondary text as BG on hover */
+  color: var(--bg-secondary); /* CHANGE: Use section BG as text on hover */
+  border-color: var(--text-secondary); /* CHANGE: Match border to BG on hover */
+}
+
+@media (prefers-color-scheme: dark) {
+    /* ... existing dark mode overrides ... */
+    /* No specific dark mode hover needed for edit button with these changes */
+     .editButton:hover {
+        background-color: var(--text-secondary);
+        color: var(--bg-secondary);
+        border-color: var(--text-secondary);
+    }
+}
+
+/* Error Message Style */
+.errorMessage {
+    color: #dc3545; /* Bootstrap danger color */
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* ... existing dark mode overrides ... */
+    .errorMessage {
+        color: #f5c6cb; 
+        background-color: #721c24; /* Darker red background */
+        border-color: #dc3545;
+    }
+}

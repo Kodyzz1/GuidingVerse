@@ -63,14 +63,37 @@ function HomePage() {
             )}
           </div>
         </div>
-        <div className={styles.heroImage}>
-          <div className={styles.imagePlaceholder}>
-            Bible Study Illustration
-          </div>
+      </section>
+      {/* END Hero Section */}
+
+      {/* --- MOVE Scripture of the Day Here --- */}
+      <section className={styles.scriptureSection}>
+        <h2 className={styles.sectionTitle}>Scripture of the Day</h2>
+        <div className={styles.scriptureCard}>
+          {isLoadingVerse ? (
+            <p>Loading verse...</p>
+          ) : verseError ? (
+            <p className={styles.errorText}>{verseError}</p>
+          ) : verseOfTheDay ? (
+            <>
+              <p 
+                className={styles.scriptureText}
+                dangerouslySetInnerHTML={{ 
+                  __html: `&quot;${DOMPurify.sanitize(verseOfTheDay.text, sanitizeConfig)}&quot;` 
+                }}
+              />
+              <p className={styles.scriptureReference}>
+                — {verseOfTheDay.book} {verseOfTheDay.chapter}:{verseOfTheDay.verse} (KJV)
+              </p>
+            </>
+          ) : (
+            <p>Verse of the day not available.</p>
+          )}
         </div>
       </section>
+      {/* --- END Scripture of the Day --- */}
       
-      {/* Features Overview Section */}
+      {/* Features Overview Section (Why Choose GuidingVerse?) */}
       <section className={styles.featuresSection}>
         <h2 className={styles.sectionTitle}>Why Choose GuidingVerse?</h2>
         
@@ -124,33 +147,6 @@ function HomePage() {
         </div>
       </section>
       */}
-      
-      {/* Scripture of the Day */}
-      <section className={styles.scriptureSection}>
-        <h2 className={styles.sectionTitle}>Scripture of the Day</h2>
-        <div className={styles.scriptureCard}>
-          {isLoadingVerse ? (
-            <p>Loading verse...</p>
-          ) : verseError ? (
-            <p className={styles.errorText}>{verseError}</p>
-          ) : verseOfTheDay ? (
-            <>
-              {/* Use dangerouslySetInnerHTML for the text */}
-              <p 
-                className={styles.scriptureText}
-                dangerouslySetInnerHTML={{ 
-                  __html: `&quot;${DOMPurify.sanitize(verseOfTheDay.text, sanitizeConfig)}&quot;` 
-                }}
-              />
-              <p className={styles.scriptureReference}>
-                — {verseOfTheDay.book} {verseOfTheDay.chapter}:{verseOfTheDay.verse} (KJV)
-              </p>
-            </>
-          ) : (
-            <p>Verse of the day not available.</p>
-          )}
-        </div>
-      </section>
       
       {/* Getting Started Section */}
       <section className={styles.gettingStartedSection}>

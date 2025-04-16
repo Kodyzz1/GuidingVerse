@@ -197,25 +197,30 @@
    =================== */
   .scriptureSection {
     text-align: center;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover-color) 100%); /* Example gradient */
-    color: white;
-    padding: 4rem 1rem;
+    /* Let's use a standard background for better theme adaptability */
+    /* background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover-color) 100%); */
+    background-color: var(--bg-secondary, #f0f0f0); /* Use secondary background */
+    color: var(--text-primary); /* CHANGE: Use theme text color */
+    padding: 3rem 1rem; /* Adjust padding if needed */
     border-radius: 8px;
+    border: 1px solid var(--border-secondary);
+    margin: 3rem 0; /* Ensure consistent section margin */
   }
   
   .scriptureSection .sectionTitle {
-     color: white; /* Title color on dark background */
+     color: var(--text-primary); /* CHANGE: Use theme text color */
      margin-bottom: 2rem;
   }
 
   .scriptureCard {
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle card background */
-    padding: 2.5rem 2rem;
-    border-radius: 8px;
-    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
+    /* Remove the light transparent background */
+    /* background-color: rgba(255, 255, 255, 0.1); */ 
+    padding: 1.5rem 1rem; /* Adjust padding */
+    border-radius: 6px;
     margin: 0 auto;
     max-width: 700px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Remove border, let the section have the border */
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
   }
   
   .scriptureText {
@@ -223,12 +228,22 @@
     font-style: italic;
     line-height: 1.7;
     margin-bottom: 1.5rem;
-    color: rgba(255, 255, 255, 0.95);
+    color: var(--text-primary); /* CHANGE: Use theme text color */
+  }
+
+  .scriptureText i,
+  .scriptureText em {
+    color: var(--text-secondary); /* Slightly different color for italics if needed */
   }
   
   .scriptureReference {
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--text-secondary); /* CHANGE: Use theme secondary text color */
+  }
+
+  .errorText { /* Style for error message */
+      color: var(--danger-color, #dc3545);
+      font-weight: 500;
   }
   
 /* ===================
