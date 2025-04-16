@@ -2,6 +2,8 @@ import express from 'express';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { sendNotificationsToAll } from '../utils/pushNotifications.js';
+import { logger } from '../utils/logger.js';
 
 const router = express.Router();
 
@@ -75,13 +77,39 @@ router.get('/', async (req, res) => {
       throw new Error(`Verse ${targetVerseRef.verse} not found in chapter data for ${targetVerseRef.book} ${targetVerseRef.chapter}.`);
     }
 
-    // Return the verse data
-    res.json({
+    const verseOfTheDay = {
       book: targetVerseRef.book,
       chapter: targetVerseRef.chapter,
       verse: verseData.verse,
       text: verseData.text,
-    });
+    };
+
+    // --- Send Response FIRST --- 
+    res.json(verseOfTheDay);
+
+    // --- Trigger Notifications (AFTER sending response) --- 
+    try {
+      // Sanitize verse text slightly for notification (optional)
+      const notificationText = verseOfTheDay.text.length > 100 
+          ? verseOfTheDay.text.substring(0, 97) + '...' 
+          : verseOfTheDay.text;
+          
+      const payload = {
+        title: 'Verse of the Day',
+        body: `"${notificationText}" - ${verseOfTheDay.book} ${verseOfTheDay.chapter}:${verseOfTheDay.verse}`,
+        icon: '/icons/icon-192x192.png', // Match SW icon
+        // Optional: Add URL to open the reader to this verse
+        url: `/read?book=${encodeURIComponent(verseOfTheDay.book)}&chapter=${verseOfTheDay.chapter}` 
+      };
+      // Send in background, don't wait for it to finish
+      sendNotificationsToAll(payload).catch(err => {
+          logger.error("[VerseOfTheDay] Background notification send failed:", err);
+      }); 
+    } catch (notificationError) {
+        // Log error if preparing payload fails, but don't crash the main request
+        logger.error("[VerseOfTheDay] Error preparing or triggering notification send:", notificationError);
+    }
+    // -----------------------------------------------------
 
   } catch (error) {
     console.error('[VerseOfTheDay] Error processing request:', error);
