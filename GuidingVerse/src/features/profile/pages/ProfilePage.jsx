@@ -38,6 +38,7 @@ function ProfilePage() {
   const [isCheckingNotifications, setIsCheckingNotifications] = useState(true);
   const [notificationError, setNotificationError] = useState(null);
   const [isSubscribing, setIsSubscribing] = useState(false);
+  const [isSendingTest, setIsSendingTest] = useState(false);
 
   // --- Denominations List (Can be moved to constants file) ---
   const denominations = [
@@ -272,6 +273,40 @@ function ProfilePage() {
     }
   }, [isAuthenticated]); // Depend on auth status
 
+  // --- Test Notification Handler ---
+  const handleTestSendClick = useCallback(async () => {
+    setIsSendingTest(true);
+    setNotificationError(null); // Clear previous errors
+    try {
+        const token = localStorage.getItem('guidingVerseToken');
+        if (!token) throw new Error('Authentication token not found.');
+
+        const response = await fetch('/api/notifications/test-send', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`
+                // No Content-Type needed for this simple POST
+            }
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.message || 'Failed to trigger test notification.');
+        }
+
+        alert(`Test notification triggered for: ${data.sentVerse}`);
+        console.log('Test notification sent successfully via backend.');
+
+    } catch (err) {
+        console.error('[TestSend] Error triggering test notification:', err);
+        setNotificationError(err.message || 'Could not trigger test notification.');
+        alert(`Error: ${err.message}`);
+    } finally {
+        setIsSendingTest(false);
+    }
+  }, []); // No dependencies needed if it just makes an API call
+
   // --- Initialize Service Worker (if not handled elsewhere) --- 
   // This might be better placed in App.jsx or main.jsx to run once on load
   useEffect(() => {
@@ -394,8 +429,17 @@ function ProfilePage() {
           ) : (
               <div>
                   {notificationsEnabled ? (
-                      <p>Push notifications are currently enabled on this device.</p>
-                      // TODO: Add an Unsubscribe button here later
+                      <>
+                          <p>Push notifications are currently enabled on this device.</p>
+                          <button 
+                              className={styles.testButton} 
+                              onClick={handleTestSendClick} 
+                              disabled={isSendingTest} 
+                              title="Send the current Verse of the Day notification to all subscribers"
+                          >
+                              {isSendingTest ? 'Sending Test...' : 'Send Test Notification'}
+                          </button>
+                      </>
                   ) : (
                       <>
                           <p>Enable push notifications to receive updates (e.g., Verse of the Day).</p>

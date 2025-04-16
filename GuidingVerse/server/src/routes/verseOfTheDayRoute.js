@@ -98,8 +98,8 @@ router.get('/', async (req, res) => {
         title: 'Verse of the Day',
         body: `"${notificationText}" - ${verseOfTheDay.book} ${verseOfTheDay.chapter}:${verseOfTheDay.verse}`,
         icon: '/icons/icon-192x192.png', // Match SW icon
-        // Optional: Add URL to open the reader to this verse
-        url: `/read?book=${encodeURIComponent(verseOfTheDay.book)}&chapter=${verseOfTheDay.chapter}` 
+        // CHANGE: Use /reader to match frontend route
+        url: `/reader?book=${encodeURIComponent(verseOfTheDay.book)}&chapter=${verseOfTheDay.chapter}` 
       };
       // Send in background, don't wait for it to finish
       sendNotificationsToAll(payload).catch(err => {
