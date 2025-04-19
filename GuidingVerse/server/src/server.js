@@ -201,4 +201,9 @@ async function runHourlyNotificationCheck() {
     }
 
   } catch (error) {
-    logger.error(`
+    // Add closing backtick and improve message
+    logger.error(`[Hourly Task - ${currentUTCHour}:00 UTC] Error during notification check:`, error);
+  }
+}
+
+// ... rest of the code ...
