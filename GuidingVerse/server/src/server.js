@@ -207,3 +207,8 @@ async function runHourlyNotificationCheck() {
 }
 
 // ... rest of the code ...
+
+// --- Start Server ---
+app.listen(PORT, '0.0.0.0', () => { // Add '0.0.0.0' as the hostname
+  logger.info(`Server running on port ${PORT}`);
+});
