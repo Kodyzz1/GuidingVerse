@@ -32,6 +32,8 @@ export function AuthProvider({ children }) {
           name: parsedUser.name,
           email: parsedUser.email,
           denomination: parsedUser.denomination,
+          preferredLocalNotificationHour: parsedUser.preferredLocalNotificationHour,
+          notificationTimezone: parsedUser.notificationTimezone,
           lastReadBook: parsedUser.lastReadBook || 'Genesis',
           lastReadChapter: parsedUser.lastReadChapter || 1,
           bookmarkedBook: parsedUser.bookmarkedBook || null, // Add bookmark
@@ -73,6 +75,8 @@ export function AuthProvider({ children }) {
           name: data.username,
           email: data.email,
           denomination: data.denomination,
+          preferredLocalNotificationHour: data.preferredLocalNotificationHour,
+          notificationTimezone: data.notificationTimezone,
           lastReadBook: data.lastReadBook || 'Genesis',
           lastReadChapter: data.lastReadChapter || 1,
           bookmarkedBook: data.bookmarkedBook || null,
@@ -130,6 +134,8 @@ export function AuthProvider({ children }) {
           name: data.username,
           email: data.email,
           denomination: data.denomination,
+          preferredLocalNotificationHour: data.preferredLocalNotificationHour,
+          notificationTimezone: data.notificationTimezone,
           lastReadBook: data.lastReadBook || 'Genesis',
           lastReadChapter: data.lastReadChapter || 1,
           bookmarkedBook: data.bookmarkedBook || null,
@@ -235,7 +241,17 @@ export function AuthProvider({ children }) {
   const updateUserState = useCallback((updatedFields) => {
     setUser(currentUser => {
       if (!currentUser) return null;
-      const newUserState = { ...currentUser, ...updatedFields };
+      // Ensure we don't accidentally overwrite the new fields if they aren't in updatedFields
+      const newUserState = { 
+          ...currentUser, 
+          ...updatedFields, // This merges the updates
+          // Explicitly include potentially updated notification fields if they exist in updatedFields,
+          // otherwise keep the current ones. This is implicitly handled by the spread above,
+          // but being explicit might be clearer for complex cases.
+          // preferredLocalNotificationHour: updatedFields.preferredLocalNotificationHour !== undefined ? updatedFields.preferredLocalNotificationHour : currentUser.preferredLocalNotificationHour,
+          // notificationTimezone: updatedFields.notificationTimezone !== undefined ? updatedFields.notificationTimezone : currentUser.notificationTimezone
+      };
+      
       // Also update localStorage so reloads reflect the change
       localStorage.setItem('guidingVerseUser', JSON.stringify(newUserState));
       console.log('[AuthContext] updateUserState updated state and localStorage:', updatedFields);
