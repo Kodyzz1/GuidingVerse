@@ -52,6 +52,13 @@ const userSchema = new mongoose.Schema({
       }
     }
   ],
+  // --- Notification Preference ---
+  preferredNotificationHour: { // Stores the UTC hour (0-23) the user wants notifications
+      type: Number,
+      min: 0,
+      max: 23,
+      default: null // Null means notifications are off for VOTD
+  },
   createdAt: {
     type: Date,
     default: Date.now

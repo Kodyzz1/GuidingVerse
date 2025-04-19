@@ -14,6 +14,9 @@ import notificationRoutes from './routes/notificationRoutes.js';
 import connectDB from './config/db.js';
 import { errorHandler } from './middleware/errorHandler.js';
 import { logger } from './utils/logger.js';
+import User from './models/User.js';
+import { sendNotificationToUser } from './utils/pushNotifications.js';
+import { getStoredVOTDDetails } from './utils/votdService.js';
 
 // Load environment variables
 dotenv.config();
@@ -101,6 +104,71 @@ if (process.env.NODE_ENV === 'production') {
 
 // --- Error Handling Middleware (Should be last) ---
 app.use(errorHandler);
+
+// --- Hourly Notification Task ---
+const ONE_HOUR_MS = 60 * 60 * 1000;
+
+async function runHourlyNotificationCheck() {
+  const currentUTCHour = new Date().getUTCHours();
+  logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] Running notification check...`);
+
+  try {
+    // Find users who want notifications at this hour
+    const usersToNotify = await User.find({
+      preferredNotificationHour: currentUTCHour,
+      'pushSubscriptions.0': { $exists: true } // Ensure they have subscriptions
+    }).select('_id pushSubscriptions'); // Select only necessary fields
+
+    if (usersToNotify.length === 0) {
+      logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] No users scheduled for this hour.`);
+      return;
+    }
+
+    logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] Found ${usersToNotify.length} users to potentially notify.`);
+
+    // Get the current VOTD details
+    const { votd, date: votdDate, dateStringForToday } = getStoredVOTDDetails();
+
+    // Check if VOTD is available and for the current date
+    if (!votd || votdDate !== dateStringForToday) {
+      logger.warn(`[Hourly Task - ${currentUTCHour}:00 UTC] VOTD not available or not for today (${dateStringForToday}). Skipping notifications. Stored date: ${votdDate}`);
+      return;
+    }
+
+    logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] Today's VOTD (${votdDate}) is: ${votd.book} ${votd.chapter}:${votd.verse}. Preparing payload.`);
+
+    // Prepare payload (same as before, but ensure it uses the retrieved votd)
+    const notificationText = votd.text.length > 100 
+        ? votd.text.substring(0, 97) + '...' 
+        : votd.text;
+    const payload = {
+      title: 'Verse of the Day',
+      body: `"${notificationText}" - ${votd.book} ${votd.chapter}:${votd.verse}`,
+      icon: '/icons/icon-192x192.png',
+      url: `/reader?book=${encodeURIComponent(votd.book)}&chapter=${votd.chapter}` 
+    };
+
+    // Send notification to each user individually
+    const sendTasks = usersToNotify.map(user => 
+      sendNotificationToUser(user._id, payload) // sendNotificationToUser handles logging and cleanup internally
+    );
+
+    await Promise.allSettled(sendTasks);
+    logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] Finished sending notifications to ${usersToNotify.length} users.`);
+
+  } catch (error) {
+    logger.error(`[Hourly Task - ${currentUTCHour}:00 UTC] Error during notification check:`, error);
+  }
+}
+
+// Run the check once shortly after server start, then set the interval
+setTimeout(() => {
+    logger.info('[Server Startup] Running initial notification check...');
+    runHourlyNotificationCheck(); 
+    setInterval(runHourlyNotificationCheck, ONE_HOUR_MS);
+    logger.info('[Server Startup] Hourly notification check interval started.');
+}, 5000); // Run 5 seconds after start
+// ---------------------------
 
 // --- Start Server ---
 app.listen(PORT, () => {

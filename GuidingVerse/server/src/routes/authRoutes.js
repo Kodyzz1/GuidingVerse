@@ -172,7 +172,7 @@ router.get('/profile', protect, async (req, res) => {
 // @desc    Update user profile
 // @access  Private
 router.put('/profile', protect, async (req, res) => {
-  const { username, email, denomination, password } = req.body;
+  const { username, email, denomination, password, preferredNotificationHour } = req.body;
   const userId = req.user._id;
 
   try {
@@ -195,6 +195,17 @@ router.put('/profile', protect, async (req, res) => {
         updates.email = email; // Schema will lowercase it
     }
     if (denomination) updates.denomination = denomination;
+
+    // Add the new preference, ensuring it's a valid number or null
+    if (preferredNotificationHour !== undefined) {
+      if (preferredNotificationHour === null || (typeof preferredNotificationHour === 'number' && preferredNotificationHour >= 0 && preferredNotificationHour <= 23 && Number.isInteger(preferredNotificationHour))) {
+        updates.preferredNotificationHour = preferredNotificationHour;
+      } else {
+        // Invalid value provided, ignore or return error?
+        // Let's ignore for now, rely on frontend validation. Schema validation will also catch type/range errors.
+        console.warn(`[API PUT /profile] Invalid preferredNotificationHour (${preferredNotificationHour}) received for user ${userId}. Ignoring.`);
+      }
+    }
 
     // Handle password update separately (requires hashing)
     if (password) {
@@ -221,6 +232,7 @@ router.put('/profile', protect, async (req, res) => {
         username: updatedUser.username,
         email: updatedUser.email,
         denomination: updatedUser.denomination,
+        preferredNotificationHour: updatedUser.preferredNotificationHour, // Include in response
         lastReadBook: updatedUser.lastReadBook,
         lastReadChapter: updatedUser.lastReadChapter,
         bookmarkedBook: updatedUser.bookmarkedBook,

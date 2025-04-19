@@ -2,7 +2,7 @@ import express from 'express';
 import User from '../models/User.js';
 import { protect } from '../middleware/authMiddleware.js';
 import { logger } from '../utils/logger.js';
-import { sendNotificationsToAll } from '../utils/pushNotifications.js'; // Import sender
+import { sendNotificationsToAll, sendNotificationToUser } from '../utils/pushNotifications.js'; // Import sender
 // Need verse fetching logic dependencies
 import fs from 'fs/promises';
 import path from 'path';
@@ -142,12 +142,12 @@ router.post('/test-send', protect, async (req, res) => {
             url: `/reader?book=${encodeURIComponent(verseOfTheDay.book)}&chapter=${verseOfTheDay.chapter}` 
         };
         
-        // Send (don't wait)
-        sendNotificationsToAll(payload).catch(err => {
-            logger.error("[POST /test-send] Background notification send failed:", err);
+        // CHANGE: Send only to the requesting user
+        sendNotificationToUser(req.user._id, payload).catch(err => {
+            logger.error("[POST /test-send] Background test notification send failed:", err);
         }); 
 
-        res.status(200).json({ message: 'Test notification triggered successfully.', sentVerse: `${verseOfTheDay.book} ${verseOfTheDay.chapter}:${verseOfTheDay.verse}` });
+        res.status(200).json({ message: 'Test notification triggered successfully for your subscriptions.', sentVerse: `${verseOfTheDay.book} ${verseOfTheDay.chapter}:${verseOfTheDay.verse}` });
 
     } catch (notificationError) {
         logger.error("[POST /test-send] Error preparing or triggering notification send:", notificationError);

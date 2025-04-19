@@ -29,7 +29,8 @@ function ProfilePage() {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
-    denomination: ''
+    denomination: '',
+    preferredNotificationHour: null // Add state for notification hour
   });
   const [isLoading, setIsLoading] = useState(false); // For save loading state
   const [error, setError] = useState(null); // For API errors
@@ -61,7 +62,9 @@ function ProfilePage() {
       setFormData({
         username: user.name || '',
         email: user.email || '',
-        denomination: user.denomination || 'Prefer not to say' 
+        denomination: user.denomination || 'Prefer not to say',
+        // Initialize from user context, use null if undefined/not set
+        preferredNotificationHour: user.preferredNotificationHour !== undefined ? user.preferredNotificationHour : null 
       });
     }
   }, [user]); // Re-run if user object changes
@@ -106,7 +109,9 @@ function ProfilePage() {
       setFormData({
         username: user.name || '',
         email: user.email || '',
-        denomination: user.denomination || 'Prefer not to say'
+        denomination: user.denomination || 'Prefer not to say',
+        // Also reset notification hour on edit start
+        preferredNotificationHour: user.preferredNotificationHour !== undefined ? user.preferredNotificationHour : null 
       });
     }
   };
@@ -142,6 +147,11 @@ function ProfilePage() {
     if (formData.username !== user.name) changedData.username = formData.username;
     if (formData.email !== user.email) changedData.email = formData.email;
     if (formData.denomination !== user.denomination) changedData.denomination = formData.denomination;
+    // Add preferredNotificationHour to changed data if it differs
+    if (formData.preferredNotificationHour !== (user.preferredNotificationHour !== undefined ? user.preferredNotificationHour : null)) {
+        // Convert string from select back to number, or keep null
+        changedData.preferredNotificationHour = formData.preferredNotificationHour === '' ? null : parseInt(formData.preferredNotificationHour, 10);
+    }
 
     if (Object.keys(changedData).length === 0) {
         setError('No changes detected.');
@@ -177,6 +187,7 @@ function ProfilePage() {
                 name: data.username, // Use updated field names from response
                 email: data.email,
                 denomination: data.denomination,
+                preferredNotificationHour: data.preferredNotificationHour, // Update context
                 // Keep other fields like lastRead, bookmark, etc. from existing user state
                 // as the PUT /profile response doesn't return them all currently.
                 // A better approach might be a dedicated fetchProfile() after update, 
@@ -375,6 +386,23 @@ function ProfilePage() {
                   <option key={denom} value={denom}>{denom}</option>
                 ))}
               </select>
+
+              {/* --- Add Preferred Notification Hour Dropdown --- */}
+              <label htmlFor="preferredNotificationHour">VOTD Notification Time (UTC):</label>
+              <select
+                id="preferredNotificationHour"
+                name="preferredNotificationHour"
+                value={formData.preferredNotificationHour === null ? '' : formData.preferredNotificationHour} // Handle null value for "Off"
+                onChange={handleInputChange}
+                className={styles.formSelect}
+              >
+                <option value="">Off</option> { /* Represents null */}
+                {Array.from({ length: 24 }, (_, i) => (
+                  <option key={i} value={i}>
+                    {i.toString().padStart(2, '0')}:00 UTC
+                  </option>
+                ))}
+              </select>
             </div>
             <div className={styles.formActions}>
               <button type="submit" className={styles.saveButton} disabled={isLoading}>
@@ -397,6 +425,14 @@ function ProfilePage() {
 
               <dt>Denomination:</dt>
               <dd>{user.denomination || 'N/A'}</dd>
+
+              {/* Display Preferred Notification Hour */}
+              <dt>VOTD Notification Time:</dt>
+              <dd>
+                {user.preferredNotificationHour === null || user.preferredNotificationHour === undefined
+                  ? 'Off'
+                  : `${user.preferredNotificationHour.toString().padStart(2, '0')}:00 UTC`}
+              </dd>
             </dl>
             <div className={styles.buttonContainer}>
               <button className={styles.editButton} onClick={handleEditClick}>

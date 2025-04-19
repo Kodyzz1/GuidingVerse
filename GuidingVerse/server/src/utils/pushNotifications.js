@@ -94,4 +94,71 @@ export async function sendNotificationsToAll(payload) {
     }
 }
 
+/**
+ * Sends a push notification payload to a specific user's valid subscriptions.
+ * @param {string} userId The ID of the user to send the notification to.
+ * @param {object} payload The payload to send (e.g., { title, body, icon, url }).
+ */
+export async function sendNotificationToUser(userId, payload) {
+    if (!userId) {
+        logger.error('[Push Send User] No userId provided.');
+        return;
+    }
+    logger.info(`[Push Send User] Attempting to send notification to user ${userId}. Payload: ${JSON.stringify(payload)}`);
+
+    try {
+        const user = await User.findById(userId).select('pushSubscriptions'); // Only select needed field
+
+        if (!user || !user.pushSubscriptions || user.pushSubscriptions.length === 0) {
+            logger.info(`[Push Send User] User ${userId} not found or has no active subscriptions.`);
+            return;
+        }
+
+        logger.info(`[Push Send User] Found ${user.pushSubscriptions.length} subscriptions for user ${userId}.`);
+
+        const sendPromises = [];
+        const subscriptionsToRemove = []; // Keep track of expired subscriptions for this user
+
+        user.pushSubscriptions.forEach(subscription => {
+            const sendPromise = webpush.sendNotification(
+                subscription,
+                JSON.stringify(payload)
+            )
+            .then(response => {
+                logger.info(`[Push Send User] Notification sent successfully to ${subscription.endpoint.substring(0, 40)}... for user ${userId}. Status: ${response.statusCode}`);
+            })
+            .catch(error => {
+                logger.error(`[Push Send User] Error sending notification to ${subscription.endpoint.substring(0, 40)}... for user ${userId}. Status: ${error.statusCode}, Message: ${error.body}`);
+                if (error.statusCode === 410 || error.statusCode === 404) {
+                    logger.warn(`[Push Send User] Subscription ${subscription.endpoint.substring(0, 40)}... for user ${userId} is expired or invalid. Queuing for removal.`);
+                    // Pass the full subscription object for easier removal
+                    subscriptionsToRemove.push(subscription.endpoint);
+                }
+            });
+            sendPromises.push(sendPromise);
+        });
+
+        await Promise.allSettled(sendPromises);
+        logger.info(`[Push Send User] All notification send attempts completed for user ${userId}.`);
+
+        // --- Cleanup Expired Subscriptions for this User --- 
+        if (subscriptionsToRemove.length > 0) {
+            logger.info(`[Push Send User] Removing ${subscriptionsToRemove.length} expired/invalid subscriptions for user ${userId}.`);
+            try {
+                 await User.updateOne(
+                    { _id: userId },
+                    { $pull: { pushSubscriptions: { endpoint: { $in: subscriptionsToRemove } } } }
+                );
+                logger.info(`[Push Send User] Expired subscription cleanup finished for user ${userId}.`);
+            } catch (cleanupError) {
+                 logger.error(`[Push Send User] Error cleaning up subscriptions for user ${userId}:`, cleanupError);
+            }
+           
+        }
+
+    } catch (error) {
+        logger.error(`[Push Send User] General error sending notifications to user ${userId}:`, error);
+    }
+}
+
 export default webpush; 
