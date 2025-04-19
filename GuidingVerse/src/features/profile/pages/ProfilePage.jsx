@@ -30,7 +30,8 @@ function ProfilePage() {
     username: '',
     email: '',
     denomination: '',
-    preferredNotificationHour: null // Add state for notification hour
+    preferredLocalNotificationHour: null,
+    detectedTimezone: ''
   });
   const [isLoading, setIsLoading] = useState(false); // For save loading state
   const [error, setError] = useState(null); // For API errors
@@ -56,18 +57,30 @@ function ProfilePage() {
     "Prefer not to say"
   ];
 
-  // --- Effect to initialize form data when user loads/changes ---
+  // --- Effect to initialize form data and detect timezone ---
   useEffect(() => {
+    let detectedTz = '';
+    try {
+      detectedTz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    } catch (e) {
+      console.warn('Could not detect browser timezone:', e);
+      // Optionally set an error state or default
+    }
+
     if (user) {
       setFormData({
         username: user.name || '',
         email: user.email || '',
         denomination: user.denomination || 'Prefer not to say',
-        // Initialize from user context, use null if undefined/not set
-        preferredNotificationHour: user.preferredNotificationHour !== undefined ? user.preferredNotificationHour : null 
+        preferredLocalNotificationHour: user.preferredLocalNotificationHour !== undefined ? user.preferredLocalNotificationHour : null,
+        detectedTimezone: detectedTz || ''
       });
+    } else {
+      // If no user, still set the detected timezone for potential use
+       setFormData(prev => ({ ...prev, detectedTimezone: detectedTz || '' }));
     }
-  }, [user]); // Re-run if user object changes
+    // Only re-run if the user object changes (timezone detection runs once)
+  }, [user]); 
 
   // Check initial notification permission and subscription status
   useEffect(() => {
@@ -103,15 +116,20 @@ function ProfilePage() {
   // --- Handlers ---
   const handleEditClick = () => {
     setIsEditing(true);
-    setError(null); // Clear previous errors
-    // Reset form data to current user state in case of previous cancelled edits
+    setError(null); 
     if (user) {
+      // Also detect timezone again when entering edit mode, in case it changed?
+      let detectedTz = '';
+      try {
+          detectedTz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      } catch (e) { console.warn('Could not detect browser timezone on edit start:', e); }
+      
       setFormData({
         username: user.name || '',
         email: user.email || '',
         denomination: user.denomination || 'Prefer not to say',
-        // Also reset notification hour on edit start
-        preferredNotificationHour: user.preferredNotificationHour !== undefined ? user.preferredNotificationHour : null 
+        preferredLocalNotificationHour: user.preferredLocalNotificationHour !== undefined ? user.preferredLocalNotificationHour : null,
+        detectedTimezone: detectedTz || ''
       });
     }
   };
@@ -124,10 +142,19 @@ function ProfilePage() {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setFormData(prevData => ({
-      ...prevData,
-      [name]: value
-    }));
+    // Handle the select for notification hour specifically
+    if (name === 'preferredLocalNotificationHour') {
+        setFormData(prevData => ({
+            ...prevData,
+            // Store null if "Off" is selected, otherwise parse the number
+            [name]: value === '' ? null : parseInt(value, 10)
+        }));
+    } else {
+        setFormData(prevData => ({
+            ...prevData,
+            [name]: value
+        }));
+    }
   };
 
   const handleSave = async (event) => {
@@ -147,10 +174,28 @@ function ProfilePage() {
     if (formData.username !== user.name) changedData.username = formData.username;
     if (formData.email !== user.email) changedData.email = formData.email;
     if (formData.denomination !== user.denomination) changedData.denomination = formData.denomination;
-    // Add preferredNotificationHour to changed data if it differs
-    if (formData.preferredNotificationHour !== (user.preferredNotificationHour !== undefined ? user.preferredNotificationHour : null)) {
-        // Convert string from select back to number, or keep null
-        changedData.preferredNotificationHour = formData.preferredNotificationHour === '' ? null : parseInt(formData.preferredNotificationHour, 10);
+    
+    // Check if notification preference changed
+    const currentPrefHour = user.preferredLocalNotificationHour !== undefined ? user.preferredLocalNotificationHour : null;
+    const currentPrefTz = user.notificationTimezone || null; // Get current timezone pref
+    const formHour = formData.preferredLocalNotificationHour; // Already number or null
+    const formTz = formData.detectedTimezone || null; // Use the detected timezone
+
+    // Send if hour changed OR if turning preference on/off (hour becomes null/non-null)
+    // Also send timezone if preference is being turned ON (hour is not null)
+    if (formHour !== currentPrefHour) { 
+        changedData.preferredLocalNotificationHour = formHour;
+        // If the preference is being set (not turned off), also send the detected timezone
+        if (formHour !== null) {
+             changedData.notificationTimezone = formTz;
+        } else {
+             // If turning off, explicitly set timezone to null on backend too
+             changedData.notificationTimezone = null;
+        }
+    } else if (formHour !== null && formTz !== currentPrefTz) {
+        // Handle case where only the detected timezone changed while hour preference remained the same (and not null)
+        // This is less common, but good to update the stored timezone if the user's system changed.
+        changedData.notificationTimezone = formTz;
     }
 
     if (Object.keys(changedData).length === 0) {
@@ -187,7 +232,8 @@ function ProfilePage() {
                 name: data.username, // Use updated field names from response
                 email: data.email,
                 denomination: data.denomination,
-                preferredNotificationHour: data.preferredNotificationHour, // Update context
+                preferredLocalNotificationHour: data.preferredLocalNotificationHour,
+                notificationTimezone: data.notificationTimezone,
                 // Keep other fields like lastRead, bookmark, etc. from existing user state
                 // as the PUT /profile response doesn't return them all currently.
                 // A better approach might be a dedicated fetchProfile() after update, 
@@ -387,22 +433,30 @@ function ProfilePage() {
                 ))}
               </select>
 
-              {/* --- Add Preferred Notification Hour Dropdown --- */}
-              <label htmlFor="preferredNotificationHour">VOTD Notification Time (UTC):</label>
-              <select
-                id="preferredNotificationHour"
-                name="preferredNotificationHour"
-                value={formData.preferredNotificationHour === null ? '' : formData.preferredNotificationHour} // Handle null value for "Off"
-                onChange={handleInputChange}
-                className={styles.formSelect}
-              >
-                <option value="">Off</option> { /* Represents null */}
-                {Array.from({ length: 24 }, (_, i) => (
-                  <option key={i} value={i}>
-                    {i.toString().padStart(2, '0')}:00 UTC
-                  </option>
-                ))}
-              </select>
+              {/* --- Update Preferred Notification Hour Dropdown --- */}
+              <label htmlFor="preferredLocalNotificationHour">VOTD Notification Time:</label>
+              <div> { /* Wrap select and timezone info */}
+                <select
+                  id="preferredLocalNotificationHour"
+                  name="preferredLocalNotificationHour"
+                  value={formData.preferredLocalNotificationHour === null ? '' : formData.preferredLocalNotificationHour}
+                  onChange={handleInputChange}
+                  className={styles.formSelect}
+                >
+                  <option value="">Off</option> { /* Represents null */}
+                  {Array.from({ length: 24 }, (_, i) => (
+                    <option key={i} value={i}>
+                      {i.toString().padStart(2, '0')}:00
+                    </option>
+                  ))}
+                </select>
+                {/* Display detected timezone */}
+                {formData.detectedTimezone && (
+                    <span className={styles.timezoneInfo}>
+                        (Your Local Time - Zone: {formData.detectedTimezone})
+                    </span>
+                )}
+              </div>
             </div>
             <div className={styles.formActions}>
               <button type="submit" className={styles.saveButton} disabled={isLoading}>
@@ -426,12 +480,16 @@ function ProfilePage() {
               <dt>Denomination:</dt>
               <dd>{user.denomination || 'N/A'}</dd>
 
-              {/* Display Preferred Notification Hour */}
+              {/* Update Display Preferred Notification Hour */}
               <dt>VOTD Notification Time:</dt>
               <dd>
-                {user.preferredNotificationHour === null || user.preferredNotificationHour === undefined
-                  ? 'Off'
-                  : `${user.preferredNotificationHour.toString().padStart(2, '0')}:00 UTC`}
+                {user.preferredLocalNotificationHour === null || user.preferredLocalNotificationHour === undefined
+                    ? 'Off'
+                    : `${user.preferredLocalNotificationHour.toString().padStart(2, '0')}:00`}
+                {/* Optionally display the stored timezone */} 
+                {user.notificationTimezone && user.preferredLocalNotificationHour !== null && (
+                    <span className={styles.timezoneDisplay}> (Local Timezone: {user.notificationTimezone})</span>
+                )}
               </dd>
             </dl>
             <div className={styles.buttonContainer}>

@@ -109,22 +109,24 @@ app.use(errorHandler);
 const ONE_HOUR_MS = 60 * 60 * 1000;
 
 async function runHourlyNotificationCheck() {
-  const currentUTCHour = new Date().getUTCHours();
+  const currentUTCHour = new Date().getUTCHours(); // Still useful for logging the task run time
+  const now = new Date(); // Get the full current time for accurate local conversion
   logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] Running notification check...`);
 
   try {
-    // Find users who want notifications at this hour
+    // Find users who have set a timezone and local hour preference
     const usersToNotify = await User.find({
-      preferredNotificationHour: currentUTCHour,
-      'pushSubscriptions.0': { $exists: true } // Ensure they have subscriptions
-    }).select('_id pushSubscriptions'); // Select only necessary fields
+      notificationTimezone: { $ne: null }, // Must have timezone set
+      preferredLocalNotificationHour: { $ne: null }, // Must have hour set
+      'pushSubscriptions.0': { $exists: true } 
+    }).select('_id pushSubscriptions notificationTimezone preferredLocalNotificationHour'); 
 
     if (usersToNotify.length === 0) {
-      logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] No users scheduled for this hour.`);
+      logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] No users with timezone/hour preferences found.`);
       return;
     }
 
-    logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] Found ${usersToNotify.length} users to potentially notify.`);
+    logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] Found ${usersToNotify.length} users with preferences.`);
 
     // Get the current VOTD details
     const { votd, date: votdDate, dateStringForToday } = getStoredVOTDDetails();
@@ -135,9 +137,7 @@ async function runHourlyNotificationCheck() {
       return;
     }
 
-    logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] Today's VOTD (${votdDate}) is: ${votd.book} ${votd.chapter}:${votd.verse}. Preparing payload.`);
-
-    // Prepare payload (same as before, but ensure it uses the retrieved votd)
+    // Prepare payload (only needs to be done once)
     const notificationText = votd.text.length > 100 
         ? votd.text.substring(0, 97) + '...' 
         : votd.text;
@@ -147,30 +147,58 @@ async function runHourlyNotificationCheck() {
       icon: '/icons/icon-192x192.png',
       url: `/reader?book=${encodeURIComponent(votd.book)}&chapter=${votd.chapter}` 
     };
+    logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] Prepared VOTD Payload for ${votd.book} ${votd.chapter}:${votd.verse}`);
 
-    // Send notification to each user individually
-    const sendTasks = usersToNotify.map(user => 
-      sendNotificationToUser(user._id, payload) // sendNotificationToUser handles logging and cleanup internally
-    );
+    // Check each user's preference against the current time in their timezone
+    const sendTasks = [];
+    usersToNotify.forEach(user => {
+        try {
+            // Format the *current* time (UTC) into the user's specified timezone
+            const formatter = new Intl.DateTimeFormat('en-US', { // locale doesn't significantly matter for hour extraction
+                timeZone: user.notificationTimezone,
+                hour: 'numeric', // Get the hour
+                hour12: false    // Use 24-hour format (0-23)
+            });
+            
+            // Extract the hour part correctly (formatToParts is safer)
+            const parts = formatter.formatToParts(now);
+            const currentLocalHourPart = parts.find(part => part.type === 'hour');
+            
+            if (!currentLocalHourPart) {
+                 logger.error(`[Hourly Task] Could not extract hour for timezone ${user.notificationTimezone} for user ${user._id}`);
+                 return; // Skip this user
+            }
+            
+            // Handle potential 24 -> 0 issue if Intl returns 24 for midnight
+            let currentLocalHour = parseInt(currentLocalHourPart.value, 10);
+            if (currentLocalHour === 24) {
+                currentLocalHour = 0; // Treat 24 as 0 (start of the day)
+            }
 
-    await Promise.allSettled(sendTasks);
-    logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] Finished sending notifications to ${usersToNotify.length} users.`);
+            // Check if the current local hour matches the user's preference
+            if (currentLocalHour === user.preferredLocalNotificationHour) {
+                logger.info(`[Hourly Task] Match found for user ${user._id}. Current local hour (${user.notificationTimezone}): ${currentLocalHour}, Preferred: ${user.preferredLocalNotificationHour}. Queueing notification.`);
+                // Queue the task to send the notification to this specific user
+                sendTasks.push(sendNotificationToUser(user._id, payload)); 
+            } 
+            // else {
+            //      logger.debug(`[Hourly Task] No match for user ${user._id}. Current local hour (${user.notificationTimezone}): ${currentLocalHour}, Preferred: ${user.preferredLocalNotificationHour}`);
+            // }
+        } catch (tzError) {
+            // Log error if the timezone name is invalid
+            logger.error(`[Hourly Task] Error processing timezone '${user.notificationTimezone}' for user ${user._id}:`, tzError);
+            // Consider setting user's timezone preference back to null here?
+            // User.findByIdAndUpdate(user._id, { $set: { notificationTimezone: null, preferredLocalNotificationHour: null } }).catch(err => logger.error('Failed to reset invalid timezone', err));
+        }
+    });
+
+    // Wait for all queued send tasks to settle
+    if (sendTasks.length > 0) {
+        await Promise.allSettled(sendTasks);
+        logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] Finished processing ${sendTasks.length} notification sends.`);
+    } else {
+        logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] No users matched the current hour.`);
+    }
 
   } catch (error) {
-    logger.error(`[Hourly Task - ${currentUTCHour}:00 UTC] Error during notification check:`, error);
-  }
-}
-
-// Run the check once shortly after server start, then set the interval
-setTimeout(() => {
-    logger.info('[Server Startup] Running initial notification check...');
-    runHourlyNotificationCheck(); 
-    setInterval(runHourlyNotificationCheck, ONE_HOUR_MS);
-    logger.info('[Server Startup] Hourly notification check interval started.');
-}, 5000); // Run 5 seconds after start
-// ---------------------------
-
-// --- Start Server ---
-app.listen(PORT, () => {
-  logger.info(`Server running on port ${PORT}`);
-});
+    logger.error(`

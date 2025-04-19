@@ -172,7 +172,7 @@ router.get('/profile', protect, async (req, res) => {
 // @desc    Update user profile
 // @access  Private
 router.put('/profile', protect, async (req, res) => {
-  const { username, email, denomination, password, preferredNotificationHour } = req.body;
+  const { username, email, denomination, password, notificationTimezone, preferredLocalNotificationHour } = req.body;
   const userId = req.user._id;
 
   try {
@@ -196,14 +196,21 @@ router.put('/profile', protect, async (req, res) => {
     }
     if (denomination) updates.denomination = denomination;
 
-    // Add the new preference, ensuring it's a valid number or null
-    if (preferredNotificationHour !== undefined) {
-      if (preferredNotificationHour === null || (typeof preferredNotificationHour === 'number' && preferredNotificationHour >= 0 && preferredNotificationHour <= 23 && Number.isInteger(preferredNotificationHour))) {
-        updates.preferredNotificationHour = preferredNotificationHour;
+    // Add update logic for new fields
+    if (notificationTimezone !== undefined) {
+        // Basic check if it looks like a timezone string (e.g., contains '/'). Robust validation is hard.
+        // Can be null.
+        if (notificationTimezone === null || (typeof notificationTimezone === 'string' && notificationTimezone.includes('/'))) {
+            updates.notificationTimezone = notificationTimezone;
+        } else {
+            console.warn(`[API PUT /profile] Invalid notificationTimezone (${notificationTimezone}) received for user ${userId}. Ignoring.`);
+        }
+    }
+     if (preferredLocalNotificationHour !== undefined) {
+      if (preferredLocalNotificationHour === null || (typeof preferredLocalNotificationHour === 'number' && preferredLocalNotificationHour >= 0 && preferredLocalNotificationHour <= 23 && Number.isInteger(preferredLocalNotificationHour))) {
+        updates.preferredLocalNotificationHour = preferredLocalNotificationHour;
       } else {
-        // Invalid value provided, ignore or return error?
-        // Let's ignore for now, rely on frontend validation. Schema validation will also catch type/range errors.
-        console.warn(`[API PUT /profile] Invalid preferredNotificationHour (${preferredNotificationHour}) received for user ${userId}. Ignoring.`);
+        console.warn(`[API PUT /profile] Invalid preferredLocalNotificationHour (${preferredLocalNotificationHour}) received for user ${userId}. Ignoring.`);
       }
     }
 
@@ -232,7 +239,8 @@ router.put('/profile', protect, async (req, res) => {
         username: updatedUser.username,
         email: updatedUser.email,
         denomination: updatedUser.denomination,
-        preferredNotificationHour: updatedUser.preferredNotificationHour, // Include in response
+        notificationTimezone: updatedUser.notificationTimezone,
+        preferredLocalNotificationHour: updatedUser.preferredLocalNotificationHour,
         lastReadBook: updatedUser.lastReadBook,
         lastReadChapter: updatedUser.lastReadChapter,
         bookmarkedBook: updatedUser.bookmarkedBook,

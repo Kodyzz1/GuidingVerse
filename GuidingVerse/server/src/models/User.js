@@ -53,7 +53,11 @@ const userSchema = new mongoose.Schema({
     }
   ],
   // --- Notification Preference ---
-  preferredNotificationHour: { // Stores the UTC hour (0-23) the user wants notifications
+  notificationTimezone: { // Stores the user's IANA timezone name (e.g., 'America/New_York')
+      type: String,
+      default: null
+  },
+  preferredLocalNotificationHour: { // Stores the user's desired LOCAL hour (0-23)
       type: Number,
       min: 0,
       max: 23,
