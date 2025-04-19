@@ -130,6 +130,7 @@ async function runHourlyNotificationCheck() {
 
     // Get the current VOTD details
     const { votd, date: votdDate, dateStringForToday } = getStoredVOTDDetails();
+    logger.debug(`[Hourly Task] VOTD Details: Stored Date='${votdDate}', Today='${dateStringForToday}', VOTD Present=${!!votd}`);
 
     // Check if VOTD is available and for the current date
     if (!votd || votdDate !== dateStringForToday) {
@@ -151,44 +152,43 @@ async function runHourlyNotificationCheck() {
 
     // Check each user's preference against the current time in their timezone
     const sendTasks = [];
+    logger.debug(`[Hourly Task] Checking ${usersToNotify.length} users against current time: ${now.toISOString()}`);
     usersToNotify.forEach(user => {
+        const userTz = user.notificationTimezone;
+        const userHourPref = user.preferredLocalNotificationHour;
+        logger.debug(`[Hourly Task] Checking User ${user._id}: PrefHour=${userHourPref}, PrefTZ='${userTz}'`);
         try {
             // Format the *current* time (UTC) into the user's specified timezone
-            const formatter = new Intl.DateTimeFormat('en-US', { // locale doesn't significantly matter for hour extraction
-                timeZone: user.notificationTimezone,
-                hour: 'numeric', // Get the hour
-                hour12: false    // Use 24-hour format (0-23)
+            const formatter = new Intl.DateTimeFormat('en-US', { 
+                timeZone: userTz,
+                hour: 'numeric', 
+                hour12: false    
             });
             
-            // Extract the hour part correctly (formatToParts is safer)
+            // Extract the hour part correctly
             const parts = formatter.formatToParts(now);
             const currentLocalHourPart = parts.find(part => part.type === 'hour');
             
             if (!currentLocalHourPart) {
-                 logger.error(`[Hourly Task] Could not extract hour for timezone ${user.notificationTimezone} for user ${user._id}`);
+                 logger.error(`[Hourly Task] Could not extract hour for timezone ${userTz} for user ${user._id}`);
                  return; // Skip this user
             }
             
-            // Handle potential 24 -> 0 issue if Intl returns 24 for midnight
             let currentLocalHour = parseInt(currentLocalHourPart.value, 10);
-            if (currentLocalHour === 24) {
-                currentLocalHour = 0; // Treat 24 as 0 (start of the day)
-            }
+            if (currentLocalHour === 24) currentLocalHour = 0; // Handle Intl returning 24 for midnight
+
+            logger.debug(`[Hourly Task] User ${user._id}: Current local hour in '${userTz}' is ${currentLocalHour}. Comparing with preference ${userHourPref}.`);
 
             // Check if the current local hour matches the user's preference
-            if (currentLocalHour === user.preferredLocalNotificationHour) {
-                logger.info(`[Hourly Task] Match found for user ${user._id}. Current local hour (${user.notificationTimezone}): ${currentLocalHour}, Preferred: ${user.preferredLocalNotificationHour}. Queueing notification.`);
-                // Queue the task to send the notification to this specific user
+            if (currentLocalHour === userHourPref) {
+                logger.info(`[Hourly Task] Match found for user ${user._id}. Current local hour (${userTz}): ${currentLocalHour}, Preferred: ${userHourPref}. Queueing notification.`);
                 sendTasks.push(sendNotificationToUser(user._id, payload)); 
             } 
             // else {
-            //      logger.debug(`[Hourly Task] No match for user ${user._id}. Current local hour (${user.notificationTimezone}): ${currentLocalHour}, Preferred: ${user.preferredLocalNotificationHour}`);
+            //     logger.debug(`[Hourly Task] No match for user ${user._id}. Current local hour (${userTz}): ${currentLocalHour}, Preferred: ${userHourPref}`);
             // }
         } catch (tzError) {
-            // Log error if the timezone name is invalid
-            logger.error(`[Hourly Task] Error processing timezone '${user.notificationTimezone}' for user ${user._id}:`, tzError);
-            // Consider setting user's timezone preference back to null here?
-            // User.findByIdAndUpdate(user._id, { $set: { notificationTimezone: null, preferredLocalNotificationHour: null } }).catch(err => logger.error('Failed to reset invalid timezone', err));
+            logger.error(`[Hourly Task] Error processing timezone '${userTz}' for user ${user._id}:`, tzError);
         }
     });
 

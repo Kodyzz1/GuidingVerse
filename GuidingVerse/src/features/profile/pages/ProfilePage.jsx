@@ -19,6 +19,17 @@ function urlBase64ToUint8Array(base64String) {
   return outputArray;
 }
 
+// ADD: Helper to format 24-hour number to 12-hour AM/PM string
+function formatHour12(hour24) {
+    if (hour24 === null || hour24 === undefined) return 'Off';
+    const hour = parseInt(hour24, 10);
+    if (isNaN(hour) || hour < 0 || hour > 23) return 'Invalid';
+
+    const ampm = hour >= 12 ? 'PM' : 'AM';
+    const hour12 = hour % 12 === 0 ? 12 : hour % 12; // Convert 0 to 12 for 12 AM, 12 to 12 for 12 PM
+    return `${hour12}:00 ${ampm}`;
+}
+
 // --- Component Definition ---
 function ProfilePage() {
   // --- Auth Hook ---
@@ -444,9 +455,11 @@ function ProfilePage() {
                   className={styles.formSelect}
                 >
                   <option value="">Off</option> { /* Represents null */}
+                  {/* Generate 12-hour options but keep 24-hour value */}
                   {Array.from({ length: 24 }, (_, i) => (
                     <option key={i} value={i}>
-                      {i.toString().padStart(2, '0')}:00
+                      {/* Display 12-hour format */}
+                      {formatHour12(i)} 
                     </option>
                   ))}
                 </select>
@@ -483,9 +496,8 @@ function ProfilePage() {
               {/* Update Display Preferred Notification Hour */}
               <dt>VOTD Notification Time:</dt>
               <dd>
-                {user.preferredLocalNotificationHour === null || user.preferredLocalNotificationHour === undefined
-                    ? 'Off'
-                    : `${user.preferredLocalNotificationHour.toString().padStart(2, '0')}:00`}
+                {/* Use formatter for display */}
+                {formatHour12(user.preferredLocalNotificationHour)}
                 {/* Optionally display the stored timezone */} 
                 {user.notificationTimezone && user.preferredLocalNotificationHour !== null && (
                     <span className={styles.timezoneDisplay}> (Local Timezone: {user.notificationTimezone})</span>
