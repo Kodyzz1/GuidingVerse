@@ -3,6 +3,7 @@ import bcrypt from 'bcryptjs'; // Use standard import name
 import jwt from 'jsonwebtoken'; // <-- Import jsonwebtoken
 import User from '../models/User.js'; // Import the User model
 import { protect } from '../middleware/authMiddleware.js'; // Assuming protect middleware exists
+import { generateUniqueFriendCode } from '../utils/codeUtils.js';
 
 const router = express.Router();
 
@@ -39,30 +40,44 @@ router.post('/register', async (req, res) => {
     const salt = await bcrypt.genSalt(10); // Generate salt (10 rounds is standard)
     const hashedPassword = await bcrypt.hash(password, salt);
 
+    // --- Generate Friend Code ---
+    let friendCode;
+    try {
+        friendCode = await generateUniqueFriendCode();
+    } catch (codeError) {
+        console.error('Failed to generate friend code:', codeError);
+        return res.status(500).json({ message: 'Server error generating unique user identifier.' });
+    }
+    // -------------------------
+
     // --- Create and Save New User --- //
     const newUser = new User({
       username,
       email, // Email is already lowercased by schema
       password: hashedPassword,
       denomination: denomination || 'Prefer not to say', // Use provided or default
+      friendCode: friendCode // Assign the generated code
     });
 
     await newUser.save(); // Mongoose handles validation here
 
     console.log('User registered successfully:', newUser.email);
 
-    // --- Send Success Response (INCLUDE TOKEN) --- //
+    // --- Send Success Response (INCLUDE TOKEN and Friend Code) --- //
     res.status(201).json({
       _id: newUser._id,
       username: newUser.username,
       email: newUser.email,
       denomination: newUser.denomination,
-      lastReadBook: newUser.lastReadBook,        // Include last read
-      lastReadChapter: newUser.lastReadChapter,    // Include last read
-      bookmarkedBook: newUser.bookmarkedBook,      // Include bookmark
-      bookmarkedChapter: newUser.bookmarkedChapter, // Include bookmark
+      friendCode: newUser.friendCode, // Add friend code to response
+      notificationTimezone: newUser.notificationTimezone, // Include notification prefs
+      preferredLocalNotificationHour: newUser.preferredLocalNotificationHour,
+      lastReadBook: newUser.lastReadBook,        
+      lastReadChapter: newUser.lastReadChapter,    
+      bookmarkedBook: newUser.bookmarkedBook,      
+      bookmarkedChapter: newUser.bookmarkedChapter, 
       createdAt: newUser.createdAt,
-      token: generateToken(newUser._id) // <-- Generate and send token
+      token: generateToken(newUser._id) 
     });
 
   } catch (error) {

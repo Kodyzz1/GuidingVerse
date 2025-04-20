@@ -63,6 +63,13 @@ const userSchema = new mongoose.Schema({
       max: 23,
       default: null // Null means notifications are off for VOTD
   },
+  // ADD: Friend Code
+  friendCode: {
+      type: String,
+      required: true, // Ensure it gets generated
+      unique: true,   // Ensure codes are unique across users
+      index: true     // Index for faster lookups when adding friends
+  },
   createdAt: {
     type: Date,
     default: Date.now
