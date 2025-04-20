@@ -85,6 +85,11 @@
 .infoGrid dd {
   margin: 0;
   color: var(--text-secondary);
+  /* Add word wrap for long emails/values */
+  overflow-wrap: break-word;
+  word-break: break-word; /* Fallback/alternative */
+  /* Ensure the grid column itself doesn't prevent wrapping */
+  min-width: 0; 
 }
 
 .placeholder {
@@ -316,4 +321,35 @@
         background-color: rgba(255, 255, 255, 0.08);
         border-color: var(--text-secondary);
     }
+}
+
+/* Add styles for the timezone info spans */
+.timezoneInfo,
+.timezoneDisplay {
+    display: block; /* Put timezone on its own line below the select/display */
+    font-size: 0.8em;
+    color: var(--text-secondary);
+    margin-top: 0.3rem;
+    margin-left: 2px; /* Small indent */
+}
+
+/* Adjust timezone display in the info grid (non-edit mode) */
+.infoGrid dd .timezoneDisplay {
+    display: inline; /* Keep it on the same line as the time */
+    margin-left: 0.5rem;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 600px) {
+  .infoGrid,
+  .formGrid {
+    grid-template-columns: 100px 1fr; /* Adjust label column width on smaller screens */
+    gap: 0.5rem;
+  }
+
+  .infoGrid dt,
+  .formGrid label {
+    text-align: left; /* Left-align labels */
+    font-size: 0.9em;
+  }
 }

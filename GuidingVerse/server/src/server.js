@@ -206,7 +206,15 @@ async function runHourlyNotificationCheck() {
   }
 }
 
-// ... rest of the code ...
+// Run the check once shortly after server start, then set the interval
+setTimeout(() => {
+    // ADD: Basic console log to confirm callback execution
+    console.log('!!! setTimeout for Hourly Notification Task Entered !!!'); 
+    logger.info('[Server Startup] Running initial notification check...');
+    runHourlyNotificationCheck(); 
+    setInterval(runHourlyNotificationCheck, ONE_HOUR_MS);
+    logger.info('[Server Startup] Hourly notification check interval started.');
+}, 5000); // Run 5 seconds after start
 
 // --- Start Server ---
 app.listen(PORT, '0.0.0.0', () => { // Add '0.0.0.0' as the hostname
