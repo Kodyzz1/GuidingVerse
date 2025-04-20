@@ -40,44 +40,69 @@
 }
 
 .copyButton {
-    padding: 0.3rem 0.6rem;
+    padding: 0.6rem 1.2rem;
     cursor: pointer;
     font-size: 0.9rem;
+    font-weight: 600;
     background-color: var(--button-background);
     color: var(--button-text);
     border: 1px solid var(--border-color);
     border-radius: 4px;
+    transition: background-color 0.2s ease;
 }
-.copyButton:hover {
+.copyButton:hover:not(:disabled) {
     background-color: var(--button-hover-background);
+}
+.copyButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 .addFriendForm {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+    align-items: center;
 }
 
 .addFriendForm input {
     flex-grow: 1;
-    padding: 0.5rem;
+    flex-basis: 200px;
+    padding: 0.6rem;
     background-color: var(--input-background);
     border: 1px solid var(--input-border);
     color: var(--text-color);
     border-radius: 4px;
+    font-size: 0.9rem;
 }
 
 .addFriendForm button {
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-button-background);
-    color: var(--primary-button-text);
-    border: none;
+    flex-basis: auto;
+    min-width: 100px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    background-color: transparent;
+    color: var(--text-secondary, #6c757d);
+    border: 1px solid var(--text-tertiary, var(--border-color, #ced4da));
 }
+
+.addFriendForm button:hover:not(:disabled) {
+    background-color: var(--text-secondary, #6c757d);
+    color: var(--bg-secondary, var(--background-color, white));
+    border-color: var(--text-secondary, #6c757d);
+}
+
 .addFriendForm button:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+    background-color: transparent !important;
+    color: var(--text-secondary, #6c757d) !important;
+    border-color: var(--text-tertiary, var(--border-color, #ced4da)) !important;
 }
 
 .listSection h4 {
@@ -115,11 +140,13 @@
 
 .actions button {
     margin-left: 0.5rem;
-    padding: 0.3rem 0.6rem;
+    padding: 0.6rem 1.2rem;
     cursor: pointer;
     font-size: 0.9rem;
+    font-weight: 600;
     border: none;
     border-radius: 4px;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 .actions button:disabled {
     opacity: 0.6;
@@ -130,10 +157,18 @@
     background-color: #4CAF50;
     color: white;
 }
+.acceptButton:hover:not(:disabled) {
+    background-color: #45a049;
+}
 
-.rejectButton, .removeButton {
+.rejectButton,
+.removeButton {
     background-color: #f44336;
     color: white;
+}
+.rejectButton:hover:not(:disabled),
+.removeButton:hover:not(:disabled) {
+    background-color: #da190b;
 }
 
 .loading, .error, .info {
@@ -154,4 +189,13 @@
 .info {
     color: var(--info-text);
     background-color: var(--info-background);
+}
+
+@media (max-width: 480px) {
+    .addFriendForm input {
+        flex-basis: 100%;
+    }
+    .addFriendForm button {
+        flex-basis: 100%;
+    }
 } 

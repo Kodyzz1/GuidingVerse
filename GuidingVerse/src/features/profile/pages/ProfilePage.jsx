@@ -620,25 +620,29 @@ function ProfilePage() {
                   {notificationsEnabled ? (
                       <>
                           <p>Push notifications are currently enabled on this device.</p>
-                          <button 
-                              className={styles.testButton} 
-                              onClick={handleTestSendClick} 
-                              disabled={isSendingTest} 
-                              title="Send the current Verse of the Day notification to all subscribers"
-                          >
-                              {isSendingTest ? 'Sending Test...' : 'Send Test Notification'}
-                          </button>
+                          <div className={styles.formActions}>
+                              <button 
+                                  className={styles.testButton} 
+                                  onClick={handleTestSendClick} 
+                                  disabled={isSendingTest} 
+                                  title="Send the current Verse of the Day notification to all subscribers"
+                              >
+                                  {isSendingTest ? 'Sending Test...' : 'Send Test Notification'}
+                              </button>
+                          </div>
                       </>
                   ) : (
                       <>
                           <p>Enable push notifications to receive updates (e.g., Verse of the Day).</p>
-                          <button 
-                              className={styles.notificationButton} 
-                              onClick={handleSubscribeClick} 
-                              disabled={isSubscribing}
-                          >
-                              {isSubscribing ? 'Enabling...' : 'Enable Notifications'}
-                          </button>
+                          <div className={styles.formActions}>
+                              <button 
+                                  className={styles.notificationButton} 
+                                  onClick={handleSubscribeClick} 
+                                  disabled={isSubscribing}
+                              >
+                                  {isSubscribing ? 'Enabling...' : 'Enable Notifications'}
+                              </button>
+                          </div>
                       </>
                   )}
               </div>
