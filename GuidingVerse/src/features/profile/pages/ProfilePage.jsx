@@ -52,6 +52,15 @@ function ProfilePage() {
   const [notificationError, setNotificationError] = useState(null);
   const [isSubscribing, setIsSubscribing] = useState(false);
   const [isSendingTest, setIsSendingTest] = useState(false);
+  // ADD: State for password change form
+  const [passwordData, setPasswordData] = useState({ 
+      currentPassword: '', 
+      newPassword: '', 
+      confirmNewPassword: '' 
+  });
+  const [isChangingPassword, setIsChangingPassword] = useState(false);
+  const [passwordError, setPasswordError] = useState(null);
+  const [passwordSuccess, setPasswordSuccess] = useState(null);
 
   // --- Denominations List (Can be moved to constants file) ---
   const denominations = [
@@ -261,6 +270,79 @@ function ProfilePage() {
     } finally {
         setIsLoading(false);
     }
+  };
+
+  // ADD: Handler for password input changes
+  const handlePasswordInputChange = (event) => {
+      const { name, value } = event.target;
+      setPasswordData(prev => ({ ...prev, [name]: value }));
+      setPasswordError(null); // Clear errors on input change
+      setPasswordSuccess(null); // Clear success message
+  };
+
+  // ADD: Handler for submitting the password change
+  const handleChangePassword = async (event) => {
+      event.preventDefault();
+      setPasswordError(null);
+      setPasswordSuccess(null);
+      setIsChangingPassword(true);
+
+      // Client-side validation
+      if (!passwordData.currentPassword || !passwordData.newPassword || !passwordData.confirmNewPassword) {
+          setPasswordError('Please fill in all password fields.');
+          setIsChangingPassword(false);
+          return;
+      }
+      if (passwordData.newPassword.length < 6) {
+           setPasswordError('New password must be at least 6 characters long.');
+           setIsChangingPassword(false);
+           return;
+      }
+      if (passwordData.newPassword !== passwordData.confirmNewPassword) {
+          setPasswordError('New passwords do not match.');
+          setIsChangingPassword(false);
+          return;
+      }
+      if (passwordData.currentPassword === passwordData.newPassword) {
+            setPasswordError('New password cannot be the same as the current password.');
+            setIsChangingPassword(false);
+            return;
+      }
+
+      try {
+          const token = localStorage.getItem('guidingVerseToken');
+          if (!token) throw new Error('Authentication token not found.');
+
+          const response = await fetch('/api/auth/change-password', {
+              method: 'PUT',
+              headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': `Bearer ${token}`
+              },
+              body: JSON.stringify({
+                  currentPassword: passwordData.currentPassword,
+                  newPassword: passwordData.newPassword
+                  // No need to send confirmNewPassword to backend
+              })
+          });
+
+          const data = await response.json();
+
+          if (!response.ok) {
+              throw new Error(data.message || 'Failed to change password.');
+          }
+
+          setPasswordSuccess('Password changed successfully!');
+          // Clear the form fields on success
+          setPasswordData({ currentPassword: '', newPassword: '', confirmNewPassword: '' });
+          // Optionally, redirect or display a persistent success message?
+
+      } catch (err) {
+          console.error('[ChangePassword] Error:', err);
+          setPasswordError(err.message || 'An error occurred while changing password.');
+      } finally {
+          setIsChangingPassword(false);
+      }
   };
 
   // --- Notification Subscription Handler ---
@@ -562,10 +644,60 @@ function ProfilePage() {
           )}
       </section>
 
-      {/* --- Security Section (Placeholder) --- */}
+      {/* --- Security Section --- */}
       <section className={styles.profileSection}>
           <h3>Security</h3>
-          <div className={styles.placeholder}>(Change password feature coming soon)</div>
+          {/* Display messages */}
+          {passwordError && <p className={styles.errorMessage}>{passwordError}</p>}
+          {passwordSuccess && <p className={styles.successMessage}>{passwordSuccess}</p>}
+
+          {/* Change Password Form */}
+          <form onSubmit={handleChangePassword}>
+             <div className={styles.formGrid}> 
+                <label htmlFor="currentPassword">Current Password:</label>
+                <input 
+                    type="password"
+                    id="currentPassword"
+                    name="currentPassword"
+                    value={passwordData.currentPassword}
+                    onChange={handlePasswordInputChange}
+                    className={styles.formInput}
+                    required
+                    autoComplete="current-password"
+                />
+
+                <label htmlFor="newPassword">New Password:</label>
+                <input 
+                    type="password"
+                    id="newPassword"
+                    name="newPassword"
+                    value={passwordData.newPassword}
+                    onChange={handlePasswordInputChange}
+                    className={styles.formInput}
+                    required
+                    minLength={6}
+                    autoComplete="new-password"
+                />
+
+                <label htmlFor="confirmNewPassword">Confirm New Password:</label>
+                <input 
+                    type="password"
+                    id="confirmNewPassword"
+                    name="confirmNewPassword"
+                    value={passwordData.confirmNewPassword}
+                    onChange={handlePasswordInputChange}
+                    className={styles.formInput}
+                    required
+                    minLength={6}
+                    autoComplete="new-password"
+                />
+             </div>
+              <div className={styles.formActions}>
+                <button type="submit" className={styles.saveButton} disabled={isChangingPassword}>
+                  {isChangingPassword ? 'Changing...' : 'Change Password'}
+                </button>
+             </div>
+          </form>
       </section>
       
     </div>

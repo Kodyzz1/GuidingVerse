@@ -337,4 +337,59 @@ router.put('/bookmark', protect, async (req, res) => {
   }
 });
 
+// @route   PUT /api/auth/change-password
+// @desc    Change user password
+// @access  Private
+router.put('/change-password', protect, async (req, res) => {
+    const { currentPassword, newPassword } = req.body;
+    const userId = req.user._id;
+
+    // Basic validation
+    if (!currentPassword || !newPassword) {
+        return res.status(400).json({ message: 'Please provide current and new passwords.' });
+    }
+
+    if (newPassword.length < 6) {
+        return res.status(400).json({ message: 'New password must be at least 6 characters long.' });
+    }
+
+    if (currentPassword === newPassword) {
+        return res.status(400).json({ message: 'New password cannot be the same as the current password.' });
+    }
+
+    try {
+        // Need to fetch user WITH password hash to compare
+        const user = await User.findById(userId).select('+password');
+        if (!user) {
+            return res.status(404).json({ message: 'User not found.' }); // Should not happen if protect works
+        }
+
+        // Verify current password
+        const isMatch = await bcrypt.compare(currentPassword, user.password);
+        if (!isMatch) {
+            return res.status(401).json({ message: 'Incorrect current password.' });
+        }
+
+        // Hash the new password
+        const salt = await bcrypt.genSalt(10);
+        const hashedNewPassword = await bcrypt.hash(newPassword, salt);
+
+        // Update the password in the database
+        user.password = hashedNewPassword;
+        await user.save(); // Use save to trigger potential pre-save hooks if any
+
+        console.log(`[API PUT /change-password] Password changed successfully for user: ${user.email}`);
+        res.status(200).json({ message: 'Password updated successfully.' });
+
+    } catch (error) {
+        console.error('[API PUT /change-password] Error:', error);
+        // Handle potential validation errors from save() if pre-save hooks are added
+        if (error.name === 'ValidationError') {
+            const messages = Object.values(error.errors).map(val => val.message);
+            return res.status(400).json({ message: messages.join(' ') });
+        }
+        res.status(500).json({ message: 'Server error changing password.' });
+    }
+});
+
 export default router; 

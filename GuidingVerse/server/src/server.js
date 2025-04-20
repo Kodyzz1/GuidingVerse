@@ -16,7 +16,7 @@ import { errorHandler } from './middleware/errorHandler.js';
 import { logger } from './utils/logger.js';
 import User from './models/User.js';
 import { sendNotificationToUser } from './utils/pushNotifications.js';
-import { getStoredVOTDDetails } from './utils/votdService.js';
+import { getStoredVOTDDetails, getCurrentVOTD } from './utils/votdService.js';
 
 // Load environment variables
 dotenv.config();
@@ -114,6 +114,16 @@ async function runHourlyNotificationCheck() {
   logger.info(`[Hourly Task - ${currentUTCHour}:00 UTC] Running notification check...`);
 
   try {
+    // --- Ensure VOTD for today is generated --- 
+    // Call getCurrentVOTD first. This will trigger the generation logic 
+    // in votdService if the date has changed or if it's the first run.
+    const ensuredVOTD = await getCurrentVOTD();
+    if (!ensuredVOTD) {
+        logger.error(`[Hourly Task - ${currentUTCHour}:00 UTC] Failed to ensure VOTD was generated. Skipping task run.`);
+        return; // Cannot proceed without a VOTD
+    }
+    // ----------------------------------------
+
     // Find users who have set a timezone and local hour preference
     const usersToNotify = await User.find({
       notificationTimezone: { $ne: null }, // Must have timezone set
