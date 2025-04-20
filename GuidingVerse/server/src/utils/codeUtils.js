@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 import User from '../models/User.js'; // Need User model for checking uniqueness
 
-const FRIEND_CODE_LENGTH = 5;
+const FRIEND_CODE_LENGTH = 6;
 const FRIEND_CODE_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
 /**

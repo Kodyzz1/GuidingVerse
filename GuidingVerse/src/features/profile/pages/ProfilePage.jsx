@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback } from 'react'; // Import useState, useEffect, useCallback
 import { useAuth } from '../../../contexts/AuthContext';
 import styles from './ProfilePage.module.css'; // Import the CSS module
+import FriendManagement from '../components/FriendManagement'; // <-- Import the new component
 
 // Helper function to convert Base64 URL string to Uint8Array
 function urlBase64ToUint8Array(base64String) {
@@ -643,6 +644,9 @@ function ProfilePage() {
               </div>
           )}
       </section>
+
+      {/* --- Friend Management Section --- */} 
+      {isAuthenticated && <FriendManagement />} { /* <-- Render Friend Management here */}
 
       {/* --- Security Section --- */}
       <section className={styles.profileSection}>

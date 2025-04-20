@@ -70,6 +70,20 @@ const userSchema = new mongoose.Schema({
       unique: true,   // Ensure codes are unique across users
       index: true     // Index for faster lookups when adding friends
   },
+  // --- Friend Relationships ---
+  friends: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User' // Reference to other users who are friends
+  }],
+  pendingRequestsSent: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User' // Users to whom this user has sent a request
+  }],
+  pendingRequestsReceived: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User' // Users who have sent a request to this user
+  }],
+  // --------------------------
   createdAt: {
     type: Date,
     default: Date.now

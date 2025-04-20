@@ -107,44 +107,66 @@ router.post('/login', async (req, res) => {
     }
 
     // --- Find User by Email --- //
-    // Mongoose's findOne is case-sensitive by default for strings unless schema specifies lowercase: true
     const user = await User.findOne({ email: email.toLowerCase() }); 
 
     // --- Check if User Exists --- //
     if (!user) {
       console.log('Login failed: User not found for email:', email.toLowerCase());
-      // Use a generic message for security (don't reveal if email exists)
       return res.status(401).json({ message: 'Invalid credentials.' }); 
     }
 
     // --- Compare Passwords --- //
-    const isMatch = await bcrypt.compare(password, user.password); // Compare plain text password with hash
+    const isMatch = await bcrypt.compare(password, user.password); 
 
     if (isMatch) {
       // --- Login Successful --- //
       console.log('User logged in successfully:', user.email);
 
-      // --- Send Success Response (INCLUDE TOKEN) --- //
+      // --- Check and Generate Friend Code if Missing --- //
+      let userFriendCode = user.friendCode;
+      if (!userFriendCode) {
+          console.log(`User ${user.email} is missing friendCode. Generating one...`);
+          try {
+              userFriendCode = await generateUniqueFriendCode();
+              user.friendCode = userFriendCode; 
+              await user.save(); // Save the updated user with the new code
+              console.log(`Generated and saved friendCode ${userFriendCode} for user ${user.email}`);
+          } catch (codeError) {
+              // Log the error but proceed with login if possible, friend features might fail later
+              console.error(`Failed to generate/save friend code for user ${user.email} during login:`, codeError);
+              // Optionally, return an error or continue without the code?
+              // For now, we proceed, but the friendCode in response might be null/undefined
+              userFriendCode = null; // Ensure it's null if generation failed
+          }
+      }
+      // --------------------------------------------------- //
+
+      // --- Send Success Response (including friendCode) --- //
       res.status(200).json({
         _id: user._id,
         username: user.username,
         email: user.email,
         denomination: user.denomination,
-        lastReadBook: user.lastReadBook,        // Include last read
-        lastReadChapter: user.lastReadChapter,    // Include last read
-        bookmarkedBook: user.bookmarkedBook,      // Include bookmark
-        bookmarkedChapter: user.bookmarkedChapter, // Include bookmark
+        friendCode: userFriendCode, // Use the potentially newly generated code
+        lastReadBook: user.lastReadBook,       
+        lastReadChapter: user.lastReadChapter,   
+        bookmarkedBook: user.bookmarkedBook,     
+        bookmarkedChapter: user.bookmarkedChapter,
         createdAt: user.createdAt,
-        token: generateToken(user._id) // <-- Generate and send token
+        token: generateToken(user._id) 
       });
     } else {
       console.log('Login failed: Password mismatch for email:', email.toLowerCase());
-      // Use a generic message for security
       return res.status(401).json({ message: 'Invalid credentials.' });
     }
 
   } catch (error) {
     console.error('Login Error:', error);
+    // Handle Mongoose errors during user.save() if friend code generation happened
+    if (error.name === 'ValidationError') {
+        const messages = Object.values(error.errors).map(val => val.message);
+        return res.status(400).json({ message: `Error saving generated friend code: ${messages.join(' ')}` });
+    }
     res.status(500).json({ message: 'Server error during login.' });
   }
 });
