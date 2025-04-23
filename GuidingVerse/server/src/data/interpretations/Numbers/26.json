@@ -1,0 +1,532 @@
+{
+  "Summary": {
+    "General": "After the plague, God commands Moses and Eleazar to conduct a second census of the Israelite men aged twenty and older, eligible for military service. This census is taken on the plains of Moab, near Jericho. The chapter lists the clans and numbers for each tribe: Reuben (43,730), Simeon (22,200, a significant decrease), Gad (40,500), Judah (76,500), Issachar (64,300), Zebulun (60,500), Manasseh (52,700, mentioning Zelophehad's daughters), Ephraim (32,500), Benjamin (45,600), Dan (64,400), Asher (53,400, mentioning daughter Serah), and Naphtali (45,400). The total number of men eligible for war is 601,730. God instructs that the land of Canaan is to be divided by lot among these tribes, with larger tribes receiving larger portions based on their numbers. The Levites are numbered separately (males one month and older) totaling 23,000; they receive no land inheritance. The text explicitly states that among those numbered, none were from the generation counted at Sinai, except for Caleb and Joshua, fulfilling God's decree that the rebellious generation would die in the wilderness.",
+    "Non-Denominational": "Focuses on God's faithfulness in preserving Israel despite judgment and preparing a new generation to inherit the promise. The census marks a transition, counting those who will enter Canaan. The drastic reduction in Simeon possibly reflects judgment for their part in the Peor incident (Zimri was Simeonite). The total number is slightly lower than the first census, showing the cost of disobedience. Land distribution based on numbers and lot signifies both divine order and fairness. The separate counting of Levites highlights their distinct role. The fulfillment of the judgment on the older generation underscores God's justice, while the survival of Caleb and Joshua highlights the reward for faithfulness.",
+    "Baptist": "Emphasizes God's sovereignty, judgment, and covenant faithfulness. The census establishes the new generation destined for the Promised Land after the judgment on the previous one. The specific numbers reflect God's accounting and prepare for the division of inheritance according to His plan. Simeon's sharp decline is often seen as divine judgment for sin (Gen 49:5-7 and Num 25). The mention of Zelophehad's daughters anticipates issues of inheritance law. The exception of Caleb and Joshua reinforces the necessity of faith and obedience. The exclusion of the older generation serves as a stark warning against unbelief. Levites' separate status points to their unique priestly calling.",
+    "Catholic": "Views the census as an act of divine ordering and preparation for the settlement of the Promised Land, fulfilling God's promises to the patriarchs. It demonstrates God's meticulous care for His people, even in numbering them. The distribution of land by lot according to tribal size reflects principles of divine justice and providence. The census confirms the judgment passed on the generation that rebelled at Kadesh Barnea, highlighting the consequences of infidelity to the covenant. The survival of Caleb and Joshua emphasizes God's reward for fidelity. The distinct numbering and inheritance status of the Levites underscore their sacred ministry.",
+    "Methodist": "Highlights themes of God's judgment on sin, His enduring covenant, and the preparation for future blessing. The census marks the raising up of a new generation after the failures of the old. The numbers provide a basis for the just allocation of land, demonstrating God's orderliness. Simeon's decline serves as a reminder of the consequences of sin. The preservation of Caleb and Joshua illustrates the reward of faithfulness and perseverance. The overall narrative shows God moving His plan forward despite human failure, emphasizing grace alongside judgment and the hope inherent in the covenant promise of the land.",
+    "Lutheran": "Focuses on God's Law (judgment on the old generation, consequences for tribes like Simeon) and Gospel (promise of the land, preservation of a remnant, raising a new generation). The census fulfills God's word of judgment against the generation from Sinai, demonstrating His faithfulness to His warnings (Law). Simultaneously, it prepares for the fulfillment of His promise of land to Abraham's descendants (Gospel). The distribution by lot emphasizes God's sovereign control over inheritance. Caleb and Joshua stand as examples of faith receiving the promise. The Levites' lack of land points to the Lord being their inheritance, a spiritual reality."
+  },
+  "Verses": {
+    "1": {
+      "General": "After the recent plague (linked to the Baal Peor incident), the Lord speaks to Moses and Eleazar, the son of Aaron the priest.",
+      "Non-Denominational": "Following the judgment of the plague, God initiates a new phase by speaking to Moses and the new High Priest, Eleazar.",
+      "Baptist": "Subsequent to the divine judgment of the plague, the Lord commands Moses and Eleazar, Aaron's successor as High Priest.",
+      "Catholic": "After the plague had ceased, the Lord addresses Moses and Eleazar, the priest, son of Aaron.",
+      "Methodist": "Following the plague, God instructs Moses and Eleazar, who now serves as High Priest after Aaron.",
+      "Lutheran": "After the plague, a divine judgment, the Lord speaks to Moses and Eleazar the priest, marking a new beginning."
+    },
+    "2": {
+      "General": "God commands them to count all the men of the Israelite congregation, twenty years old and older, eligible for military service, organized by their ancestral families.",
+      "Non-Denominational": "The command is given to take a census of the fighting men (20+ years old) of the entire Israelite community, structured by families.",
+      "Baptist": "God directs a census of all Israelite men aged 20 and above, fit for warfare, registered according to their fathers' households.",
+      "Catholic": "A census is ordered for the entire community of Israelites, counting men twenty years and older fit for military duty, by their ancestral houses.",
+      "Methodist": "God orders a census of the Israelite community, specifically counting men twenty years and older capable of going to war, listed by family lines.",
+      "Lutheran": "God commands a census of all men in Israel aged 20 and up, those able to go to war, registered by their fathers' houses."
+    },
+    "3": {
+      "General": "Moses and Eleazar the priest convey this command to the Israelites on the plains of Moab, located by the Jordan River across from Jericho.",
+      "Non-Denominational": "Moses and Eleazar relay God's instruction for the census to the people while they are encamped in Moab, near the Jordan and Jericho.",
+      "Baptist": "Moses and Eleazar communicate the divine command for the census to the Israelites in the plains of Moab, by the Jordan near Jericho.",
+      "Catholic": "Moses and Eleazar the priest speak to the people in the plains of Moab, by the Jordan opposite Jericho, relaying the census order.",
+      "Methodist": "In the plains of Moab, near the Jordan by Jericho, Moses and Eleazar address the Israelites regarding the census.",
+      "Lutheran": "Moses and Eleazar the priest announce the census command to the Israelites in the plains of Moab, beside the Jordan near Jericho."
+    },
+    "4": {
+      "General": "They reiterate the instruction to count the men twenty years old and older, as the Lord had commanded Moses and the Israelites who came out of Egypt (referencing the original command or context).",
+      "Non-Denominational": "The census criteria (20 years and older) are restated, emphasizing this is according to the Lord's command given previously to Moses and the generation that left Egypt.",
+      "Baptist": "The age requirement (20+) for the census is repeated, affirming it as the Lord's command to Moses and the Israelites who departed Egypt.",
+      "Catholic": "The census parameter (men 20+) is specified again, as commanded by the Lord to Moses and the Israelites who came from Egypt.",
+      "Methodist": "The command to count those 20 years and older is confirmed, referencing the Lord's prior instructions to Moses and the generation of the Exodus.",
+      "Lutheran": "The census parameters (20+) are restated, linking back to the Lord's command given to Moses and the Israelites who left Egypt."
+    },
+    "5": {
+      "General": "The census begins with Reuben, Israel's firstborn: the clans descended from his sons Hanoch (Hanochites) and Pallu (Palluites) are listed.",
+      "Non-Denominational": "Details of Reuben's tribe: Lists the clans originating from his sons Hanoch and Pallu.",
+      "Baptist": "Enumeration of Reuben's tribe: Mentions the families descended from Hanoch (Hanochites) and Pallu (Palluites).",
+      "Catholic": "The census starts with Reuben, Israel's eldest, listing the Hanochite clan (from Hanoch) and the Palluite clan (from Pallu).",
+      "Methodist": "Reuben's descendants are counted first: the clans of the Hanochites (from Hanoch) and the Palluites (from Pallu).",
+      "Lutheran": "Begins the tribal census with Reuben, Israel's firstborn, listing the clans of Hanoch (Hanochites) and Pallu (Palluites)."
+    },
+    "6": {
+      "General": "Continuing with Reuben's descendants: the clans of the Hezronites (from Hezron) and the Carmites (from Carmi) are listed.",
+      "Non-Denominational": "Further clans of Reuben: Lists those descending from Hezron and Carmi.",
+      "Baptist": "More Reubenite families: Lists the Hezronites (from Hezron) and the Carmites (from Carmi).",
+      "Catholic": "Continues Reuben's lineage: the Hezronite clan (from Hezron) and the Carmite clan (from Carmi).",
+      "Methodist": "Additional Reubenite clans: the Hezronites (from Hezron) and the Carmites (from Carmi).",
+      "Lutheran": "Lists further Reubenite clans: the Hezronites (from Hezron) and the Carmites (from Carmi)."
+    },
+    "7": {
+      "General": "The total number of men counted for these Reubenite clans is 43,730.",
+      "Non-Denominational": "The military strength of the tribe of Reuben is recorded as 43,730 men.",
+      "Baptist": "The census total for the tribe of Reuben is 43,730 eligible men.",
+      "Catholic": "The total number registered for the Reubenite clans amounts to 43,730.",
+      "Methodist": "The count for the Reubenite families eligible for service is 43,730.",
+      "Lutheran": "The total number of fighting men counted in the Reubenite families is 43,730."
+    },
+    "8": {
+      "General": "The son of Pallu (mentioned in verse 5) was Eliab.",
+      "Non-Denominational": "Specifies that Eliab was the son of Pallu, a Reubenite clan leader.",
+      "Baptist": "Identifies Eliab as the son of Pallu, from the tribe of Reuben.",
+      "Catholic": "Notes that Pallu's son was Eliab.",
+      "Methodist": "Clarifies the lineage: Eliab was the son of Pallu.",
+      "Lutheran": "States that Eliab was the son of Pallu (of Reuben)."
+    },
+    "9": {
+      "General": "Eliab's sons were Nemuel, Dathan, and Abiram. Dathan and Abiram are identified as the well-known community leaders who rebelled against Moses and Aaron with Korah's company, challenging the Lord.",
+      "Non-Denominational": "Identifies Eliab's sons, specifically noting Dathan and Abiram as the prominent leaders who participated in Korah's rebellion against Moses, Aaron, and ultimately God.",
+      "Baptist": "Names Eliab's sons, emphasizing that Dathan and Abiram were the infamous leaders ('famous in the congregation') who joined Korah's rebellion against Moses, Aaron, and the Lord.",
+      "Catholic": "Names Eliab's sons, highlighting Dathan and Abiram as the chosen leaders of the community who contended against Moses and Aaron with Korah's group in defiance of the Lord.",
+      "Methodist": "Lists Eliab's sons, recalling Dathan and Abiram's notorious role as leaders in Korah's rebellion against Moses, Aaron, and God's authority.",
+      "Lutheran": "Names the sons of Eliab, identifying Dathan and Abiram as the notable men who led the rebellion with Korah against Moses, Aaron, and the Lord Himself."
+    },
+    "10": {
+      "General": "Recalls the judgment: the earth opened and swallowed Dathan and Abiram along with Korah's followers when they died, and fire consumed 250 other men involved, serving as a warning sign.",
+      "Non-Denominational": "Recounts the divine judgment where the earth swallowed Dathan, Abiram, and Korah's faction, while fire destroyed 250 others, making them an example or sign.",
+      "Baptist": "Reminds of the judgment: the earth swallowed Dathan and Abiram with Korah's company, and fire consumed 250 men, establishing them as a solemn warning (sign).",
+      "Catholic": "Recalls the divine punishment: the earth swallowed Dathan and Abiram with Korah's group, and fire consumed 250 men, making them a sign of the consequences of rebellion.",
+      "Methodist": "Describes the judgment: Dathan, Abiram, and Korah's group were swallowed by the earth, while fire consumed 250 men, serving as a powerful warning sign.",
+      "Lutheran": "Recounts God's judgment: the earth swallowed Dathan, Abiram, and Korah's company, fire consumed 250 men, and they became a sign (a warning example)."
+    },
+    "11": {
+      "General": "However, it notes specifically that the sons of Korah did not die in that incident.",
+      "Non-Denominational": "Adds an important clarification: Korah's own sons were spared from the judgment that befell their father.",
+      "Baptist": "States an exception to the judgment: the sons of Korah were not killed along with their father's rebellious company.",
+      "Catholic": "Notes significantly that the sons of Korah did not perish with their father.",
+      "Methodist": "Makes the point that despite Korah's fate, his sons did not die in the rebellion.",
+      "Lutheran": "Clarifies that the sons of Korah were not killed in the judgment against their father's rebellion, showing God's specific justice."
+    },
+    "12": {
+      "General": "Census moves to Simeon: clans listed are Nemuelites (from Nemuel), Jaminites (from Jamin), and Jachinites (from Jachin).",
+      "Non-Denominational": "Enumeration of Simeon's tribe: Lists clans descending from Nemuel, Jamin, and Jachin.",
+      "Baptist": "Counting Simeon's tribe: Includes families of Nemuel (Nemuelites), Jamin (Jaminites), and Jachin (Jachinites).",
+      "Catholic": "Lists the Simeonites by clan: Nemuelites (from Nemuel), Jaminites (from Jamin), Jachinites (from Jachin).",
+      "Methodist": "Simeon's descendants are counted: clans of Nemuelites, Jaminites, and Jachinites.",
+      "Lutheran": "Begins the census of Simeon's tribe: listing the Nemuelite, Jaminite, and Jachinite clans."
+    },
+    "13": {
+      "General": "Continuing Simeon's clans: Zarhites (from Zerah) and Shaulites (from Shaul).",
+      "Non-Denominational": "Further clans of Simeon: Lists those descending from Zerah and Shaul.",
+      "Baptist": "More Simeonite families: Lists the Zarhites (from Zerah) and Shaulites (from Shaul).",
+      "Catholic": "Continues Simeon's lineage: the Zarhite clan (from Zerah) and the Shaulite clan (from Shaul).",
+      "Methodist": "Additional Simeonite clans: the Zarhites and the Shaulites.",
+      "Lutheran": "Lists further Simeonite clans: the Zarhites (from Zerah) and Shaulites (from Shaul)."
+    },
+    "14": {
+      "General": "The total number counted for the Simeonite clans is 22,200.",
+      "Non-Denominational": "The military strength of Simeon is recorded as 22,200, showing a significant decrease since the first census.",
+      "Baptist": "The census total for Simeon is 22,200 men, a drastically reduced number possibly reflecting judgment.",
+      "Catholic": "The total registered for the Simeonite clans is 22,200.",
+      "Methodist": "The count for the Simeonite families is 22,200, a notable decrease.",
+      "Lutheran": "The total number of fighting men in the Simeonite families is 22,200, a sharp decline."
+    },
+    "15": {
+      "General": "Census moves to Gad: clans listed are Zephonites (from Zephon), Haggites (from Haggi), and Shunites (from Shuni).",
+      "Non-Denominational": "Enumeration of Gad's tribe: Lists clans descending from Zephon, Haggi, and Shuni.",
+      "Baptist": "Counting Gad's tribe: Includes families of Zephon (Zephonites), Haggi (Haggites), and Shuni (Shunites).",
+      "Catholic": "Lists the Gadites by clan: Zephonites (from Zephon), Haggites (from Haggi), Shunites (from Shuni).",
+      "Methodist": "Gad's descendants are counted: clans of Zephonites, Haggites, and Shunites.",
+      "Lutheran": "Begins the census of Gad's tribe: listing the Zephonite, Haggite, and Shunite clans."
+    },
+    "16": {
+      "General": "Continuing Gad's clans: Oznites (from Ozni) and Erites (from Eri).",
+      "Non-Denominational": "Further clans of Gad: Lists those descending from Ozni and Eri.",
+      "Baptist": "More Gadite families: Lists the Oznites (from Ozni) and Erites (from Eri).",
+      "Catholic": "Continues Gad's lineage: the Oznite clan (from Ozni) and the Erite clan (from Eri).",
+      "Methodist": "Additional Gadite clans: the Oznites and the Erites.",
+      "Lutheran": "Lists further Gadite clans: the Oznites (from Ozni) and Erites (from Eri)."
+    },
+    "17": {
+      "General": "Continuing Gad's clans: Arodites (from Arod) and Arelites (from Areli).",
+      "Non-Denominational": "Further clans of Gad: Lists those descending from Arod and Areli.",
+      "Baptist": "More Gadite families: Lists the Arodites (from Arod) and Arelites (from Areli).",
+      "Catholic": "Continues Gad's lineage: the Arodite clan (from Arod) and the Arelite clan (from Areli).",
+      "Methodist": "Additional Gadite clans: the Arodites and the Arelites.",
+      "Lutheran": "Lists further Gadite clans: the Arodites (from Arod) and Arelites (from Areli)."
+    },
+    "18": {
+      "General": "The total number counted for the Gadite clans is 40,500.",
+      "Non-Denominational": "The military strength of Gad is recorded as 40,500 men.",
+      "Baptist": "The census total for Gad is 40,500 eligible men.",
+      "Catholic": "The total registered for the Gadite clans amounts to 40,500.",
+      "Methodist": "The count for the Gadite families eligible for service is 40,500.",
+      "Lutheran": "The total number of fighting men in the Gadite families is 40,500."
+    },
+    "19": {
+      "General": "Mentions Judah's sons Er and Onan, noting they had previously died in the land of Canaan.",
+      "Non-Denominational": "Recalls that two of Judah's sons, Er and Onan, died in Canaan (as recorded in Genesis 38).",
+      "Baptist": "Notes that Judah's sons Er and Onan died prematurely in Canaan due to their wickedness (ref. Genesis 38).",
+      "Catholic": "Recalls the earlier deaths of Judah's sons, Er and Onan, in the land of Canaan.",
+      "Methodist": "Reminds that Judah's sons Er and Onan had died previously in Canaan.",
+      "Lutheran": "References the deaths of Judah's sons Er and Onan in Canaan, events described in Genesis."
+    },
+    "20": {
+      "General": "Census moves to Judah's surviving lines: clans listed are Shelanites (from Shelah), Pharzites (from Pharez), and Zarhites (from Zerah).",
+      "Non-Denominational": "Enumeration of Judah's tribe through his surviving sons: Lists clans descending from Shelah, Pharez, and Zerah.",
+      "Baptist": "Counting Judah's tribe: Includes families of Shelah (Shelanites), Pharez (Pharzites), and Zerah (Zarhites).",
+      "Catholic": "Lists the clans of Judah: Shelanites (from Shelah), Pharzites (from Pharez), Zarhites (from Zerah).",
+      "Methodist": "Judah's descendants are counted: clans of Shelanites, Pharzites, and Zarhites.",
+      "Lutheran": "Begins the census of Judah's tribe: listing the Shelanite, Pharzite, and Zarhite clans."
+    },
+    "21": {
+      "General": "Lists the clans descending from Pharez: Hezronites (from Hezron) and Hamulites (from Hamul).",
+      "Non-Denominational": "Details the clans originating from Judah's son Pharez: Hezronites and Hamulites.",
+      "Baptist": "Specifies the families descending from Pharez: Hezronites (from Hezron) and Hamulites (from Hamul).",
+      "Catholic": "Lists the clans descended from Pharez: Hezronites (from Hezron) and Hamulites (from Hamul).",
+      "Methodist": "Details the clans from Pharez: Hezronites and Hamulites.",
+      "Lutheran": "Lists the clans descending specifically from Pharez: Hezronites and Hamulites."
+    },
+    "22": {
+      "General": "The total number counted for the clans of Judah is 76,500.",
+      "Non-Denominational": "The military strength of Judah, the largest tribe, is recorded as 76,500 men.",
+      "Baptist": "The census total for Judah is 76,500 eligible men, showing significant growth.",
+      "Catholic": "The total registered for the clans of Judah amounts to 76,500.",
+      "Methodist": "The count for the families of Judah eligible for service is 76,500.",
+      "Lutheran": "The total number of fighting men in the families of Judah is 76,500, the most numerous tribe."
+    },
+    "23": {
+      "General": "Census moves to Issachar: clans listed are Tolaites (from Tola) and Punites (from Pua/Puvah).",
+      "Non-Denominational": "Enumeration of Issachar's tribe: Lists clans descending from Tola and Pua.",
+      "Baptist": "Counting Issachar's tribe: Includes families of Tola (Tolaites) and Pua (Punites).",
+      "Catholic": "Lists the clans of Issachar: Tolaites (from Tola) and Punites (from Pua).",
+      "Methodist": "Issachar's descendants are counted: clans of Tolaites and Punites.",
+      "Lutheran": "Begins the census of Issachar's tribe: listing the Tolaite and Punite clans."
+    },
+    "24": {
+      "General": "Continuing Issachar's clans: Jashubites (from Jashub) and Shimronites (from Shimron).",
+      "Non-Denominational": "Further clans of Issachar: Lists those descending from Jashub and Shimron.",
+      "Baptist": "More Issacharite families: Lists the Jashubites (from Jashub) and Shimronites (from Shimron).",
+      "Catholic": "Continues Issachar's lineage: the Jashubite clan (from Jashub) and the Shimronite clan (from Shimron).",
+      "Methodist": "Additional Issacharite clans: the Jashubites and the Shimronites.",
+      "Lutheran": "Lists further Issacharite clans: the Jashubites (from Jashub) and Shimronites (from Shimron)."
+    },
+    "25": {
+      "General": "The total number counted for the clans of Issachar is 64,300.",
+      "Non-Denominational": "The military strength of Issachar is recorded as 64,300 men.",
+      "Baptist": "The census total for Issachar is 64,300 eligible men.",
+      "Catholic": "The total registered for the clans of Issachar amounts to 64,300.",
+      "Methodist": "The count for the families of Issachar eligible for service is 64,300.",
+      "Lutheran": "The total number of fighting men in the families of Issachar is 64,300."
+    },
+    "26": {
+      "General": "Census moves to Zebulun: clans listed are Sardites (from Sered), Elonites (from Elon), and Jahleelites (from Jahleel).",
+      "Non-Denominational": "Enumeration of Zebulun's tribe: Lists clans descending from Sered, Elon, and Jahleel.",
+      "Baptist": "Counting Zebulun's tribe: Includes families of Sered (Sardites), Elon (Elonites), and Jahleel (Jahleelites).",
+      "Catholic": "Lists the clans of Zebulun: Sardites (from Sered), Elonites (from Elon), Jahleelites (from Jahleel).",
+      "Methodist": "Zebulun's descendants are counted: clans of Sardites, Elonites, and Jahleelites.",
+      "Lutheran": "Begins the census of Zebulun's tribe: listing the Sardite, Elonite, and Jahleelite clans."
+    },
+    "27": {
+      "General": "The total number counted for the clans of Zebulun is 60,500.",
+      "Non-Denominational": "The military strength of Zebulun is recorded as 60,500 men.",
+      "Baptist": "The census total for Zebulun is 60,500 eligible men.",
+      "Catholic": "The total registered for the clans of Zebulun amounts to 60,500.",
+      "Methodist": "The count for the families of Zebulun eligible for service is 60,500.",
+      "Lutheran": "The total number of fighting men in the families of Zebulun is 60,500."
+    },
+    "28": {
+      "General": "Census moves to Joseph's sons: Manasseh and Ephraim.",
+      "Non-Denominational": "The census continues with the descendants of Joseph, represented by his two sons, Manasseh and Ephraim.",
+      "Baptist": "The count proceeds to the sons of Joseph, specifically the tribes of Manasseh and Ephraim.",
+      "Catholic": "The census now addresses the descendants of Joseph through his sons, Manasseh and Ephraim.",
+      "Methodist": "The enumeration moves to Joseph's lineage, covering the tribes of Manasseh and Ephraim.",
+      "Lutheran": "The census turns to the sons of Joseph: Manasseh and Ephraim, who formed distinct tribes."
+    },
+    "29": {
+      "General": "Details for Manasseh: Lists the Machirite clan (from Machir). Notes Machir was the father of Gilead, and from Gilead came the Gileadite clan.",
+      "Non-Denominational": "Focuses on Manasseh: Mentions the Machirite clan. Links Machir to Gilead, establishing the Gileadite clan.",
+      "Baptist": "Enumerating Manasseh: Notes the family of Machir (Machirites) and that Machir fathered Gilead, leading to the Gileadite family.",
+      "Catholic": "Begins Manasseh's clans: the Machirite clan (from Machir). It notes Machir fathered Gilead, origin of the Gileadite clan.",
+      "Methodist": "Lists Manasseh's descendants: the Machirite clan from Machir, who fathered Gilead, leading to the Gileadite clan.",
+      "Lutheran": "Starts with Manasseh: Lists the Machirite clan. Specifies Machir begat Gilead, source of the Gileadite clan."
+    },
+    "30": {
+      "General": "Lists the clans descended from Gilead: Jeezerites (from Jeezer) and Helekites (from Helek).",
+      "Non-Denominational": "Further clans from Gilead (Manasseh's line): Jeezerites and Helekites.",
+      "Baptist": "Details Gilead's descendants (Manasseh): Families of Jeezer (Jeezerites) and Helek (Helekites).",
+      "Catholic": "Lists clans descended from Gilead: Jeezerites (from Jeezer) and Helekites (from Helek).",
+      "Methodist": "Clans from Gilead: Jeezerites and Helekites.",
+      "Lutheran": "Lists Gilead's descendant clans (Manasseh): Jeezerites and Helekites."
+    },
+    "31": {
+      "General": "Continuing Gilead's clans: Asrielites (from Asriel) and Shechemites (from Shechem).",
+      "Non-Denominational": "More clans from Gilead (Manasseh): Asrielites and Shechemites.",
+      "Baptist": "More families from Gilead (Manasseh): Asrielites (from Asriel) and Shechemites (from Shechem).",
+      "Catholic": "Continues Gilead's lineage: the Asrielite clan (from Asriel) and the Shechemite clan (from Shechem).",
+      "Methodist": "Additional Gileadite clans: Asrielites and Shechemites.",
+      "Lutheran": "Lists more Gileadite clans (Manasseh): Asrielites and Shechemites."
+    },
+    "32": {
+      "General": "Continuing Gilead's clans: Shemidaites (from Shemida) and Hepherites (from Hepher).",
+      "Non-Denominational": "Further clans from Gilead (Manasseh): Shemidaites and Hepherites.",
+      "Baptist": "More families from Gilead (Manasseh): Shemidaites (from Shemida) and Hepherites (from Hepher).",
+      "Catholic": "Continues Gilead's lineage: the Shemidaite clan (from Shemida) and the Hepherite clan (from Hepher).",
+      "Methodist": "Additional Gileadite clans: Shemidaites and Hepherites.",
+      "Lutheran": "Lists more Gileadite clans (Manasseh): Shemidaites and Hepherites."
+    },
+    "33": {
+      "General": "Notes an exception: Zelophehad, son of Hepher, had no sons, only daughters named Mahlah, Noah, Hoglah, Milcah, and Tirzah.",
+      "Non-Denominational": "Highlights the case of Zelophehad (son of Hepher) who had only daughters, listing their names.",
+      "Baptist": "Specifically mentions Zelophehad son of Hepher, noting he had no sons, only five daughters: Mahlah, Noah, Hoglah, Milcah, and Tirzah (relevant for inheritance laws).",
+      "Catholic": "Points out that Zelophehad, son of Hepher, had daughters but no sons, and names the daughters.",
+      "Methodist": "Specifies that Hepher's son Zelophehad had only daughters, listing their names, which becomes important later.",
+      "Lutheran": "Notes the specific case of Zelophehad son of Hepher, who lacked sons but had five daughters, listed by name."
+    },
+    "34": {
+      "General": "The total number counted for the clans of Manasseh is 52,700.",
+      "Non-Denominational": "The military strength of Manasseh is recorded as 52,700 men.",
+      "Baptist": "The census total for Manasseh is 52,700 eligible men.",
+      "Catholic": "The total registered for the clans of Manasseh amounts to 52,700.",
+      "Methodist": "The count for the families of Manasseh eligible for service is 52,700.",
+      "Lutheran": "The total number of fighting men in the families of Manasseh is 52,700."
+    },
+    "35": {
+      "General": "Census moves to Ephraim: clans listed are Shuthalhites (from Shuthelah), Bachrites (from Becher), and Tahanites (from Tahan).",
+      "Non-Denominational": "Enumeration of Ephraim's tribe: Lists clans descending from Shuthelah, Becher, and Tahan.",
+      "Baptist": "Counting Ephraim's tribe: Includes families of Shuthelah (Shuthalhites), Becher (Bachrites), and Tahan (Tahanites).",
+      "Catholic": "Lists the clans of Ephraim: Shuthalhites (from Shuthelah), Bachrites (from Becher), Tahanites (from Tahan).",
+      "Methodist": "Ephraim's descendants are counted: clans of Shuthalhites, Bachrites, and Tahanites.",
+      "Lutheran": "Begins the census of Ephraim's tribe: listing the Shuthalhite, Bachrite, and Tahanite clans."
+    },
+    "36": {
+      "General": "Details the clan descending from Shuthelah: Eranites (from Eran).",
+      "Non-Denominational": "Specifies the clan originating from Shuthelah's son, Eran: the Eranites.",
+      "Baptist": "Notes the family descending from Shuthelah: the Eranites (from Eran).",
+      "Catholic": "Lists the clan descended from Shuthelah: the Eranite clan (from Eran).",
+      "Methodist": "Details the clan from Shuthelah: the Eranites.",
+      "Lutheran": "Lists the clan descending specifically from Shuthelah: the Eranites (from Eran)."
+    },
+    "37": {
+      "General": "The total number counted for the clans of Ephraim is 32,500. It reiterates these are Joseph's descendants (along with Manasseh).",
+      "Non-Denominational": "The military strength of Ephraim is recorded as 32,500 men. Reaffirms Ephraim and Manasseh constitute Joseph's lineage.",
+      "Baptist": "The census total for Ephraim is 32,500 eligible men. Confirms these (Ephraim and Manasseh) are Joseph's sons.",
+      "Catholic": "The total registered for the clans of Ephraim amounts to 32,500. It concludes the count for Joseph's sons.",
+      "Methodist": "The count for the families of Ephraim is 32,500. Reiteration that these clans belong to Joseph's line.",
+      "Lutheran": "The total number of fighting men in the families of Ephraim is 32,500. Summarizes the count for Joseph's descendants."
+    },
+    "38": {
+      "General": "Census moves to Benjamin: clans listed are Belaites (from Bela), Ashbelites (from Ashbel), and Ahiramites (from Ahiram).",
+      "Non-Denominational": "Enumeration of Benjamin's tribe: Lists clans descending from Bela, Ashbel, and Ahiram.",
+      "Baptist": "Counting Benjamin's tribe: Includes families of Bela (Belaites), Ashbel (Ashbelites), and Ahiram (Ahiramites).",
+      "Catholic": "Lists the clans of Benjamin: Belaites (from Bela), Ashbelites (from Ashbel), Ahiramites (from Ahiram).",
+      "Methodist": "Benjamin's descendants are counted: clans of Belaites, Ashbelites, and Ahiramites.",
+      "Lutheran": "Begins the census of Benjamin's tribe: listing the Belaite, Ashbelite, and Ahiramite clans."
+    },
+    "39": {
+      "General": "Continuing Benjamin's clans: Shuphamites (from Shupham/Shephupham) and Huphamites (from Hupham).",
+      "Non-Denominational": "Further clans of Benjamin: Lists those descending from Shupham and Hupham.",
+      "Baptist": "More Benjaminite families: Lists the Shuphamites (from Shupham) and Huphamites (from Hupham).",
+      "Catholic": "Continues Benjamin's lineage: the Shuphamite clan (from Shupham) and the Huphamite clan (from Hupham).",
+      "Methodist": "Additional Benjaminite clans: the Shuphamites and Huphamites.",
+      "Lutheran": "Lists further Benjaminite clans: Shuphamites and Huphamites."
+    },
+    "40": {
+      "General": "Details clans descending from Benjamin's son Bela: Ardites (from Ard) and Naamites (from Naaman).",
+      "Non-Denominational": "Specifies the clans originating from Benjamin's son Bela: Ardites and Naamites.",
+      "Baptist": "Notes the families descending from Bela: the Ardites (from Ard) and the Naamites (from Naaman).",
+      "Catholic": "Lists the clans descended from Bela: Ardites (from Ard) and Naamites (from Naaman).",
+      "Methodist": "Details the clans from Bela: Ardites and Naamites.",
+      "Lutheran": "Lists the clans descending specifically from Bela: Ardites and Naamites."
+    },
+    "41": {
+      "General": "The total number counted for the clans of Benjamin is 45,600.",
+      "Non-Denominational": "The military strength of Benjamin is recorded as 45,600 men.",
+      "Baptist": "The census total for Benjamin is 45,600 eligible men.",
+      "Catholic": "The total registered for the clans of Benjamin amounts to 45,600.",
+      "Methodist": "The count for the families of Benjamin eligible for service is 45,600.",
+      "Lutheran": "The total number of fighting men in the families of Benjamin is 45,600."
+    },
+    "42": {
+      "General": "Census moves to Dan: the single listed clan is Shuhamites (from Shuham/Hushim). It states these are Dan's families.",
+      "Non-Denominational": "Enumeration of Dan's tribe: Lists only one primary clan, the Shuhamites, representing Dan's descendants.",
+      "Baptist": "Counting Dan's tribe: Mentions the family of Shuham (Shuhamites) as representing the families of Dan.",
+      "Catholic": "Lists the clan of Dan: Shuhamites (from Shuham), representing all families of Dan.",
+      "Methodist": "Dan's descendants are counted: the clan of Shuhamites represents Dan's families.",
+      "Lutheran": "Begins the census of Dan's tribe: listing only the Shuhamite clan, comprising Dan's families."
+    },
+    "43": {
+      "General": "The total number counted for the Shuhamite clans (representing Dan) is 64,400.",
+      "Non-Denominational": "The military strength of Dan (represented by the Shuhamites) is recorded as 64,400 men.",
+      "Baptist": "The census total for Dan (the Shuhamite families) is 64,400 eligible men.",
+      "Catholic": "The total registered for the Shuhamite clans (Dan) amounts to 64,400.",
+      "Methodist": "The count for the families of the Shuhamites (Dan) is 64,400.",
+      "Lutheran": "The total number of fighting men in the Shuhamite families (Dan) is 64,400."
+    },
+    "44": {
+      "General": "Census moves to Asher: clans listed are Jimnites (from Jimna), Jesuites (from Jesui), and Beriites (from Beriah).",
+      "Non-Denominational": "Enumeration of Asher's tribe: Lists clans descending from Jimna, Jesui, and Beriah.",
+      "Baptist": "Counting Asher's tribe: Includes families of Jimna (Jimnites), Jesui (Jesuites), and Beriah (Beriites).",
+      "Catholic": "Lists the clans of Asher: Jimnites (from Jimna), Jesuites (from Jesui), Beriites (from Beriah).",
+      "Methodist": "Asher's descendants are counted: clans of Jimnites, Jesuites, and Beriites.",
+      "Lutheran": "Begins the census of Asher's tribe: listing the Jimnite, Jesuite, and Beriite clans."
+    },
+    "45": {
+      "General": "Details clans descending from Asher's son Beriah: Heberites (from Heber) and Malchielites (from Malchiel).",
+      "Non-Denominational": "Specifies the clans originating from Asher's son Beriah: Heberites and Malchielites.",
+      "Baptist": "Notes the families descending from Beriah: the Heberites (from Heber) and the Malchielites (from Malchiel).",
+      "Catholic": "Lists the clans descended from Beriah: Heberites (from Heber) and Malchielites (from Malchiel).",
+      "Methodist": "Details the clans from Beriah: Heberites and Malchielites.",
+      "Lutheran": "Lists the clans descending specifically from Beriah: Heberites and Malchielites."
+    },
+    "46": {
+      "General": "Adds a note: The name of Asher's daughter was Serah (mentioned also in Genesis).",
+      "Non-Denominational": "Includes the detail that Asher also had a daughter named Serah.",
+      "Baptist": "Specifically mentions Asher's daughter, Serah.",
+      "Catholic": "Notes the name of Asher's daughter: Serah.",
+      "Methodist": "Mentions the name of Asher's daughter, Serah.",
+      "Lutheran": "Adds the detail that Asher's daughter was named Serah."
+    },
+    "47": {
+      "General": "The total number counted for the clans of Asher is 53,400.",
+      "Non-Denominational": "The military strength of Asher is recorded as 53,400 men.",
+      "Baptist": "The census total for Asher is 53,400 eligible men.",
+      "Catholic": "The total registered for the clans of Asher amounts to 53,400.",
+      "Methodist": "The count for the families of Asher eligible for service is 53,400.",
+      "Lutheran": "The total number of fighting men in the families of Asher is 53,400."
+    },
+    "48": {
+      "General": "Census moves to Naphtali: clans listed are Jahzeelites (from Jahzeel) and Gunites (from Guni).",
+      "Non-Denominational": "Enumeration of Naphtali's tribe: Lists clans descending from Jahzeel and Guni.",
+      "Baptist": "Counting Naphtali's tribe: Includes families of Jahzeel (Jahzeelites) and Guni (Gunites).",
+      "Catholic": "Lists the clans of Naphtali: Jahzeelites (from Jahzeel) and Gunites (from Guni).",
+      "Methodist": "Naphtali's descendants are counted: clans of Jahzeelites and Gunites.",
+      "Lutheran": "Begins the census of Naphtali's tribe: listing the Jahzeelite and Gunite clans."
+    },
+    "49": {
+      "General": "Continuing Naphtali's clans: Jezerites (from Jezer) and Shillemites (from Shillem).",
+      "Non-Denominational": "Further clans of Naphtali: Lists those descending from Jezer and Shillem.",
+      "Baptist": "More Naphtalite families: Lists the Jezerites (from Jezer) and Shillemites (from Shillem).",
+      "Catholic": "Continues Naphtali's lineage: the Jezerite clan (from Jezer) and the Shillemite clan (from Shillem).",
+      "Methodist": "Additional Naphtalite clans: the Jezerites and the Shillemites.",
+      "Lutheran": "Lists further Naphtalite clans: Jezerites and Shillemites."
+    },
+    "50": {
+      "General": "The total number counted for the clans of Naphtali is 45,400.",
+      "Non-Denominational": "The military strength of Naphtali is recorded as 45,400 men.",
+      "Baptist": "The census total for Naphtali is 45,400 eligible men.",
+      "Catholic": "The total registered for the clans of Naphtali amounts to 45,400.",
+      "Methodist": "The count for the families of Naphtali eligible for service is 45,400.",
+      "Lutheran": "The total number of fighting men in the families of Naphtali is 45,400."
+    },
+    "51": {
+      "General": "Provides the grand total of numbered Israelite men (eligible for war): 601,730.",
+      "Non-Denominational": "States the total number of Israelite men fit for military service across all tribes (excluding Levi): 601,730.",
+      "Baptist": "Gives the final tally of Israelite fighting men counted in this census: 601,730.",
+      "Catholic": "Summarizes the total number of Israelites registered in this census (excluding Levites): 601,730.",
+      "Methodist": "Reports the total number of Israelite men counted who were eligible for war: 601,730.",
+      "Lutheran": "States the grand total from the census of Israelite fighting men: 601,730."
+    },
+    "52": {
+      "General": "The Lord speaks to Moses again.",
+      "Non-Denominational": "God gives further instructions to Moses following the census.",
+      "Baptist": "The Lord communicates His instructions concerning the census results to Moses.",
+      "Catholic": "The Lord addresses Moses with instructions related to the census.",
+      "Methodist": "God speaks to Moses with directives based on the census.",
+      "Lutheran": "Following the census, the Lord speaks to Moses."
+    },
+    "53": {
+      "General": "God instructs that the land (Canaan) is to be divided among these counted tribes as an inheritance, based on the number of names (people) in each tribe.",
+      "Non-Denominational": "God commands the division of the Promised Land among the tribes based on the population size revealed in the census.",
+      "Baptist": "The Lord decrees that the land inheritance is to be allocated to the tribes according to their population size ('number of names').",
+      "Catholic": "God directs that the land be apportioned to these tribes as their inheritance, proportionate to the number of names registered.",
+      "Methodist": "God instructs that the land is to be divided as an inheritance among the tribes according to their respective numbers from the census.",
+      "Lutheran": "The Lord commands the division of the land as an inheritance based on the number of names listed in the census for each tribe."
+    },
+    "54": {
+      "General": "Specifies the principle of allocation: give a larger inheritance to a larger tribe (many) and a smaller inheritance to a smaller tribe (few); each tribe's share depends on its counted number.",
+      "Non-Denominational": "Explains the distribution principle: larger tribes receive more land, smaller tribes receive less, proportional to their census count.",
+      "Baptist": "Clarifies the distribution method: inheritance size is directly proportional to tribal population - more people, more land; fewer people, less land.",
+      "Catholic": "Details the principle of distribution: larger tribes get a larger share, smaller tribes a smaller share, based on their registered numbers.",
+      "Methodist": "Elaborates on land allocation: the size of the inheritance given to each tribe must correspond to its population size.",
+      "Lutheran": "Specifies proportional distribution: a larger inheritance for numerous tribes, a smaller one for less numerous tribes, based on their census numbers."
+    },
+    "55": {
+      "General": "Adds a second principle: the land must also be divided by lot. The actual territories will be assigned based on the names of their ancestral tribes.",
+      "Non-Denominational": "Introduces the element of divine selection: the specific location of each tribe's inheritance will be determined by casting lots, assigned according to ancestral tribal lines.",
+      "Baptist": "Adds the method of assignment: the specific parcels of land will be determined by lot, according to the ancestral tribes.",
+      "Catholic": "Adds the method of assignment: the land is to be divided by lot, with inheritance corresponding to the names of the ancestral tribes.",
+      "Methodist": "Introduces a divine element: despite proportionality, the specific land allocation will be determined by casting lots among the tribes.",
+      "Lutheran": "Introduces the principle of divine assignment by lot: the land's division is ultimately by lot, corresponding to the ancestral tribes."
+    },
+    "56": {
+      "General": "Reiterates: the possession (inheritance) will be divided between the large and small tribes according to the outcome of the lot.",
+      "Non-Denominational": "Combines the principles: the lot determines the specific location, while the size (large or small tribe) determines the extent of the territory.",
+      "Baptist": "Summarizes the dual principle: the allocation between larger and smaller tribes will be decided according to the lot.",
+      "Catholic": "Reaffirms that the division of possession between numerous and few tribes will be determined by the lot.",
+      "Methodist": "Confirms that the inheritance portion (size based on numbers) for both large and small tribes will be assigned via the casting of lots.",
+      "Lutheran": "Restates the combined principle: the inheritance is divided by lot, distributing land between the many and the few."
+    },
+    "57": {
+      "General": "Turns to the census of the Levites, listing their main family lines: Gershonites (from Gershon), Kohathites (from Kohath), and Merarites (from Merari).",
+      "Non-Denominational": "Begins the separate census of the Levites, listing the primary clans descended from Levi's sons: Gershon, Kohath, and Merari.",
+      "Baptist": "Details the Levitical census, organized by families: Gershonites, Kohathites, and Merarites.",
+      "Catholic": "Lists the Levites registered according to their clans: Gershonites, Kohathites, Merarites.",
+      "Methodist": "Enumerates the Levites by their main family divisions: Gershonites, Kohathites, and Merarites.",
+      "Lutheran": "Details the census of the Levites by their main clans: Gershonites, Kohathites, and Merarites."
+    },
+    "58": {
+      "General": "Lists further Levitical families/clans: Libnites, Hebronites, Mahlites, Mushites, Korathites. Notes that Kohath was the father of Amram.",
+      "Non-Denominational": "Lists additional Levitical sub-clans and specifies that Kohath was the ancestor of Amram (Moses and Aaron's father).",
+      "Baptist": "Provides more Levitical family names: Libnites, Hebronites, Mahlites, Mushites, Korathites. States that Kohath fathered Amram.",
+      "Catholic": "Lists specific Levitical clans and notes that Amram descended from Kohath.",
+      "Methodist": "Details further Levitical clans and identifies Kohath as the father of Amram.",
+      "Lutheran": "Lists additional Levitical clans and specifies the lineage: Kohath begat Amram."
+    },
+    "59": {
+      "General": "Identifies Amram's wife as Jochebed, daughter of Levi (born to Levi's line in Egypt). She bore Amram Aaron, Moses, and their sister Miriam.",
+      "Non-Denominational": "Provides genealogical details: Amram's wife was Jochebed (a Levite born in Egypt), and their children were Aaron, Moses, and Miriam.",
+      "Baptist": "Names Amram's wife Jochebed, a daughter of Levi born in Egypt, and identifies their famous children: Aaron, Moses, and Miriam.",
+      "Catholic": "Identifies Amram's wife as Jochebed, daughter of Levi, born in Egypt, and mother of Aaron, Moses, and Miriam.",
+      "Methodist": "Names Amram's wife, Jochebed (daughter of Levi), and lists their children: Aaron, Moses, and Miriam.",
+      "Lutheran": "Gives the name of Amram's wife, Jochebed (daughter of Levi, born in Egypt), and lists their children: Aaron, Moses, and Miriam."
+    },
+    "60": {
+      "General": "Lists Aaron's sons: Nadab, Abihu, Eleazar, and Ithamar.",
+      "Non-Denominational": "Specifies the sons born to Aaron: Nadab, Abihu, Eleazar, and Ithamar.",
+      "Baptist": "Names Aaron's sons: Nadab, Abihu, Eleazar, and Ithamar.",
+      "Catholic": "Lists Aaron's sons: Nadab, Abihu, Eleazar, and Ithamar.",
+      "Methodist": "Identifies Aaron's sons: Nadab, Abihu, Eleazar, and Ithamar.",
+      "Lutheran": "Names the sons born to Aaron: Nadab, Abihu, Eleazar, and Ithamar."
+    },
+    "61": {
+      "General": "Recalls that Nadab and Abihu died when they offered unauthorized ('strange') fire before the Lord (as recorded in Leviticus 10).",
+      "Non-Denominational": "Reminds that Aaron's sons Nadab and Abihu died previously as judgment for offering improper fire before God.",
+      "Baptist": "Recounts the judgment upon Nadab and Abihu, who died for offering 'strange fire' contrary to God's command.",
+      "Catholic": "Recalls the death of Nadab and Abihu resulting from their offering illicit fire before the Lord.",
+      "Methodist": "Mentions the death of Nadab and Abihu due to their offering of 'strange fire,' violating God's instructions.",
+      "Lutheran": "References the death of Nadab and Abihu as judgment for offering unauthorized fire before the Lord (Law)."
+    },
+    "62": {
+      "General": "Gives the total number of Levites counted (males one month old and upward): 23,000. Explains they weren't counted with the other Israelites because they received no land inheritance among them.",
+      "Non-Denominational": "States the total number of Levite males (one month+) as 23,000. Clarifies their exclusion from the main census was due to their distinct status and lack of land inheritance.",
+      "Baptist": "Provides the census total for Levite males (1 month+): 23,000. Explicitly states they were numbered separately because they were not allotted a tribal land inheritance.",
+      "Catholic": "Gives the total registered Levites (males 1 month+): 23,000. Explains they were not counted with the other Israelites as they received no land inheritance.",
+      "Methodist": "Reports the total Levite count (males 1 month+): 23,000. Explains their separate census stems from their unique role and lack of territorial inheritance.",
+      "Lutheran": "Totals the Levitical census (males 1 month+): 23,000. Explains their separate count because they were given no land inheritance, the Lord being their portion."
+    },
+    "63": {
+      "General": "Summarizes that these were the people numbered by Moses and Eleazar the priest in the plains of Moab by the Jordan near Jericho.",
+      "Non-Denominational": "Confirms these results are from the census conducted by Moses and Eleazar in the plains of Moab.",
+      "Baptist": "Reiterates that these numbers represent the census taken by Moses and Eleazar in Moab, near Jericho.",
+      "Catholic": "Identifies these totals as the result of the census conducted by Moses and Eleazar in the plains of Moab.",
+      "Methodist": "Confirms these figures as the outcome of the census led by Moses and Eleazar in the plains of Moab.",
+      "Lutheran": "States that these are the census results conducted by Moses and Eleazar in the plains of Moab by the Jordan."
+    },
+    "64": {
+      "General": "Makes a crucial point: among all those counted in this census, not one man was from the group originally numbered by Moses and Aaron in the Wilderness of Sinai.",
+      "Non-Denominational": "Highlights the complete generational turnover: none of the men counted in the first census at Sinai were present in this second census.",
+      "Baptist": "Emphasizes the fulfillment of judgment: not a single man from the first census in Sinai (the generation condemned for unbelief) was included in this count.",
+      "Catholic": "Stresses a key fact: among those registered here, there was no man counted in the earlier census by Moses and Aaron in the Sinai wilderness.",
+      "Methodist": "Underlines the generational shift: none of the men numbered in the Sinai census were among those counted now in Moab.",
+      "Lutheran": "Explicitly states the fulfillment of God's judgment: none of the men from the Sinai census were counted here."
+    },
+    "65": {
+      "General": "Explains why: the Lord had declared that the generation from Sinai would surely die in the wilderness. None were left except Caleb son of Jephunneh and Joshua son of Nun.",
+      "Non-Denominational": "Provides the reason: God's prior decree stated that rebellious generation would die in the wilderness. Only the faithful spies, Caleb and Joshua, survived.",
+      "Baptist": "Gives the theological reason: the Lord had prophesied their death in the wilderness due to rebellion. Only Caleb and Joshua, who showed faith, remained from that generation of men.",
+      "Catholic": "Explains the absence of the former generation: the Lord had decreed their death in the wilderness. Only Caleb and Joshua were spared.",
+      "Methodist": "Clarifies that the Lord's word was fulfilled: the generation from Sinai died in the wilderness as decreed, with only Caleb and Joshua surviving.",
+      "Lutheran": "Explains the fulfillment: The Lord had decreed (Law) the death of that generation in the wilderness. Only Caleb and Joshua, who believed the promise (Gospel), survived."
+    }
+  }
+}

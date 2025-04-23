@@ -1,0 +1,44 @@
+Rules for Generating Bible Chapter Interpretations:
+
+1.  **File Organization:**
+    *   Each chapter of a Bible book should have its own dedicated JSON file.
+    *   Files should be named according to the chapter number (e.g., `12.json`).
+    *   Files should be placed within the appropriate book directory (e.g., `GuidingVerse/server/src/data/interpretations/Numbers/`).
+
+2.  **JSON Structure:**
+    *   The root of the JSON object must contain two keys: `Summary` and `Verses`.
+    *   The `Summary` value must be an object.
+    *   The `Verses` value must be an object.
+
+3.  **Denominational Perspectives:**
+    *   Both the `Summary` object and each individual verse object within `Verses` must contain keys representing specific perspectives.
+    *   The required perspectives are: `General`, `Non-Denominational`, `Baptist`, `Catholic`, `Methodist`, `Lutheran`.
+
+4.  **Content - Summary:**
+    *   Under the `Summary` object, each perspective key (e.g., `Summary.General`, `Summary.Baptist`) should have a string value.
+    *   This string value should be a concise summary of the entire chapter from that specific perspective.
+
+5.  **Content - Verses:**
+    *   Under the `Verses` object, the keys should be strings representing the verse numbers (e.g., `"1"`, `"2"`, `"3"`).
+    *   The value for each verse number key must be an object.
+    *   Inside each verse number object, use the same perspective keys as in the `Summary` (`General`, `Non-Denominational`, etc.).
+    *   The value for each perspective key within a verse object (e.g., `Verses["1"].General`, `Verses["1"].Catholic`) should be a string.
+    *   This string value should be a concise interpretation of that specific verse from that particular perspective.
+
+6.  **Source Material:**
+    *   Base interpretations primarily on the King James Version (KJV).
+    *   Use web search if necessary to obtain the KJV chapter text. If KJV text is unavailable or unclear for a specific passage, other reliable translations may be consulted for comparison, but the final interpretation should align with KJV wording and structure where possible.
+
+7.  **Accuracy and Conciseness:**
+    *   Ensure all summaries and interpretations accurately reflect the content of the scripture.
+    *   Keep the interpretation strings concise and focused.
+    *   Faithfully represent the nuances and typical theological focal points of each specified denomination where applicable.
+
+8.  **Prioritized Translation:**
+    *   Utilize the King James Version (KJV) Bible as the primary source for interpretations.
+    *   Prioritize KJV over all other Bible versions.
+
+9.  **Individual Verse Interpretation:**
+    *   Every verse within a chapter must be listed individually within the `Verses` object, using its number as the key (e.g., `"1"`, `"2"`, ... up to the last verse).
+    *   Grouping multiple verses under a single key or interpretation entry is strictly prohibited.
+    *   Each verse must have its own complete set of denominational interpretations, even if the content seems repetitive compared to adjacent verses. 
