@@ -11,9 +11,9 @@ export default defineConfig({
     minify: 'terser',
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-        },
+        // manualChunks: { // Temporarily comment out
+        //   vendor: ['react', 'react-dom', 'react-router-dom'],
+        // },
       },
     },
   },
