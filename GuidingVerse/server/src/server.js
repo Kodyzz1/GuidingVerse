@@ -5,6 +5,8 @@ import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import path from 'path';
 import dotenv from 'dotenv';
+import http from 'http'; // Need http module
+import { Server as SocketIOServer } from 'socket.io'; // Import socket.io server
 import bibleRoutes from './routes/bibleRoutes.js';
 import searchRoutes from './routes/searchRoutes.js';
 import interpretationRoutes from './routes/interpretationRoutes.js';
@@ -30,6 +32,7 @@ const PORT = process.env.PORT || 3000;
 
 // --- Initialize Express App ---
 const app = express();
+const server = http.createServer(app); // Create HTTP server
 
 // --- Middleware ---
 // Configure CORS to allow specific origins
@@ -66,6 +69,78 @@ const limiter = rateLimit({
   max: 100
 });
 app.use(limiter);
+
+// --- Initialize Socket.IO ---
+const io = new SocketIOServer(server, {
+  cors: {
+    origin: allowedOrigins, // Use the same allowed origins as Express CORS
+    methods: ["GET", "POST"],
+    credentials: true
+  }
+});
+
+// --- User Tracking for Sockets ---
+const onlineUsers = new Map(); // Map<userId, socketId>
+
+// --- Socket.IO Connection Handling ---
+io.on('connection', (socket) => {
+  logger.info(`[Socket.IO] User connected: ${socket.id}`);
+
+  // Placeholder: Need to associate userId with socket.id upon authentication/connection
+  // For now, we'll just log connection/disconnection
+
+  socket.on('disconnect', () => {
+    logger.info(`[Socket.IO] User disconnected: ${socket.id}`);
+    // Remove user from onlineUsers map upon disconnect
+    let disconnectedUserId = null;
+    for (const [userId, socketId] of onlineUsers.entries()) {
+      if (socketId === socket.id) {
+        onlineUsers.delete(userId);
+        disconnectedUserId = userId;
+        logger.info(`[Socket.IO] Removed user ${userId} from online list`);
+        // TODO: Optionally, notify friends that this user went offline?
+        break;
+      }
+    }
+    // TODO: Notify friends about disconnection if disconnectedUserId is not null
+    // if (disconnectedUserId) {
+    //   notifyFriendsOfStatusChange(disconnectedUserId, false); // false for offline
+    // }
+  });
+
+  // Placeholder for handling user authentication via socket
+  // Client should emit 'authenticate' with its JWT token after connecting/logging in
+  socket.on('authenticate', (token) => {
+      // TODO: Implement token verification and user association
+      // Example (requires jwt library and token verification logic):
+      /*
+      try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const userId = decoded.userId; // Adjust based on your JWT payload
+        if (userId) {
+          onlineUsers.set(userId.toString(), socket.id);
+          logger.info(`[Socket.IO] Authenticated user ${userId} associated with socket ${socket.id}`);
+          // TODO: Optionally confirm successful authentication back to the client
+          socket.emit('authenticated'); 
+          // TODO: Notify friends that this user is now online
+          // notifyFriendsOfStatusChange(userId, true); // true for online
+        } else {
+           logger.warn(`[Socket.IO] Invalid token payload for socket ${socket.id}`);
+           socket.emit('authentication_failed', { message: 'Invalid token payload.' });
+        }
+      } catch (err) {
+         logger.warn(`[Socket.IO] Failed authentication attempt for socket ${socket.id}: ${err.message}`);
+         // Optionally disconnect if authentication fails, or just inform the client
+         socket.emit('authentication_failed', { message: 'Invalid or expired token.' });
+         // socket.disconnect(true); 
+      }
+      */
+     logger.info(`[Socket.IO] Received 'authenticate' event from ${socket.id} (token verification not yet implemented)`);
+  });
+
+  // Placeholder for future events
+  // socket.on('some_event', (data) => { ... });
+});
 
 // --- API Routes ---
 app.use('/api/auth', authRoutes);
@@ -229,6 +304,9 @@ setTimeout(() => {
 }, 5000); // Run 5 seconds after start
 
 // --- Start Server ---
-app.listen(PORT, '0.0.0.0', () => { // Add '0.0.0.0' as the hostname
+server.listen(PORT, '0.0.0.0', () => { // Add '0.0.0.0' as the hostname
   logger.info(`Server running on port ${PORT}`);
 });
+
+// Export io instance and onlineUsers map for use in other modules (like authRoutes)
+export { io, onlineUsers };

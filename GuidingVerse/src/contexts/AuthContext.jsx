@@ -5,12 +5,19 @@ import {
   useContext,
   useEffect,
   useMemo,
-  useCallback
+  useCallback,
+  useRef // Add useRef for socket instance
 } from 'react';
 import PropTypes from 'prop-types';
+import { io } from 'socket.io-client'; // Import socket.io client
+import { ToastContainer, toast } from 'react-toastify'; // Import react-toastify
 
 // --- Context Creation ---
 const AuthContext = createContext(null);
+
+// --- Socket Server URL (Adjust if needed) ---
+// Assumes server is running on the same host/port or configured via proxy
+const SOCKET_SERVER_URL = '/'; // Use relative path
 
 // --- Provider Component ---
 export function AuthProvider({ children }) {
@@ -18,6 +25,7 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true); // Start true for initial auth check
+  const socketRef = useRef(null); // Use ref for socket instance to avoid re-renders on change
 
   // --- Effect for Initial Auth Check ---
   useEffect(() => {
@@ -50,6 +58,86 @@ export function AuthProvider({ children }) {
       setIsLoading(false); // Finished initial check
     }
   }, []); // Run only once on mount
+
+  // --- Effect for Socket.IO Connection Management ---
+  useEffect(() => {
+    if (isAuthenticated && user?.id) {
+      // User is logged in, establish connection if not already connected
+      if (!socketRef.current) {
+        console.log('[Socket.IO] Authenticated, attempting to connect...');
+        const token = localStorage.getItem('guidingVerseToken');
+        if (!token) {
+          console.error('[Socket.IO] Cannot connect: Auth token not found.');
+          // Handle this case - maybe logout? Force refresh?
+          return;
+        }
+
+        // Connect to the server, passing the token for authentication
+        const newSocket = io(SOCKET_SERVER_URL, {
+          auth: { token }
+        });
+
+        socketRef.current = newSocket; // Store the socket instance in the ref
+
+        // --- Standard Socket Event Listeners ---
+        newSocket.on('connect', () => {
+          console.log(`[Socket.IO] Connected successfully! Socket ID: ${newSocket.id}`);
+          // Optionally emit an event here if needed upon successful connection/authentication
+          // e.g., newSocket.emit('user_online', { userId: user.id });
+        });
+
+        newSocket.on('disconnect', (reason) => {
+          console.log(`[Socket.IO] Disconnected. Reason: ${reason}`);
+          socketRef.current = null; // Clear the ref on disconnect
+          // Handle potential reconnection logic here if needed
+        });
+
+        newSocket.on('connect_error', (error) => {
+          console.error(`[Socket.IO] Connection Error: ${error.message}`, error);
+          // Handle connection errors (e.g., server down, invalid token)
+          // Maybe attempt reconnection after a delay, or notify the user
+          socketRef.current?.disconnect(); // Ensure cleanup on connection error
+          socketRef.current = null;
+          // Consider logging out the user if the token is rejected repeatedly
+          // logout();
+        });
+
+        // --- Custom Application Event Listeners ---
+        newSocket.on('friend_logged_in', (data) => {
+          console.log('[Socket.IO] Received friend_logged_in event:', data);
+          // Use toast notification instead of alert
+          toast.info(`${data.username} just logged in!`);
+          // alert(`Friend logged in: ${data.username} (ID: ${data.userId})`); // Basic alert for now - REMOVED
+        });
+
+      }
+    } else {
+      // User is not authenticated, disconnect if connected
+      if (socketRef.current) {
+        console.log('[Socket.IO] User logged out or unauthenticated, disconnecting socket.');
+        socketRef.current.disconnect();
+        socketRef.current = null; // Clear the ref
+      }
+    }
+
+    // --- Cleanup Function ---
+    // Runs when the component unmounts OR when dependencies (isAuthenticated, user?.id) change BEFORE the effect runs again.
+    return () => {
+      if (socketRef.current) {
+        console.log('[Socket.IO] Cleaning up socket connection on effect re-run or unmount.');
+        // Remove specific listeners to prevent memory leaks if the socket instance itself isn't being destroyed immediately
+        socketRef.current.off('connect');
+        socketRef.current.off('disconnect');
+        socketRef.current.off('connect_error');
+        socketRef.current.off('friend_logged_in');
+        // Only disconnect if the intention is to fully close the connection (e.g., on logout/unmount)
+        // If the effect is just re-running due to auth change, the logic above handles disconnect/connect.
+        // However, disconnecting here ensures cleanup if the component unmounts while connected.
+        socketRef.current.disconnect();
+        socketRef.current = null;
+      }
+    };
+  }, [isAuthenticated, user?.id]); // Re-run when auth state or user ID changes
 
   // --- Auth Functions (Real Implementation) ---
   const login = useCallback(async (email, password) => {
@@ -87,10 +175,12 @@ export function AuthProvider({ children }) {
       setUser(userData);
       setIsAuthenticated(true);
       localStorage.setItem('guidingVerseUser', JSON.stringify(userData));
-      // --- STORE THE TOKEN --- 
+      // --- STORE THE TOKEN ---
       if (data.token) {
           localStorage.setItem('guidingVerseToken', data.token);
           console.log('Auth token stored in localStorage.');
+          // *** Trigger socket connection attempt AFTER token is stored and state is set ***
+          // The useEffect hook dependent on isAuthenticated will handle the connection.
       } else {
           console.warn('No token received from login endpoint.');
       }
@@ -147,10 +237,12 @@ export function AuthProvider({ children }) {
       setUser(userData);
       setIsAuthenticated(true);
       localStorage.setItem('guidingVerseUser', JSON.stringify(userData));
-      // --- STORE THE TOKEN --- 
+      // --- STORE THE TOKEN ---
       if (data.token) {
           localStorage.setItem('guidingVerseToken', data.token);
           console.log('Auth token stored in localStorage after signup.');
+          // *** Trigger socket connection attempt AFTER token is stored and state is set ***
+          // The useEffect hook dependent on isAuthenticated will handle the connection.
       } else {
           console.warn('No token received from register endpoint.');
       }
@@ -173,6 +265,12 @@ export function AuthProvider({ children }) {
 
   const logout = useCallback(async () => {
     setIsLoading(true);
+    // Explicitly disconnect socket BEFORE clearing auth state
+    if (socketRef.current) {
+        console.log('[AuthContext Logout] Disconnecting socket before logging out.');
+        socketRef.current.disconnect();
+        socketRef.current = null;
+    }
     // TODO: Add API call to backend logout endpoint if needed (e.g., to invalidate tokens)
     setUser(null);
     setIsAuthenticated(false);
@@ -268,11 +366,12 @@ export function AuthProvider({ children }) {
     isAuthenticated,
     isLoading,
     login,
-    signup,
     logout,
+    signup,
     setBookmark,
     updateUserState // <-- Add updateUserState to context value
-  }), [user, isAuthenticated, isLoading, login, signup, logout, setBookmark, updateUserState]); // Add updateUserState dependency
+    // socket: socketRef.current // Optionally provide socket instance - use with caution
+  }), [user, isAuthenticated, isLoading, login, logout, signup, setBookmark, updateUserState]); // Add updateUserState dependency
 
   // --- Provider JSX ---
   return (
@@ -282,6 +381,19 @@ export function AuthProvider({ children }) {
       ) : (
         children
       )}
+      {/* Add ToastContainer here for global notifications */}
+      <ToastContainer
+        position="bottom-right" // Example position
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored" // Example theme
+      />
     </AuthContext.Provider>
   );
 }
@@ -297,6 +409,22 @@ export const useAuth = () => {
   if (context === undefined || context === null) {
     // Ensures hook is used within a provider
     throw new Error('useAuth must be used within an AuthProvider');
+  }
+  if (context === null) { // Handle the initial null state before provider initializes
+      // This might happen briefly on initial render.
+      // Return a default shape or handle appropriately depending on requirements.
+      // console.warn("AuthContext is null, returning default state");
+      return {
+          user: null,
+          isAuthenticated: false,
+          isLoading: true,
+          login: () => Promise.reject(new Error("AuthProvider not ready")),
+          logout: () => Promise.reject(new Error("AuthProvider not ready")),
+          signup: () => Promise.reject(new Error("AuthProvider not ready")),
+          setBookmark: () => Promise.reject(new Error("AuthProvider not ready")),
+          updateUserState: () => {},
+          // socket: null
+      };
   }
   return context;
 };

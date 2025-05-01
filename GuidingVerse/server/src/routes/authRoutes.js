@@ -4,6 +4,8 @@ import jwt from 'jsonwebtoken'; // <-- Import jsonwebtoken
 import User from '../models/User.js'; // Import the User model
 import { protect } from '../middleware/authMiddleware.js'; // Assuming protect middleware exists
 import { generateUniqueFriendCode } from '../utils/codeUtils.js';
+import { io, onlineUsers } from '../server.js'; // Import socket.io instance and online users map
+import { logger } from '../utils/logger.js'; // Import logger
 
 const router = express.Router();
 
@@ -120,7 +122,7 @@ router.post('/login', async (req, res) => {
 
     if (isMatch) {
       // --- Login Successful --- //
-      console.log('User logged in successfully:', user.email);
+      logger.info(`[POST /api/auth/login] User logged in successfully: ${user.email}`); // Use logger
 
       // --- Check and Generate Friend Code if Missing --- //
       let userFriendCode = user.friendCode;
@@ -141,6 +143,40 @@ router.post('/login', async (req, res) => {
       }
       // --------------------------------------------------- //
 
+      // --- Notify Online Friends --- //
+      try {
+        // Ensure friends list is populated for the logged-in user
+        // We need the full user object with populated friends here
+        const loggedInUserWithFriends = await User.findById(user._id).select('friends username').populate('friends', '_id'); // Populate friend IDs
+
+        if (loggedInUserWithFriends && loggedInUserWithFriends.friends && loggedInUserWithFriends.friends.length > 0) {
+          logger.info(`[Socket.IO] User ${loggedInUserWithFriends.username} (${user._id}) logged in. Notifying ${loggedInUserWithFriends.friends.length} friends.`);
+
+          loggedInUserWithFriends.friends.forEach(friend => {
+            const friendId = friend._id.toString();
+            const friendSocketId = onlineUsers.get(friendId); // Check the onlineUsers map
+
+            if (friendSocketId) {
+              logger.info(`[Socket.IO] Friend ${friendId} is online (socket ${friendSocketId}). Sending 'friend_logged_in' notification.`);
+              // Send notification to the specific friend's socket
+              io.to(friendSocketId).emit('friend_logged_in', {
+                userId: user._id, // ID of the user who logged in
+                username: loggedInUserWithFriends.username, // Username of the user who logged in
+                timestamp: new Date().toISOString()
+              });
+            } else {
+              logger.debug(`[Socket.IO] Friend ${friendId} is offline. Skipping notification.`);
+            }
+          });
+        } else {
+          logger.debug(`[Socket.IO] User ${user._id} has no friends or friends list could not be populated.`);
+        }
+      } catch (notifyError) {
+         logger.error(`[Socket.IO] Error notifying friends for user ${user._id}:`, notifyError);
+         // Non-fatal error, login should still succeed. Consider if this needs more robust handling.
+      }
+      // ----------------------------- //
+
       // --- Send Success Response (including friendCode) --- //
       res.status(200).json({
         _id: user._id,
@@ -156,7 +192,7 @@ router.post('/login', async (req, res) => {
         token: generateToken(user._id) 
       });
     } else {
-      console.log('Login failed: Password mismatch for email:', email.toLowerCase());
+      logger.warn(`[POST /api/auth/login] Login failed: Password mismatch for email: ${email.toLowerCase()}`); // Use logger
       return res.status(401).json({ message: 'Invalid credentials.' });
     }
 
